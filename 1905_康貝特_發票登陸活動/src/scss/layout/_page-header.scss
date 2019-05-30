@@ -1,0 +1,215 @@
+/*==================================================*\
+        Page Header
+\*==================================================*/
+
+.page-header {
+  width: 100%;
+  z-index: 999;
+  position: fixed;
+  top: 15px; right: 0;
+
+  @include mq(tablet, max) {
+    top: 0;
+  }
+
+  > .container {
+    @include mq(tablet, max) {
+      top:0;
+    }
+    @include mq(tablet-small) {
+      width: 100%;
+      max-width: none;
+      padding: 0 55px;
+    }
+  }
+
+  .hamburger {
+    width: 28px;
+    height: 24px;
+    // margin-right: 4%;
+    padding: 4px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  
+    > div {
+      width: 100%;
+      height: 4px;
+      margin: auto;
+      opacity: 1;
+      transition: all $duration-fast;
+      border-radius: 100px;
+      background-color: $c-primary;
+      position: absolute;
+      left: 0; right: 0;
+    }
+  
+    .top {
+      top: 0;
+    }
+  
+    .middle {
+      transform: translate(0, 0);
+      background-color: transparent;
+      top: 0; bottom: 0;
+  
+      &:before,
+      &:after {
+        @include pseudo();
+        @include wh(100%);
+        transition: inherit;
+        border-radius: inherit;
+        background-color: $c-primary;
+        top: 0; bottom: 0;
+        left: 0; right: 0;
+      }
+    }
+  
+    .bottom {
+      bottom: 0;
+    }
+  
+    @include mq(tablet) {
+      display: none;
+    }
+  }
+
+  &.menuOpen {
+    .hamburger {
+      $tbRemoveOffset: 30px;
+      .top,
+      .bottom {
+        opacity: 0;
+      }
+      .top {
+        top: $tbRemoveOffset;
+      }
+      .bottom {
+        bottom: $tbRemoveOffset;
+      }
+      
+      .middle {
+        &:before {
+          transform: rotate(135deg);
+        }
+        &:after {
+          transform: rotate(-135deg);
+        }
+      }
+    }
+  }
+
+  .header-nav {
+    overflow: hidden;
+
+    @include mq(tablet, max) {
+      width: 100%;
+      height: 100%;
+      background-image: url('../images/bg/m_nav_bg.jpg');
+      background-size: cover;
+    }
+    
+    > .container {
+      width: 100%;
+      max-width: 100%;
+      padding-right: calc(120px + 5%);
+      @include set-flex(center, flex-end);
+      @include mq(notebook, max) {
+        padding-right: calc(90px + 2%);
+      }
+      @include mq(tablet-wide, max) {
+        padding-right: calc(50px + 2%);
+      }
+      @include mq(tablet, max) {
+        padding-right: 0;
+        @include set-flex(center, center);
+      }
+    }
+    
+    ul {
+      display: none;
+      overflow: visible;
+      
+      @include mq(tablet) {
+        @include set-flex(center, space-between);
+      }
+      @include mq(tablet, max) {
+        height: 100vh;
+        padding-top: 55%;
+      }
+    }
+  
+    li {
+      transition: all $duration-fast;
+      overflow: visible;
+      padding: 30px 0;
+      background-position: left center;
+      // display: flex;
+      // align-self: stretch;
+      // @include mq(tablet) {
+      //   padding: 0 5px;
+      // }
+      // @media only screen and (max-width: 767px) {
+      //   display: block;
+      // }
+      @include mq(tablet, max){
+        padding: 25px 0;
+        border-bottom: 1px solid $c-primary;
+        &:last-child{
+          border-bottom: none;
+        }
+      }
+  
+      &:hover, &.active {
+        // border-bottom-color: $c-grayBG;
+        background-image: url('../images/nav_active.svg');
+        background-repeat: no-repeat;
+        background-size: 120px auto;
+        background-position: center center;
+        @include mq(tablet, max) {
+          background-size: 100px auto;
+        }
+      }
+      a {
+        border-right: 0;
+        padding: 0 30px;
+        border-right: 1px solid $c-primary;
+        @include mq(tablet, max) {
+          border-right: none;
+          padding: 0 10px;
+        }
+        
+      }
+      &:first-child{
+        background-size: 120px auto;
+        a {
+          padding: 0 50px;
+        }
+        @include mq(tablet, max) {
+          background-size: 100px auto;
+          a{
+            padding: 0 30px;
+          }
+        }
+      }
+      &:last-child{
+        a {
+          border-right: none;
+        }
+      }
+    }
+  
+    
+    
+  }
+  
+  
+
+  // picture {
+  //   width: 37%;
+  //   display: block;
+  //   @include mq(tablet-small) {
+  //     width: 256px;
+  //   }
+  // }
+}

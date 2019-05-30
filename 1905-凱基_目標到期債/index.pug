@@ -1,0 +1,608 @@
+doctype html
+html(lang='zh_TW')
+    head
+        meta(charset='UTF-8')
+        title Document
+        meta(name='viewport', content='width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no')
+        meta(http-equiv='X-UA-Compatible', content='ie=edge')
+        meta(http-equiv='Pragma' content='no-cache')
+        meta(http-equiv='Cache-Control' content='no-cache')
+        meta(http-equiv='Expires' content='0')
+        meta(name='keywords' content='')
+        meta(name='description' content='')
+        meta(name='og:title' content='')
+        meta(name='og:description' content='')
+        meta(name='og:image' content='')
+        meta(name='format-detection' content='telephone=no')
+
+        link(rel='stylesheet' href='assets/css/slick.css' media='all' type='text/css')
+        link(link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.8.2/css/all.css' integrity='sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay' crossorigin='anonymous')
+        link(rel='stylesheet' href='assets/css/slick-theme.css' media='all' type='text/css')
+        link(rel='stylesheet' href='assets/css/jquery.fullpage.min.css' media='all' type='text/css')
+        link(rel='stylesheet' href='assets/css/base.css' media='all' type='text/css')
+        link(rel='stylesheet' href='assets/css/animate.css' media='all' type='text/css')
+        link(rel='stylesheet' id='css_style' href='assets/css/style.css' media='all' type='text/css')
+    body
+        .loading
+            .spinner
+        header#header
+            .wrapper
+                .logoWrapper
+                    a(href='https://www.kgifund.com.tw/' target='_blank')
+                        img(src='assets/images/logo_w.png', alt='凱基投信')
+                nav
+                    ul#menu
+                        li(data-menuanchor='sec00' class='active')
+                            a(href='#secTop') 首頁
+                        li(data-menuanchor='sec01')
+                            a(href='#secA') 淡定投資學
+                        li(data-menuanchor='sec02')
+                            a(href='#secB') 目標到期價
+                        li(data-menuanchor='sec04')
+                            a(href='#secD') 圖解淡定術
+                        li(data-menuanchor='sec05')
+                            a(href='#secE') 系列產品
+                        li(data-menuanchor='sec11')
+                            a(href='#secK') 產品Q&amp;A
+                        li
+                            | JOIN
+                            a.icon.icon_fb(href='#')
+                                img(src='assets/images/icon_fb.svg', alt='facebook')
+                            a.icon.icon_line(href='#')
+                                img(src='assets/images/icon_line.svg', alt='line')
+
+        #btnGoTop
+            img(src="assets/images/icon_gotop.png", alt="")
+        #fullpage
+            section(class='section' id='secTop')
+                .wrapper
+                    h1.slogan
+                        span 凱基2025
+                            br
+                            .
+                                階梯到期新興市場債券基金
+                        br
+                        hr
+                        span 本基金有相當投資比重投資於
+                            br
+                            .
+                                非投資等級之高風險債券
+                a.scrollDown(href='#secA')
+                    span scroll
+                    i.fas.fa-chevron-down
+            section(class='section fp-auto-height' id='secA')
+                .secTopic
+                    img(src='assets/images/sec_a_topic.png', alt='淡定投資學')
+                .wrapper
+                    .sec01_mainBlock
+                        .imgWrapper
+                            img(src='assets/images/sec_a_pic_01.png', alt='')
+                        p 目標到期債投資策略具有可獲得
+                            span.highlighter 收益確定性高一點、投資期間確定，
+                            | 以及
+                            span.highlighter 市場波動較穩定
+                            | 的三大優勢，讓您面對市場不確定時，更能淡定規劃未來。
+                        .dashlineA.dash.showD
+                            svg(version="1.1" x="0px" y="0px" viewBox="0 0 350.4 276.8" style="enable-background:new 0 0 350.4 276.8;" xml:space="preserve")
+                                path.st0(d="M344,268H188c0,0-34,2-34-40s0-189,0-189s-1-33-32-33S3,6,3,6")
+                                path.st1(d="M344,268H188c0,0-34,2-34-40s0-189,0-189s-1-33-32-33S3,6,3,6")
+                        .dashlineB.dash.showD
+                            svg(version="1.1" x="0px" y="0px" viewBox="0 0 350.4 276.8" style="enable-background:new 0 0 350.4 276.8;" xml:space="preserve")
+                                path.st0(d="M60,260V54c0,0-2-30,41-30s220,0,220,0")
+                                path.st1(d="M60,260V54c0,0-2-30,41-30s220,0,220,0")
+                        .dashlineC.dash.showD
+                            svg(version="1.1" x="0px" y="0px" viewBox="0 0 350.4 276.8" style="enable-background:new 0 0 350.4 276.8;" xml:space="preserve")
+                                line.st0( x1="51" y1="146" x2="289" y2="146")
+                                line.st1( x1="51" y1="146" x2="289" y2="146")
+                    #secAslider
+                        .sec01_block.sec01_blockA.isAnimated.noAniM
+                            .imgWrapper
+                                img(src='assets/images/sec_a_pic_02.png', alt='')
+                            .title
+                                h3 收益較確定
+                                h4 主要來自債息收入
+                            .clear
+                            p.text 買進債券持有到期，期間若無發生信用違約事件，債券發行者依契約提供票面利息，因此獲得的收益確定性高一點。
+                        .sec01_block.sec01_blockB.isAnimated.noAniM
+                            .imgWrapper
+                                img(src='assets/images/sec_a_pic_03.png', alt='')
+                            .title
+                                h3 期間已固定
+                                h4 投資6年到期
+                            .clear
+                            p.text 買進債券持有至到期，由於投資前已確認投資時間，方便投資人財務規劃，資金效率較高。
+                        .sec01_block.sec01_blockC.isAnimated.noAniM
+                            .imgWrapper
+                                img(src='assets/images/sec_a_pic_04.png', alt='')
+                            .title
+                                h3 波動較穩定
+                                h4 買進持有至到期
+                            .clear
+                            p.text 買進債券持有至到期，期間因政策利率變化造成的價格波動，期間若無信用違約事件，不影響返還金額及期間利息收入，因此無須過度擔心市場波動。
+            section(class='section fp-auto-height' id='secB')
+                .secTopic
+                    img(src='assets/images/sec_b_topic.png', alt='了解目標到期債')
+                .wrapper
+                    
+                    #secBslider.showD
+                        .item
+                            h2.isAnimated 目標到期債基金，收益可確定性高一點
+                            p.isAnimated 目標到期債投資策略是以債券利息收入為主， 回歸債券投資本質利用債券到期還本特性，買進債券後持有至到期， 可獲得收益的確定性高一點。
+                            .canvasWrapper
+                                iframe#iframeA(src="assets/canvas/pig/pig.html", frameborder="0")
+                            //- #animation_container(style="width:1300px; height:628px")
+                            //-     canvas#canvas(width="1300" height="628" style="position: absolute; display: block;")
+                            //-     #dom_overlay_container(style="pointer-events:none; overflow:hidden; width:1300px; height:628px; position: absolute; left: 0px; top: 0px; display: block;")
+                            span.remark02
+                                | 註：以上圖示僅為示意圖，並不做為收益之保證。
+                        .item
+                            h2.isAnimated 三段階梯到期策略，提升資金運用彈性
+                            p.isAnimated 第四年開始階梯買回，提升資金運用彈性及降低投資風險
+                            .canvasWrapper
+                                iframe#iframeB(src="assets/canvas/chart/chart.html", frameborder="0")
+                            //- #animation_container2(style="width:1300px; height:628px")
+                            //-     canvas#canvas2(width="1300" height="628" style="position: absolute; display: block;")
+                            //-     #dom_overlay_container2(style="pointer-events:none; overflow:hidden; width:1300px; height:628px; position: absolute; left: 0px; top: 0px; display: block;")
+                            span.remark02
+                                | 註：以上圖示僅為示意圖，並不做為收益之保證。 *期間若無發生信用違約的事件，債券發行者依契約提供票面利息；若發生違約事件，可能侵蝕投資本金 *受益人授權經理公司於第四年定期買回日當日將受益人所持有受益權單位總數之10%辦理買回，及於第五年定期買回日當日將受益人所持有受益權單位總數之22.2%辦理買回。
+                    #secBslider2.showMT
+                        .item
+                            h2.isAnimated 目標到期債基金，收益可確定性高一點
+                            p.isAnimated 目標到期債投資策略是以債券利息收入為主， 回歸債券投資本質利用債券到期還本特性，買進債券後持有至到期， 可獲得收益的確定性高一點。
+                            .canvasWrapper
+                                iframe#iframeA2(src="assets/canvas/pig/pig_m.html", frameborder="0")
+                            span.remark02
+                                | 註：以上圖示僅為示意圖，並不做為收益之保證。
+                        .item
+                            h2.isAnimated 三段階梯到期策略，提升資金運用彈性
+                            p.isAnimated 第四年開始階梯買回，提升資金運用彈性及降低投資風險
+                            .canvasWrapper
+                                iframe#iframeB2(src="assets/canvas/chart/chart_m.html", frameborder="0")
+                            span.remark02
+                                | 註：以上圖示僅為示意圖，並不做為收益之保證。 *期間若無發生信用違約的事件，債券發行者依契約提供票面利息；若發生違約事件，可能侵蝕投資本金 *受益人授權經理公司於第四年定期買回日當日將受益人所持有受益權單位總數之10%辦理買回，及於第五年定期買回日當日將受益人所持有受益權單位總數之22.2%辦理買回。
+
+            section(class='section fp-auto-height' id='secC')
+                .wrapper
+                    .imgWrapper.isAnimated
+                        img(src='assets/images/sec_c_icon_01.png', alt='')
+                    h2.isAnimated 目標到期債基金 價格波動少一點
+                    p.isAnimated 雖然政策利率變會對債券價格產生波動， 在沒有發生信用違約情況下，對於買進持有債券至到期的投資人， 價格波動較不會影響到債券到期時返還金額及期間收益， 且隨著債券越接近到期，債券價格的波動也越低， 因此無需過度擔心市場波動。
+                    em.isAnimated 債券價格的表現示意圖
+                        br.showM
+                        span.textSmaller (係採債券以面額購入為例)
+                    .sec03_mainBlock(style='background-image: url("assets/images/sec_c_bg.png");')
+                        .dashline
+                        span.isAnimated 隨時間越接近到期，波動幅度也將降低
+                        .sec03_block.sec03_blockA.isAnimated
+                            img(src='assets/images/sec_c_pic_01.png', alt='')
+                        .sec03_block.sec03_blockB.isAnimated
+                            img(src='assets/images/sec_c_pic_02.png', alt='債券隨利率波動')
+                        .sec03_block.sec03_blockC.isAnimated
+                            img(src='assets/images/sec_c_pic_03.png', alt='到期後價格回到面額附近')
+                    span.remark02
+                        | 註：以上圖示僅為示意圖，並不做為收益之保證。
+            section(class='section fp-auto-height' id='secD')
+                .secTopic
+                    img(src='assets/images/sec_d_topic.png', alt='圖解淡定術')
+                .wrapper
+                    #secDslider
+                        a.item(href='#')
+                            .imgWrapper
+                                img(src='assets/images/sec_d_pic_01.png', alt='')
+                            p 面對中美貿易戰爭 投資組合該如何佈局?
+                        a.item(href='#')
+                            .imgWrapper
+                                img(src='assets/images/sec_d_pic_02.png', alt='')
+                            p 面對升息環境下 未來的投資布局策略
+                        a.item(href='#')
+                            .imgWrapper
+                                img(src='assets/images/sec_d_pic_03.png', alt='')
+                            p 目標到期債券基金淨值會不會波動啊?
+                        a.item(href='#')
+                            .imgWrapper
+                                img(src='assets/images/sec_d_pic_04.png', alt='')
+                            p 選擇目標到期債，投資變聰明!
+                        a.item(href='#')
+                            .imgWrapper
+                                img(src='assets/images/sec_d_pic_05.png', alt='')
+                            p 駛向輕鬆投資的列車 目標到期債券基金
+                        a.item(href='#')
+                            .imgWrapper
+                                img(src='assets/images/sec_d_pic_06.png', alt='')
+                            p 資金配置好工具 SWAP換匯交易
+            section(class='section fp-auto-height' id='secE')
+                .secTopic
+                    img(src='assets/images/sec_e_topic.png', alt='系列產品')
+                .wrapper.js-container
+                    .imgWrapper.isAnimated.showDT
+                        img(src='assets/images/sec_e_pic.png', alt='')
+                    .imgWrapper.isAnimated.showM
+                        img(src='assets/images/sec_e_pic_m.png', alt='')
+            section(class='section fp-auto-height' id='secF')
+                .secTopic02
+                    span.topRadius 雙強攜手合作
+                        br.showM
+                        | 為您資產嚴格把關
+                .wrapper
+                    .sec06_block.sec06_blockA
+                        img(src='assets/images/sec_f_pic_01.png', alt='')
+                    .sec06_block.sec06_blockB.isAnimated
+                        img(src='assets/images/sec_f_pic_02.png', alt='')
+                        p 凱基投信為開發金控子公司之一，共同基金管理規模達410億元。
+                            br
+                            .
+                                凱基投信自2018年跨入目標到期債券基金領域，目前管理規模達111億元；另外，債券ETF規模達234億元，值得信賴(1) 
+                    .sec06_block.sec06_blockC.isAnimated
+                        img(src='assets/images/sec_f_pic_03.png', alt='')
+                        p 鋒裕匯理資產管理公司(Amundi)為歐洲第一大與全球前十大資產管理業者(2)，在全球設有6個國際投資研究中心、10個當地投資研究中心，及全球37國家設有營業據點，管理規模超過1.475兆歐元(3)。
+                    span.remark
+                        | Source : (1) 資料截至2019/1/28；(2) 2018年6月出版之IPE《400大資產管理公司》，截至2017年12月之資產管理規模。(3) Amundi Asset Management，2018/9/30。
+            section(class='section fp-auto-height' id='secG')
+                .secTopic02
+                    span.topRadius 多層防禦機制
+                        br.showM
+                        | 嚴控投資組合風險
+                .wrapper
+                    #secGslider
+                        .column.boxWrapperA
+                            .boxTop
+                                img(src='assets/images/sec_g_icon_01.svg', alt='')
+                                | 投資等級債券為主*
+                            .boxBtm
+                                ul
+                                 li
+                                    img(class='isAnimated noAniM' src='assets/images/icon_check.svg', alt='')
+                                    | 高收益債投資比重不超過40%
+                                 li
+                                    img(class='isAnimated noAniM' src='assets/images/icon_check.svg', alt='')
+                                    | 信評Ｂ等級之債券不超過20%
+                                 li
+                                    img(class='isAnimated noAniM' src='assets/images/icon_check.svg', alt='')
+                                    | 不主動投資CCC+(含)等級以下債券
+                        .column.boxWrapperB
+                            .boxTop
+                                 img(src='assets/images/sec_g_icon_02.svg', alt='')
+                                 | 分散投資組合風險*
+                            .boxBtm
+                                ul
+                                 li
+                                    img(class='isAnimated noAniM' src='assets/images/icon_check.svg', alt='')
+                                    | 投資標的數為50檔(含)以上
+                                 li
+                                    img(class='isAnimated noAniM' src='assets/images/icon_check.svg', alt='')
+                                    | 單一投資級債券比重不超過5%
+                                 li
+                                    img(class='isAnimated noAniM' src='assets/images/icon_check.svg', alt='')
+                                    | 單一高收益債券比重不超過2%
+                        .column.boxWrapperC
+                            .boxTop
+                                 img(src='assets/images/sec_g_icon_03.svg', alt='')
+                                 | 嚴謹選債與監控*
+                            .boxBtm
+                                ul
+                                 li
+                                    img(class='isAnimated noAniM' src='assets/images/icon_check.svg', alt='')
+                                    | Amundi具有獨立信用評估分析報告**
+                                 li
+                                    img(class='isAnimated noAniM' src='assets/images/icon_check.svg', alt='')
+                                    | 結合前中後臺，嚴格執行監控
+                    span.remark02
+                        | *投資組合信用評級部位比例，以初期投資時為計算基準，但日後可能因市場價格變動或投資標的遭調降信評而變動。<br>**Amundi內部擁有獨立的發行人分析評估報告。信用分析報告包含了遠期評級/評級展望/信心水平；同時，針對每個發行人相對應於同類族群的違約分數和相對價值進行評估。
+            section(class='section fp-auto-height' id='secH')
+                .secTopic02
+                    span.topRadius 美元計價債券
+                        br.showM
+                        | 近全額避險降低匯率風險
+                .wrapper
+                    .barWrapper.barA
+                        .barHead
+                            h6 美元計價級別
+                            span (累積級別)
+                        .barBody.isAnimated
+                            p 基金投資以美元計價債為主，無須避險
+                            .iconDollar
+                                img(src='assets/images/sec_h_icon_01.png', alt='')
+                    .barWrapper.barB
+                        .barHead
+                            h6 新臺幣計價級別
+                            span (累積級別)
+                        .barBody.isAnimated
+                            p 透過近全額避險，降低新臺幣匯率變化影響
+                            .iconDollar
+                                img(src='assets/images/sec_h_icon_02.png', alt='')
+                    .barWrapper.barC
+                        .barHead
+                            h6 人民幣計價級別
+                            span (累積級別)
+                        .barBody.isAnimated
+                            p 透過近全額避險，降低人民幣匯率變化影響，且有機會享有匯兌收益
+                            .iconDollar
+                                img(src='assets/images/sec_h_icon_03.png', alt='')
+            section(class='section fp-auto-height' id='secI')
+                .secTopic02
+                    span.topRadius 美元走勢趨緩
+                        br.showM
+                        | 新興市場企業債風險降低
+                .wrapper
+                    p
+                         img(src='assets/images/sec_i_icon_01.png', alt='')
+                         | 從新興市場企業債務水準來看，過去美元走強並未損及新興市場企業償還債務能力。隨著Fed升息預期降低，美元走勢趨緩下，對新興市場貨幣的衝擊將大幅降低，有助於新興市場違約率持續維持於低檔。
+                    h2 新興市場企業債債務水準持續下降
+                    #chartWrapperA
+                        #contline
+                            #chartline
+                                svg(version='1.1', viewBox='0 0 836 326', style='enable-background:new 0 0 836 326;', xml:space='preserve')
+                                    path#Path-1.path(sketch:type='MSShapeGroup', d='M8.5,290.5c0,0,15,23,24,26s19,3,19,3s15-13,21-19s22-34,32-65s28-60,28-60s1-9,10-1s14,12,14,12s11-22,23-22\
+                                    c0,0,12,52,14,57s32,27,43,29s16-5,36-1s24,10,48,6c0,0,18-15,26-23s18-28,41-32s16,3,26-10s5-14,18-19s61-13,98-33c0,0,21-8,40-2\
+                                    c0,0,4-2,13-20s83-88,102-97c0,0,10-10,17-4s27,28,51,34s13,16,43,23c0,0,6,0,11,13s13,28,13,28')
+                                    polygon.downarrow(points='770,14.6 780.5,5 820,44.5 827.9,37.4 828.8,62 804.2,62 811.2,55 ')
+                        ul#numbers
+                            li
+                                span 2.5
+                            li
+                                span 2.0
+                            li
+                                span 1.5
+                            li
+                                span 1.0
+                            li
+                                span 0.5
+                        ul#bars
+                            li
+                                span 2008
+                            li
+                                span 2009
+                            li
+                                span 2010
+                            li
+                                span 2011
+                            li
+                                span 2012
+                            li
+                                span 2013
+                            li
+                                span 2014
+                            li
+                                span 2015
+                            li
+                                span 2016
+                            li
+                                span 2017
+                            li
+                                span 2018
+                            li.chartBg
+                                div
+                                div
+                                div
+                                div
+                                div
+                                div 全球新興市場債務水準(x)
+                                div
+                                div
+                    span.remark02 Source：ICE Data Indices LLC, BAML, 2018/9/30。
+                    p
+                        img(src='assets/images/sec_i_icon_01.png', alt='')
+                        | 新興市場美元計價企業債與主權債表現相當，但卻擁有相對較低的波動度。
+                    h2 新興市場企業債年化波動度相對較低
+                    #chartWrapperB
+                        ul#numbers
+                            li
+                                span 7%
+                            li
+                                span 6%
+                            li
+                                span 5%
+                            li
+                                span 4%
+                            li
+                                span 3%
+                            li
+                                span 2%
+                            li
+                                span 1%
+                            li
+                                span 0%
+                        ul#bars
+                            li
+                                .bar(data-percentage='5.76')
+                                span 過去十年
+                            li
+                                .bar(data-percentage='5.64')
+                            li
+                                .bar(data-percentage='4.90')
+                                span 過去五年
+                            li
+                                .bar(data-percentage='3.88')
+                            li
+                                .bar(data-percentage='5.05')
+                                span 過去三年
+                            li
+                                .bar(data-percentage='3.33')
+                            li
+                                .bar(data-percentage='4.85')
+                                span 過去一年
+                            li
+                                .bar(data-percentage='2.46')
+                            li.chartBg
+                                div
+                                    .colorBox.colorA
+                                    em 新興市場主權債
+                                    .colorBox.colorB
+                                    em 新興市場企業債
+                                div
+                                div
+                                div
+                                div
+                                div
+                                div
+                                div
+                    span.remark02
+                        | Source:Bloomberg，2018/12/31，債券採取ICE BofAML之美元計價新興市場主權債指數、美元計價之新興市場企業債指數及全球高收益債券指數。<br>以上僅為過去歷史數據表現，不代表本基金未來之投資獲利保證。
+            section(class='section fp-auto-height' id='secJ')
+                .container
+                    .secTopic03
+                        img(src='assets/images/sec_j_icon_01.png', alt='') 
+                        | 基金小檔案
+                    .wrapper
+                        .showDT
+                            .process01.isAnimated
+                                img(src='assets/images/sec_j_pic_01.png', alt='')
+                            .process02.isAnimated
+                                img(src='assets/images/sec_j_pic_02.png', alt='')
+                            .process03.isAnimated
+                                img(src='assets/images/sec_j_pic_03.png', alt='')
+                            .process04.isAnimated
+                                img(src='assets/images/sec_j_pic_04.png', alt='')
+                            .process05.isAnimated
+                                img(src='assets/images/sec_j_pic_05.png', alt='')
+                            .process06.isAnimated
+                                img(src='assets/images/sec_j_pic_06.png', alt='')
+                            .process07.isAnimated
+                                img(src='assets/images/sec_j_pic_07.png', alt='')
+                            .process08.isAnimated
+                                img(src='assets/images/sec_j_pic_08.png', alt='')
+                            .process09.isAnimated
+                                img(src='assets/images/sec_j_pic_09.png', alt='')
+                            .process10.isAnimated
+                                img(src='assets/images/sec_j_pic_10.png', alt='')
+                            .process11.isAnimated
+                                img(src='assets/images/sec_j_pic_11.png', alt='')
+                        .showM
+                            .process01.isAnimated
+                                img(src='assets/images/sec_j_pic_01_m.png', alt='')
+                            .process02.isAnimated
+                                img(src='assets/images/sec_j_pic_02_m.png', alt='')
+                            .process03.isAnimated
+                                img(src='assets/images/sec_j_pic_03_m.png', alt='')
+                            .process04.isAnimated
+                                img(src='assets/images/sec_j_pic_04_m.png', alt='')
+                            .process05.isAnimated
+                                img(src='assets/images/sec_j_pic_05_m.png', alt='')
+                            .process06.isAnimated
+                                img(src='assets/images/sec_j_pic_06_m.png', alt='')
+                            .process07.isAnimated
+                                img(src='assets/images/sec_j_pic_07_m.png', alt='')
+                            .process08.isAnimated
+                                img(src='assets/images/sec_j_pic_08_m.png', alt='')
+                            .process09.isAnimated
+                                img(src='assets/images/sec_j_pic_09_m.png', alt='')
+                            .process10.isAnimated
+                                img(src='assets/images/sec_j_pic_10_m.png', alt='')
+                            .process11.isAnimated
+                                img(src='assets/images/sec_j_pic_11_m.png', alt='')
+                    .wrapper
+                        .btnWrapper
+                            a.btnDownload(href='' download)
+                                img(src="assets/images/sec_j_icon_03.png", alt="")
+                                | 公開說明書下載
+                            a.btnDownload(href='' download)
+                                img(src="assets/images/sec_j_icon_03.png", alt="")
+                                | 簡式公開說明書下載
+                        .finishedBlock
+                            .stamp.isAnimated
+                                img(src="assets/images/sec_j_icon_02.png", alt="")
+                            p 凱基2025到期新興市場債券基金
+                            p 本基金有相當投資比重投資於非投資等級之高風險債券
+                        .finishedBlock
+                            .stamp.isAnimated
+                                img(src="assets/images/sec_j_icon_02.png", alt="")
+                            p 凱基2024到期新興市場債券基金
+                            p 本基金有相當投資比重投資於非投資等級之高風險債券
+                        .finishedBlock
+                            .stamp.isAnimated
+                                img(src="assets/images/sec_j_icon_02.png", alt="")
+                            p 凱基6年到期新興市場債券基金
+                            p 本基金有相當投資比重投資於非投資等級之高風險債券
+            section(class='section fp-auto-height' id='secK')
+                .secTopic
+                    img(src='assets/images/sec_k_topic.png', alt='產品QA')
+                .wrapper
+                    ul.qaBlock
+                        li.bubbleWrapper.customer
+                            .photoIcon
+                                img(src='assets/images/sec_k_icon_01.png', alt='')
+                            .talkBubble
+                                p.talkTxt 目標到期債券基金的淨值都不會波動?
+                            .iconCollapse +
+                        li.bubbleWrapper.service
+                            .talkBubble
+                                p.talkTxt 目標到期債券基金與一般的債券基金一樣，淨值都會因為所持有的債券價格變化而隨之波動，但因為目標到期債券基金是買進與基金到期日相近的債券，因此隨著所持有的債券逐步接近到期日，淨值波動將隨著存續期間的縮減而逐漸降低。
+                            .photoIcon
+                                img(src='assets/images/sec_k_icon_03.png', alt='')
+                    ul.qaBlock
+                        li.bubbleWrapper.customer
+                            .photoIcon
+                                img(src='assets/images/sec_k_icon_02.png', alt='')
+                            .talkBubble
+                                p.talkTxt 目標到期債券基金中途不能買回?若中途買回會有額外的費用?
+                            .iconCollapse +
+                        li.bubbleWrapper.service
+                            .talkBubble
+                                p.talkTxt 目標到期債券基金可以在中途提出買回，除了於基金成立日之次一營業日（含當日）起至第六個營業日（含當日）期間提出買回者，不收取買回費用外，其餘期間提出者需負擔2%的買回費用。主要是目標到期債券基金於成立後，幾乎會將所有資金進行投資，以期在到期日時能提供投資人預期的目標收益率，因此一旦途中有投資人提出買回，為了支付買回款項，基金將被迫賣出所投資的債券標的，而既有留存的投資人可能被迫承擔因為他人買回所衍生的交易成本，或是因為賣出債券標的可能產生的資本利損，因此為求公平起見，相關成本應由提出買回的投資人承擔，而所收取的費用也將全數納入基金淨資產當中。
+                            .photoIcon
+                                img(src='assets/images/sec_k_icon_03.png', alt='')
+                    ul.qaBlock
+                        li.bubbleWrapper.customer
+                            .photoIcon
+                                img(src='assets/images/sec_k_icon_02.png', alt='')
+                            .talkBubble
+                                p.talkTxt 市場若持續升息會影響到目標到期債券的投資?
+                            .iconCollapse +
+                        li.bubbleWrapper.service
+                            .talkBubble
+                                p.talkTxt 市場利率波動為影響債券價格的重要關鍵，因此利率變化將反應在目標到期債券基金的基金淨值中，但投資期間淨值的變化只會對提前買回的投資人造成影響，因此若投資人選擇於中途買回，須承擔淨值波動所造成的資本利得或利損。但若是投資人持有至到期，債券將會發揮到期還本的特質，隨著越接近到期日，債券價格波動也會越低，債券價格會逐漸回到票面金額，因此在基金進場布局完成後，利率的變化不是影響投資組合達到預期目標收益的主要因素。
+                            .photoIcon
+                                img(src='assets/images/sec_k_icon_03.png', alt='')
+                    ul.qaBlock
+                        li.bubbleWrapper.customer
+                            .photoIcon
+                                img(src='assets/images/sec_k_icon_02.png', alt='')
+                            .talkBubble
+                                p.talkTxt 債券的佈局，買入後還會進行調整?
+                            .iconCollapse +
+                        li.bubbleWrapper.service
+                            .talkBubble
+                                p.talkTxt 目標到期債券基金在期初佈局時，會選定到期日與基金到期日相近的一籃子優質的債券標的進行買入，然後持有至接近到期，以領取穩定的票息，並避免不必要的交易成本發生，因此正常情況下，經理人在買入標的後不會發生頻繁調整情況，除非有債券到期再擇優布局、債券利息再投入，以及中途有投資人選擇買回，或是原本選定的投資標的有信用違約風險發生時，將會因應狀況進行投資組合的調整。
+                            .photoIcon
+                                img(src='assets/images/sec_k_icon_03.png', alt='')
+                    ul.qaBlock
+                        li.bubbleWrapper.customer
+                            .photoIcon
+                                img(src='assets/images/sec_k_icon_02.png', alt='')
+                            .talkBubble
+                                p.talkTxt 投資目標到期債券基金，預估收益率何時可以較確定?
+                            .iconCollapse +
+                        li.bubbleWrapper.service
+                            .talkBubble
+                                p.talkTxt 本產品為投資商品，並非像定存一樣接近無風險。目標到期債券基金投資組合平均殖利率須於基金成立進場佈局完成之後才能有較為明確的預估。但該殖利率亦非最後到期確定給付的收益率，因為期間投資標的調整或是所收取的債息收入再投資所獲得的收益，都可能影響到到期時給付的收益率。
+                            .photoIcon
+                                img(src='assets/images/sec_k_icon_03.png', alt='')
+                    ul.qaBlock
+                        li.bubbleWrapper.customer
+                            .photoIcon
+                                img(src='assets/images/sec_k_icon_02.png', alt='')
+                            .talkBubble
+                                p.talkTxt 目標到期債券基金，是否有稅負問題
+                            .iconCollapse +
+                        li.bubbleWrapper.service
+                            .talkBubble
+                                p.talkTxt 現行法規規定，境內基金之資本利得無需課稅，且因為這類基金產品大都僅提供累積級別(債息再投資)，無課徵海外所得稅問題，因此投資於無配息型的目標到期債券基金無稅負問題。
+                            .photoIcon
+                                img(src='assets/images/sec_k_icon_03.png', alt='')
+            section(class='section fp-auto-height' id='secL')
+                .wrapper
+                    p 凱基證券投資信託股份有限公司   104台北市中山區明水路698號  www.kgifund.com.tw    服務專線：( 02 ) 2181 5678
+                    p 【凱基投信獨立經營管理】本公司經理之基金均經金管會核准或同意生效，惟不表示絕無風險。基金經理公司以往之經理績效不保證基金之最低投資收益；基金經理公司除盡善良管理人之注意義務外，不負責基金之盈虧，亦不保證最低之收益，投資人申購前應詳閱基金公開說明書。有關基金應負擔之費用（含分銷費用）已揭露於基金公開說明書及投資人須知，本公司及銷售機構均備有基金公開說明書（或中譯本）或投資人須知，投資人亦可至公開資訊觀測站或境外基金資訊觀測站中查詢。基金配息率不代表基金報酬率，且過去配息率不代表未來配息率；基金淨值可能因市場因素而上下波動。基金的配息可能由基金的收益或本金中支付。任何涉及由本金支出的部份，可能導致原始投資金額減損。基金由本金支付配息之相關資料，投資人可至本公司網站(www.kgifund.com.tw)查詢。基金配息前未先扣除應負擔之相關費用。基金年化配息率為估算值，計算公式為「每單位配息金額÷除息日前一日之淨值×一年配息次數× 100％」。各期間報酬率(含息)是假設收益分配均滾入再投資於本基金之期間累積報酬率。
+                        br
+                        
+                        span.textOrange
+                            | 由於高收益債券之信用評等未達投資等級或未經信用評等由於高收益債券之信用評等未達投資等級或未經信用評等，且對利率變動的敏感度甚高，故高收益債券基金可能會因利率上升、市場流動性下降，或債券發行機構違約不支付本金、利息或破產而蒙受虧損。高收益債券基金不適合無法承擔相關風險之投資人，投資人投資以高收益債券為訴求之基金不宜占其投資組合過高之比重。
+                        br
+                        | 基金涉及投資新興市場部份，因其波動性與風險程度可能較高，且其政治與經濟情勢穩定度可能低於已開發國家，也可能使資產價值受不同程度之影響。依金管會規定，投信基金直接投資大陸地區有價證券僅限掛牌上市有價證券，境外基金投資大陸地區有價證券則不得超過該基金資產淨值之10%，投資人須留意中國市場特定政治、經濟與市場等投資風險。
+                        span.textOrange 部份基金或所投資之債券子基金，可能投資美國Rule 144A 債券（境內基金投資比例最高可達基金總資產 30%），該等債券屬私募性質，較可能發生流動性不足，財務訊息揭露不完整或因價格不透明導致波動性較大之風險，投資人須留意相關風險。
+                        br
+                        | 本文提及之經濟走勢預測不必然代表基金之績效，基金投資風險請詳閱基金公開說明書。定時定額投資人因不同時間進場，將有不同之投資績效，過去之績效亦不代表未來績效之保證。以過去績效進行模擬投資組合之報酬率時，僅為歷史資料模擬投資組合之結果，不代表該投資組合之實際報酬率及未來績效保證，不同時間進行模擬操作，結果可能不同。目標到期債券基金非為保本型或保證型投資策略，非定存之替代品，亦不保證收益分配（如有）之金額與本金之全額返還。投資人若於本基金到期日前申請買回之金額，需負擔提前買回費用，此費用將歸入基金資產。投資人應特別留意，經理公司得於募集期間視目標到期基金達首次最低淨發行總面額之情形而決定是否再繼續受理投資人申購。基金成立當日或自成立日起一段期間後即不再接受益權單位之申購，閉鎖期後即開放每日可買回。目標到期基金不建議投資人從事短線交易並鼓勵投資人持有至基金到期。基金風險報酬等級依投信投顧公會分類標準，由低至高分為RR1~RR5等五個等級。此分類係基於一般市況反映市場價格波動風險，無法涵蓋所有風險，不宜作為投資唯一依據，投資人仍應注意所投資基金之個別風險，並考量個人風險承擔能力、資金可運用期間等，始為投資判斷。基金之風險可能含有產業景氣循環變動、流動性不足、外匯管制、投資地區政經社會變動或其他投資風險。本公司系列基金包含新台幣及外幣計價級別，如投資人以非基金計價幣別之貨幣換匯後申購基金，須自行承擔匯率變動之風險。由於中國大陸地區實施外匯管制，基金可以透過經理公司申請獲准之合格境外投資機構者(QFII)之額度直接投資中國大陸地區當地證券市場，QFII額度須先兌匯為美元匯入中國大陸地區後再兌換為人民幣，以投資當地人民幣計價之投資商品，使得結轉匯成本因此提高。人民幣匯率波動可能對該類型每受益權單位淨資產價值造成直接或間接之影響，故申購該類型受益權單位之受益人需承擔人民幣匯率變動之風險。投資人應特別留意，基金因計價幣別不同，投資人申購之受益權單位數為該申購幣別金額除以面額計算，於召開受益人會議時，各計價幣別受益權單位每受益權單位有一表決權，不因投資人取得各級別每受益權單位之成本不同而異。本基金無受存款保險、保險安定基金或其他相關保障機制之保障，投資人須自負盈虧。基金投資可能產生的最大損失為全部本金。本資料係整理分析各方面資訊之結果，純屬參考性質，本公司不作任何保證或承諾，請勿將本內容視為對個別投資人做基金買賣或其他任何投資之建議或要約。本公司已力求其中資訊之正確與完整，惟不保證本報告絕對正確無誤。未經授權不得複製、修改或散發引用。
+
+        script(type='text/javascript' src='assets/js/scripts.js')
+        script(src="https://code.createjs.com/createjs-2015.11.26.min.js")
+        script(type='text/javascript' src='assets/js/allset.js')

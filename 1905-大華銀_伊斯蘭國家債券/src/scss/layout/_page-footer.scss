@@ -1,0 +1,86 @@
+/*==================================================*\
+        Page Footer
+\*==================================================*/
+
+.page-footer {
+  padding: size-rem(35) 0;
+  background-color: $c-primary;
+  @include mq(tablet) {
+    padding: size-rem(55) 0;
+  }
+
+  p {
+    color: $c-white;
+    font-size: 12px;
+    line-height: 1.83;
+
+    strong {
+      color: $c-highlight;
+      font-weight: normal;
+    }
+  }
+
+  .info {
+    margin-bottom: size-rem(30);
+    @include mq(tablet) {
+      margin-bottom: size-rem(20);
+    }
+
+    @include mq(tablet-wide) {
+      @include set-flex(center, flex-start);
+    }
+
+    p {
+      font-size: 15px;
+      @include mq(tablet) {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.Custody-bank {
+  // margin-bottom: size-rem(10);
+  margin-top: 1px;
+  @include set-flex(center, flex-start);
+  @include mq(tablet-wide) {
+    margin-right: 30px;
+    margin-bottom: 0;
+    position: relative;
+
+    &:before {
+      @include pseudo();
+      width: 1px;
+      height: 24px;
+      margin: auto;
+      background-color: $c-white;
+      top: 0; bottom: 0;
+      right: -15px;
+    }
+  }
+
+  img {
+    width: 128px;
+    // @include mq(tablet) {
+    //   width: 163px;
+    // }
+  }
+}
+
+.other-info {
+  @include mq(tablet) {
+    p {
+      width: 40%;
+      display: inline-block;
+    }
+  }
+  @include mq(tablet-wide) {
+    p {
+      width: auto;
+
+      &:not(:last-of-type) {
+        margin-right: 20px;
+      }
+    }
+  }
+}

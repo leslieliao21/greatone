@@ -1,0 +1,32 @@
+/*==================================================*\
+        Page Footer
+\*==================================================*/
+
+.page-footer {
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  bottom: 0; left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  
+  p {
+    width: 100%;
+    padding: 10px 5px;
+    display: inline-block;
+    color: $c-white;
+    font-size: 13px;
+    line-height: 1.4em;
+    text-align: center;
+    white-space: normal;
+    word-break: break-word;
+    // @include mq(phablet) {
+    //   font-size: 14px;
+    // }
+    // @include mq(tablet) {
+    //   font-size: 16px;
+    // }
+    // @include mq(tablet-wide) {
+    //   font-size: 14px;
+    // }
+  }
+}
