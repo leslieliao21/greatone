@@ -1,0 +1,303 @@
+%notselect{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+@mixin clearfix{
+    // *zoom:1;
+    &:after{
+        clear:both;
+        content:'';
+        display:table;
+    }
+}
+@mixin centering($w, $h){
+    position: fixed;
+    width: $w;
+    height: $h;
+    top:50%;
+    left:50%;
+    margin-top: - $h /2;
+    margin-left: -$w /2;
+}
+
+//basic setting
+@mixin wh($w, $h) {
+    width: $w;
+    height: $h;
+}
+@mixin square($s){
+    width: $s;
+    height: $s;
+    line-height: $s;
+}
+@mixin wh-auto-m($w, $h) {
+    width: $w;
+    height: $h;
+    margin: 0 auto;
+    position: relative;
+}
+@mixin tl($t, $l) {
+    top: $t;
+    left: $l;
+    position: absolute;
+}
+@mixin wh--a($w, $h) {
+    width: $w;
+    height: $h;
+    display: block;
+}
+@mixin allcolor($cc, $bc) {
+    color: $cc;
+    background-color: $bc;
+}
+
+//images
+@mixin maru-pic($wh,$r){
+  @include wh($wh,$wh);
+  @include radius($r);
+  overflow:hidden;
+  img {
+      width: 100%;
+      height: auto;
+  }
+}
+@mixin img-mid{
+  overflow: hidden;
+  img{
+      width: 100%;
+      height: auto;
+      top:50%;
+      left: 50%;
+      position: relative; 
+      transform: translate(-50%, -50%);
+    }
+}
+@mixin pic_16-9{
+    height: 0;
+    padding-bottom: 56.25%;
+    box-sizing:border-box;
+    overflow: hidden;
+    position:relative;
+    img{
+      position:absolute;
+      top:0;
+      bottom:0;
+      right:0;
+      left:0;
+      max-width:100%;
+      margin:auto;
+    }
+
+}
+@mixin pic_90-54{
+    height: 0;
+    padding-bottom: 60%;
+    box-sizing:border-box;
+    overflow: hidden;
+    position:relative;
+    img{
+      position:absolute;
+      top:0;
+      bottom:0;
+      right:0;
+      left:0;
+      max-width:100%;
+      margin:auto;
+    }
+
+}
+@mixin pic_4-3{
+    height: 0;
+    padding-bottom: 75%;
+    box-sizing:border-box;
+    overflow: hidden;
+    position:relative;
+    img{
+      position:absolute;
+      top:0;
+      bottom:0;
+      right:0;
+      left:0;
+      max-width:100%;
+      margin:auto;
+    }
+
+}
+//font, text setting
+@mixin line-clamp($n){
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $n;
+  overflow: hidden;
+}
+@mixin fontstyle($fz, $c, $ta){
+    font-size: $fz;
+    color:map-get($colors, $c);
+    text-align: $ta;
+}
+
+@mixin textoverflow($fsize, $lheight, $lshow){
+    $font-size: $fsize;
+    $line-height: $lheight;
+    $lines-to-show: $lshow;
+    display: block; /* Fallback for non-webkit */
+    float: left;
+    display: -webkit-box;
+    height: $font-size*$line-height*$lines-to-show; /* Fallback for non-webkit */
+    margin: 0 auto;
+    font-size: $font-size;
+    line-height: $line-height;
+    -webkit-line-clamp: $lines-to-show;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+//border
+@mixin radius($s){
+     -moz-border-radius: $s;
+     -webkit-border-radius: $s;
+     border-radius: $s;
+}
+@mixin radiusfix{
+     -moz-border-radius: 4px;
+     -webkit-border-radius: 4px;
+     border-radius: 4px;
+}
+@mixin pd-box($tb, $lr){
+    padding: $tb $lr;
+    box-sizing:border-box;
+}
+
+//column
+@mixin cc($cc){
+    -webkit-column-count: $cc;
+    -moz-column-count: $cc;
+    column-count: $cc;
+}
+@mixin cg($cg){
+    -webkit-column-gap: $cg;
+    -moz-column-gap: $cg;
+    column-gap: $cg;
+}
+
+//filter
+@mixin blur($blur){
+    filter: blur($blur);
+    -webkit-filter: blur($blur);
+    -webkit-filter: blur($blur);
+    -o-filter     : blur($blur);
+}
+@mixin opacity($opacity){
+	opacity: $opacity;
+	-moz-opacity: $opacity;
+	filter: alpha(opacity=$opacity*100);
+}
+@mixin brightness($brightness){
+  -webkit-filter: brightness($brightness);
+  -moz-filter: brightness($brightness);
+  -o-filter: brightness($brightness);
+  -ms-filter: brightness($brightness);
+  filter: brightness($brightness);
+}
+
+
+//animation transition
+@mixin transition($duration) {
+    -webkit-transition: all $duration;
+    -moz-transition: all $duration;
+    -ms-transition: all $duration;
+    transition: all $duration;
+}
+@mixin animate($name, $duration, $delay, $times, $ease){
+    animation: $name $time $duration $times $ease;
+    -webkit-animation:  $name $duration $delay $times $ease;
+}
+@mixin keyframe ($name) {
+    @-webkit-keyframes $name {
+        @content;
+    }
+    @keyframes $name {
+        @content;
+    }
+}
+
+//transform
+@mixin transform($trantb, $tranlr) {
+    -webkit-transform: translate($trantb, $tranlr);
+    -moz-transform: translate($trantb, $tranlr);
+    -ms-transform: translate($trantb, $tranlr);
+    transform: translate($trantb, $tranlr);
+}
+@mixin transform-origin ( $value ) {
+  -webkit-transform-origin: $value;
+     -moz-transform-origin: $value;
+       -o-transform-origin: $value;
+          transform-origin: $value;
+}
+@mixin rotate($deg) { 
+    @include transform(rotate(#{$deg}deg));
+}
+@mixin scale($scale) {
+    @include transform(scale($scale));
+}
+@mixin translate ($x, $y) {
+    @include transform(translate($x, $y));
+}
+@mixin skew ($x, $y) {
+    @include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+//linear-gradient
+@mixin linear-gradient($from, $to){
+	background: $to;
+	background-image: linear-gradient($from, $to);/* W3C */
+	background-image: -webkit-linear-gradient($from, $to);/* Chrome10+,Safari5.1+ */
+	background-image: -moz-linear-gradirnt($from,$to);/* FF3.6+ */
+	background-image: -ms-linear-gradient($from, $to);/* IE10+ */
+	background-image: -o-linear-gradient($from, $to); /* Opera 11.10+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, $from), color-stop(1, $to));/* Chrome,Safari4+ */	
+}
+
+//flex
+@mixin flex{
+	display:flex;
+	display:-webkit-flex;
+	display:-moz-flex;
+	justify-content:space-between;
+	-webkit-justify-content:space-between;
+	align-items:center;
+	-weblit-align-items:center;
+}
+
+//rwd
+@mixin breakpoint($point){
+    @if $point == hd{
+        @media only screen and (max-width: 1280px) { 
+          @content ;
+        }
+    }
+    @if $point == desktop{
+        @media only screen and (max-width: 1024px) { 
+          @content ;
+        }
+    }
+    @else if $point == tablet{
+        @media only screen and (max-width: 768px) { 
+          @content ;
+        }
+    }
+    @else if $point == mobile{
+        @media only screen and (max-width: 414px) { 
+          @content ;
+        }
+    }
+    @else if $point == iphone_s{
+        @media only screen and (max-width: 320px) { 
+          @content ;
+        }
+    }
+}
+

@@ -1,0 +1,30 @@
+$fontDefault: Arial, 'Microsoft JhengHei';
+$colors:(
+	silver:#bdc3c7,
+	grayA:#545454,
+	grayB:#666,
+	grayC:#9b9b9b,
+	grayD:#ddd,
+	grayE:#f8f8f8,
+	grayF:#929292,
+	grayG:#4a4a4a,
+	grayH:#b8b8b8,
+	grayI:#7c7c7c,
+	grayLog:#2e2e2e,
+	white:#fff,
+	black:#000,
+	navb:#d8d8d8,
+	ored:#e74c3c,
+	red:#ff3244,
+	indexpink:#ff3244,
+	shareblue:#00d2cd,
+	goodsyellow:#f7b500,
+	makerpurple:#5a11bd,
+	pointblue:#2350dc
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+

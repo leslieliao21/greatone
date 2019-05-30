@@ -1,0 +1,193 @@
+@charset "utf-8";
+
+/* RESET
+--------------------------------------------------------------------------------------*/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,rem,font,img,ins,kbd,q,s,samp,small,strike,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td, figure{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outline:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}address{ display: inline; font-style: normal;}
+
+
+/* 共用設定 */
+img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+a, a:visited{
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: #aa9369;
+    text-decoration: none;
+}
+a:hover{ color: #cbad79;}
+
+.clear:before, .clear:after {content:""; display:table; } 
+.clear:after {clear:both; } 
+.c{clear: both;}
+
+/* table */
+.table{
+    width: 100%;
+    display: table;
+}
+.tr{
+    display: table-row;
+}
+.th, .td{
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+}
+.table.pc{ display: table;}
+.table.mobile{ display: none;}
+
+/* pc & mobile */
+.pc{ display: block;}
+.mobile{ display: none;}
+
+/* inline-block */
+.inblock{ font-size: 0;}
+.inblock li, 
+.inblock div, 
+.inblock dt, 
+.inblock dd,
+.inblock h2,
+.inblock p{ 
+    display: inline-block;
+    vertical-align: middle;
+}
+.inblock .block{ display: block;}
+
+/* 區塊設定 */
+.float_l{ float: left;}
+.float_r{ float: right;}
+
+/* 文字顏色設定 */
+.colorP, .colorP a{ color: #d6007f;}
+
+/* 文字設定 */
+.lh1{ line-height: 1;}
+.lh2{ line-height: 1.2;}
+.lh3{ line-height: 1.5;}
+.lh4{ line-height: 1.7;}
+.lh5{ line-height: 2;}
+
+.bold{ font-weight: bold;}
+.marginC{ text-align: center;}
+.alignC{ text-align: center;}
+.alignR{ text-align: right;}
+.alignL{ text-align: left;}
+
+/* icon設定 */
+@font-face{
+    font-family:'FontAwesome';
+    src:url('../fonts/fontawesome-webfont.eot?v=4.2.0');
+    src:url('../fonts/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'),
+        url('../fonts/fontawesome-webfont.woff?v=4.2.0') format('woff'),
+        url('../fonts/fontawesome-webfont.ttf?v=4.2.0') format('truetype'),
+        url('../fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal
+}
+
+i{ font-style: normal;}
+a:hover i:before{ color: inherit;}
+.icon:before{
+    font-family: "FontAwesome";
+    color: inherit;
+    font-size: inherit;
+    speak: none;
+}
+.icon_chrome:before{
+    content: "\f268";
+}
+.icon_firefox:before{
+    content: "\f269";
+}
+.icon_safari:before{
+    content: "\f267";
+}
+.icon_opera:before{
+    content: "\f26a";
+}
+.icon_ie:before{
+    content: "\f26b";
+}
+.icon_exclamation:before{
+    content: "\f12a";
+}
+
+/* basestyle 
+----------------------------------------------------------------------------*/
+body,html{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    font-family: Arial, "微軟正黑體","蘋果儷黑體","新細明體", Verdana, Helvetica, sans-serif;
+    color: #fff;
+    font-size: 50px;
+    position: relative;
+}
+body{
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+.wrapper{
+    width: 100%;
+    min-height: 100%;
+    background: #000;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+.container{
+    width: 94.79166666666667%;
+    max-width: 980px;
+    margin: auto;
+    position: relative;
+}
+.center{ position: relative;}
+
+.fs6{ font-size: 18px;}
+.fs13{ font-size: 35px;}
+.pt{ padding-top: 13%;}
+.mr{ margin-right: 50px;}
+.mb3{ margin-bottom: 15px;}
+.mb10{ margin-bottom: 50px;}
+i{ margin-right: 10px; font-size: 50px; color: #aa9369;}
+ul i{ font-size: 35px; color: inherit;}
+
+
+
+@media screen and (max-height: 648px) {
+    body,html{ font-size: 45px;}
+}
+@media screen and (max-height: 585px) {
+    body,html{ font-size: 42px;}
+}
+@media screen and (max-width: 1160px) {
+    body,html{ font-size: 45px;}
+}
+@media screen and (max-width: 1160px) and (max-height: 585px) {
+    body,html{ font-size: 42px;}
+}
+@media screen and (max-width: 1080px) {
+    body,html{ font-size: 44px;}
+}
+@media screen and (max-width: 1080px) and (max-height: 585px) {
+    body,html{ font-size: 42px;}
+}
+@media screen and (max-width: 1024px) {
+    body,html{ font-size: 42px;}
+}
+@media screen and (max-width: 980px) {
+    body,html{ font-size: 39px;}
+}
+@media screen and (max-width: 900px) {
+    body,html{ font-size: 36px;}
+}
+@media screen and (max-width: 840px) {
+    body,html{ font-size: 33px;}
+}
+@media screen and (max-width: 768px) {
+}
