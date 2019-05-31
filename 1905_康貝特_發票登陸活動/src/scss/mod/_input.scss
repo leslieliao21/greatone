@@ -2,14 +2,20 @@
 input, select{
     background-color: #fff;
     border-radius: 8px;
-    padding: 12px 15px;
+    padding: 10.5px 15px;
     color: #727272;
+    border: 1px solid transparent;
     @include mq(tablet, max) {
-        padding: 10px 12px;
+        padding: 9px 12px;
         font-size: 15px;
     }
     @include mq(phone-mini, max) {
+        padding: 9px 12px;
         font-size: 14px;
+    }
+    &:focus{
+        color: #727272;
+        border: 1px solid #512800;
     }
 }
 select{
@@ -21,6 +27,12 @@ select{
     background-position: 92% center;
     -webkit-background-size: 12px 12px;
     background-size: 12px 12px;
+    &:first-child{
+        margin-right: 1.2%;
+        @include mq(tablet, max) {
+            margin-right: 0.4%;
+        }
+    }
 }
 
 label, input, select{
@@ -38,10 +50,10 @@ label, input, select{
             height: 101px;
         }
         @include mq(tablet, max) {
-            height: 39px;
-            line-height: 39px;
+            height: 40px;
+            line-height: 40px;
             &:nth-child(3){
-                height: 89px;
+                height: 92px;
             }
         }
         @include mq(phone-mini, max) {
@@ -54,15 +66,15 @@ label, input, select{
 .inputStepB{
     .inputTitle{
         label{
-            height: 43px;
-            line-height: 43px;
+            height: 41px;
+            line-height: 42px;
             @include mq(tablet, max) {
                 height: 39px;
                 line-height: 39px;
             }
             @include mq(phone-mini, max) {
-                height: 37px;
-                line-height: 37px;
+                height: 36px;
+                line-height: 36px;
             }
         }
     }
@@ -97,6 +109,7 @@ label, input, select{
 }
 .inputBox{
     width: 77%;
+    text-align: left;
     input{
         width: 100%;
     }
@@ -104,7 +117,7 @@ label, input, select{
         width: 72%;
     }
     input.veriInput{
-        width: 65%;
+        width: 64%;
         display: inline-block;
         vertical-align: middle;
     }
@@ -123,6 +136,9 @@ label, input, select{
         text-align: left;
         font-size: 14px;
         color: #242424;
+        a{
+            display: inline;
+        }
     }
 }
   
@@ -217,4 +233,13 @@ input[type="checkbox"] {
     -webkit-transform-origin: center center;
             transform-origin: center center;
   }
+
+  input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    input[type="number"] {
+        -moz-appearance: textfield;
+    }
 

@@ -277,8 +277,8 @@
           width: 143px;
           height: auto;
           position: absolute;
-          right: -20%;
-          bottom: -10%;
+          right: -19%;
+          bottom: -10.5%;
         }
       }
       @include mq(tablet, max) {
@@ -293,6 +293,12 @@
             width: 300px;
             top: -65px;
             left: 5%;
+            @include mq(phone-mid, max) {
+              left: 0%;
+            }
+            @include mq(phone-mini, max) {
+              left: -9%;
+            }
           }
           .btn{
             width: 80%;
@@ -308,10 +314,10 @@
               bottom: -17.5%;
             }
             @include mq(phone-mid, max) {
-              bottom: -19%;
+              bottom: -20%;
             }
             @include mq(phone-mini, max) {
-              bottom: -17%;
+              bottom: -18%;
             }
           }
         }
@@ -456,16 +462,20 @@
             margin: 25px 0;
             padding: 0 1.5em 0 0;
             ul{
-              @include set-flex(center, space-between);
+              @include set-flex(center, flex-start);
               li{
                 color: $c-primary;
                 background: #f0c30a;
                 font-size: 18px;
                 font-weight: 700;
-                padding: 5px 6%;
+                padding: 5px 4%;
+                margin-right: 2%;
                 cursor: pointer;
                 &.active{
                   background: #ffff46;
+                }
+                &:last-child{
+                  margin-right: 0;
                 }
               }
             }
