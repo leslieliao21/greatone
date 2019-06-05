@@ -1,0 +1,168 @@
+/*==================================================*\
+        Index Page Style
+\*==================================================*/
+
+.index-page {
+
+  main {
+    background: #0074c1; /* Old browsers */
+    background: -moz-linear-gradient(top, #0074c1 3%, #59bde2 47%, #90d3ec 73%, #b7e6f8 94%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #0074c1 3%,#59bde2 47%,#90d3ec 73%,#b7e6f8 94%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #0074c1 3%,#59bde2 47%,#90d3ec 73%,#b7e6f8 94%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0074c1', endColorstr='#b7e6f8',GradientType=0 ); /* IE6-9 */
+    overflow: hidden;
+    
+    > .container {
+      // height: 100%;
+      // @include set-flex();
+      position: relative;
+    }
+
+    .deco_img{
+      position: absolute;
+      z-index: -1;
+    }
+    .deco_imgA{
+      right: 0;
+      top: 50%;
+    }
+    .deco_imgB{
+      left: 10%;
+      top:30%;
+    }
+    .deco_imgC{
+      right: 0%;
+      top:40%;
+    }
+    .deco_imgD{
+      left: 0%;
+      top:5%;
+    }
+
+    section{
+      overflow: visible;
+      &.secA{
+        text-align: center;
+        margin-top: -8em;
+        img{
+          max-width: 394px;
+          margin: 0 auto 20px auto;
+        }
+        p{
+          color: #FFF;
+          font-size: size-rem(22);
+          font-weight: 700;
+          line-height: 1.8em;
+        }
+      }
+
+      &.secB{
+        margin: 3em 0 0 0;
+        .videoWrapper {
+          width: 100%;
+          position: relative;
+          padding-bottom: 54%; /* 16:9 */
+          padding-top: 25px;
+          height: 0;
+          border-right: 20px solid rgba(0, 0, 0, .15);
+          border-left: 20px solid rgba(0, 0, 0, .15);
+          &:before {
+            content: "";
+            position: absolute;
+            width: calc(100% + 40px);
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-bottom: 20px solid rgba(0, 0, 0, .15);
+            top: -20px;
+            left: -20px;
+          }
+          &:after {
+            content: "";
+            position: absolute;
+            width: calc(100% + 40px);
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 20px solid rgba(0, 0, 0, .15);
+            bottom: -20px;
+            left: -20px;
+          }
+      
+          iframe{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      &.secC{
+        margin: 6em 0 0 0;
+        background: url('../images/index_bg_bottom.png') no-repeat;
+        background-position: center bottom;
+        padding-bottom: 5em;
+        
+        .container{
+          max-width: 1400px;
+          @include set-flex(center, space-between);
+        }
+
+        .btn_challenge{
+          max-width: 535px;
+          margin: 40px auto 0 auto;
+          transition: all $duration-fast;
+          &:hover{
+            transform: scale(0.95,0.95);
+          }
+        }
+        .circleBox{
+          width: 30%;
+          position: relative;
+          height: 0;
+          padding: 15% 0;
+          border-radius: 50%;
+          background-color: rgba(255,255,255,0.75);
+          .circleCont{
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            // height: 100%;
+            text-align: center;
+            transform: translateY(-50%);         
+            // &:before{
+            //   content: '';
+            //   vertical-align: middle;
+            //   display: inline-block;
+            //   width: 0;
+            //   height: 100%;
+            // }
+            img, p{
+              
+              display: inline-block;
+            }
+            img{
+              width: 28%;
+              max-width: 125px;
+            }
+            p{
+              width: 100%;
+              padding: 0 8%;
+              margin-top: 5%;
+              font-size: size-rem(18);
+              line-height: 1.4em;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+
+    }
+
+
+  }
+
+}
+

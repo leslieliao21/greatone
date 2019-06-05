@@ -1,0 +1,223 @@
+/*==================================================*\
+        Layout
+\*==================================================*/
+
+/*==================== Document ====================*/
+html, 
+body {
+  width: 100%;
+  height: 100%;
+  font-family: $font-stack;
+  background-color: #FFF;
+  -webkit-overflow-scrolling: touch;
+}
+
+html {
+  height: 100%;
+  font-size: $rootFz + px;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+*{
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  border: none;
+  outline: none;
+  // -webkit-user-select: none;
+  //   -moz-user-select: none;
+  //   -ms-user-select: none;
+  //    user-select: none;
+}
+
+/*==================== Container ====================*/
+main {
+  // height: 100%;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: visible;
+  z-index: 3;
+  section{
+    width: 100%;
+    position: relative;
+    background: transparent;
+  }
+}
+
+// section {
+// }
+
+.container {
+  width: 100%;
+  max-width: 1024px;
+  margin: auto;
+  // overflow: hidden;
+}
+
+.white-popup {
+  // position: relative;
+  display: block;
+  background: #FFF;
+  padding: 30px 40px;
+  width: auto;
+  max-width: 700px;
+  margin: 20px auto;
+  font-size: 14px;
+  // overflow-y: scroll;
+  h4{
+    font-weight: 800;
+    font-size: 20px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  p{
+    margin-bottom: 10px;
+  }
+  ul{
+    list-style: disc outside;
+    padding-left: 20px;
+    
+  }
+  strong{
+    display: block;
+    line-height: 1.4em;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 15px;
+  }
+
+}
+
+.showM{
+  display: none;
+  @include mq(tablet, max) {
+    display: block;
+  }
+}
+
+
+/*************** SIMPLE INNER SCROLLBAR ***************/
+
+.scrollWrapper .scroll-content {
+  border: none !important;
+  box-sizing: content-box !important;
+  height: auto;
+  left: 0;
+  margin: 0;
+  max-height: none;
+  max-width: none !important;
+  overflow-y: scroll !important;
+  overflow-x: hidden !important;
+  padding: 0;
+  position: relative !important;
+  top: 0;
+  width: auto !important;
+}
+
+.scrollWrapper .scroll-content::-webkit-scrollbar {
+  height: 0;
+  width: 0;
+}
+
+.scroll-element {
+  display: none;
+}
+.scroll-element, .scroll-element div {
+  box-sizing: content-box;
+}
+
+.scroll-element.scroll-x.scroll-scrollx_visible,
+.scroll-element.scroll-y.scroll-scrolly_visible {
+  display: block;
+}
+
+.scroll-element .scroll-bar,
+.scroll-element .scroll-arrow {
+  cursor: default;
+}
+
+.scroll-textarea {
+  border: 1px solid #cccccc;
+  border-top-color: #999999;
+}
+.scroll-textarea > .scroll-content {
+  overflow: hidden !important;
+}
+.scroll-textarea > .scroll-content > textarea {
+  border: none !important;
+  box-sizing: border-box;
+  height: 100% !important;
+  margin: 0;
+  max-height: none !important;
+  max-width: none !important;
+  overflow: scroll !important;
+  outline: none;
+  padding: 2px;
+  position: relative !important;
+  top: 0;
+  width: 100% !important;
+}
+.scroll-textarea > .scroll-content > textarea::-webkit-scrollbar {
+  height: 0;
+  width: 0;
+}
+
+.scrollbar-inner > .scroll-element,
+.scrollbar-inner > .scroll-element div
+{
+  border: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: 10;
+}
+
+.scrollbar-inner > .scroll-element div {
+  display: block;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.scrollbar-inner > .scroll-element.scroll-x {
+  bottom: 2px;
+  height: 8px;
+  left: 0;
+  width: 100%;
+}
+
+.scrollbar-inner > .scroll-element.scroll-y {
+  height: 100%;
+  right: 2px;
+  top: 0;
+  width: 8px;
+}
+
+.scrollbar-inner > .scroll-element .scroll-element_outer {
+  overflow: hidden;
+}
+
+// .scrollbar-inner > .scroll-element .scroll-element_outer,
+// .scrollbar-inner > .scroll-element .scroll-element_track,
+// .scrollbar-inner > .scroll-element .scroll-bar {
+//   -webkit-border-radius: 8px;
+//   -moz-border-radius: 8px;
+//   border-radius: 8px;
+// }
+
+// .scrollbar-inner > .scroll-element .scroll-element_track,
+// .scrollbar-inner > .scroll-element .scroll-bar {
+//   -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+//   filter: alpha(opacity=40);
+//   opacity: 0.4;
+// }
+
+.scrollbar-inner > .scroll-element .scroll-element_track { background-color: #fbd22b; }
+.scrollbar-inner > .scroll-element .scroll-bar { background-color: $c-primary; }
+.scrollbar-inner > .scroll-element:hover .scroll-bar { background-color: $c-primary; }
+.scrollbar-inner > .scroll-element.scroll-draggable .scroll-bar { background-color: $c-primary; }
+

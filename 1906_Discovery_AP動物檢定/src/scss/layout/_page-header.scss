@@ -1,0 +1,226 @@
+/*==================================================*\
+        Page Header
+\*==================================================*/
+
+.page-header {
+  width: 100%;
+  z-index: 999;
+  position: fixed;
+  top: 0; left: 0;
+  transition: all $duration-std;
+
+  .container {
+    max-width: 1920px;
+    padding: 20px 40px;
+    @include set-flex(center, space-between);
+    @include mq(tablet, max) {
+      max-width: 100%;
+      padding: 20px;
+    }
+  }
+
+  &.menuOpen {
+    .hamburger {
+      .bar:nth-of-type(1) {
+        -webkit-transform:rotate(-45deg) translateY(0) translateX(0);
+        transform:rotate(-45deg) translateY(0) translateX(0);
+        }
+    
+        .bar:nth-of-type(2) {
+          opacity:0;
+        }
+    
+      .bar:nth-of-type(3) {
+        -webkit-transform:rotate(45deg) translateY(0em) translateX(0em);
+        transform:rotate(45deg) translateY(0em) translateX(0em);
+      }
+    }
+  }
+}
+
+.header-top {
+  background-color: #131722;
+
+  // &:after {
+  //   @include pseudo($pos:static);
+  //   width: 100%;
+  //   height: 5px;
+  //   background-color: $c-primary;
+  //   @include mq(tablet) {
+  //     content: none;
+  //   }
+  // }
+
+  
+
+  img {
+    width: 100%;
+  }
+}
+
+.main-logo {
+  width: 238px;
+}
+
+.sub-logo {
+  width: 74px;
+  display: block;
+  margin-left: 35px;
+}
+
+
+.header-nav {
+  @include set-flex(center, space-between);
+  @include mq(tablet, max) {
+    width: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    text-align: center;
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  ul {
+    display: none;
+    overflow: hidden;
+    @include mq(tablet) {
+      @include set-flex(center, space-between);
+    }
+  }
+
+  li {
+    transition: all $duration-fast;
+    display: flex;
+    align-self: stretch;
+    padding-right: 40px;
+    // @include mq(tablet) {
+    //   padding: 0 5px;
+    // }
+    // @include mq(tablet-wide) {
+    //   padding: 0 10px;
+    // }
+    @media only screen and (max-width: 767px) {
+      display: block;
+    }
+
+    &:last-child{
+      border-left: 1px solid #FFF;
+      padding-left: 40px;
+      padding-right: 0px;
+    }
+    
+    &:not(:last-of-type) {
+      border-bottom: 1px solid $c-white;
+      @include mq(tablet) {
+        border-bottom: 0;
+      }
+    }
+
+    &.active {
+      border-bottom-color: #308dfe;
+
+      p {
+        &:before {
+          width: 100%;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  a {
+    display: flex;
+    align-self: stretch;
+    &.active{
+      p{
+        color: #308dfe;
+        &:before {
+          width: 100%;
+          opacity: 1;
+        }
+      }
+    }
+    &:hover {
+      p {
+        color: #308dfe;
+        &:before {
+          width: 100%;
+          opacity: 1;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      display: block;
+    }
+  }
+  
+  p {
+    display: flex;
+    align-items: center;
+    color: $c-white;
+    font-size: size-rem(18);
+    font-weight: bold;
+    // line-height: 2.93;
+    text-align: center;
+    position: relative;
+    line-height: 1em;
+    padding: 2px 0;
+    // @include mq(tablet) {
+    //   color: $c-white;
+    //   font-size: size-rem(15);
+    // }
+    @media only screen and (max-width: 767px) {
+      display: block;
+    }
+
+    &:before {
+      @include pseudo();
+      width: 0;
+      height: size-rem(1);
+      margin: auto;
+      transition: all $duration-fast;
+      opacity: 0;
+      background-color: #308dfe;
+      bottom: 0;
+      left: 0; right: 0;
+    }
+  }
+}
+
+.header-left {
+  @include set-flex();
+}
+
+.hamburger {
+  // width: 60px;
+  // height: 60px;
+  // margin-right: 4%;
+  // padding: 4px;
+  // position: absolute;
+  // top: 0;
+  // right: 15px;
+
+  fill:#3da8d9;
+pointer-events:all; //needs to be there so the hover works
+cursor:pointer;
+
+.bar {
+    -webkit-transform:rotate(0) translateY(0) translateX(0);
+    transform:rotate(0) translateY(0) translateX(0);
+    opacity:1;
+    -webkit-transform-origin: 20px 10px;
+    transform-origin: 20px 10px;
+    -webkit-transition: -webkit-transform 0.4s ease-in-out, opacity 0.2s ease-in-out;
+    transition: transform 0.4s ease-in-out, opacity 0.2s ease-in-out;
+    }
+  
+  .bar:nth-of-type(1) {
+    -webkit-transform-origin: 20px 10px;
+    transform-origin: 20px 10px;
+  }
+  
+  .bar:nth-of-type(3) {
+    -webkit-transform-origin: 20px 20px;
+    transform-origin: 20px 20px;
+  }
+}
