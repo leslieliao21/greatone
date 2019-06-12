@@ -3,6 +3,5 @@
 //@prepros-prepend vendor/jquery.scrollbar.js
 //@prepros-prepend vendor/imagesloaded.js
 //@prepros-prepend vendor/picturefill.min.js
-//@prepros-prepend vendor/jquery.magnific-popup.min.js
 //@prepros-prepend vendor/TweenMax.min.js
 //@prepros-prepend vendor/rellax.min.js

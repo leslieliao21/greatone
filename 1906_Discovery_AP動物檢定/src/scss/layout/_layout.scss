@@ -18,6 +18,7 @@ html {
 }
 
 body {
+  position: relative;
   overflow-x: hidden;
   overflow-y: visible;
 }
@@ -46,12 +47,9 @@ main {
   }
 }
 
-// section {
-// }
-
 .container {
   width: 100%;
-  max-width: 1024px;
+  max-width: 1150px;
   margin: auto;
   // overflow: hidden;
 }
@@ -91,11 +89,106 @@ main {
 
 }
 
+.show{
+  display: block;
+}
+.hide{
+  display: none;
+}
+
+.showD{
+  display: block;
+  @include mq(tablet-wide, max) {
+    display: none;
+  }
+}
 .showM{
   display: none;
   @include mq(tablet, max) {
     display: block;
   }
+}
+.showMT{
+  display: none;
+  @include mq(tablet-wide, max) {
+    display: block;
+  }
+}
+
+.txtred{
+  color: red;
+}
+
+.txtBlue{
+  color: #0d7ea6;
+}
+
+.dashSide {
+  line-height: 0.5;
+  text-align: center;
+  margin: 40px auto 20px auto;
+}
+.dashSide span {
+  display: inline-block;
+  position: relative;  
+}
+.dashSide span:before,
+.dashSide span:after {
+  content: "";
+  position: absolute;
+  height: 0;
+  // border-bottom: 1px solid white;
+  border-top: 1px solid #dfdfdf;
+  top: 2px;
+  width: 100%;
+}
+.dashSide span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+.dashSide span:after {
+  left: 100%;
+  margin-left: 15px;
+}
+
+//btn style
+
+.btn_default{
+  text-decoration: underline;
+  display: inline-block;
+  margin: 0 10px;
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+.btn_radius{
+  width: 95%;
+  max-width: 280px;
+  margin: 0 auto;
+  border-radius: 100px;
+  color: #FFF;
+  font-size: 22px;
+  font-weight: 600;
+  padding: 1.4vh;
+  margin-bottom: 2vh;
+  box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.15);
+  transition: all $duration-std;
+  &:hover{
+    background-color: #999;
+  }
+}
+
+.btn_blue{
+  background-color: #1eb4ff;
+}
+
+.btn_fbcolor{
+  background-color: #3b579d;
+}
+
+.btn_go{
+  background-color: #0073ff;
 }
 
 
@@ -200,24 +293,9 @@ main {
 .scrollbar-inner > .scroll-element .scroll-element_outer {
   overflow: hidden;
 }
+.scrollbar-inner > .scroll-element .scroll-element_track { width: 1px; left: 3px; background-color: #c2c2c2; }
+.scrollbar-inner > .scroll-element .scroll-bar { border-radius: 50px; background-color: #1eb4ff; }
+.scrollbar-inner > .scroll-element:hover .scroll-bar { background-color: #1eb4ff; }
+.scrollbar-inner > .scroll-element.scroll-draggable .scroll-bar { background-color: #1eb4ff; }
 
-// .scrollbar-inner > .scroll-element .scroll-element_outer,
-// .scrollbar-inner > .scroll-element .scroll-element_track,
-// .scrollbar-inner > .scroll-element .scroll-bar {
-//   -webkit-border-radius: 8px;
-//   -moz-border-radius: 8px;
-//   border-radius: 8px;
-// }
-
-// .scrollbar-inner > .scroll-element .scroll-element_track,
-// .scrollbar-inner > .scroll-element .scroll-bar {
-//   -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
-//   filter: alpha(opacity=40);
-//   opacity: 0.4;
-// }
-
-.scrollbar-inner > .scroll-element .scroll-element_track { background-color: #fbd22b; }
-.scrollbar-inner > .scroll-element .scroll-bar { background-color: $c-primary; }
-.scrollbar-inner > .scroll-element:hover .scroll-bar { background-color: $c-primary; }
-.scrollbar-inner > .scroll-element.scroll-draggable .scroll-bar { background-color: $c-primary; }
 

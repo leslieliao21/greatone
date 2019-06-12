@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <!-- Basic Data -->
+    <meta charset="UTF-8">
+    <title>動物檢定</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" type="image/ico" href="https://www.discoverychannel.com.tw/images/logo/favicon/ap_favicon.ico" />
+
+    <!-- Meta Data -->
+    <meta name="keywords" content="網頁關鍵字">
+    <meta name="description" content="網頁描述">
+    <meta name="og:title" content="分享標題">
+    <meta name="og:description" content="網頁描述">
+    <meta name="og:type" content="website">
+    <meta name="og:image" content="http://demo.great3.com.tw/leslie/1906discovery_ap/images/1200x630.jpg">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.min.css" />
+
+    <!-- Tools -->
+    <script src="./js/vendor-dist.js"></script>
+    <script src="./js/kits-dist.js"></script>
+
+    <!--[if IE]>
+    <script type="text/javascript" src="js/html5shiv.js"></script>
+  <![endif]-->
+
+</head>
+
+<body class="member-page">
+    <div class="page-loading">
+        <div>
+            <img src="./images/icons/loading.svg" alt="頁面下載中，請稍後">
+        </div>
+    </div>
+
+    <header class="page-header">
+        <section class="header-top">
+
+            <div class="container">
+                <div class="header-left">
+                    <a class="main-logo" target="_blank" href="https://www.discoverychannel.com.tw/ap_index.php">
+                        <img src="./images/logos/ap_logo.png" alt="動物星球頻道">
+                    </a>
+                    <div class="sub-logo">
+                        <img src="./images/logos/sub_logo.png" alt="動物檢定">
+                    </div>
+                </div>
+
+                <button class="hamburger showMT">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" aria-hidden="true">
+                        <line x1="10" y1="20" x2="110" y2="20" />
+                        <line x1="10" y1="60" x2="110" y2="60" />
+                        <line x1="10" y1="100" x2="110" y2="100" />
+                    </svg>
+                </button>
+
+                <nav class="header-nav">
+                    <ul>
+                        <li>
+                            <a href="index.html" target="_self">
+                                <p>首頁</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>開始遊戲</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p>遊戲規則</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:" class="active">
+                                <p>會員中心</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:">
+                                <p>會員登出</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <p><img src="./images/icons/facebook.svg" alt="facebook icon"></p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+
+            </div>
+
+        </section>
+
+    </header>
+
+    <main class="main-container">
+        <div class="kv">
+            <ul class="optionButtonWrapper">
+                <li>
+                    <span>x<span class="num">02</span></span>
+                    <img src="./images/member/btn_feed.png" alt="">
+                </li>
+                <li>
+                    <span>x<span class="num">04</span></span>
+                    <img src="./images/member/btn_clean.png" alt="">
+                </li>
+                <li>
+                    <span>x<span class="num">03</span></span>
+                    <img src="./images/member/btn_shower.png" alt="">
+                </li>
+            </ul>
+            <div class="mainIsland">
+                <div class="nameBoardWrapper">
+                    <span class="elephantName">我的小象</span>
+                    <img src="./images/member/member_name_board.png" alt="">
+                </div>
+                <div class="elephantNotathome hide">
+                    <img src="./images/member/member_elephant_notathome.png" alt="">
+                </div>
+                <div class="elephantWrapper">
+                    <div class="canvasWrapper">
+                        <iframe id="iframeA" src="includes/elephant/elephant_hungry_before/elephant_hungry_before.html"
+                            frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <section>
+                <button type="button" class="btn_goplay btn_go btn_radius">開始遊戲 GO!</button>
+            <div class="memberInfoWrapper">
+                <div>
+                    <div class="userimgWrapper">
+                        <div>
+                            <div id="imagePreview">
+                                <div class="imgUploadIcon hide"><img src="images/icon_photo_default.png" alt=""></div>
+                            </div>
+                            <input id="uploadFile" type="file" name="image" class="img" />
+                        </div>
+                    </div>
+                    <div class="userinfoWrapper">
+                        <div class="userName">王小明</div>
+                        <span>積分</span>
+                        <div class="userScore">20,000</div>
+                    </div>
+                </div>
+                <div>
+                    <button type="button" data-lb="_memberinfo" class="btnInfoDetail btn_member btn_blue btn_radius _lb">基本資料</button>
+                    <button type="button" data-lb="_memberscore" class="btnScore btn_member btn_blue btn_radius _lb">我的檢定</button>
+                    <button type="button" data-lb="_membercard" class="btnCard btn_member btn_blue btn_radius _lb">我的通關卡</button>
+                    <button type="button" data-lb="_rule" class="btnRule btn_member btn_blue btn_radius _lb">遊戲規則</button>
+                </div>
+            </div>
+            
+        </section>
+
+
+
+
+    </main>
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="info">
+                <ul>
+                    <li><a href="#">關於我們</a></li>
+                    <li><a href="#">使用條款</a></li>
+                    <li><a href="#">廣告業務</a></li>
+                    <li><a href="#">Discovery徵才</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <article class="caution">
+                <p>
+                    © 2019 Discovery Networks International. All rights reserved.
+                </p>
+            </article>
+        </div>
+    </footer>
+
+    <script>
+        $(function() {
+            //uploadimg
+            $("#uploadFile").on("change", function () {
+                var files = !!this.files ? this.files : [];
+                if (!files.length || !window.FileReader) return; // no file selected, or no FileReader support
+        
+                if (/^image/.test(files[0].type)) { // only image file
+                    var reader = new FileReader(); // instance of the FileReader
+                    reader.readAsDataURL(files[0]); // read the local file
+        
+                    reader.onloadend = function () { // set image data as background of div
+                        $("#imagePreview").css({"background-image": "url(" + this.result + ")", "background-size": "cover"});
+                        $('.imgUploadIcon').show();
+                    }
+                }
+            });
+            $('#imagePreview').click(function () {
+                $('#uploadFile').trigger('click');
+            });
+        
+        });
+    </script>
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

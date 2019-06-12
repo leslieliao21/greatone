@@ -1,146 +1,46 @@
 
 input, select{
     background-color: #fff;
-    border-radius: 8px;
-    padding: 10.5px 15px;
-    color: #727272;
-    border: 1px solid transparent;
-    @include mq(tablet, max) {
-        padding: 9px 12px;
-        font-size: 15px;
-    }
-    @include mq(phone-mini, max) {
-        padding: 9px 12px;
-        font-size: 14px;
-    }
+    border-radius: 4px;
+    padding: 8px 10px;
+    color: #000;
+    display: inline-block;
+    border: 1px solid #e0e0e0;
     &:focus{
-        color: #727272;
-        border: 1px solid #512800;
+        border: 1px solid #a6a6a6;
+    }
+    &.w50{
+        width: 50%;
     }
 }
 select{
-    width: 48.5%;
+    margin-right: 2%;
     // -webkit-appearance: none;
     // -moz-appearance: none;
     // appearance: none;
     background: url('../images/icon_select.svg') #FFF no-repeat;
     background-position: 92% center;
-    -webkit-background-size: 12px 12px;
-    background-size: 12px 12px;
-    &:first-child{
-        margin-right: 1.2%;
-        @include mq(tablet, max) {
-            margin-right: 0.4%;
-        }
-    }
+    -webkit-background-size: 10px 10px;
+    background-size: 10px 10px;
 }
 
 label, input, select{
     display: block;
-    margin-bottom: 15px;
-  }
-
-
-
-.inputStepA{
-    label{
-        height: 43px;
-        line-height: 43px;
-        &:nth-child(3){
-            height: 101px;
-        }
-        @include mq(tablet, max) {
-            height: 40px;
-            line-height: 40px;
-            &:nth-child(3){
-                height: 92px;
-            }
-        }
-        @include mq(phone-mini, max) {
-            height: 37px;
-            line-height: 37px;
-        }
-    }
-}
-  
-.inputStepB{
-    .inputTitle{
-        label{
-            height: 41px;
-            line-height: 42px;
-            @include mq(tablet, max) {
-                height: 39px;
-                line-height: 39px;
-            }
-            @include mq(phone-mini, max) {
-                height: 36px;
-                line-height: 36px;
-            }
-        }
-    }
-}
-  
-
-.inputTitle, .inputBox, select{
+    margin-bottom: 1vh;
     display: inline-block;
+    margin-left: -4px;
 }
 
-.inputTitle{
-    width: 19%;
-    margin-right: 1.5%;
-    vertical-align: top;
-    label{
-        display: block;
-        width: 100%;
-        font-size: 18px;
-        font-weight: 700;
-        color: #512800;
-        text-align: justify;
-        @include mq(phone, max) {
-            font-size: 16px;
-        }
-        @include mq(phone-mini, max) {
-            font-size: 14px;
-        }
-    }
-    @include mq(tablet, max) {
-        width: 23%;
-    }
-}
-.inputBox{
-    width: 77%;
-    text-align: left;
-    input{
-        width: 100%;
-    }
-    @include mq(tablet, max) {
-        width: 72%;
-    }
-    input.veriInput{
-        width: 64%;
-        display: inline-block;
-        vertical-align: middle;
-    }
-    .verImg{
-        display: inline-block;
-        margin-left: 1%;
-        margin-bottom: 14px;
-        width: 32%;
-        vertical-align: middle;
-    }
+label{
+    width: 8%;
 }
 
-.agreeBox{
-    label{
-        padding-left: 30px;
-        text-align: left;
-        font-size: 14px;
-        color: #242424;
-        a{
-            display: inline;
-        }
-    }
+
+
+input[type="file"] {
+    display: none;
 }
+
   
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #727272;
@@ -191,7 +91,7 @@ input[type="date"], focus {
     -moz-box-shadow: none;
 }
 
-// input[type="checkbox"] {
+// input[type="radio"] {
 //     width: 10px;
 //     // height: 15px;
 //     background: #FFF;
@@ -199,40 +99,6 @@ input[type="date"], focus {
 //     opacity: 1;
 // }
 
-input[type="checkbox"] {
-    opacity: 1;
-    padding: 0;
-    width: 21px;
-    height: 20px;
-    border-radius: 4px;
-    background-color: #ffffff; 
-    margin-bottom: 1em;
-  }
-  input[type="checkbox"]::after {
-    content: '';
-    width: 70%;
-    height: 45%;
-    border-radius: 0;
-    margin: auto;
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    -webkit-transition: background 0.25s ease;
-    transition: background 0.25s ease;
-  }
-  input[type="checkbox"]:checked {
-    background-color: #7d0000;
-  }
-  input[type="checkbox"]:checked::after {
-    border-left: 3px solid;
-    border-bottom: 3px solid;
-    border-color: #ffffff;
-    border-radius: 0;
-    -webkit-transform: rotate(-45deg) translate3d(0, 0, 0);
-            transform: rotate(-45deg) translate3d(0, 0, 0);
-    -webkit-transform-origin: center center;
-            transform-origin: center center;
-  }
 
   input[type="number"]::-webkit-outer-spin-button,
     input[type="number"]::-webkit-inner-spin-button {

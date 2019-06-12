@@ -1,0 +1,82 @@
+<div class="parrot">
+    <img src="images/parrot.png" alt="">
+</div>
+
+<div id="page-memberinfo">
+
+    <div class="inside show">
+        <div class="whiteBg">
+            <div class="lb_title">我的檢定</div>
+            <div class="userimgWrapper">
+                <div class="crown">
+                    <img src="images/member/crown_first.png" alt="">
+                </div>
+                <div>
+                    <div id="imagePreview">
+                        <div class="imgUploadIcon hide"><img src="images/icon_photo_default.png" alt=""></div>
+                    </div>
+                    <input id="uploadFile" type="file" name="image" class="img" />
+                </div>
+                <div class="userinfoWrapper">
+                    <div class="userName">王小明</div>
+                    <span>積分</span>
+                    <div class="userScore">20,000</div>
+                </div>
+            </div>
+
+            <div class="score_info">
+                <ul class="score_list">
+                    <li>
+                        <span>答題數</span>
+                        <span><strong>50</strong>題</span>
+                    </li>
+                    <li>
+                        <span>答題總積分</span>
+                        <span><strong>20,000</strong>分</span>
+                    </li>
+                    <li>
+                        <span>平均答對題目秒數</span>
+                        <span><strong>5</strong>秒</span>
+                    </li>
+                </ul>
+                <div class="score_average">
+                    <div class="playerAverage">
+                        <span>玩家排行(%數)</span>
+                        <span><strong>98.56</strong>%</span>
+                    </div>
+                    <div class="correctAverage">
+                        <span>答題正確率</span>
+                        <span><strong>99.5</strong>%</span>
+                    </div>
+                </div>
+                <p>答題總積分: 週週有5題，答對一題得5分，答錯可得2分</p>
+            </div>
+        </div>
+        <button type="button" class="btn_ok btn_blue btn_radius">確定</button>
+    </div>
+    
+</div>
+
+<script>
+$(function() {
+    //uploadimg
+    $("#uploadFile").on("change", function () {
+        var files = !!this.files ? this.files : [];
+        if (!files.length || !window.FileReader) return; // no file selected, or no FileReader support
+
+        if (/^image/.test(files[0].type)) { // only image file
+            var reader = new FileReader(); // instance of the FileReader
+            reader.readAsDataURL(files[0]); // read the local file
+
+            reader.onloadend = function () { // set image data as background of div
+                $("#imagePreview").css({"background-image": "url(" + this.result + ")", "background-size": "cover"});
+                $('.imgUploadIcon').show();
+            }
+        }
+    });
+    $('#imagePreview').click(function () {
+        $('#uploadFile').trigger('click');
+    });
+
+});
+</script>

@@ -1,0 +1,155 @@
+<div class="parrot">
+    <img src="images/parrot.png" alt="">
+</div>
+
+<div id="page-memberinfo">
+
+    <!--基本資料 START-->
+    <div class="inside show">
+        <div class="whiteBg">
+            <div class="lb_title">基本資料</div>
+            <div class="userimgWrapper">
+                <div class="crown">
+                    <img src="images/member/crown_first.png" alt="">
+                </div>
+                <div>
+                    <div id="imagePreview">
+                        <div class="imgUploadIcon hide"><img src="images/icon_photo_default.png" alt=""></div>
+                    </div>
+                    <input id="uploadFile" type="file" name="image" class="img" />
+                </div>
+                <div class="userinfoWrapper">
+                    <div class="userName">王小明</div>
+                    <span>積分</span>
+                    <div class="userScore">20,000</div>
+                </div>
+            </div>
+
+            <div class="write_info">
+                <div>
+                    <label id="name-label" for="name">姓名:</label>
+                    <input type="text" name="name" id="name" class="input-field" placeholder="" value="王小明">
+                </div>
+                <div>
+                    <label id="gender-label" for="">性別:</label>
+                    <div class="genderBox">
+                        <div>
+                            <input type="radio" id="male" name="gender" checked>
+                            <label id="male-label" for="male">男</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="female" name="gender">
+                            <label id="female-label" for="female">女</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="birthWrapper">
+                    <label id="birthday-label" for="">生日:</label>
+                    <select name="year" id="year">
+                        <option value="">年</option>
+                    </select>
+                    <select name="month" id="month">
+                        <option value="">月</option>
+                    </select>
+                    <select name="date" id="date">
+                        <option value="">日</option>
+                    </select>
+                </div>
+                <div>
+                    <label id="phone-label" for="phone">電話:</label>
+                    <input type="number" name="phonenum" id="phonenum" class="input-field" placeholder="">
+                </div>
+                <div class="addressWrapper">
+                    <label id="address-label" for="address">地址:</label>
+                    <select name="city" id="city">
+                        <option value="">縣市</option>
+                    </select>
+                    <select name="area" id="area">
+                        <option value="">鄉鎮市區</option>
+                    </select>
+                    <input type="text" name="address" id="address" class="input-field" placeholder="">
+                </div>
+                <div>
+                    <label id="email-label" for="email">email:</label>
+                    <input type="email" name="email" id="email" class="input-field" placeholder="example@example.com"
+                        disabled="disabled">
+                </div>
+                <div>
+                    <label id="elephantname-label" class="wider" for="phone">小象暱稱:</label>
+                    <input type="text" name="elephantname" id="elephantname" class="input-field" placeholder="我的小象" maxlength="4">
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn_change_pw btn_blue btn_radius">更改密碼</button>
+        <button type="submit" class="btn_save btn_blue btn_radius">儲存</button>
+    </div>
+    <!--基本資料 END-->
+
+    <!--修改密碼 START-->
+    <div class="inside hide">
+            <div class="whiteBg">
+                <div class="lb_title">基本資料</div>
+                <div class="userimgWrapper">
+                    <div class="crown">
+                        <img src="images/member/crown_first.png" alt="">
+                    </div>
+                    <div>
+                        <div id="imagePreview">
+                            <div class="imgUploadIcon hide"><img src="images/icon_photo_default.png" alt=""></div>
+                        </div>
+                        <input id="uploadFile" type="file" name="image" class="img" />
+                    </div>
+                    <div class="userinfoWrapper">
+                        <div class="userName">王小明</div>
+                        <span>積分</span>
+                        <div class="userScore">20,000</div>
+                    </div>
+                </div>
+    
+                <div class="write_info change_pw">
+                    <em>更改密碼</em>
+                    <div>
+                        <label id="oldpw-label" class="wider" for="oldpw">舊密碼:</label>
+                        <input type="password" name="oldpw" id="oldpw" class="input-field" placeholder="">
+                    </div>
+                    <div>
+                        <label id="newpw-label" class="wider" for="newpw">新密碼:</label>
+                        <input type="password" name="newpw" id="newpw" class="input-field" placeholder="">
+                    </div>
+                    <div>
+                        <label id="newpw-confirm-label" class="wider" for="newpw-confirm">確認新密碼:</label>
+                        <input type="password" name="newpw-confirm" id="newpw-confirm" class="input-field" placeholder="">
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn_back btn_blue btn_radius">返回</button>
+            <button type="submit" class="btn_save btn_blue btn_radius">確認</button>
+        </div>
+        <!--修改密碼 END-->
+
+    
+</div>
+
+<script>
+$(function() {
+    //uploadimg
+    $("#uploadFile").on("change", function () {
+        var files = !!this.files ? this.files : [];
+        if (!files.length || !window.FileReader) return; // no file selected, or no FileReader support
+
+        if (/^image/.test(files[0].type)) { // only image file
+            var reader = new FileReader(); // instance of the FileReader
+            reader.readAsDataURL(files[0]); // read the local file
+
+            reader.onloadend = function () { // set image data as background of div
+                $("#imagePreview").css({"background-image": "url(" + this.result + ")", "background-size": "cover"});
+                $('.imgUploadIcon').show();
+            }
+        }
+    });
+    $('#imagePreview').click(function () {
+        $('#uploadFile').trigger('click');
+    });
+
+});
+</script>

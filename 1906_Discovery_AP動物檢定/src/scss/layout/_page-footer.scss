@@ -24,13 +24,30 @@
       display: flex;
       align-self: stretch;
       padding: 0 20px;
-      border-right: 1px solid #FFF;
+      border-right: 1px solid #5d5d5d;
       line-height: 1;
       &:last-child{
         border: none;
       }
       &:hover{
         color: #308dfe;
+      }
+      @include mq(tablet-small, max) {
+        margin: 8px 0;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 950px) {
+    .container{
+      padding: 10px;
+      display: block;
+      text-align: center;
+    }
+    ul{
+      display: inline-block;
+      li{
+        display: inline-block;
       }
     }
   }

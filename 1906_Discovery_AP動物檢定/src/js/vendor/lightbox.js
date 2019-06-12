@@ -148,6 +148,7 @@
         $closeBtn.remove();
       } else {
         $closeBtn.on('click', function() {
+          // $('body').css({'overflow-y':'visible'});
           closeLb(opts);
         });
       }
@@ -210,6 +211,12 @@
         {
           duration: opts.duration,
           complete: function() {
+            if(device.mobile() || device.tablet()){
+              $(".header-nav ul").stop().slideUp(DURATION.FAST);
+              $(".page-header").removeClass(PAGE_HEADER_ACTIVE)
+            }
+            $('body').css({'overflow-y':'hidden'});
+            
             console.log('%cLightbox Loading Completed!', logSafeStyle);
           }
         }
@@ -240,6 +247,7 @@
           duration: opts.duration,
           complete: function() {
             $(this).remove();
+            $('body').css({'overflow-y':'visible'});
             console.log('%cLightbox Is Closed', logSafeStyle);
           }
         }

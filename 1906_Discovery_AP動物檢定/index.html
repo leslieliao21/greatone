@@ -13,13 +13,12 @@
   <link rel="icon" type="image/ico" href="https://www.discoverychannel.com.tw/images/logo/favicon/ap_favicon.ico" />
 
   <!-- Meta Data -->
-  <!-- <meta name="keywords" content="網頁關鍵字">
+  <meta name="keywords" content="網頁關鍵字">
   <meta name="description" content="網頁描述">
-  <meta name="author" content="作者姓名">
   <meta name="og:title" content="分享標題">
   <meta name="og:description" content="網頁描述">
   <meta name="og:type" content="website">
-  <meta name="og:image" content="分享圖檔絕對位置 (1200x630)"> -->
+  <meta name="og:image" content="http://demo.great3.com.tw/leslie/1906discovery_ap/images/1200x630.jpg"> 
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/main.min.css" />
@@ -38,9 +37,12 @@
   <div class="page-loading">
     <div>
       <img src="./images/icons/loading.svg" alt="頁面下載中，請稍後">
-
     </div>
   </div>
+
+  <a href="" class="btn_news">
+    <img src="./images/index/index_btn_news.png" alt="">
+  </a>
 
   <header class="page-header">
     <section class="header-top">
@@ -55,12 +57,12 @@
           </div>
         </div>
 
-        <button class="hamburger showM">
-            <svg id="svg" class="inline-svg" enable-background="new 0 0 32 22.5" height="60px" version="1.1" viewBox="0 0 32 22.5" width="60px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"><title></title><g class="svg-menu-toggle">
-                <path class="bar" d="M20.945,8.75c0,0.69-0.5,1.25-1.117,1.25H3.141c-0.617,0-1.118-0.56-1.118-1.25l0,0c0-0.69,0.5-1.25,1.118-1.25h16.688C20.445,7.5,20.945,8.06,20.945,8.75L20.945,8.75z"></path>
-                <path class="bar" d="M20.923,15c0,0.689-0.501,1.25-1.118,1.25H3.118C2.5,16.25,2,15.689,2,15l0,0c0-0.689,0.5-1.25,1.118-1.25 h16.687C20.422,13.75,20.923,14.311,20.923,15L20.923,15z"></path>
-                <path class="bar" d="M20.969,21.25c0,0.689-0.5,1.25-1.117,1.25H3.164c-0.617,0-1.118-0.561-1.118-1.25l0,0c0-0.689,0.5-1.25,1.118-1.25h16.688C20.469,20,20.969,20.561,20.969,21.25L20.969,21.25z"></path>
-                {C}<rect fill="none" height="30" width="30"></rect></g></svg>
+        <button class="hamburger showMT">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" aria-hidden="true">
+              <line x1="10" y1="20" x2="110" y2="20" />
+              <line x1="10" y1="60" x2="110" y2="60" />
+              <line x1="10" y1="100" x2="110" y2="100" />
+            </svg>
         </button>
 
         <nav class="header-nav">
@@ -76,17 +78,17 @@
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="javascript:" data-lb="_rule" class="btnRule _lb">
                 <p>遊戲規則</p>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="javascript:" data-lb="_signup" class="btnSignup _lb">
                 <p>我要註冊</p>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="javascript:" data-lb="_signin" class="btnSignin _lb">
                 <p>會員登入</p>
               </a>
             </li>
@@ -108,24 +110,24 @@
   <main class="main-container">
     <div class="kv rellax" data-rellax-speed="-3">
       <picture>
-        <source media="(min-width: 768px)" srcset="./images/index_kv.png">
-        <img src="./images/m_index_kv.png" alt="Key Vision">
+        <source media="(min-width: 640px)" srcset="./images/index/index_kv.png">
+        <img src="./images/index/m_index_kv.png" alt="Key Vision">
       </picture>
     </div>
 
     <section class="secA">
       <div class="container">
-        <img src="./images/index_guide_title.png" alt="動物檢定是什麼?">
+        <img src="./images/index/index_guide_title.png" alt="動物檢定是什麼?">
         <p>
-            你知道蜜蜂有幾隻眼睛嗎? 鯊魚全身長滿了小牙齒? 你對動物的知識有多少？<br>
-            最具知識的動物檢定線上版來了，歡迎各位大小朋友拿出你的冒險家精神，與我們盡情探索自然的奧秘，<br>
+            你知道蜜蜂有幾隻眼睛嗎? 鯊魚全身長滿了小牙齒? 你對動物的知識有多少？<br class="showD">
+            最具知識的動物檢定線上版來了，歡迎各位大小朋友拿出你的冒險家精神，與我們盡情探索自然的奧秘，<br class="showD">
             週週登入答題累計積分，冠軍還可獲得動物檢定專屬證書喔！
         </p>
       </div>
     </section>
 
     <div class="deco_img deco_imgA rellax" data-rellax-speed="1.2">
-      <img src="./images/index_img_island.png" alt="">
+      <img src="./images/index/index_img_island.png" alt="">
     </div>
 
     <section class="secB">
@@ -135,10 +137,10 @@
         </div>
       </div>
       <div class="deco_img deco_imgB rellax" data-rellax-speed="0.5">
-        <img src="./images/index_img_q1.png" alt="">
+        <img src="./images/index/index_img_q1.png" alt="">
       </div>
       <div class="deco_img deco_imgC rellax" data-rellax-speed="-1">
-        <img src="./images/index_img_q2.png" alt="">
+        <img src="./images/index/index_img_q2.png" alt="">
       </div>
     </section>
 
@@ -146,30 +148,45 @@
       <div class="container">
         <div class="circleBox">
           <div class="circleCont">
-            <img src="./images/index_circle_icon1.png" alt="">
+            <picture>
+              <source media="(min-width: 895px)" srcset="./images/index/index_circle_icon1.png">
+              <img src="./images/index/m_index_circle_icon1.png" alt="全球唯一">
+            </picture>
+            <!--<img src="./images/index/index_circle_icon1.png" alt="">-->
             <p>動物星球頻道是全球唯一以動物為主角的內容頻道，以熱情感性的深度內容為人類與動物搭起橋樑，全球觀眾超過3億7千9百萬人。</p>
           </div>
         </div>
         <div class="circleBox">
           <div class="circleCont">
-            <img src="./images/index_circle_icon2.png" alt="">
+            <picture>
+              <source media="(min-width: 895px)" srcset="./images/index/index_circle_icon2.png">
+              <img src="./images/index/m_index_circle_icon2.png" alt="線上學習">
+            </picture>
+            <!--<img src="./images/index/index_circle_icon2.png" alt="">-->
             <p>題目來自動物星球頻道的熱門節目, 解答影片就像會說話的動物百科全書，以輕鬆有趣的遊戲帶你一起認識大自然，任何時間、地點即可答題挑戰。</p>
           </div>
         </div>
         <div class="circleBox">
           <div class="circleCont">
-            <img src="./images/index_circle_icon1.png" alt="">
+            <picture>
+              <source media="(min-width: 895px)" srcset="./images/index/index_circle_icon3.png">
+              <img src="./images/index/m_index_circle_icon3.png" alt="專家推薦">
+            </picture>
+            <!--<img src="./images/index/index_circle_icon3.png" alt="">-->
             <p>由知名生態老師領軍，帶你一起玩耍，一起長知識。<br>
-              <span>蝌蚪池塘自然平台創辦人：蝌蚪老師 呂軍逸<br>親子自然生態講師 : 甩阿老師 曾文宣</span>
+              <span class="txtBlue">蝌蚪池塘自然平台創辦人：蝌蚪老師 呂軍逸<br>親子自然生態講師 : 甩阿老師 曾文宣</span>
             </p>
           </div>
         </div>
       </div>
       <a href="#" class="btn btn_challenge">
-        <img src="./images/btn_challenge.png" alt="">
+        <picture>
+          <source media="(min-width: 650px)" srcset="./images/index/btn_challenge.png">
+          <img src="./images/index/m_btn_challenge.png" alt="我要挑戰">
+        </picture>
       </a>
       <div class="deco_img deco_imgD rellax" data-rellax-speed="2">
-        <img src="./images/index_img_q3.png" alt="">
+        <img src="./images/index/index_img_q3.png" alt="">
       </div>
     </section>
           

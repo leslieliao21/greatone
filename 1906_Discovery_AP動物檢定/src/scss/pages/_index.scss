@@ -4,6 +4,22 @@
 
 .index-page {
 
+  .btn_news{
+    width: 88px;
+    display: block;
+    position: fixed;
+    top: 220px;
+    right: 0;
+    z-index: 99;
+    margin-right: 0;
+    transition: all $duration-std;
+    @include mq(tablet-small, max) {
+      width: 65px;
+      top: 250px;
+      margin-right: 0;
+    }
+  }
+
   main {
     background: #0074c1; /* Old browsers */
     background: -moz-linear-gradient(top, #0074c1 3%, #59bde2 47%, #90d3ec 73%, #b7e6f8 94%); /* FF3.6-15 */
@@ -36,23 +52,36 @@
     }
     .deco_imgD{
       left: 0%;
-      top:5%;
+      top:0%;
     }
 
     section{
       overflow: visible;
       &.secA{
         text-align: center;
-        margin-top: -8em;
+        margin-top: -7%;
         img{
+          width: 45%;
           max-width: 394px;
           margin: 0 auto 20px auto;
         }
         p{
           color: #FFF;
-          font-size: size-rem(22);
+          font-size: size-rem(24);
           font-weight: 700;
           line-height: 1.8em;
+        }
+        @include mq(tablet-wide, max) {
+          padding: 0 20px;
+        }
+        @include mq(tablet-small, max) {
+          margin-top: -16%;
+          img{
+            width: 75%;
+          }
+          p{
+            line-height: 1.5em;
+          }
         }
       }
 
@@ -88,6 +117,15 @@
             bottom: -20px;
             left: -20px;
           }
+          @include mq(tablet-wide, max) {
+            border: none;
+            &:before {
+              display: none;
+            }
+            &:after {
+              display: none;
+            }
+          }
       
           iframe{
             position: absolute;
@@ -100,10 +138,10 @@
       }
       &.secC{
         margin: 6em 0 0 0;
-        background: url('../images/index_bg_bottom.png') no-repeat;
+        background: url('../images/index/index_bg_bottom.png') no-repeat;
         background-position: center bottom;
         padding-bottom: 5em;
-        
+    
         .container{
           max-width: 1400px;
           @include set-flex(center, space-between);
@@ -117,6 +155,28 @@
             transform: scale(0.95,0.95);
           }
         }
+        @include mq(tablet-mid, max) {
+          margin: 0;
+          background: #0074c1; /* Old browsers */
+          background: -moz-linear-gradient(top, #0074c1 3%, #45afdc 94%); /* FF3.6-15 */
+          background: -webkit-linear-gradient(top, #0074c1 3%, #45afdc 94%); /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(to bottom, #0074c1 3%,#45afdc 94%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0074c1', endColorstr='#45afdc',GradientType=0 ); /* IE6-9 */
+          .container{
+            display: block;
+          }
+        }
+        @include mq(tablet-small,max){
+          padding-bottom: 0;
+          .btn_challenge{
+            max-width: 100%;
+            margin: 0 auto;
+            &:hover{
+              transform: none;
+            }
+          }
+        }
+
         .circleBox{
           width: 30%;
           position: relative;
@@ -131,7 +191,8 @@
             width: 100%;
             // height: 100%;
             text-align: center;
-            transform: translateY(-50%);         
+            transform: translateY(-50%);
+            margin-top: -10px;         
             // &:before{
             //   content: '';
             //   vertical-align: middle;
@@ -139,21 +200,109 @@
             //   width: 0;
             //   height: 100%;
             // }
-            img, p{
-              
+            picture, p{
               display: inline-block;
             }
-            img{
+            picture{
               width: 28%;
               max-width: 125px;
             }
             p{
               width: 100%;
               padding: 0 8%;
-              margin-top: 5%;
-              font-size: size-rem(18);
-              line-height: 1.4em;
+              margin-top: 2%;
+              font-size: size-rem(20);
+              line-height: 1.5em;
               font-weight: 600;
+              color: #333333;
+              span{
+                font-size: size-rem(17);
+                line-height: 1;
+              }
+            }
+          }
+          @include mq(notebook, max) {
+            .circleCont{
+              picture{
+                width: 20%;
+              }
+              p{
+                padding: 0 10%;
+                font-size: size-rem(17);
+              }
+            }
+          }
+          @include mq(tablet-mid, max) {
+            width: 100%;
+            height: auto;
+            padding: 0;
+            border-radius: 0;
+            background-color: transparent;
+            
+            &:first-child{
+              &:before, &:after{
+                @include pseudo();
+                width: 100%;
+                height: 100%;
+                top: 0; 
+              }
+              &:before{     
+                left: 0;
+                background: url('../images/index/index_box1_before.png') no-repeat;
+                background-size: contain;
+                background-position: left top;
+              }
+              &:after{
+                right: 0;
+                background: url('../images/index/index_box1_after.png') no-repeat;
+                background-size: contain;
+                background-position: right bottom;
+              }
+            }
+            &:last-child{
+              &:before, &:after{
+                @include pseudo();
+                width: 100%;
+                height: 100%;
+                top: 0; 
+              }
+              &:before{     
+                left: 0;
+                background: url('../images/index/index_box2_before.png') no-repeat;
+                background-size: contain;
+                background-position: left top;
+              }
+              &:after{
+                right: 0;
+                background: url('../images/index/index_box2_after.png') no-repeat;
+                background-size: contain;
+                background-position: right bottom;
+              }
+            }
+            &:nth-child(2){
+              background-color: rgba(255,255,255,0.15);
+            }
+            .circleCont{
+              position: relative;
+              top: initial;
+              left: initial;
+              width: 100%;
+              padding: 10% 2.5%;
+              transform: none;
+              margin-top: 0;
+              picture{
+                width: 40%;
+                max-width: 267px;
+              }
+              p{
+                color: #FFF;
+                font-size: size-rem(24);
+                padding: 0 5%;
+                span{
+                  font-size: size-rem(24);
+                  color: #FFF;
+                }
+              }
             }
           }
         }
