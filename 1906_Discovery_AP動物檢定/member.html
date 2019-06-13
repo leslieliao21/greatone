@@ -40,7 +40,7 @@
         </div>
     </div>
 
-    <header class="page-header">
+    <header class="page-header header_signin">
         <section class="header-top">
 
             <div class="container">
@@ -74,7 +74,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="#" data-lb="_rule" class="btnRule _lb">
                                 <p>遊戲規則</p>
                             </a>
                         </li>
@@ -89,8 +89,8 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <p><img src="./images/icons/facebook.svg" alt="facebook icon"></p>
+                            <a href="https://www.facebook.com/AnimalPlanetTaiwan/" target="_blank">
+                                <p><img src="./images/icons/facebook.png" alt="facebook icon"></p>
                             </a>
                         </li>
                     </ul>
@@ -100,7 +100,6 @@
             </div>
 
         </section>
-
     </header>
 
     <main class="main-container">
@@ -124,29 +123,38 @@
                     <span class="elephantName">我的小象</span>
                     <img src="./images/member/member_name_board.png" alt="">
                 </div>
+                <!--大象不在家-->
                 <div class="elephantNotathome hide">
                     <img src="./images/member/member_elephant_notathome.png" alt="">
                 </div>
-                <div class="elephantWrapper">
+                <!--大象大號-->
+                <div class="elephantWrapper sweep hide">
+                    <div class="canvasWrapper">
+                        <iframe id="iframeA" src="includes/elephant/elephant_sweep_before/elephant_sweep_before.html"
+                            frameborder="0"></iframe>
+                    </div>
+                </div>
+                <!--其它大象都在這-->
+                <div class="elephantWrapper show">
                     <div class="canvasWrapper">
                         <iframe id="iframeA" src="includes/elephant/elephant_hungry_before/elephant_hungry_before.html"
                             frameborder="0"></iframe>
                     </div>
                 </div>
             </div>
-            
+
         </div>
 
         <section>
-                <button type="button" class="btn_goplay btn_go btn_radius">開始遊戲 GO!</button>
+            <button type="button" class="btn_goplay btn_go btn_radius">開始遊戲 GO!</button>
             <div class="memberInfoWrapper">
                 <div>
                     <div class="userimgWrapper">
                         <div>
-                            <div id="imagePreview">
+                            <div class="imagePreview">
                                 <div class="imgUploadIcon hide"><img src="images/icon_photo_default.png" alt=""></div>
                             </div>
-                            <input id="uploadFile" type="file" name="image" class="img" />
+                            <input class="uploadFile" type="file" name="image" class="img" />
                         </div>
                     </div>
                     <div class="userinfoWrapper">
@@ -156,17 +164,17 @@
                     </div>
                 </div>
                 <div>
-                    <button type="button" data-lb="_memberinfo" class="btnInfoDetail btn_member btn_blue btn_radius _lb">基本資料</button>
-                    <button type="button" data-lb="_memberscore" class="btnScore btn_member btn_blue btn_radius _lb">我的檢定</button>
-                    <button type="button" data-lb="_membercard" class="btnCard btn_member btn_blue btn_radius _lb">我的通關卡</button>
-                    <button type="button" data-lb="_rule" class="btnRule btn_member btn_blue btn_radius _lb">遊戲規則</button>
+                    <button type="button" data-lb="_memberinfo"
+                        class="btnInfoDetail btn_member btn_blue btn_radius _lb">基本資料</button>
+                    <button type="button" data-lb="_memberscore"
+                        class="btnScore btn_member btn_blue btn_radius _lb">我的檢定</button>
+                    <button type="button" data-lb="_membercard"
+                        class="btnCard btn_member btn_blue btn_radius _lb">我的通關卡</button>
+                    <button type="button" data-lb="_rule"
+                        class="btnRule btn_member btn_blue btn_radius _lb">遊戲規則</button>
                 </div>
             </div>
-            
         </section>
-
-
-
 
     </main>
 
@@ -190,26 +198,30 @@
     </footer>
 
     <script>
-        $(function() {
+        $(function () {
             //uploadimg
-            $("#uploadFile").on("change", function () {
+            $(".memberInfoWrapper .uploadFile").on("change", function () {
                 var files = !!this.files ? this.files : [];
-                if (!files.length || !window.FileReader) return; // no file selected, or no FileReader support
-        
+                if (!files.length || !window.FileReader)
+            return; // no file selected, or no FileReader support
+
                 if (/^image/.test(files[0].type)) { // only image file
                     var reader = new FileReader(); // instance of the FileReader
                     reader.readAsDataURL(files[0]); // read the local file
-        
+
                     reader.onloadend = function () { // set image data as background of div
-                        $("#imagePreview").css({"background-image": "url(" + this.result + ")", "background-size": "cover"});
+                        $(".imagePreview").css({
+                            "background-image": "url(" + this.result + ")",
+                            "background-size": "cover"
+                        });
                         $('.imgUploadIcon').show();
                     }
                 }
             });
-            $('#imagePreview').click(function () {
-                $('#uploadFile').trigger('click');
+            $('.memberInfoWrapper .imagePreview').click(function () {
+                $(this).siblings('.uploadFile').trigger('click');
             });
-        
+
         });
     </script>
 

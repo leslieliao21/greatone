@@ -9,14 +9,14 @@
         <div class="whiteBg">
             <div class="lb_title">基本資料</div>
             <div class="userimgWrapper">
-                <div class="crown">
-                    <img src="images/member/crown_first.png" alt="">
-                </div>
                 <div>
-                    <div id="imagePreview">
+                    <div class="crown">
+                        <img src="images/member/crown_first.png" alt="">
+                    </div>
+                    <div class="imagePreview">
                         <div class="imgUploadIcon hide"><img src="images/icon_photo_default.png" alt=""></div>
                     </div>
-                    <input id="uploadFile" type="file" name="image" class="img" />
+                    <input class="uploadFile" type="file" name="image" class="img" />
                 </div>
                 <div class="userinfoWrapper">
                     <div class="userName">王小明</div>
@@ -90,14 +90,15 @@
             <div class="whiteBg">
                 <div class="lb_title">基本資料</div>
                 <div class="userimgWrapper">
-                    <div class="crown">
-                        <img src="images/member/crown_first.png" alt="">
-                    </div>
+                    
                     <div>
-                        <div id="imagePreview">
+                        <div class="crown">
+                            <img src="images/member/crown_first.png" alt="">
+                        </div>
+                        <div class="imagePreview">
                             <div class="imgUploadIcon hide"><img src="images/icon_photo_default.png" alt=""></div>
                         </div>
-                        <input id="uploadFile" type="file" name="image" class="img" />
+                        <input class="uploadFile" type="file" name="image" class="img" />
                     </div>
                     <div class="userinfoWrapper">
                         <div class="userName">王小明</div>
@@ -133,7 +134,7 @@
 <script>
 $(function() {
     //uploadimg
-    $("#uploadFile").on("change", function () {
+    $("#page-memberinfo .uploadFile").on("change", function () {
         var files = !!this.files ? this.files : [];
         if (!files.length || !window.FileReader) return; // no file selected, or no FileReader support
 
@@ -142,13 +143,20 @@ $(function() {
             reader.readAsDataURL(files[0]); // read the local file
 
             reader.onloadend = function () { // set image data as background of div
-                $("#imagePreview").css({"background-image": "url(" + this.result + ")", "background-size": "cover"});
+                $(".imagePreview").css({"background-image": "url(" + this.result + ")", "background-size": "cover"});
                 $('.imgUploadIcon').show();
             }
         }
     });
-    $('#imagePreview').click(function () {
-        $('#uploadFile').trigger('click');
+
+    //click btn_change_pw and back
+    $('#page-memberinfo .imagePreview').click(function () {
+        $(this).siblings('.uploadFile').trigger('click');
+    });
+
+    $('.btn_change_pw, .btn_back').click(function(){
+        $(this).parents('.inside').hide();
+        $(this).parents().siblings('.inside').show();
     });
 
 });

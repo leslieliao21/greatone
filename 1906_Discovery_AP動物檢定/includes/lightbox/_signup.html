@@ -24,10 +24,10 @@
             <div class="lb_title">我要註冊</div>
             <div class="userimgWrapper">
                 <div>
-                    <div id="imagePreview">
+                    <div class="imagePreview">
                         <div class="imgUploadIcon hide"><img src="images/icon_photo_default.png" alt=""></div>
                     </div>
-                    <input id="uploadFile" type="file" name="image" class="img" />
+                    <input class="uploadFile" type="file" name="image" class="img" />
                 </div>
             </div>
 
@@ -102,10 +102,10 @@
             <div class="lb_title">我要註冊</div>
             <div class="userimgWrapper">
                 <div>
-                    <div id="imagePreview">
+                    <div class="imagePreview">
                         <div class="imgUploadIcon hide"><img src="images/icon_photo_default.png" alt=""></div>
                     </div>
-                    <input id="uploadFile" type="file" name="image" class="img" />
+                    <input class="uploadFile" type="file" name="image" class="img" />
                 </div>
             </div>
 
@@ -170,7 +170,7 @@
 <script>
 $(function() {
     //uploadimg
-    $("#uploadFile").on("change", function () {
+    $("#page-signup .uploadFile").on("change", function () {
         var files = !!this.files ? this.files : [];
         if (!files.length || !window.FileReader) return; // no file selected, or no FileReader support
 
@@ -179,13 +179,13 @@ $(function() {
             reader.readAsDataURL(files[0]); // read the local file
 
             reader.onloadend = function () { // set image data as background of div
-                $("#imagePreview").css({"background-image": "url(" + this.result + ")", "background-size": "cover"});
+                $(".imagePreview").css({"background-image": "url(" + this.result + ")", "background-size": "cover"});
                 $('.imgUploadIcon').show();
             }
         }
     });
-    $('#imagePreview').click(function () {
-        $('#uploadFile').trigger('click');
+    $('#page-signup .imagePreview').click(function () {
+        $(this).siblings('.uploadFile').trigger('click');
     });
 
 });

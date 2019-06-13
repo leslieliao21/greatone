@@ -118,6 +118,9 @@
       padding-bottom: 5px;
       margin-bottom: 2vh;
       border-bottom: 1px solid #dfdfdf;
+      @include mq(tablet, max) {
+        font-size: 32px;
+      }
     }
     form{
       padding: 10px 0;
@@ -127,6 +130,9 @@
     width: 100%;
     display: inline-block;
     word-wrap: break-word;
+    @include mq(phablet, max) {
+      margin-left: -10px;
+    }
   }
 }
 

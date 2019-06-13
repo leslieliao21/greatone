@@ -22,9 +22,9 @@
                     <img src="images/member/card_green15.png" alt="">
                 </div>
                 <ul class="cardSelector">
-                    <li>+5秒</li>
+                    <li onclick="switchCard()">+5秒</li>
                     <li>+10秒</li>
-                    <li>+15秒</li>
+                    <li class="active">+15秒</li>
                 </ul>
             </div>
             <div class="cardGray">
@@ -39,3 +39,20 @@
     
 </div>
 
+<script>
+    $(function() {
+        $(".cardSelector li").click(function () {
+            $(this).addClass('active');
+            $(this).siblings().removeClass('active');
+        }); 
+        $(".cardSelector li").eq(0).click(function () {
+            $('.cardGreen').find('img').attr('src', 'images/member/card_green5.png');
+        });  
+        $(".cardSelector li").eq(1).click(function () {
+            $('.cardGreen').find('img').attr('src', 'images/member/card_green10.png');
+        });  
+        $(".cardSelector li").eq(2).click(function () {
+            $('.cardGreen').find('img').attr('src', 'images/member/card_green15.png');
+        });   
+    });
+</script>

@@ -121,13 +121,13 @@
       }
     }
     
-    // &:not(:last-of-type) {
-    //   border-bottom: 1px solid #469dd6;
+    &:not(:last-of-type) {
+      border-bottom: 1px solid #469dd6;
       
-    //   @include mq(tablet-wide) {
-    //     border-bottom: 0;
-    //   }
-    // }
+      @include mq(tablet-wide) {
+        border-bottom: 0;
+      }
+    }
 
     &.active {
       // border-bottom-color: #308dfe;

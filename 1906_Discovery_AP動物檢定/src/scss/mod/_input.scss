@@ -12,12 +12,14 @@ input, select{
     &.w50{
         width: 50%;
     }
+    @include mq(tablet, max) {
+        &.w50{
+            width: 70%;
+        }
+    }
 }
 select{
     margin-right: 2%;
-    // -webkit-appearance: none;
-    // -moz-appearance: none;
-    // appearance: none;
     background: url('../images/icon_select.svg') #FFF no-repeat;
     background-position: 92% center;
     -webkit-background-size: 10px 10px;
@@ -33,9 +35,10 @@ label, input, select{
 
 label{
     width: 8%;
+    @include mq(tablet, max) {
+        width: 20%;
+    }
 }
-
-
 
 input[type="file"] {
     display: none;
@@ -108,4 +111,5 @@ input[type="date"], focus {
     input[type="number"] {
         -moz-appearance: textfield;
     }
+
 

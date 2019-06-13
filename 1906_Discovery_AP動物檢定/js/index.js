@@ -2,11 +2,22 @@
 
 var rellax = new Rellax('.rellax');
 
+// includesLoader({
+//     callback: mainFunc,
+//     includesList: [{
+//         target: ".page-header.header_signout",
+//         fileName: "header_signout"
+//     }, {
+//         target: ".page-header.header_signin",
+//         fileName: "header_signin"
+//     }]
+// });
+
 //prevent touch to hover
 function hasTouch() {
-    return 'ontouchstart' in document.documentElement
-           || navigator.maxTouchPoints > 0
-           || navigator.msMaxTouchPoints > 0;
+    return 'ontouchstart' in document.documentElement ||
+        navigator.maxTouchPoints > 0 ||
+        navigator.msMaxTouchPoints > 0;
 }
 
 if (hasTouch()) { // remove all :hover stylesheets
@@ -27,6 +38,7 @@ if (hasTouch()) { // remove all :hover stylesheets
 }
 //END
 
+//header animate by scroll
 var c, currentScrollTop = 0,
     navbar = $('header'),
     newsbtn = $('.btn_news');
@@ -58,9 +70,11 @@ $(window).scroll(function () {
     }
     c = currentScrollTop;
 });
+//END
 
 
-$(function() {
+
+$(function () {
     $(".header-nav li").click(function () {
         $(this).find('a').addClass('active');
         $(this).siblings().find('a').removeClass('active');
@@ -68,18 +82,18 @@ $(function() {
 });
 
 function mainFunc() {
-    
-    $header = $(".page-header"), $hamburger = $(".hamburger"), $headerNav = $(".header-nav ul"),windowEvents(),  $hamburger.on("click", function (e) {
-        e.preventDefault(), e.stopPropagation(), $header.toggleClass(PAGE_HEADER_ACTIVE), $header.hasClass(PAGE_HEADER_ACTIVE) ? $headerNav.stop().slideDown(DURATION.STD) : $headerNav.stop().slideUp(DURATION.STD)
-    }), $doc.on("click", function () {
-        $header.hasClass(PAGE_HEADER_ACTIVE) && ($headerNav.stop().slideUp(DURATION.STD), $header.removeClass(PAGE_HEADER_ACTIVE))
-    }), 
-    $("._lb").lightbox(function () {});
-     
-    
-     transitionThenRemove({
+
+    $header = $(".page-header"), $hamburger = $(".hamburger"), $headerNav = $(".header-nav ul"), windowEvents(), $hamburger.on("click", function (e) {
+            e.preventDefault(), e.stopPropagation(), $header.toggleClass(PAGE_HEADER_ACTIVE), $header.hasClass(PAGE_HEADER_ACTIVE) ? $headerNav.stop().slideDown(DURATION.STD) : $headerNav.stop().slideUp(DURATION.STD)
+        }), $doc.on("click", function () {
+            $header.hasClass(PAGE_HEADER_ACTIVE) && ($headerNav.stop().slideUp(DURATION.STD), $header.removeClass(PAGE_HEADER_ACTIVE))
+        }),
+        $("._lb").lightbox(function () {});
+
+
+    transitionThenRemove({
         dom: $(".page-loading"),
-        duration: DURATION.STD,
+        duration: DURATION.SLOW,
         callback: function () {
             console.log("%cBuild Completed!", logSafeStyle)
         }
@@ -92,11 +106,6 @@ function windowEvents() {
 
 function _resize() {
     getSize(), 1024 < winW ? resizePC() : resizeMB()
-    // if (device.mobile() || device.tablet()) {
-    //     resizeMB()
-    // }else{
-    //     resizePC()
-    // }
 }
 
 function getSize() {
@@ -112,7 +121,7 @@ function resizePC() {
 }
 
 function resizeMB() {
-    
+
     $(window).scroll(function () {
         $header.removeClass(PAGE_HEADER_ACTIVE);
         $headerNav.stop().slideUp(DURATION.FAST);

@@ -151,6 +151,13 @@ main {
   margin-left: 15px;
 }
 
+@include mq(tablet, max) {
+  .dashSide span:before,
+  .dashSide span:after {
+    width: 40%;
+  }
+}
+
 //btn style
 
 .btn_default{
@@ -176,6 +183,9 @@ main {
   transition: all $duration-std;
   &:hover{
     background-color: #999;
+  }
+  @include mq(phone, max) {
+    font-size: 20px;
   }
 }
 
