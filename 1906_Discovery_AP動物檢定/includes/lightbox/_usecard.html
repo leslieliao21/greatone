@@ -1,0 +1,58 @@
+<div class="parrot">
+    <img src="images/parrot.png" alt="">
+</div>
+
+<div id="page-membercard" class="page-usecard">
+
+    <div class="inside show">
+        <div class="lb_title_white">我的通關卡</div>
+        <div class="allCards">
+            <div class="cardBlue selected">
+                <div class="imgWrapper">
+                    <div class="cardNum">x<strong>02</strong></div>
+                    <div class="triangle"></div>
+                    <img src="images/card_blue.png" alt="">
+                </div>
+            </div>
+            <div class="cardGreen">
+                <div class="imgWrapper">
+                    <div class="cardNum">x<strong>03</strong></div>
+                    <div class="triangle"></div>
+                    <img src="images/card_green15.png" alt="">
+                </div>
+                <ul class="cardSelector">
+                    <li onclick="switchCard()">+5秒</li>
+                    <li>+10秒</li>
+                    <li class="active">+15秒</li>
+                </ul>
+            </div>
+            <div class="cardGray">
+                <div class="imgWrapper">
+                    <div class="cardNum">x<strong>04</strong></div>
+                    <div class="triangle"></div>
+                    <img src="images/card_gray.png" alt="">
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn_usecard_confirm btn_blue btn_radius">確定使用</button>
+    </div>
+    
+</div>
+
+<script>
+    $(function() {
+        $(".cardSelector li").click(function () {
+            $(this).addClass('active');
+            $(this).siblings().removeClass('active');
+        }); 
+        $(".cardSelector li").eq(0).click(function () {
+            $('.cardGreen').find('img').attr('src', 'images/card_green5.png');
+        });  
+        $(".cardSelector li").eq(1).click(function () {
+            $('.cardGreen').find('img').attr('src', 'images/card_green10.png');
+        });  
+        $(".cardSelector li").eq(2).click(function () {
+            $('.cardGreen').find('img').attr('src', 'images/card_green15.png');
+        });   
+    });
+</script>

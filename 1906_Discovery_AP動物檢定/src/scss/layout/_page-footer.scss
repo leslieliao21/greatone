@@ -33,7 +33,10 @@
         color: #308dfe;
       }
       @include mq(tablet-small, max) {
-        margin: 8px 0;
+        margin: 5px 0;
+      }
+      @include mq(phone-wide, max) {
+        padding: 0 4px;
       }
     }
   }
@@ -62,14 +65,19 @@
     text-align: center;
     white-space: normal;
     word-break: break-word;
-    // @include mq(phablet) {
-    //   font-size: 14px;
-    // }
-    // @include mq(tablet) {
-    //   font-size: 16px;
-    // }
-    // @include mq(tablet-wide) {
-    //   font-size: 14px;
-    // }
+    @include mq(phone-wide, max) {
+      font-size: size-rem(10);
+      padding: 4px;
+    }
   }
+}
+
+.game-page {
+  .page-footer {
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    bottom: 0; left: 0;
+  }
+
 }

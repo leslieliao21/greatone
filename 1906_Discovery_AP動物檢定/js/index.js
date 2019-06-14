@@ -79,6 +79,50 @@ $(function () {
         $(this).find('a').addClass('active');
         $(this).siblings().find('a').removeClass('active');
     });
+
+    $(".challengeOptionBox.choose .yesnoOption .item, .challengeOptionBox.choose .abcOption .item").click(function () {
+        $(this).addClass('selected');
+        $(this).siblings().removeClass('selected');
+    });
+
+    // var gameIndex = $('.game-page .kv'),
+    //     gameChallenge = $('.challengeWrapper'),
+    //     tweenGameIndex = new TimelineMax({
+    //         paused: true
+    //     }),
+    //     tweenGameChallenge = new TimelineMax({
+    //         paused: true
+    //     });
+    // tweenGameIndex.to(gameIndex, 0.3, {
+    //     css: {
+    //       scale: 0,
+    //       opacity: 0,
+    //     },
+    //     ease: Expo.easeOut,
+    //     pause: true
+    // });
+    // tweenGameChallenge.fromTo(gameChallenge, 0.5, {
+    //     css: {
+    //       marginTop: -2000
+    //     },
+    //     opacity: 0,
+    //     autoAlpha: 1
+    //   }, {
+    //     css: {
+    //       marginTop: -50
+    //     },
+    //     opacity: 1,
+    //     autoAlpha: 1,
+    //     delay: 0.6,
+    //     ease: Power2.easeOut
+    // });
+
+    // $('.btn_play').click(function () {
+    //     tweenGameIndex.play();
+    //     tweenGameChallenge.play();
+    // });
+    
+      
 });
 
 function mainFunc() {
@@ -109,15 +153,16 @@ function _resize() {
 }
 
 function getSize() {
-    winW = $win.outerWidth(), winH = $win.height(), headerTopH = $(".header-top").outerHeight(), headerNavH = $(".header-nav").outerHeight()
+    winW = $win.outerWidth(), winH = $win.height(), headerTopH = $(".header-top").outerHeight(), headerNavH = $(".header-nav").outerHeight(), footerH = $("footer").outerHeight()
 }
 
 function resizePC() {
+    var footerDH = footerH-30;
     headerInit("flex"), $(".main-container").css({
         marginTop: headerTopH
-    }), $(".header-nav").css({
-        marginTop: 0
-    }), headerTotalH = headerTopH
+    }), $(".game-page main").css({
+        'height': 'calc(100vh - ' +footerDH+ 'px)'
+    })
 }
 
 function resizeMB() {
@@ -128,7 +173,9 @@ function resizeMB() {
     });
     headerInit("none"), $(".main-container, .header-nav").css({
         marginTop: headerTopH
-    }), headerTotalH = headerTopH
+    }), $(".game-page main").css({
+        'height': 'calc(100vh - ' +footerH+ 'px)'
+    })
 }
 
 function headerInit(e) {
@@ -183,4 +230,5 @@ var PAGE_HEADER_ACTIVE = "menuOpen",
     headerTopH = void 0,
     headerNavH = void 0,
     headerTotalH = void 0,
+    footerH = void 0,
     nowPos = void 0;

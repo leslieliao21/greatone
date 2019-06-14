@@ -15,7 +15,7 @@
     <!-- Meta Data -->
     <meta name="keywords" content="網頁關鍵字">
     <meta name="description" content="網頁描述">
-    <meta name="og:title" content="分享標題">
+    <meta name="og:title" content="動物檢定">
     <meta name="og:description" content="網頁描述">
     <meta name="og:type" content="website">
     <meta name="og:image" content="http://demo.great3.com.tw/leslie/1906discovery_ap/images/1200x630.jpg">
@@ -69,12 +69,12 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="game.html" target="_self">
                                 <p>開始遊戲</p>
                             </a>
                         </li>
                         <li>
-                            <a href="#" data-lb="_rule" class="btnRule _lb">
+                            <a href="javascript:" data-lb="_rule" class="btnRule _lb">
                                 <p>遊戲規則</p>
                             </a>
                         </li>
@@ -146,7 +146,7 @@
         </div>
 
         <section>
-            <button type="button" class="btn_goplay btn_go btn_radius">開始遊戲 GO!</button>
+            <button type="button" class="btn_goplay btn_darkblue btn_radius">開始遊戲 GO!</button>
             <div class="memberInfoWrapper">
                 <div>
                     <div class="userimgWrapper">
@@ -197,35 +197,35 @@
         </div>
     </footer>
 
-    <script>
-        $(function () {
-            //uploadimg
-            $(".memberInfoWrapper .uploadFile").on("change", function () {
-                var files = !!this.files ? this.files : [];
-                if (!files.length || !window.FileReader)
-            return; // no file selected, or no FileReader support
-
-                if (/^image/.test(files[0].type)) { // only image file
-                    var reader = new FileReader(); // instance of the FileReader
-                    reader.readAsDataURL(files[0]); // read the local file
-
-                    reader.onloadend = function () { // set image data as background of div
-                        $(".imagePreview").css({
-                            "background-image": "url(" + this.result + ")",
-                            "background-size": "cover"
-                        });
-                        $('.imgUploadIcon').show();
-                    }
-                }
-            });
-            $('.memberInfoWrapper .imagePreview').click(function () {
-                $(this).siblings('.uploadFile').trigger('click');
-            });
-
-        });
-    </script>
-
     <script src="./js/index.js"></script>
+    <script>
+            $(function () {
+                
+                //uploadimg
+                $(".memberInfoWrapper .uploadFile").on("change", function () {
+                    var files = !!this.files ? this.files : [];
+                    if (!files.length || !window.FileReader)
+                return; // no file selected, or no FileReader support
+    
+                    if (/^image/.test(files[0].type)) { // only image file
+                        var reader = new FileReader(); // instance of the FileReader
+                        reader.readAsDataURL(files[0]); // read the local file
+    
+                        reader.onloadend = function () { // set image data as background of div
+                            $(".imagePreview").css({
+                                "background-image": "url(" + this.result + ")",
+                                "background-size": "cover"
+                            });
+                            $('.imgUploadIcon').show();
+                        }
+                    }
+                });
+                $('.memberInfoWrapper .imagePreview').click(function () {
+                    $(this).siblings('.uploadFile').trigger('click');
+                });
+                
+            });
+        </script>
 </body>
 
 </html>

@@ -90,7 +90,7 @@
         .videoWrapper {
           width: 100%;
           position: relative;
-          padding-bottom: 54%; /* 16:9 */
+          padding-bottom: 54%; 
           padding-top: 25px;
           height: 0;
           border-right: 20px solid rgba(0, 0, 0, .15);
@@ -150,10 +150,6 @@
         .btn_challenge{
           max-width: 535px;
           margin: 40px auto 0 auto;
-          transition: all $duration-fast;
-          &:hover{
-            transform: scale(0.95,0.95);
-          }
         }
         @include mq(tablet-mid, max) {
           margin: 0;

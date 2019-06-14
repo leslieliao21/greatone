@@ -42,6 +42,13 @@
   position: relative;
 }
 
+#_prompt{
+  .lb-content {
+    width: auto;
+    max-width: auto;
+  }
+}
+
 // Lightbox Content
 .lb-content {
   width: 900px;

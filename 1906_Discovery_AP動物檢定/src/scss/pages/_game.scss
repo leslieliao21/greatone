@@ -1,0 +1,434 @@
+/*==================================================*\
+        Index Page Style
+\*==================================================*/
+
+.game-page {
+    overflow-y: hidden !important;
+    main {
+        width: 100%;
+        // height: 100vh;
+        overflow-y: hidden;
+        // min-height: 994px;
+        background: #0074c1; /* Old browsers */
+        background: -moz-linear-gradient(top, #0074c1 3%, #59bde2 37%, #90d3ec 73%, #b7e6f8 94%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #0074c1 3%,#59bde2 37%,#90d3ec 73%,#b7e6f8 94%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #0074c1 3%,#59bde2 37%,#90d3ec 73%,#b7e6f8 94%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0074c1', endColorstr='#b7e6f8',GradientType=0 ); /* IE6-9 */
+    
+        overflow: hidden;
+
+        &:before{
+            @include pseudo();
+            background: url('../images/game/kv_cloud.png') top center no-repeat;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-size: cover;
+        }
+        &:after{
+            @include pseudo();
+            background: url('../images/game/kv_img.png') bottom center no-repeat;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            background-size: cover;
+            @include mq(tablet-small, max) {
+                background: url('../images/game/m_kv_img.png') bottom center no-repeat;
+                background-size: 100% auto;
+            }
+        }
+
+        .kv{
+            width: 65%;
+            position: absolute;
+            max-width: 450px;
+            top: 50%;
+            left: 50%;
+            z-index: 3;
+            transform: translate(-50%, -50%);
+            margin-top: -22vh;
+            overflow-y: hidden;
+            .imgWrapper{
+                width: 85%;
+                max-width: 410px;
+                margin: 0 auto;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+
+        .challengeWrapper{
+            // width: 100%;
+            height: 100%;
+            @include set-flex(center, center);
+            flex-direction: column;
+            position: absolute;
+            max-width: 950px;
+            top: 50%;
+            left: 50%;
+            z-index: 3;
+            transform: translate(-50%, -50%);
+            // margin-top: -2000px;
+            margin-top: -50px;
+            // overflow-y: hidden;
+            overflow-x: visible;
+
+            ul.challengeProgress{
+                width: 100%;
+                @include set-flex(center, center);
+                margin-bottom: 3vh;
+                li{
+                    @include set-flex(center, center);
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 100%;
+                    font-weight: 700;
+                    font-size: 24px;
+                    color: #FFF;
+                    background-color: #b5b5b5;
+                    border: 3px solid #FFF;
+                    margin-right: 35px;
+                    &:not(:last-child):after{
+                        @include pseudo();
+                        border-top: 5px solid transparent;
+                        border-bottom: 5px solid transparent;
+                        border-left: 8px solid #FFF;
+                        margin-left: 40px;
+                    }
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                    &.done{
+                        background-color: #1eb4ff;
+                    }
+                }
+            }
+
+            .challengeOptionBox{
+                margin-bottom: 2vh;
+                .abcOption{
+                    @include set-flex(stretch, center);
+                    .item{
+                        position: relative;
+                        color: #333333;
+                        width: 32%;
+                        padding: 3% 2%;
+                        background-color: #fff;
+                        border-radius: 10px;
+                        text-align: center;
+                        margin: 1%;
+                        font-size: 16px;
+                        line-height: 1.2em;
+                        -webkit-user-select: none;
+                          -moz-user-select: none;
+                          -ms-user-select: none;
+                           user-select: none;
+                        cursor: pointer;
+                        .alphabet{
+                            width: 24%;
+                            position: relative;
+                            height: 0;
+                            padding: 12% 0;
+                            border-radius: 50%;
+                            margin: 0 auto 10px auto;
+                            font-size: 150%;
+                            font-weight: 700;
+                            border: 1px solid #333;
+                            span{
+                                position: absolute;
+                                top: 50%;
+                                left: 0;
+                                width: 100%;
+                                text-align: center;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+                }
+                .yesnoOption{
+                    @include set-flex(stretch, center);
+                    .item{
+                        position: relative;
+                        @include set-flex(center, center);
+                        width: 32%;
+                        max-width: 300px;
+                        padding: 4% 11%;
+                        background-color: #fff;
+                        border-radius: 10px;
+                        text-align: center;
+                        margin: 1%;
+                        -webkit-user-select: none;
+                          -moz-user-select: none;
+                          -ms-user-select: none;
+                           user-select: none;
+                        cursor: pointer;
+                        svg{
+                            width: 100%;
+                            .oo{
+                                fill:none;stroke:#333;stroke-width:12;stroke-miterlimit:10;
+                            }
+                            .xx{
+                                fill:none;stroke:#333;stroke-width:14;stroke-miterlimit:10;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .challengeQaWrapper{
+                position: relative;
+                width: 100%;
+
+                .challengeQuestionBox{
+                    min-width: 75vh;
+                    position: relative;
+                    background: url('../images/game/question_bg.png') center center no-repeat;
+                    background-size: contain;
+                    // padding-bottom: 56.25%; /* 16:9 */
+                    .cTitle, .countdownBox{
+                        position: absolute;
+                    }
+                    .cTitle{
+                        top: -30px; left: -15px;
+                        z-index: 99;
+                    }
+                    .imgWrapper{
+                        width: 90%;
+                        position: relative;
+                        padding-bottom: 56.25%; /* 16:9 */
+                        padding-top: 25px;
+                        height: 0;
+                        margin: 0 auto;
+                        img{
+                            position: absolute;
+                          top: 50%;
+                          left: 50%;
+                          transform: translate(-50%, -50%);
+                          width: 100%;
+                        }
+                    }
+                }
+                .challengeOptionBox{
+                    .abcOption{
+                        .item{
+                            &.selected, &:hover{
+                                border: 5px solid #1eb4ff;
+                                padding: calc(3% - 5px) calc(2% - 5px);
+                            }
+                        }
+                    }
+                    .yesnoOption{
+                        .item{
+                            &.selected, &:hover{
+                                border: 5px solid #1eb4ff;
+                                padding: calc(4% - 5px) calc(11% - 5px);
+                            }
+                        }
+                    }
+                }
+            }
+            .challengeAnswerWrapper{
+                position: relative;
+                width: 100%;
+                .challengeAnswerBox{
+                    min-width: 75vh;
+                    position: relative;
+                    background: url('../images/game/question_bg.png') center center no-repeat;
+                    background-size: contain;
+                    // padding-bottom: 56.25%;
+                    padding-bottom: 1.5%;
+                    .cTitle{
+                        position: absolute;
+                        top: -25px; left: -15px;
+                        z-index: 99;
+                    }
+                    .videoWrapper {
+                        width: 90%;
+                        position: relative;
+                        padding-bottom: 56.25%; /* 16:9 */
+                        padding-top: 25px;
+                        height: 0;
+                        margin: 0 auto;
+                    
+                        iframe{
+                          position: absolute;
+                          top: 0;
+                          left: 0;
+                          width: 100%;
+                          height: 100%;
+                        }
+                      }
+                }
+                .challengeOptionBox{
+                    .abcOption{
+                        .item{
+                            cursor: default;
+                            &.wrongAns{
+                                color: #aeaeae;
+                                .alphabet{
+                                    border-color: #aeaeae;
+                                }
+                            }
+                            &.boderWrong{
+                                border: 5px solid #ff4153;
+                                padding: calc(3% - 5px) calc(2% - 5px);
+                                &:after{
+                                    @include pseudo();
+                                    content: '';
+                                    right: -15px;
+                                    bottom: -15px;
+                                    width: 30px;
+                                    height: 30px;
+                                    z-index: 10;
+                                    background: url('../images/game/wrong_ans.png') center center no-repeat;
+                                    background-size: contain;
+                
+                                }
+                            }
+                            &.boderCorrect{
+                                border: 5px solid #58df0e;
+                                padding: calc(3% - 5px) calc(2% - 5px);
+                                &:after{
+                                    @include pseudo();
+                                    content: '';
+                                    right: -15px;
+                                    bottom: -15px;
+                                    width: 30px;
+                                    height: 30px;
+                                    z-index: 10;
+                                    background: url('../images/game/correct_ans.png') center center no-repeat;
+                                    background-size: contain;
+                
+                                }
+                            }
+                        }
+                    }
+                    .yesnoOption{
+                        .item{
+                            cursor: default;
+                            &.selected{
+                                border: 5px solid #1eb4ff;
+                                padding: calc(4% - 5px) calc(11% - 5px);
+                            }
+                            &.wrongAns{
+                                svg{
+                                    .oo{
+                                        fill:none;stroke:#aeaeae;stroke-width:12;stroke-miterlimit:10;
+                                    }
+                                    .xx{
+                                        fill:none;stroke:#aeaeae;stroke-width:14;stroke-miterlimit:10;
+                                    }
+                                }     
+                            }
+                            &.boderWrong{
+                                border: 5px solid #ff4153;
+                                padding: calc(4% - 5px) calc(11% - 5px);
+                                &:after{
+                                    @include pseudo();
+                                    content: '';
+                                    right: -15px;
+                                    bottom: -15px;
+                                    width: 30px;
+                                    height: 30px;
+                                    z-index: 10;
+                                    background: url('../images/game/wrong_ans.png') center center no-repeat;
+                                    background-size: contain;
+                
+                                }
+                            }
+                            &.boderCorrect{
+                                border: 5px solid #58df0e;
+                                padding: calc(4% - 5px) calc(11% - 5px);
+                                &:after{
+                                    @include pseudo();
+                                    content: '';
+                                    right: -15px;
+                                    bottom: -15px;
+                                    width: 30px;
+                                    height: 30px;
+                                    z-index: 10;
+                                    background: url('../images/game/correct_ans.png') center center no-repeat;
+                                    background-size: contain;
+                
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//燈箱頁內容style
+
+.page-usecard{
+    .allCards{
+        > div{
+            cursor: pointer;
+            transition: all $duration-std;
+            .imgWrapper:hover{
+                padding-top: 15px;
+                border: 5px solid #0073ff;
+                border-radius: 10px;
+            }
+            &.selected{
+                .imgWrapper{
+                    padding-top: 15px;
+                    border: 5px solid #0073ff;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}
+
+#_prompt{
+    .lb-content {
+        width: 700px;
+        max-width: 700px;
+    }
+}
+
+#page-prompt{
+    .inside{
+        .whiteBg{
+            min-height: auto;
+            padding: 6%;
+            margin-bottom: 0;
+            background-color: #fff9dd;
+            .imgWrapper{
+                width: 20%;
+                max-width: 150px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+            .cont{
+                width: 76%;
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 22px;
+                padding: 0 4%;
+                text-align: left;
+                h6{
+                    font-size: 36px;
+                    text-align: center;
+                }
+                span{
+                    text-align: left;
+                }
+            }
+            p{
+                display: inline-block;
+                width: 100%;
+                background-color: #f1ecd4;
+                font-size: 20px;
+                padding: 2%;
+                margin-top: 4%;
+                text-align: left;
+            }
+        }
+    }
+  }
+  
