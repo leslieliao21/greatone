@@ -1,0 +1,74 @@
+
+
+/*  base scss  */
+
+
+$font-stack: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+  Helvetica, Arial, "微軟正黑體", "新細明體", "蘋果儷黑體", Verdana, sans-serif;
+
+$font-p:#e84283;
+$bg-p1:#db5e94;
+$bg-p2:#eea7b7;
+$bg-p3:#ffdddd;
+$color-gray:#767676;
+$color-gray2:#7e7e7e;
+
+
+/* base 共用 */
+
+
+._c:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.c {
+  clear: both;
+}
+
+.hide {
+  display: none;
+}
+
+.vhide {
+  visibility: hidden;
+}
+
+.table {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.tr {
+  display: table-row;
+}
+
+.td {
+  display: table-cell;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+//img[src$=".gif"],
+//img[src$=".jpg"],
+//img[src$=".png"] {
+//    image-rendering: -moz-crisp-edges;
+//    /* Firefox */
+//    image-rendering: -o-crisp-edges;
+//    /* Opera */
+//    image-rendering: -webkit-optimize-contrast;
+//    /* Webkit (non-standard naming) */
+//    image-rendering: crisp-edges;
+//    -ms-interpolation-mode: nearest-neighbor;
+//    /* IE (non-standard property) */
+//}

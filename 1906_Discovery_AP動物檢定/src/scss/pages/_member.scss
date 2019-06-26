@@ -109,7 +109,7 @@
             .elephantWrapper {
                 width: 100%;
                 position: absolute;
-                top: 4vw;
+                top: 2vw;
                 left: 50%;
                 transform: translateX(-50%);
                 margin-left: 80px;
@@ -217,7 +217,7 @@
                 }
     
                 .elephantWrapper {
-                    top: 4vw;
+                    top: 1vw;
                     margin-left: 50px;
     
                     .canvasWrapper {
@@ -1024,12 +1024,13 @@
     position: relative;
     // content: "click Here";
     // color: black;
-    cursor: pointer;
     transition: all $duration-slow;
 
-    &:hover {
-        // border: 10px solid #eee;
-        filter: brightness(90%);
+    &.cPointer{
+        cursor: pointer;
+        &:hover {
+            filter: brightness(90%);
+        }
     }
 
     .imgUploadIcon {
@@ -1093,4 +1094,9 @@ input[type="radio"]:checked::after {
     transform: rotate(-45deg) translate3d(0, 0, 0);
     -webkit-transform-origin: center center;
     transform-origin: center center;
+}
+
+#animation_container canvas{
+    position: absolute;
+    top: 0; left: 0;
 }

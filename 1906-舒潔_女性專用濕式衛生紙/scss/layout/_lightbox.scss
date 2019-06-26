@@ -1,0 +1,12 @@
+.lightbox-bg {
+    //    min-width: 1366px;
+    background: rgba(0, 0, 0, 0.7);
+    overflow: auto; //    background: #fff;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 2000000;
+}

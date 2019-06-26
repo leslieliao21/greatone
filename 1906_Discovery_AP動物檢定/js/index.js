@@ -50,18 +50,18 @@ $(window).scroll(function () {
     currentScrollTop = a;
 
     if (c < currentScrollTop && a > b + b) {
-        navbar.css({
-            marginTop: -headerTopH
-        });
+        // navbar.css({
+        //     marginTop: -headerTopH
+        // });
         if (device.mobile()) {
             newsbtn.css({
                 marginRight: -88
             });
         }
     } else if (c > currentScrollTop && !(a <= b)) {
-        navbar.css({
-            marginTop: 0
-        });
+        // navbar.css({
+        //     marginTop: 0
+        // });
         if (device.mobile()) {
             newsbtn.css({
                 marginRight: 0
@@ -156,26 +156,29 @@ function getSize() {
     winW = $win.outerWidth(), winH = $win.height(), headerTopH = $(".header-top").outerHeight(), headerNavH = $(".header-nav").outerHeight(), footerH = $("footer").outerHeight()
 }
 
+var scrollHandler = function(){
+    $header.removeClass(PAGE_HEADER_ACTIVE);
+    $headerNav.stop().slideUp(DURATION.FAST);
+}
+
 function resizePC() {
     var footerDH = footerH-30;
     headerInit("flex"), $(".main-container").css({
         marginTop: headerTopH
+    }),$(".header-nav").css({
+        marginTop: 0
     }), $(".game-page main").css({
         'height': 'calc(100vh - ' +footerDH+ 'px)'
-    })
+    }),$(window).off("scroll", scrollHandler)
 }
 
 function resizeMB() {
-
-    $(window).scroll(function () {
-        $header.removeClass(PAGE_HEADER_ACTIVE);
-        $headerNav.stop().slideUp(DURATION.FAST);
-    });
+    
     headerInit("none"), $(".main-container, .header-nav").css({
         marginTop: headerTopH
     }), $(".game-page main").css({
         'height': 'calc(100vh - ' +footerH+ 'px)'
-    })
+    }),$(window).scroll(scrollHandler)
 }
 
 function headerInit(e) {
@@ -183,43 +186,8 @@ function headerInit(e) {
         display: e
     })
 }
-
-// function getSectionPos() {
-//     sectionPos = [], $.each($(".anchor"), function (e, o) {
-//         sectionPos.push(Math.floor($(o).offset().top))
-//     })
-// }
-
-// function _scroll() {
-//     getPos(), setNavigationHint()
-// }
-
-// function getPos() {
-//     nowPos = {
-//         x: $doc.scrollLeft(),
-//         y: $doc.scrollTop(),
-//         top: $doc.scrollTop() + headerTotalH + 1
-//     }
-// }
-
-// function setNavigationHint() {
-//     var e = $(".header-nav li"),
-//         o = "active";
-//     $.each(sectionPos, function (a, n) {
-//         if (0 === a && nowPos.top < sectionPos[0] || nowPos.top >= footerPos) return e.removeClass(o), !1;
-//         nowPos.top >= n && (e.removeClass(o), e.eq(a).addClass(o))
-//     })
-// }
-// function loadHtml(){
-//     $('.index-page header').load('includes/header_signout.html');
-//     $('.member-page header').load('includes/header_signin.html');
-// }
-var $progressBar = $(".page-loading .progress-bar");
-listenImagesLoading($("img"), mainFunc, function (e, o) {
-    $progressBar.css({
-        width: e + "%"
-    })
-});
+// var $progressBar = $(".page-loading .progress-bar");
+listenImagesLoading($(".main-container, img"), mainFunc);
 var PAGE_HEADER_ACTIVE = "menuOpen",
     $header = void 0,
     $hamburger = void 0,

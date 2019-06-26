@@ -17,6 +17,9 @@
       max-width: 100%;
       padding: 20px 10px;
     }
+    @include mq(phone-mini, max) {
+      padding: 10px;
+    }
   }
 
   &.menuOpen {
@@ -65,6 +68,16 @@
     width: 45px;
     margin-left: 20px;
   }  
+}
+@include mq(phone-mini, max) {
+  .main-logo {
+    width: 150px;
+  }
+  
+  .sub-logo {
+    width: 35px;
+    margin-left: 20px;
+  } 
 }
 
 
@@ -216,6 +229,9 @@
 
     @include mq(tablet-wide, max) {
       font-size: size-rem(35);
+    }
+    @include mq(phone-mid, max) {
+      font-size: size-rem(25);
     }
 
     &:before {

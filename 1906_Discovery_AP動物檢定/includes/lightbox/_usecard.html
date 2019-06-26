@@ -44,7 +44,11 @@
         $(".cardSelector li").click(function () {
             $(this).addClass('active');
             $(this).siblings().removeClass('active');
-        }); 
+        });
+        $(".allCards div").click(function () {
+            $(this).addClass('selected');
+            $(this).siblings().removeClass('selected');
+        });  
         $(".cardSelector li").eq(0).click(function () {
             $('.cardGreen').find('img').attr('src', 'images/card_green5.png');
         });  

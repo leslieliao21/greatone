@@ -21,7 +21,7 @@ const DURATION = {
   STD: 300,
   NOR: 400,
   SLOWER: 500,
-  SLOW: 600
+  SLOW: 1000
 };
 
 /*==================== Library ====================*/
@@ -47,7 +47,7 @@ function listenImagesLoading(
 ) {
       callback = callback||function() {}
       progress = progress||function(per, instance) {
-        //console.log(`${per}% (${IMG_COUNTER}/${instance.images.length})`);
+        // console.log(`${per}% (${IMG_COUNTER}/${instance.images.length})`);
       }
   console.log("%cImages Loading Listening...", logInfoStyle);
   let IMG_COUNTER = 0;

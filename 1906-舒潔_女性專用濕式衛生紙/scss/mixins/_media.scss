@@ -1,0 +1,44 @@
+@mixin media($point) {
+    @if $point==pc1{
+        @media screen and(max-width: $pc1) {
+            @content;
+        }
+    }@else if $point==pc2{
+        @media screen and(max-width: $pc2) {
+            @content;
+        }
+    }@else if $point==pc3{
+        @media screen and(max-width: $pc3) {
+            @content;
+        }
+    } @else if $point==tab1 {
+        @media screen and(max-width: $tab1) {
+            @content;
+        }
+    } @else if $point==tab2 {
+        @media screen and(max-width: $tab2) {
+            @content;
+        }
+    }@else if $point==tab3{
+        @media screen and(max-width: $tab3) {
+            @content;
+        }
+    }@else if $point==m1 {
+        @media screen and(max-width: $m1) {
+            @content;
+        }
+    } @else if $point==m2 {
+        @media screen and(max-width: $m2) {
+            @content;
+        }
+    }@else if $point==m3 {
+        @media screen and(max-width: $m3) {
+            @content;
+        }
+    }@else if $point==m2 {
+        @media screen and(max-width: $m4) {
+            @content;
+        }
+    }
+}
+

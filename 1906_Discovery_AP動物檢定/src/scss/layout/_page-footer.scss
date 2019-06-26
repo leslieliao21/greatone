@@ -38,6 +38,10 @@
       @include mq(phone-wide, max) {
         padding: 0 4px;
       }
+      @include mq(phone-mini, max) {
+        padding: 0 2px;
+        font-size: size-rem(10);
+      }
     }
   }
 
@@ -67,6 +71,11 @@
     word-break: break-word;
     @include mq(phone-wide, max) {
       font-size: size-rem(10);
+      padding: 4px;
+      line-height: 1em;
+    }
+    @include mq(phone-mini, max) {
+      font-size: size-rem(8);
       padding: 4px;
     }
   }

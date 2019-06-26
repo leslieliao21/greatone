@@ -5,24 +5,18 @@
 @import "init/extends";
 @import "init/reset";
 
-
 /*========== mod ==========*/
 @import "mod/input";
 // @import "mod/font";
-
 
 /*========== Vendor ==========*/
 // @import "vendor/slick";
 // @import "vendor/slick-theme";
 // @import "vendor/jquery.mCustomScrollbar";
 
-
-
 /*========== Lightbox ==========*/
 @import "lightbox/lightbox";
 // @import "lightbox/magnific";
-
-
 
 /*========== layout ==========*/
 @import "layout/layout";
@@ -30,14 +24,10 @@
 @import "layout/page-header";
 @import "layout/page-footer";
 
-
-
 /*========== Pages ==========*/
 @import "pages/index";
 @import "pages/member";
 @import "pages/game";
-
-
 
 /*========== Others ==========*/
 @import "utils";

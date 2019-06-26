@@ -32,15 +32,20 @@
   opacity: 0;
   z-index: 0;
   position: absolute;
-  top: 0; bottom: 0;
-  left: 0; right: 0;
+  // top: 0; bottom: 0;
+  // left: 0; right: 0;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  @media screen and (max-width:723px) { 
+    position: relative;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    transform: none;
+  }
 }
 
-// Content Container
-.lb-container {
-  z-index: 1;
-  position: relative;
-}
+
 
 #_prompt{
   .lb-content {
@@ -137,9 +142,9 @@
     width: 100%;
     display: inline-block;
     word-wrap: break-word;
-    @include mq(phablet, max) {
-      margin-left: -10px;
-    }
+    // @include mq(phablet, max) {
+    //   margin-left: -10px;
+    // }
   }
 }
 

@@ -80,6 +80,7 @@
             width: 75%;
           }
           p{
+            font-size: size-rem(18);
             line-height: 1.5em;
           }
         }
@@ -90,7 +91,7 @@
         .videoWrapper {
           width: 100%;
           position: relative;
-          padding-bottom: 54%; 
+          padding-bottom: 52%; 
           padding-top: 25px;
           height: 0;
           border-right: 20px solid rgba(0, 0, 0, .15);
@@ -212,7 +213,7 @@
               font-weight: 600;
               color: #333333;
               span{
-                font-size: size-rem(17);
+                font-size: 0.9vw;
                 line-height: 1;
               }
             }
@@ -292,11 +293,11 @@
               }
               p{
                 color: #FFF;
-                font-size: size-rem(24);
+                font-size: size-rem(20);
                 padding: 0 5%;
                 span{
-                  font-size: size-rem(24);
-                  color: #FFF;
+                  font-size: size-rem(17);
+                  color: #054ca3;
                 }
               }
             }
