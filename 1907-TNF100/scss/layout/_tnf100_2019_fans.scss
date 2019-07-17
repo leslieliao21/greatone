@@ -1,0 +1,237 @@
+/*==================================================*\
+        Fans Page
+\*==================================================*/
+.tnf100_2019Template.tnf100_2019_fansPage {  /* <body> */
+
+  .fixedSideBar {
+    li {
+  //     /*
+  //     * 因為 Phone & Tablet 時 隱藏fixedSideBar 的需求，所以註解掉。
+  //     * 請保留、for 未來需求改變
+  //     */
+  //     // left: size(121);
+
+  //     // @include mq(phablet) {
+  //     //   left: size(177);
+  //     // }
+
+      @include mq(tablet) {
+        left: size(84);
+      }
+    }
+  }
+  .pc-none{
+    @include mq(tablet) {
+      display: none;
+    }
+  }
+  // 客製化
+  &.enPage{
+    .title, .tTitle{
+      margin-top: 1rem;
+    }
+    .block{
+      p{
+        margin-top: 1rem;
+      }
+    }
+  }
+  .topSpace{
+    margin-top: 3vw;
+    @include mq(tablet){
+      margin-top: 1.125rem;
+    }
+  }
+  h3{
+    font-size: 1.4125rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+  .alignC{
+    @include mq(tablet){
+      text-align: center;
+    }
+  }
+  .mt2{
+    margin-top: 2%;
+  }
+  .banner{
+    &::before{
+      display: none;
+    }
+  }
+  ul{
+    list-style-type: disc;
+  }
+  .title{
+    font-weight: bold;
+    vertical-align: middle;
+    .btnSign{
+      width: 70%;
+      display: block;
+      vertical-align: middle;
+      max-width: 336px;
+      margin: 0 auto;
+      @include mq(tablet) {
+        display: inline-block;
+        width: 30%;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+  .txtPic{
+    margin: 5% auto 10%;
+  }
+  ol{
+    list-style-type:decimal;
+    padding-left: 5vw;
+    @include mq(tablet) {
+      padding-left: 1.3rem;
+    }
+  }
+  .triUl{
+    li{
+      position: relative;
+      padding-left: 1.3125rem;
+      &::before{
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: .4rem 0 .4rem .6rem;
+        border-color: transparent transparent transparent #e72418;
+        position: absolute;
+        top: 0.65rem;
+        left: 1vw;
+      }
+      @include mq(tablet) {
+        &::before{
+          left: 1.3125rem;
+        }
+      }
+    }
+  }
+  .bb1{
+    border-bottom: 1px #cccccc solid;
+  }
+  .shoesTable{
+    margin-top: 3vw;
+    border-spacing: 0;
+    @include mq(tablet) {
+      margin-top: 1rem;
+    }
+    td{
+      padding: 3vw;
+      @include mq(tablet) {
+        padding: 1rem;
+      }
+    }
+  }
+  .storeTable{
+    width: 100%;
+    thead{
+      background-color: #4169e1;
+      p{
+        text-align: center;
+        color: #fff;
+      }
+    }
+    tr{
+      &:nth-child(even){
+        background-color: #f1f1f1;
+      }
+    }
+    td{
+      vertical-align: middle;
+      padding: .2vw .25vw;
+      @include mq(tablet) {
+        padding: .25rem .5rem;
+      }
+      &:not(:last-child){
+        text-align: center;
+      }
+    }
+  }
+  section{
+    p{
+      line-height: 1.8;
+      font-size: 4vw;
+      @include mq(tablet) {
+        font-size: 1.125rem;
+        line-height: 2;
+      }
+    }
+  }
+  .block{
+    // padding-left: 0;
+    // padding: 0 5vw;
+    margin-bottom: 2rem;
+    @include mq(tablet) {
+      padding: 0;
+      // padding-left: 1.5rem;
+    }
+    .infoPic{
+      margin: 2% 0 0;
+      padding-left: 0;
+      @include mq(tablet) {
+        padding-left: 1.2rem;
+      }
+    }
+  }
+  .rule{
+    position: relative;
+    padding-bottom: 10%;
+    &::before{
+      display: block;
+      position: absolute;
+      width: 100%;
+      padding-bottom: 14.6875%;
+      background-image: url(../images/background/m_banner_mountain_silhouette.png);
+      background-size: 100% auto;
+      background-position: bottom center;
+      background-repeat: no-repeat;
+      bottom: -1px;
+      left: 0;
+      @include mq(tablet) {
+        background-image: url(../images/background/banner_mountain_silhouette.png);
+        background-size: auto;
+        background-repeat: repeat-x;
+        content: "";
+      }
+    }
+    ol{
+      list-style-type: decimal;
+    }
+  }
+  .sponsor{
+    position: relative;
+    padding-bottom: 10%;
+    padding-top: 20%;
+    @include mq(tablet) {
+      padding-bottom: 100px;
+      padding-top: 5%;
+    }
+  }
+/*==================== Course Section ====================*/
+  // .course {  /*section*/
+    
+  //   // 照片背景
+  //   &:before {
+  //     height: 0;
+  //     padding-bottom: 279%;
+  //     background-color: transparent;
+  //     background-image: url('../images/background/camping_bottom_bgimg.jpg');
+  //     background-size: cover;
+  //     background-position: top center;
+  //     background-repeat: no-repeat;
+  //     z-index: -1;
+  //     bottom: 0; left: 0;
+      
+  //     @include mq(tablet) {
+  //       padding-bottom: 60%;
+  //       background-image: url('../images/background/camping_bottom_bgimg.jpg');
+  //     }
+  //   }
+  // }
+}

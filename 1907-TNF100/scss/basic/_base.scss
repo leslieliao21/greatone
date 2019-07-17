@@ -1,0 +1,47 @@
+/*==================================================*\
+        Common Style
+\*==================================================*/
+
+/*==================== Document ====================*/
+html, 
+body {
+    width: 100%;
+    height: 100%;
+    // overflow-x: hidden;
+    font-family: $fontStack;
+    font-size: $rootFz;
+    
+    &,
+    > * {
+      min-width: 320px;
+    }
+}
+  
+// body {
+  // iPhone 滑動不順的時候可以使用
+  // -webkit-overflow-scrolling: touch;
+// }
+
+/*==================== Normal Tags ====================*/
+select,
+input,
+textarea {
+    font-family: $fontStack;
+    background-color: $colorWhite;
+}
+
+button {
+  font-family: $fontStack;
+}
+
+p {
+  font-size: size(17);
+}
+
+/*==================== Functional Classes ====================*/
+// Clearfix
+._c:after {
+    content: '';
+    clear: both;
+    display: block;
+}

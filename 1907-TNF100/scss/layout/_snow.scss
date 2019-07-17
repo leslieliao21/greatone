@@ -1,0 +1,299 @@
+/*==================================================*\
+        Outdoor Training Page
+\*==================================================*/
+.activetiesTemplate.snowPage {  /* <body> */
+  .kv {
+    height: 318px;
+    padding: 0;
+    background-image: url(../images/kv/snow_kv.jpg);
+  }
+  .topic {
+    width: 80%;
+    top: 9%;
+
+    @include mq(phablet) {
+      top: 17%;
+    }
+
+    @include mq(tablet) {
+      width: 57.8125%;
+      top: 40px;
+    }
+    
+    @include mq(tablet-wide) {
+      top: 79px;
+    }
+  }
+
+  .fixedSideBar {
+    display: none;
+    li {
+  //     /*
+  //     * 因為 Phone & Tablet 時 隱藏fixedSideBar 的需求，所以註解掉。
+  //     * 請保留、for 未來需求改變
+  //     */
+  //     // left: size(121);
+
+  //     // @include mq(phablet) {
+  //     //   left: size(177);
+  //     // }
+
+      @include mq(tablet) {
+        left: size(84);
+      }
+    }
+  }
+
+  .fcRed{
+    color: #e72418;
+  }
+  article .block>ul>li>p, 
+  article section>ul>li>p{
+    align-items: baseline;
+    br{
+      display: block;
+    }
+    .fcRed{
+      min-width: 8rem;
+    }
+    .inblock{
+      display: block;
+    }
+    &:not(:first-child){
+      &::before{
+        display: none;
+      }
+      padding-left: 1rem;
+    }
+  }
+
+  // 客製化
+  .peoBox{
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    .peoPic{
+      width: 60%;
+      max-width: 256px;
+    }
+    .nameBox{
+      margin: 8% 0 4%;
+    }
+    &:not(:last-child){
+      margin-right: 6%;
+    }
+    p{
+      padding: 0 10%;
+      margin-bottom: 2rem;
+    }
+    
+    @include mq(tablet) {
+      width: 28%;
+      .peoPic{
+        width: 85%;
+      }
+      p{
+        padding: 0;
+      }
+    }
+  }
+  .yt{
+    width: 100%;
+    height: 51vw;
+    margin: 0 auto 4rem;
+    display: block;
+    @include mq(tablet) {
+      width: 700px;
+      height: 394px;
+    }
+
+  }
+  .mb10{
+    margin-bottom: 1rem;
+  }
+  .origin{
+    margin-bottom: 0;
+  }
+  .fixedSideBar{
+    .origin{
+      display: none;
+    }
+  }
+  .courseTable{
+    .pc-none{
+      display: inline-block;
+    }
+    .m-none{
+      display: none;
+    }
+    @include mq(tablet) {
+      .m-none{
+        display: inline-block;
+      }
+      .pc-none{
+        display: none;
+      }
+    }
+    ul{
+      // font-size: 1.125rem;
+      line-height: 1.5;
+      color: #000;
+      list-style: disc;
+      padding-left: 1.5rem;
+    }
+  }
+  article .listContent{
+    padding-left: 0;
+    margin-bottom: 1rem;
+  }
+  article .listContent>table>tbody>tr>td:first-child{
+    width: 4rem;
+    @include mq(tablet) {
+      width: 8.25rem;
+    }
+  }
+  article .listContent>table>tbody>tr>td:nth-child(2){
+    width: 6rem;
+    @include mq(tablet) {
+      width: 10rem;
+    }
+  }
+  
+  .brBlock{
+    br{
+      display: block;
+    }
+  }
+
+  .introductionTable{
+    tbody{
+      p{
+        text-align: left;
+      }
+    }
+  }
+  article .listContent>.infoTable>tbody>tr>td:last-child{
+    text-align: center;
+    &.tLeft{
+      text-align: left;
+      padding-left: 2rem;
+    }
+  }
+  .googleMap{
+    height: auto;
+    padding: 0;
+    font-size: 0;
+  }
+  .reg{
+    .block{
+      margin-bottom: 2.5rem;
+      padding: 0;
+      font-size: 0;
+    }
+    .leftBox,.rightBox{
+      display: inline-block;
+      width: 100%;
+      vertical-align: top;
+    }
+    .leftBox{
+      margin-bottom: 2rem;
+      @include mq(tablet) {
+        width: 55%;
+        margin-bottom: 0;
+      }
+      .ulTri{
+        position: relative;
+        &::before{
+          content: "";
+          display: block;
+          position: absolute;
+          left: -1rem;
+          top: .3rem;
+          width: 0;
+          height: 0;
+          margin-right: -5px;
+          border-width: 7.5px 10px;
+          border-style: solid;
+          border-color: transparent transparent transparent #e72418;
+        }
+      }
+    }
+    .rightBox{
+      margin-bottom: 2.5rem;
+      @include mq(tablet) {
+        width: 45%;
+      }
+    }
+  }
+  .mapBox{
+    margin-top: 3rem;
+    height: 380px;
+    padding-bottom: 60px;
+  }
+    .soonBtn{
+      display: flex;
+      // &::after{
+      //   display: none;
+      // }
+    }
+    
+/*==================== Course Section ====================*/
+  .course {  /*section*/
+    
+    // 照片背景
+    &:before {
+      height: 0;
+      padding-bottom: 279%;
+      background-color: transparent;
+      background-image: url('../images/background/snow_bottom_bgimg.jpg');
+      background-size: cover;
+      background-position: top center;
+      background-repeat: no-repeat;
+      z-index: -1;
+      bottom: 0; left: 0;
+      
+      @include mq(tablet) {
+        padding-bottom: 120%;
+        background-image: url('../images/background/snow_bottom_bgimg.jpg');
+      }
+    }
+  }
+
+  /*==================== SignUp Section ====================*/
+  .signUp {
+    .taipei,.kaohsiung{
+      display: none;
+    }
+    > a {
+      // width: 240px;
+    }
+
+    p {
+      font-size: 1.5em;
+      line-height: 1.8;
+    }
+  }
+}
+
+.bottombox{
+  .leftbox{ 
+    float: left; 
+    width: 100%;
+    padding-bottom: 1.5rem;
+    @include mq(tablet) {
+      width: 48%;
+      padding-bottom: 0;
+    }
+  }
+  .rightbox{ 
+    float: right; 
+    width: 100%;
+    @include mq(tablet) {
+      width: 48%;
+    }
+  }
+  .c{ clear: both;}
+  .pic{
+    padding-bottom: 1rem;
+  }
+}

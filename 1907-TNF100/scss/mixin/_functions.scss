@@ -1,0 +1,14 @@
+/*==================================================*\
+        Functions
+\*==================================================*/
+
+/*** PX to REM ***/
+/**
+ * example:
+ * .site-header {
+ *     z-index: z("lightbox");
+ * }
+ */
+ @function size($px) {
+    @return $px / $rootFzNum + rem;
+}

@@ -1,0 +1,930 @@
+/*==================================================*\
+        Activeties Template
+\*==================================================*/
+.articlePage {  /* <body> */
+  .bgBlue{
+    background-color: rgb(44, 130, 201);
+  }
+  .bgRed{
+    background-color: rgb(226, 80, 65);
+  }
+  .fcWhite{
+    color: #fff;
+  }
+  .fcRed{
+    color: rgb(255, 0, 0);
+  }
+  .fcDeepRed{
+    color: rgb(226, 80, 65);
+  }
+  .fcOrange{
+    color: rgb(245, 139, 0);
+  }
+  .ftac{
+    text-align: center;
+  }
+  .border_gray{
+    padding: 1vw;
+    border: 1px solid rgb(210, 210, 210);
+    @include mq(tablet){
+      padding: 10px;
+    }
+  }
+  &.noSignUp {
+    .signUp > *,
+    .fixedSideBar li:last-child {
+      display: none;
+    }
+
+    .review {
+      padding-bottom: 0;
+    }
+  }
+
+  &.noReview {
+    // &.noSignUp {
+    //   .googleMap {
+    //     padding-bottom: 0;
+    //   }
+    // }
+
+    .review > *,
+    .fixedSideBar li:nth-child(5) {
+      display: none;
+    }
+
+    .review {
+      padding-bottom: 0;
+    }
+  }
+
+  .block{
+    margin-bottom: 5%;
+  }
+
+  /*==================== KV Section ====================*/
+
+  .articleSec {
+    > * {
+      z-index: 2;
+      position: relative;
+    }
+  }
+
+  ._bgc_gray {
+    background: url("../images/background/m_course_bottom_bgimg.jpg") center bottom no-repeat,$colorBgGray;
+    background-size: cover;
+    @include mq(tablet){
+      background: url("../images/background/course_bottom_bgimg.jpg") right bottom no-repeat,$colorBgGray;
+    }
+    section {
+      background-color: transparent;
+    }
+  }
+
+  article {
+    @include mq(tablet) {
+      padding-left: 30px;
+
+      br {
+        display: none;
+      }
+    }
+
+    section {
+      background-color: transparent;
+    }
+    
+    section,
+    .block {
+      &:not(:last-child) {
+        margin-bottom: 5%;
+
+        @include mq(tablet) {
+          margin-bottom: 34px;
+        }
+      }
+
+      > ul {
+        > li {
+          &:not(:last-child) {
+            margin-bottom: size(20);
+          }
+
+          > p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            
+            &:before {
+              @include pseudo($pos: static);
+              @include wh(0);
+              margin-right: -5px;
+              border-width: 7.5px 10px;
+              border-style: solid;
+              border-color: transparent transparent transparent $colorPrimary;
+            }
+          }
+
+          ol {
+            list-style-type: decimal;
+            list-style-position: inside;
+            
+            >li {
+              font-size: size(16);
+              line-height: 1.5;
+
+              @include mq(phablet) {
+                font-size: size(24);
+              }
+
+              @include mq(tablet) {
+                font-size: size(18);
+              }
+
+              &:not(:last-of-type) {
+                margin-bottom: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    p {
+      font-size: size(16);
+      line-height: 1.5;
+
+      @include mq(phablet) {
+        font-size: size(24);
+      }
+
+      @include mq(tablet) {
+        font-size: size(18);
+      }
+      
+      &:not(:last-child){
+        margin-bottom: 4%;
+
+        @include mq(tablet) {
+          margin-bottom: 18px;
+        }
+      }
+      a{
+        display: inline-block;
+        color: rgb(0, 150, 255);
+      }
+    }
+
+    .listContent {  /* ul > li >  */
+      padding-left: 8%;
+
+      @include mq(tablet) {
+       padding-left: 38px; 
+      }
+
+      > table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center;
+        
+        > thead,
+        > tbody {
+          width: 100%;
+
+          > tr {
+            width: 100%;
+
+            > th,
+            > td {
+              padding: 10px;
+              border: 1px solid #d4d3d4;
+              font-weight: normal;
+              vertical-align: middle;
+              background-color: $colorWhite;
+
+              &:first-child {
+                width: size(70);
+                
+                @include mq(phablet) {
+                  width: size(100);
+                }
+              }
+
+              @include mq(tablet) {
+                br {
+                  display: none;
+                }
+              }
+            }
+
+            > td {
+              &:last-child {
+                text-align: left;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* Slick for Outdoor Training */
+  ._slick {
+    margin: 2% 0;
+  }
+
+  .slick-arrow {  /* <button> */
+    @include wh(14px);
+    margin: auto;
+    overflow: visible;
+    z-index: 1;
+    position: absolute;
+    top: 0; bottom: 0;
+
+    @include mq(phablet) {
+      @include wh(26px);
+    }
+
+    @include mq(tablet) {
+      transition: all 200ms;
+    }
+
+    // 到底!!!
+    &.inTheEnd {
+      opacity: 0.1;
+      
+      @include mq(tablet) {
+        cursor: not-allowed;
+
+        &:hover {
+          &.arrow-prev {
+            left: 0;
+          }
+          &.arrow-next {
+            right: 0;
+          }
+        }
+      }
+    }
+    
+    &.arrow-prev {
+      transform: translateX(-90%);
+      left: 0;
+
+      @include mq(phablet) {
+        transform: translateX(-70%);
+      }
+
+      @include mq(tablet) {
+        &:hover {
+          left: -10px
+        }
+      }
+      
+      > div {
+        transform: rotate(-135deg);
+      }
+    }
+    &.arrow-next {
+      transform: translateX(90%);
+      right: 0;
+
+      @include mq(phablet) {
+        transform: translateX(70%);
+      }
+
+      @include mq(tablet) {
+        &:hover {
+          right: -10px;
+        }
+      }
+
+      > div {
+        transform: rotate(45deg);
+      }
+    }
+
+    > div {
+      @include wh(100%);
+      margin: auto;
+      border-width: 2px 2px 0 0;
+      border-style: solid;
+      border-color: $colorBlack;
+      position: absolute;
+      top: 0; bottom: 0;
+      left: 0; right: 0;
+    }
+  }
+
+  // Content Container
+  .slickItem {
+    margin: 0 7px;
+  }
+
+  // 頁數顯示
+  .slickPageWrap { /* p */
+    text-align: right;
+
+    span {
+      font-size: inherit;
+    }
+
+    .nowPage {  /* span */
+      font-size: size(20);
+      font-weight: bold;
+    }
+  }
+  // Article Picture
+  .articlePic{
+    
+    span{
+      line-height: 1.3;
+      display: block;
+      margin: 20px 0;
+      text-align: center;
+      font-size: size(16);
+      &::before{
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 8px;
+        margin-right: 5px;
+        position: relative;
+        bottom: 2px;
+        vertical-align: middle;
+        background: url('../images/icon/article_triangle.png') center bottom no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+  // ol li
+  ol{
+    list-style-type: decimal;
+    list-style-position: inside;
+    li{
+      font-size: size(18);
+      line-height: 1.5;
+      margin-bottom: 5px;
+    }
+  }
+  // ul li
+  ul{
+    li{
+      font-size: size(18);
+      line-height: 1.5;
+      margin-bottom: 5px;
+    }
+  }
+  // dot
+  .dot::before{    
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    margin-top: -2px;
+    content: "";
+    width: 4px;
+    height: 4px;    
+    border-radius: 50%;
+    background-color: rgb(111, 123, 138);
+  }
+  // articleFooter
+  .articleFooter{
+    margin-top: 40px;
+    border-top: 1px solid #9e9e9e;
+    text-align: right;
+    padding: 5% 0 12%;
+    @include mq(tablet){
+      padding: 20px 0 80px;
+    }
+    span{
+      font-size: size(18);
+      color: #444444;
+    }
+  }
+}  /* .articlePage END */
+
+
+/***** Session KV 場次區塊 *****/
+/*a*/.session {
+  width: 13%;
+  position: absolute;
+
+  @include mq(tablet) {
+    width: 60px;
+    margin: auto;
+    left: 0; right: 0;
+
+    &:hover {
+      > picture {
+        background-image: url('../images/icon/session_icon_red@3x.png');
+        background-size: cover;
+        background-position: center center;
+        
+        @include mq(phablet) {
+          background-image: url('../images/icon/session_icon_red@2x.png');
+        }
+        
+        @include mq(tablet) {
+          background-image: url('../images/icon/session_icon_red.png');
+        }
+  
+        img {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  &.selected {
+    -ms-pointer-events: none;
+    pointer-events: none;
+
+    > picture {
+      background-image: url('../images/icon/session_icon_red@3x.png');
+      background-size: cover;
+      background-position: center center;
+      
+      @include mq(phablet) {
+        background-image: url('../images/icon/session_icon_red@2x.png');
+      }
+      
+      @include mq(tablet) {
+        background-image: url('../images/icon/session_icon_red.png');
+      }
+
+      img {
+        opacity: 0;
+      }
+    }
+  }
+
+  > p {
+    margin-bottom: 10%;
+    color: $colorWhite;
+    font-size: size(14);
+    line-height: 1.2;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+
+    @include mq(tablet) {
+      font-size: size(17);
+    }
+  }
+  
+  picture {
+    width: 58.5%;
+    margin: auto;
+    display: block;
+
+    @include mq(tablet) {
+      width: 31px;
+    }
+  }
+}
+
+/* 個別調整 */
+// Session-1
+/*a*/.session1 {
+  bottom: 18%; left: 1.5%;
+
+  @include mq(tablet) {
+    bottom: 70px; right: 228px;
+  }
+}
+
+// Session-2
+/*a*/.session2 {
+  bottom: 20%; left: 19%;
+
+  @include mq(tablet) {
+    bottom: 76px; left: -35px;
+  }
+  
+  @include mq(tablet-wide) {
+    left: 15px;
+  }
+}
+
+// Session-3
+/*a*/.session3 {
+  bottom: 16%; left: 35%;
+
+  @include mq(tablet) {
+    bottom: 45px; left: 140px;
+  }
+  
+  @include mq(tablet-wide) {
+    bottom: 62px; left: 240px;
+  }
+}
+
+// Session-4
+/*a*/.session4 {
+  bottom: 23%; left: 52%;
+
+  @include mq(tablet) {
+    bottom: 75px; left: 300px;
+  }
+  
+  @include mq(tablet-wide) {
+    bottom: 86px; left: 450px;
+  }
+}
+
+// Session-5
+/*a*/.session5 {
+  bottom: 32%; left: 68%;
+
+  @include mq(tablet) {
+    bottom: 87px; left: 475px;
+  }
+  
+  @include mq(tablet-wide) {
+    bottom: 116px; left: 675px;
+  }
+}
+
+// Session-6
+/*a*/.session6 {
+  bottom: 36%; left: 86%;
+
+  @include mq(tablet) {
+    bottom: 110px; left: 635px;
+  }
+  
+  @include mq(tablet-wide) {
+    bottom: 127px; left: 885px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/*==================== Banner Section ====================*/
+/*section*/.articleTitle {
+  position: relative;
+  padding: 10% 0 15%;
+
+  @include mq(tablet) {
+    padding-top: 50px;
+    padding-bottom: 140px;
+  }
+
+  // 下方山形剪影
+  &:before {
+    @include pseudo();
+    width: 100%;
+    padding-bottom: 14.6875%;
+    background-image: url('../images/background/m_banner_mountain_silhouette.png');
+    background-size: 100% auto;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    bottom: -1px; left: 0;
+    
+    @include mq(tablet) {
+      background-image: url('../images/background/banner_mountain_silhouette.png');
+      background-size: auto;
+      background-repeat: repeat-x;
+    }
+  }
+
+  h2 {
+    // margin-bottom: 2.5%;
+
+    color: $colorBlack;
+    font-size: size(22);
+    line-height: 1.5;
+    font-weight: bold;
+    text-align: left;
+    
+
+    @include mq(phablet) {
+      font-size: size(30);
+    }
+
+    @include mq(tablet) {
+      letter-spacing: 2px;
+    }
+
+    span {
+      background: url('../images/background/article_title_bg.png') left top no-repeat;
+      background-size: 30vw 50%;
+      display: block;
+      padding: 1% 0 1%;
+      padding-left: 20px;
+      @include mq(tablet) {
+        background: url('../images/background/article_title_bg.png') left top no-repeat;
+        background-size: contain;
+        display: inline;
+      }
+    }
+  }
+  .flag{
+    text-align: right;
+    color: #9b9b9b;
+  }
+  .flag::before{
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 12px;
+    // vertical-align: middle;
+    margin-top: 3%;
+    background: url('../images/icon/article_flag.png') center bottom no-repeat;
+    background-size: contain;
+  }
+  /*button*/.toBannerBlock {
+    margin: auto;
+    position: relative;
+
+    &:before,
+    &:after {
+      @include pseudo();
+    }
+
+    // 底線
+    &:before {
+      width: 100%;
+      height: 1px;
+      background-color: $colorBlack;
+      top: 100%; left: 0;
+    }
+
+    // 下方箭頭
+    &:after {
+      @include wh(0);
+      margin: auto;
+      border-width: 10px 7.5px;
+      border-style: solid;
+      border-color: $colorBlack transparent transparent transparent;
+      animation: arrowDownMove 0.5s infinite alternate;
+      top: calc(100% + 11px);
+      left: 0; right: 0;
+    }
+
+    @keyframes arrowDownMove {
+      from {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      to {
+        opacity: 0.5;
+        transform: translateY(7px);
+      }
+    }
+
+    p {
+      color: $colorPrimary;
+      font-size: size(16);
+      line-height: 1.3;
+      font-weight: bold;
+
+      @include mq(phablet) {
+        font-size: size(24);
+      }
+    }
+  }
+}
+
+.bannerBlock {
+  padding: 10% 0 20%;
+
+  @include mq(tablet) {
+    padding-top: 50px;
+    padding-bottom: 140px;
+  }
+
+  .container {
+    padding: 0;
+
+    @include mq(tablet) {
+      padding: 0 $containerPadding;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/*==================== Introduction Section ====================*/
+.introduction {  /*section*/
+  padding-bottom: 10%;
+
+  @include mq(tablet) {
+    padding-bottom: 60px;
+  }
+}
+
+
+
+
+
+/*==================== Origin Section ====================*/
+.origin {  /* section */
+  margin-bottom: 5%;
+}
+
+
+
+
+
+
+/*==================== Signup Section ====================*/
+  .articleSubTitle {
+    margin-bottom: 2%;
+    @include mq(phablet) {
+      margin-right: 50px;
+    }
+
+    @include mq(tablet) {
+      margin-right: 30px;
+    }
+
+    h4 {
+      line-height: 2.45;
+
+      @include mq(phablet) {
+        line-height: 2.175;
+      }
+
+      @include mq(tablet) {
+        line-height: 1.75;
+      }
+      span{
+        padding: 0 3px;
+        font-size: size(18);
+      }
+    }
+  }
+.turnBack {  /* <section> */
+  padding-bottom: 30%;
+
+  @include mq(tablet) {
+    padding-bottom: 200px;
+  }
+
+  //  ._mod_title 
+
+  /* ._mod_title END */
+
+
+  /*========== 收合時的按鈕 ==========*/
+  .turnBackBtn {  /* button */
+    width: 60%;
+    margin: auto;
+    transform: skew(-$stdSkewDeg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $colorPrimary;
+    position: relative;
+
+    @include mq(phablet) {
+      width: 300px;
+    }
+
+    // &:after {
+    //   @include pseudo($pos: static);
+    //   @include wh(0);
+    //   border-width: 5px 8px;
+    //   border-style: solid;
+    //   border-color: transparent transparent transparent $colorWhite;
+      
+    //   @include mq(phablet) {
+    //     border-width: 9px 12px;
+    //   }
+    //   @include mq(phablet) {
+    //     border-width: 7px 10px;
+    //   }
+    // }
+
+    &:after,
+    picture,
+    p {
+      transform: skew($stdSkewDeg);
+    }
+
+    picture {
+      width: size(18);
+
+      @include mq(phablet) {
+        width: size(24);
+      }
+
+      @include mq(tablet) {
+        width: auto;
+      }
+    }
+
+    
+    p {
+      margin: 0 10px;
+      color: $colorWhite;
+      font-size: size(20);
+      line-height: 1.6;
+      font-weight: bold;
+
+      @include mq(phablet) {
+        font-size: size(32);
+        margin-bottom: -1px;
+      }
+
+      @include mq(tablet) {
+        font-size: size(30);
+      }
+    }
+  }
+
+  .content {
+    display: none;
+  }
+
+
+  .formItem {
+    // 性別 個別調整
+    &.gender {
+      @include mq(phablet) {
+        display: flex;
+        align-items: center;
+
+        .title {
+          margin-right: 30px;
+        }
+      }
+
+      @include mq(tablet) {
+        .title {
+          margin-right: 0;
+        }
+      }
+    }
+
+    // 身份證字號
+    &.idNum {
+      .bkContainer {
+        display: block;
+      }
+    }
+
+    // 生日 + 聯絡電話
+    // &.birthday,
+    // &.contactNum {
+    //   .bkContainer {
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: flex-start;
+    //   }
+    // }
+
+    // 聯絡電話 個別調整
+    &.contactNum {
+      .block {
+        width: 100%;
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      picture {
+        width: 30px;
+        margin-right: 5px;
+
+        @include mq(phablet) {
+          width: 50px;
+        }
+      }
+    }
+
+    // 衣服尺寸 個別調整
+    &.clothSize {
+      .bkContainer {
+        display: block;
+      }
+    }
+  }
+
+  /***** 表單內按鈕 *****/
+  .cancel {  /* button */
+    margin-right: 20px;
+
+    @include mq(tablet) {
+      margin-right: 30px;
+    }
+  }
+}

@@ -1,0 +1,184 @@
+@charset "UTF-8";
+/*========== Mixin ==========*/
+@import "../../../scss/mixin/mixins";
+@import "../../../scss/mixin/functions";
+
+/*========== Basic ==========*/
+@import "../../../scss/basic/reset";
+@import "../../../scss/basic/variables";
+
+/*========== Modules ==========*/
+@import "../../../scss/modules/mods";
+
+/*========== Includes ==========*/
+@import "../../../scss/includes/page_header";
+@import "../../../scss/includes/page_footer";
+@import "../../../scss/includes/loading";
+@import "../../../scss/includes/fixed_side_bar";
+
+/*========== Lightbox ==========*/
+@import "../../../scss/lightboxes/lightbox";
+@import "../../../scss/lightboxes/_signout";
+@import "../../../scss/lightboxes/_place_change";
+
+/*========== layout ==========*/
+@import "../../../scss/basic/base";
+@import "../layout/utilies";
+
+/*========== Pages ==========*/
+@import "../layout/activeties_template";
+/*==================================================*\
+        Outdoor Training Page
+\*==================================================*/
+.activetiesTemplate.jiufenPage{  /* <body> */
+  .kv {  /* <section> */
+    padding-bottom: 60%;
+    background-image: url('../images/kv/m_orienteering_kv.jpg');
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    
+    @include mq(tablet) {
+      height: 318px;
+      padding: 0;
+      background-image: url('../images/kv/orienteering_kv.jpg');
+    }
+
+    // 前景: 山脈剪影
+    &:before {
+      @include pseudo();
+      width: 100%;
+      height: 29.0625%;
+      background-image: url('../images/background/m_mountain_silhouette.png');
+      background-size: 100% auto;
+      background-position: bottom left;
+      background-repeat: no-repeat;
+      bottom: -1px; left: 0;
+      
+      @include mq(tablet) {
+        height: 184px;
+        background-image: url('../images/background/mountain_orienteering.png');
+        background-size: auto;
+        background-position: bottom center;
+        background-repeat: repeat-x;
+      }
+    }
+    .topic {
+      width: 80%;
+      top: 9%;
+
+      @include mq(phablet) {
+        top: 17%;
+      }
+
+      @include mq(tablet) {
+        width: 57.8125%;
+        top: 40px;
+      }
+      
+      @include mq(tablet-wide) {
+        top: 79px;
+      }
+    }
+  }
+  
+  /* 個別調整 */
+  // Session-1
+  /*a*/.session1 {
+    bottom: 21%; left: 17.5%;
+
+    @include mq(tablet) {
+      bottom: 72px; left: 243px;
+    }
+  }
+
+  // Session-2
+  /*a*/.session2 {
+    bottom: 18%; left: 35%;
+
+    @include mq(tablet) {
+      bottom: 63px; left: 234px; 
+    }
+    
+    @include mq(tablet-wide) {
+      bottom: 63px; left: 234px; 
+    }
+  }
+
+  // Session-3
+  /*a*/.session3 {
+    bottom: 24%; left: 51%;
+
+    @include mq(tablet) {
+      bottom: 85px; left: 429px;
+    }
+    
+    @include mq(tablet-wide) {
+      bottom: 85px; left: 429px;
+    }
+  }
+
+  // 客製化
+  .fcRed{
+    color: rgb(192, 80, 77);
+  }
+  .fcGray{
+    color: #4a4a4a;
+  }
+    .mt-100{
+      @include mq(tablet) {
+        margin-top: -34px;
+      }
+    }
+    .tCenter{
+      text-align: center;
+    }
+
+
+    .busTable{
+      max-width: 400px;
+      width: 100%;
+      td{
+        text-align: center;
+        width: 50%;
+      }
+      tr{
+        &:nth-child(1) td{
+          background-color: #333333;
+          p{
+            color: #fff;
+          }
+        }
+        &:nth-child(even) td{
+          background-color: #e4e4e4;
+          p{
+          }
+        }
+      }
+    }
+
+    
+/*==================== Course Section ====================*/
+  .course {  /*section*/
+    
+    // 照片背景
+    &:before {
+      height: 0;
+      padding-bottom: 279%;
+      background-color: transparent;
+      background-image: url('../images/background/orienteering_bgimg.jpg');
+      background-size: cover;
+      background-position: top center;
+      background-repeat: no-repeat;
+      z-index: -1;
+      bottom: 0; left: 0;
+      
+      @include mq(tablet) {
+        padding-bottom: 108%;
+        background-image: url('../images/background/orienteering_bgimg.jpg');
+      }
+    }
+  }
+
+}

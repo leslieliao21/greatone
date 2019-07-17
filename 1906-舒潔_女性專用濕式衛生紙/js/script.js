@@ -1,4 +1,3 @@
-
 var $win = $(window),
     winW = $win.width(),
     winH = $win.height(),
@@ -27,33 +26,12 @@ var myScript = function () {
     var imagesLoaded = loading();
     imagesLoaded.loadfunc();
 
-    /*     # include
-  ----------------------------------------- */
-
-    // if (winW > 768) {
-    //     $('._slick').slick({
-    //         // mobileFirst: true,
-    //         infinite: true,
-    //         slidesToShow: 3,
-    //         slidesToScroll: 1,
-    //         responsive: [{
-    //             breakpoint: 768,
-    //             settings: "unslick"
-    //         }]
-    //     });
-    // }
     var $this = {};
     var $main = $('.maincontainer');
-    
+
     $('.btnX').on('click', function () {
         $('header').toggleClass('active');
     })
-    // $('.lbX, .lbBg').on('click', function () {
-    //     $('.lb').fadeOut();
-    // })
-    // $('.report .btnMore').on('click', function () {
-    //     $('.doctorSay').fadeIn();
-    // })
 
     var wdth = $(window).width();
     if (wdth <= 768) {
@@ -67,84 +45,110 @@ var myScript = function () {
             $('header').removeClass('mMenu').removeClass('active');
         }
 
-        // if (wdth > 768) {
-        //     $('._slick').slick({
-        //         // mobileFirst: true,
-        //         infinite: true,
-        //         slidesToShow: 3,
-        //         slidesToScroll: 1,
-        //         responsive: [{
-        //             breakpoint: 768,
-        //             settings: "unslick"
-        //         }]
-        //     });
-        // }
     });
-    // $('.buy').on('click', function () {
-    //     fbq('init', '1873549686070900');
-    //     fbq('track', 'Purchase');
-    // })
-    // $('.goConditions').on('click', function () {
-    //     fbq('init', '2154662284804730');
-    //     fbq('track', 'Lead');
-    // })
-    // $('.goProducts').on('click', function () {
-    //     fbq('init', '2154662284804730');
-    //     fbq('track', 'CompleteRegistration');
-    // })
-    // $('.goMedia').on('click', function () {
-    //     fbq('init', '2154662284804730');
-    //     fbq('track', 'AddPaymentInfo');
-    // })
-    // $('.goFan').on('click', function () {
-    //     fbq('init', '2154662284804730');
-    //     fbq('track', 'AddToCart');
-    // })
-    // $('.gogobuy').on('click', function () {
-    //     fbq('init', '2154662284804730');
-    //     fbq('track', 'AddToWishlist');
-    // })
-
     $('.buy, .gogobuy').on('click', function () {
-        gtag('event', 'click-ga', {
-            'event_category':'england-ladywipe-button_201806','event_action':'01-click-buy','event_label':'01-click-ladywipe'
-        });
-        console.log("SEND GA");
-        fbq('trackSingle', '265214090710692', 'Purchase');
-
-        console.log("SEND FBQ");
-        goog_report_conversion();
-        console.log("SEND GOOG");
+        fbq('init', '2154662284804730');
+        fbq('track', 'Purchase');
+    })
+    $('.btn_buy_bottom').on('click', function () {
+        fbq('init', '2154662284804730');
+        fbq('track', 'CompleteRegistration');
+    })
+    $('.goConditions').on('click', function () {
+        fbq('init', '2154662284804730');
+        fbq('track', 'ViewContent');
+    })
+    $('.goDoctor').on('click', function () {
+        fbq('init', '2154662284804730');
+        fbq('track', 'Search');
+    })
+    $('.goProducts').on('click', function () {
+        fbq('init', '2154662284804730');
+        fbq('track', 'AddToCart');
+    })
+    $('.goMedia').on('click', function () {
+        fbq('init', '2154662284804730');
+        fbq('track', 'InitiateCheckout');
+    })
+    $('.goPurchase').on('click', function () {
+        fbq('init', '2154662284804730');
+        fbq('track', 'AddPaymentInfo');
+    })
+    $('.goQA').on('click', function () {
+        fbq('init', '2154662284804730');
+        fbq('track', 'Subscribe');
+    })
+    $('.goFan').on('click', function () {
+        fbq('init', '2154662284804730');
+        fbq('track', 'StartTrial');
     })
 
-    $('.menuList').on('click', function(){
+    $('._ga').on('click', function (e) {
+        var evt_category = $(this).data('category');
+        var evt_label = $(this).data('label');
+        var href = $(this).attr('href');
+        var target = $(this).attr('target');
+        
+        if (target != '_blank' && href && href != '#' && href != 'javascript:;') {
+            e.preventDefault();
+            ga('send', 'event', evt_category, 'click', evt_label, 1);
+            // gtag('event', 'click-ga', {
+            //     'event_category': evt,
+            //     'event_action': '',
+            //     'event_label': evt
+            // });
+            setTimeout(function () {
+                location.href = href;
+            }, 500);
+        }else{
+            ga('send', 'event', evt_category, 'click', evt_label, 1);
+            // gtag('event', 'click-ga', {
+            //     'event_category': evt,
+            //     'event_action': '',
+            //     'event_label': evt
+            // });
+        }
+        console.log("SEND GA", evt_category, evt_label);
+    })
+
+    $('.buy_gb').on('click', function () {
+        var evt_category = $(this).data('category');
+        var evt_label = $(this).data('label');
+
+        window.uetq = window.uetq || [];
+        window.uetq.push('event', 'purchasebuttonclick', {
+            'event_category': evt_category,
+            'event_label': evt_label,
+            'event_value': '1'
+        });
+        console.log("SEND BING", evt_category, evt_label);
+
+        gtag('event', 'conversion', {
+            'event_category': evt_category,
+            'event_action': 'click',
+            'event_label': evt_label,
+            'event_value': '1'
+        });
+        console.log("SEND goog", evt_category, evt_label);
+
+        gtag_report_conversion();
+    })
+
+    $('.buy, .gogobuy').on('click', function () {
+        fbq('trackSingle', '265214090710692', 'Purchase');
+        console.log("SEND FBQ");
+    })
+
+    $('.menuList').on('click', function () {
         $('header').removeClass('active');
     })
 
-    $(".goTop").on('click',function (){
-        $('html, body').animate({  
+    $(".goTop").on('click', function () {
+        $('html, body').animate({
             scrollTop: 0
-        }, 500);  
+        }, 500);
     });
 }
-
-
-// KARL 20180320-------
-
-// $(window).scroll(function () {
-//     var scrollVal = $(this).scrollTop();
-//     var scrollBottom = $(this).scrollTop() + $(window).height();
-//     var reportTop = $('.report .w1400').offset().top;
-//     var reportArea = $('.report .w1400').offset().top + $('.report .w1400').height() + $(window).height()+500;
-//     // console.log(scrollBottom)
-
-//     if (scrollBottom >= reportTop && scrollBottom <= reportArea){
-//         $('.buy').fadeOut();
-//     }else{
-//         $('.buy').fadeIn();
-//     }
-
-// });
 
 function windowEvents() {
     $win.on("resize", _resize).resize()
@@ -171,31 +175,31 @@ function resizeMB() {
 
     //手機版occasion移位
     var flipBlock = ['office', 'excercise', 'period', 'pregnant', 'travel', 'gathering'];
-    flipBlock.forEach(function(el){
-        $("#"+el).appendTo($("li[data-condition='"+el+"']"));
+    flipBlock.forEach(function (el) {
+        $("#" + el).appendTo($("li[data-condition='" + el + "']"));
     })
 }
 
 $(function () {
     var main = myScript();
-    
+
 
     windowEvents();
 
     var realclick = true;
 
-    $(".qaCollapseWrapper").load("includes/faq-txt.html"); 
+    $(".qaCollapseWrapper").load("includes/faq-txt.html");
 
-    $('.qaWrapper').on('click', function(){   
+    $('.qaWrapper').on('click', function () {
         $(this).find('.arrow').toggleClass('rotate');
-        $(this).next('.qaCollapseWrapper').slideToggle();   
+        $(this).next('.qaCollapseWrapper').slideToggle();
     })
 
     // window.onpopstate = function(event) {
     //     alert("urlchange");
     //     var id = '';
 
-        
+
     //     realclick = false;
     //     if (location.hash != '') { // if has hash
     //         id = location.hash
@@ -211,11 +215,11 @@ $(function () {
     //     // $('html, body').stop().animate({
     //     //     'scrollTop': $(id).parents().prev('ul').offset().top-100
     //     // });
-        
+
     //   };
 
     $(".flip").on("click", function (event) {
-        
+
         $(this).toggleClass('active');
         $(".flip").not(this).removeClass('active');
         $('.conditionTxt').hide();
@@ -223,16 +227,16 @@ $(function () {
         var $title = $(this).data('title');
         // Use Pushstate to change the URL
         var stateObj = {};
-       
-        if($(this).hasClass('active')){
+
+        if ($(this).hasClass('active')) {
             //load content html
             $.ajax({
-                url: "./includes/occasion-txt-"+condition+".html",
+                url: "./includes/occasion-txt-" + condition + ".html",
                 // data: {},
                 type: "GET",
                 dataType: "html",
                 success: function (data) {
-                    $('#'+condition).html(data);
+                    $('#' + condition).html(data);
                 },
                 error: function (xhr, status) {
                     alert("抱歉, 內容讀取錯誤!");
@@ -246,7 +250,7 @@ $(function () {
                 history.pushState(stateObj, $title, "occasion-" + condition + ".html");
                 document.title = $title;
             }
-        }else{
+        } else {
             $('#' + condition).find('.loadCont').remove();
             $('#' + condition).hide();
             if (history.pushState) {
@@ -259,16 +263,16 @@ $(function () {
         wdth = $(window).width();
         if (wdth <= 768) {
             $('html, body').stop().animate({
-                'scrollTop': $(this).offset().top-headerTopH-10
+                'scrollTop': $(this).offset().top - headerTopH - 10
             });
         }
 
-        
+
     });
 
     // $(window).on('hashchange', function (e) {
     //     var id = '';
-        
+
     //     realclick = false;
     //     if (location.hash != '') { // if has hash
     //         id = location.hash

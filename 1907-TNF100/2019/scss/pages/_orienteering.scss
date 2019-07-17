@@ -1,0 +1,307 @@
+@charset "UTF-8";
+/*========== Mixin ==========*/
+@import "../../../scss/mixin/mixins";
+@import "../../../scss/mixin/functions";
+
+/*========== Basic ==========*/
+@import "../../../scss/basic/reset";
+@import "../../../scss/basic/variables";
+
+/*========== Modules ==========*/
+@import "../../../scss/modules/mods";
+
+/*========== Includes ==========*/
+@import "../../../scss/includes/page_header";
+@import "../../../scss/includes/page_footer";
+@import "../../../scss/includes/loading";
+@import "../../../scss/includes/fixed_side_bar";
+
+/*========== Lightbox ==========*/
+@import "../../../scss/lightboxes/lightbox";
+@import "../../../scss/lightboxes/_signout";
+@import "../../../scss/lightboxes/_place_change";
+
+/*========== layout ==========*/
+@import "../../../scss/basic/base";
+@import "../layout/utilies";
+
+/*========== Pages ==========*/
+@import "../layout/activeties_template";
+/*==================================================*\
+        Outdoor Training Page
+\*==================================================*/
+.activetiesTemplate.orienteeringPage {  /* <body> */
+  .kv {  /* <section> */
+    padding-bottom: 60%;
+    background-image: url('../images/kv/m_orienteering_kv.jpg');
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    
+    @include mq(tablet) {
+      height: 318px;
+      padding: 0;
+      background-image: url('../images/kv/orienteering_kv.jpg');
+    }
+
+    // 前景: 山脈剪影
+    &:before {
+      @include pseudo();
+      width: 100%;
+      height: 29.0625%;
+      background-image: url('../images/background/m_mountain_silhouette.png');
+      background-size: 100% auto;
+      background-position: bottom left;
+      background-repeat: no-repeat;
+      bottom: -1px; left: 0;
+      
+      @include mq(tablet) {
+        height: 184px;
+        background-image: url('../images/background/mountain_orienteering.png');
+        background-size: auto;
+        background-position: bottom center;
+        background-repeat: repeat-x;
+      }
+    }
+    .topic {
+      width: 80%;
+      top: 9%;
+
+      @include mq(phablet) {
+        top: 17%;
+      }
+
+      @include mq(tablet) {
+        width: 57.8125%;
+        top: 40px;
+      }
+      
+      @include mq(tablet-wide) {
+        top: 79px;
+      }
+    }
+  }
+  
+  /* 個別調整 */
+  // Session-1
+  /*a*/.session1 {
+    bottom: 21%; left: 17.5%;
+
+    @include mq(tablet) {
+      bottom: 72px; left: 243px;
+    }
+  }
+
+  // Session-2
+  /*a*/.session2 {
+    bottom: 18%; left: 35%;
+
+    @include mq(tablet) {
+      bottom: 63px; left: 234px; 
+    }
+    
+    @include mq(tablet-wide) {
+      bottom: 63px; left: 234px; 
+    }
+  }
+
+  // Session-3
+  /*a*/.session3 {
+    bottom: 24%; left: 51%;
+
+    @include mq(tablet) {
+      bottom: 85px; left: 429px;
+    }
+    
+    @include mq(tablet-wide) {
+      bottom: 85px; left: 429px;
+    }
+  }
+
+  // .fixedSideBar {
+  //   li {
+  //     /*
+  //     * 因為 Phone & Tablet 時 隱藏fixedSideBar 的需求，所以註解掉。
+  //     * 請保留、for 未來需求改變
+  //     */
+  //     // left: size(121);
+
+  //     // @include mq(phablet) {
+  //     //   left: size(177);
+  //     // }
+
+  //     @include mq(tablet) {
+  //       left: size(135);
+  //     }
+  //   }
+  // }
+
+  // 客製化
+  .fcRed{
+    color: rgb(192, 80, 77);
+  }
+  .fcGray{
+    color: #4a4a4a;
+  }
+    .mt-100{
+      @include mq(tablet) {
+        margin-top: -34px;
+      }
+      // @include mq(tablet) {
+      //   margin-top: -60px;
+      // }
+      // @include mq(tablet-wide) {
+      //   margin-top: -100px;
+      // }
+    }
+    .tCenter{
+      text-align: center;
+    }
+    .picSpan{
+      text-align: center;
+      display: inline-block;
+      margin-top: 0.3rem;
+      a{
+        display: inline-block;
+        color: #2ab3fc;
+      }
+    }
+    article .listContent{
+      padding-left: 0;
+      @include mq(tablet){
+        padding-left: 0;
+      }
+    }
+    .leftPic{
+      @include mq(tablet){
+        display: inline-block;
+      }
+      img{
+        @include mq(tablet){
+          margin-left: 0;
+        }
+      }
+      span{
+        display: block;
+        text-align: center;
+        font-size: 1rem;
+      }
+    }
+    .picSpan{
+      line-height: 1.5;
+      text-align: center;
+    }
+    ._mod_title.smallTitle {
+      .ch {
+        margin-right: 20px;
+        @include mq(mini-phone) {
+          margin-right: 25px;
+        }
+        @include mq(tablet) {
+          margin-right: 30px;
+        }
+        h4 {
+          font-size: size(16);
+          @include mq(mini-phone) {
+            font-size: size(20);
+          }
+          @include mq(phablet) {
+            font-size: size(24);
+          }
+        }
+      }
+      
+      .en {
+        h4 {
+          font-size: size(14);
+          @include mq(mini-phone) {
+            font-size: size(16);
+          }
+          @include mq(phablet) {
+            font-size: size(28);
+          }
+        }
+      }
+    }
+    .soonBtn{
+      display: flex;
+      // &::after{
+      //   display: none;
+      // }
+    }
+
+    // TABLE
+    article .listContent>table>tbody>tr>td:first-child, 
+    article .listContent>table>tbody>tr>th:first-child{
+        @include mq(phablet) {
+          width: 10rem;
+        }
+    }
+    article .listContent>table>tbody>tr>td:last-child, 
+    article .listContent>table>thead>tr>td:last-child,
+    article .listContent>table>tbody>tr>td:nth-child(2), 
+    article .listContent>table>thead>tr>td:nth-child(2){
+      text-align: left;
+    }
+
+    // 高雄場
+    .forKao{
+      display: none;
+      margin-bottom: 1rem;
+      line-height: 1.3;
+      h4{
+        margin-bottom: .5rem;
+        font-size: 2rem;
+      }
+      @include mq(tablet){
+        display: none;
+      }
+    }
+    
+/*==================== Course Section ====================*/
+  .course {  /*section*/
+    
+    // 照片背景
+    &:before {
+      height: 0;
+      padding-bottom: 279%;
+      background-color: transparent;
+      background-image: url('../images/background/orienteering_bgimg.jpg');
+      background-size: cover;
+      background-position: top center;
+      background-repeat: no-repeat;
+      z-index: -1;
+      bottom: 0; left: 0;
+      
+      @include mq(tablet) {
+        padding-bottom: 108%;
+        background-image: url('../images/background/orienteering_bgimg.jpg');
+      }
+    }
+  }
+  &.enPage{
+    .course{
+      &:before{
+        @include mq(tablet) {
+          padding-bottom: 88%;
+        }
+      }
+    }
+  }
+
+  /*==================== SignUp Section ====================*/
+  .signUp {
+    .taipei,.kaohsiung{
+      display: none;
+    }
+    > a {
+      // width: 240px;
+    }
+
+    p {
+      font-size: 1.5em;
+      line-height: 1.8;
+    }
+  }
+}

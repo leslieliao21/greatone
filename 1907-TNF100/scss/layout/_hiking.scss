@@ -1,0 +1,166 @@
+/*==================================================*\
+        Outdoor Training Page
+\*==================================================*/
+.hikingPage {  /* <body> */
+  .session{
+    &.session1{
+      bottom: 20%;
+      left: 13.5%;
+    }
+    &.session2{
+      bottom: 15%;
+      left: 36.5%;
+    }
+    &.session3{
+      bottom: 20%;
+      left: 60%;
+    }
+    @include mq(tablet) {
+      width: 110px;
+      &.session1{
+        bottom: 86px;
+        left: 594px;
+      }
+      &.session2{
+        bottom: 107px;
+        left: 650px;
+      }
+      &.session3{
+        bottom: 120px;
+        left: 890px;
+      }
+    }
+  }
+  .banner{
+    h2{
+      span{
+        display: inline-block;
+      }
+    }
+  }
+  .kv {  /* <section> */
+    .topic {
+      width: 57.8125%;
+      top: 9%;
+
+      @include mq(phablet) {
+        top: 17%;
+      }
+
+      @include mq(tablet) {
+        top: 40px;
+      }
+      
+      @include mq(tablet-wide) {
+        top: 79px;
+      }
+    }
+  }
+  section{
+    ul{
+      margin-bottom: 2rem;
+    }
+  }
+  // ._mod_title .en .sp{
+  //   font-size: 1.0375rem;
+  // }
+  ._mod_title.sp {
+    .ch h4{
+      font-size: 4vw;
+    }
+    .en h4{
+      font-size: 4vw;
+    }
+    @include mq(tablet) {
+      .ch h4{
+        font-size: 1.5rem;
+      }
+      .en h4{
+        font-size: 1.3375rem;
+      }
+    }
+  }
+  .fcGreen{
+    color: rgb(26, 188, 156);
+  }
+  .subTitle{
+    color: rgb(184, 49, 47);
+  }
+  .picBlock{
+    text-align: center;
+    span{
+      margin: 1rem 0;
+      display: inline-block;
+      // text-align: center;
+    }
+    .picSign{
+      width: 200px;
+      margin: 0 auto;
+    }
+  }
+  .dot{
+    position: relative;
+    padding-left: 1.3125rem;
+    &::before{
+      content: '';
+      display: block;
+      width: 5px;
+      height: 5px;
+      position: absolute;
+      left: 0.3125rem;
+      top: 0.57rem;
+      border-radius: 50%;
+      background-color: rgb(111, 123, 138);
+    }
+  }
+  .tag{
+    color: rgb(44, 130, 201);
+    display: inline;
+  }
+  article .block>ul>li>p, article section>ul>li>p{
+    padding-left: 1rem;
+    &::before{
+      display: none;
+    }
+  }
+  .gLink{
+    display: inline-block;
+    strong{
+      text-decoration: underline;
+      color: rgb(106, 158, 32);
+    }
+  }
+  article .listContent>table>tbody>tr>td:first-child{
+    width: auto;
+  }
+  article .listContent>table>tbody>tr>td>p{
+    text-align: center;
+  }
+  .origin{
+    .articleLink{
+      a{
+        border: 1px solid #ccc;
+        &:not(:last-child){
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+  .fixedSideBar {
+    li {
+      /*
+      * 因為 Phone & Tablet 時 隱藏fixedSideBar 的需求，所以註解掉。
+      * 請保留、for 未來需求改變
+      */
+      // left: size(121);
+
+      // @include mq(phablet) {
+      //   left: size(177);
+      // }
+
+      @include mq(tablet) {
+        left: size(120);
+      }
+    }
+  }
+}

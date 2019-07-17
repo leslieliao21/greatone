@@ -6,16 +6,16 @@
 
     main {
         width: 100%;
-        padding-bottom: 20vh;
+        padding-bottom: 10vw;
         // min-height: 994px;
         background: url('../images/member/member_bg.jpg') no-repeat;
         background-position: top center;
         background-size: cover;
         overflow: hidden;
 
-        @include mq(tablet, max) {
-            padding-bottom: 40vh;
-        }
+        // @include mq(tablet, max) {
+        //     padding-bottom: 40vw;
+        // }
 
         >.container {
             position: relative;
@@ -229,20 +229,30 @@
         }
 
         section {
-            position: absolute;
-            top: 28vw;
-            @include mq(tablet-wide, max) {
-                top: 50vw;
-            }
-            @include mq(tablet, max) {
-                top: 60vw;
-            }
+            position: relative;
+            text-align: center;
+            // top: 28vw;
+            margin-top: -13vw;
 
-            .btn_goplay {
-                margin-bottom: 6vh;
-                padding: 2vh;
-                @include mq(tablet, max) {
-                    margin-bottom: 3vh;
+            // @include mq(tablet-wide, max) {
+            //     top: 50vw;
+            // }
+            // @include mq(tablet, max) {
+            //     top: 60vw;
+            // }
+            button{
+                display: inline-block;
+                &.btn_darkblue{
+                    width: 45%;
+                    max-width: 280px;
+                    margin-bottom: 6vh;
+                    padding: 2vh;
+                    @include mq(tablet, max) {
+                        margin-bottom: 3vh;
+                    }
+                    &.btn_goreview{
+                        margin-left: 2%;
+                    }
                 }
             }
 
@@ -359,6 +369,139 @@
         }
     }
 }
+
+.review-page {
+    main {
+        width: 100%;
+        // height: 100vh;
+        overflow-y: hidden;
+        // min-height: 994px;
+        background: #0074c1; /* Old browsers */
+        background: -moz-linear-gradient(top, #0074c1 3%, #59bde2 37%, #90d3ec 73%, #b7e6f8 94%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #0074c1 3%,#59bde2 37%,#90d3ec 73%,#b7e6f8 94%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #0074c1 3%,#59bde2 37%,#90d3ec 73%,#b7e6f8 94%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0074c1', endColorstr='#b7e6f8',GradientType=0 ); /* IE6-9 */
+
+        &:before{
+            @include pseudo();
+            background: url('../images/game/kv_cloud.png') top center no-repeat;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-size: cover;
+        }
+        &:after{
+            @include pseudo();
+            background: url('../images/game/kv_img.png') bottom center no-repeat;
+            width: 100%;
+            height: 100%;
+            bottom: -8%;
+            z-index: 2;
+            background-size: cover;
+            @include mq(tablet-small, max) {
+                background: url('../images/game/m_kv_img.png') bottom center no-repeat;
+                background-size: 100% auto;
+            }
+        }
+        .reviewWrapper{
+            width: 100%;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 3% 0 60px 0;
+            @include set-flex(center, center);
+            flex-direction: column;
+            position: relative;
+            // position: absolute;
+            // top: 2%;
+            // left: 50%;
+            z-index: 3;
+            // transform: translate(-50%, 0);
+
+            .videoWrapper {
+                width: 100%;
+                position: relative;
+                padding-bottom: 56.25%; /* 16:9 */
+                padding-top: 25px;
+                height: 0;
+                margin: 0 auto;
+                background: url("../images/review_video_bg.jpg") center center no-repeat;
+                background-size: contain;
+            
+                iframe{
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                }
+            }
+
+            .reviewListWrapper{
+                width: 100%;
+                position: relative;
+                background-color: #fff;
+                border-radius: 15px;
+                margin: 20px auto 0 auto;
+                @include mq(tablet, max) {
+                    width: 92%;
+                }
+                h3{
+                    vertical-align: middle;
+                    color: #FFF;
+                    background-color: #0073ff;
+                    padding: 10px;
+                    border-radius: 15px 15px 0 0;
+                    font-size: 25px;
+                    text-align: center;
+                    span{
+                        display: inline-block;
+                        vertical-align: middle;
+                        font-size: 18px;
+                        // font-weight: normal;
+                    }
+                    @include mq(phone, max) {
+                        font-size: 20px;
+                        span{
+                            font-size: 15px;
+                        }
+                    }
+                }
+                ul{
+                    padding: 10px 25px;
+                    li{
+                        border-bottom: 1px solid #dfdfdf;
+                        padding: 15px 0;
+                        padding-right: 130px;
+                        position: relative;
+                        font-size: 18px;
+                        &:last-child{
+                            border: 0;
+                        }
+                        button{
+                            position: absolute;
+                            top: 50%;
+                            right: 0;
+                            max-width: 110px;
+                            font-size: 18px;
+                            padding: 0.8vh;
+                            transform: translateY(-50%);
+                            margin-bottom: 0;
+                            box-shadow: none;
+                            img{
+                                display: inline-block;
+                                // vertical-align: middle;
+                                margin-bottom: -3px;
+                                margin-left: 4px;
+                                width: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}  
 
 
 //燈箱頁內容style

@@ -1,0 +1,119 @@
+<div class="_mod_title">
+  <div class="ch">
+    <h4>取消報名</h4>
+  </div>
+  <div class="en">
+    <h4>CANCEL <br>REGISTRATION</h4>
+  </div>
+</div>
+
+<form class="stdForm" id="cancel_form">
+  <!-- 報名場次 -->
+  <div class="formItem">
+    <div class="title">
+      <p>報名場次 / Registration time</p>
+    </div>
+    <div class="bkContainer">
+      <div class="selectWrap">
+        <select name="area_id">
+		  <option value="">請選擇</option>
+          <option value="1">清大/交大場</option>
+          <option value="2">政治大學場</option>
+          <option value="3">中山大學場</option>
+          <option value="4">成功大學場</option>
+          <option value="5">台灣大學場</option>
+          <option value="6">東海大學場</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- 電子信箱 -->
+  <div class="formItem">
+    <div class="title">
+      <p>電子信箱 / Email</p>
+    </div>
+    <div class="bkContainer">
+      <input type="email" name="email">
+    </div>
+  </div>
+
+  <!-- 聯絡電話 -->
+  <div class="formItem phone">
+    <div class="title">
+      <p>聯絡電話 / Contact Number</p>
+    </div>
+    <div class="bkContainer">
+      <div class="inputPhoneWrap">
+        <input type="tel" name="tel">
+        <div class="fakePlaceholder">
+          <picture>
+            <source media="(min-width: 769px)" srcset="images/icon/phone.png">
+            <source media="(min-width: 561px)" srcset="images/icon/phone@2x.png">
+            <img src="images/icon/phone@3x.png" alt="Cellphone Icon">
+          </picture>
+          <p>手機 / Mobile</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="formBtnWrap">
+    <button class="_blackBG submit">
+      <p>確認取消</p>
+    </button>
+  </div>
+</form>
+
+
+<!-- JavaScript -->
+<script>
+  $('.inputPhoneWrap > input').on('input', function() {
+    var $fakePlaceholder = $('.inputPhoneWrap').find('div');
+
+    if ($(this).val() !== '') {
+      $fakePlaceholder.hide();
+    } else {
+      $fakePlaceholder.css({
+        display: 'flex'
+      })
+    }
+  });
+  
+  //james add START
+  $('#cancel_form .submit').click(function(e){
+	  e.preventDefault();
+	  var msg = '';	  
+	  var email = $('#cancel_form [name=email]').val();
+	  var tel = $('#cancel_form [name=tel]').val();	  
+	  var area_id = $('#cancel_form [name=area_id]').val();
+	  
+	  if(area_id == '') msg = '請選擇場次';	  
+	  else if(email == '') msg = '請輸入Email';
+	  else if(tel == '') msg = '請輸入聯絡電話';	  
+	  if(msg){
+		  alert(msg);
+		  return false;
+	  }
+	  
+	  var data = {email:email, tel:tel, area_id:area_id};
+	  $.ajax({
+		  url: 'ajax/delete.php',
+		  type: 'get',
+		  dataType: 'json',
+		  data: data,
+		  error: function(){
+			  alert('系統忙碌中，請稍後再試');
+			  return false;
+		  },
+		  success: function(res){
+			  if(res.success){
+			      alert('取消報名成功');
+				  window.location.reload();
+			  }	  
+			  else alert('查無此報名資料');
+		  }
+	  });
+  });
+  //james add END
+</script>

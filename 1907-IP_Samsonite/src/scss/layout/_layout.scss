@@ -1,0 +1,91 @@
+/*==================================================*\
+        Layout
+\*==================================================*/
+
+
+
+/*==================== Document ====================*/
+html, 
+body {
+  width: 100%;
+  height: 100%;
+  font-family: $font-stack;
+  background-color: #12412f;
+  line-height: 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+html {
+  height: 100%;
+  font-size: $rootFz + px;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+*{
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  transition: all $duration-std;
+}
+
+/*==================== Container ====================*/
+main {
+  // height: 100%;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: visible;
+  z-index: 3;
+  section{
+    width: 100%;
+    position: relative;
+    background: transparent;
+  }
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1290px;
+  margin: 0 auto;
+  // overflow: hidden;
+}
+.show{
+  display: block;
+}
+.hide{
+  display: none !important;
+}
+
+.showD{
+  display: block;
+  @include mq(tablet-wide, max) {
+    display: none;
+  }
+}
+.showM{
+  display: none;
+  @include mq(tablet, max) {
+    display: block;
+  }
+}
+.showMT{
+  display: none;
+  @include mq(tablet-wide, max) {
+    display: block;
+  }
+}
+.showMinline{
+  display: none;
+  @include mq(tablet, max) {
+    display: inline-block;
+  }
+}
+
+//btn style
+
+

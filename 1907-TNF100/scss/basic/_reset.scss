@@ -1,0 +1,87 @@
+/*==================================================*\
+        Browser Style Reset
+\*==================================================*/
+
+/*
+ * http://meyerweb.com/eric/tools/css/reset/ 
+ * v2.0 | 20110126
+ * License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, 
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, 
+abbr, acronym, address, big, cite, code, del, 
+dfn, em, font, img, ins, kbd, q, s, samp, small, 
+strike, sub, sup, tt, var, b, u, i, center, dl, 
+dt, dd, ol, ul, li, fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td ,
+button, select, option, input, label, textarea {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body { line-height: 1; }
+ol,ul { list-style: none; }
+blockquote, q { quotes: none; }
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: none;
+}
+
+main {
+    display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none; 
+  user-select: none;
+  display: block; 
+}
+
+img { 
+  width: auto;
+  max-width: 100%;
+  margin: auto;
+  user-select: none; 
+  display: block; 
+}
+
+*:focus { outline: 0; }
+*, *:before, *:after { box-sizing: border-box; }
+*:before, *:after { pointer-events: none; }
+
+button,
+select,
+input,
+label,
+textarea {
+    border-radius: 0;
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    resize: none;
+    appearance: none;
+    user-select: none;
+    display: block;
+}
+
+button,
+select,
+label {
+    cursor: pointer;
+}
+
+// Select's arrow hidden for IE10+
+select::-ms-expand {
+    display: none;
+}

@@ -1,0 +1,55 @@
+/*==================================================*\
+        Modules Common Style
+\*==================================================*/
+/*
+ * 目錄：
+ *   1. Close Btn
+ *   2. Hamburger
+ */
+
+/*==================== Close Btn ====================*/
+/*
+ * 自行設定於 全域(此處) 或 私用(自訂) 需定義：
+ *   1. ._mod_closeBtn { "寬高" }
+ *   2. ._mod_closeBtn:before, 
+ *      ._mod_closeBtn:after { "線條高度"、"線條顏色" }
+ */
+._mod_closeBtn {
+    cursor: pointer;
+    transform: translate(0, 0);
+
+    // White Cross
+    &:before,
+    &:after {
+        @include pseudo();
+        width: 100%;
+        margin: auto;
+        top: 0; bottom: 0;
+    }
+    &:before {
+        transform: rotate(45deg);
+    }
+    &:after {
+        transform: rotate(-45deg);
+    }
+}
+
+/***** Hover: ._mod_closeBtn *****/
+// Close Button Hover-1
+%closeBtnHover1 {
+    @include mq(tablet) {
+        &:before,
+        &:after {
+            transition: all $stdDuration;
+        }
+
+        &:hover {
+            &:before {
+                transform: rotate(135deg);
+            }
+            &:after {
+                transform: rotate(-135deg);
+            }
+        }
+    }
+}

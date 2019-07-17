@@ -38,14 +38,32 @@ if (hasTouch()) { // remove all :hover stylesheets
 }
 //END
 
-//header animate by scroll
+//animate by scroll
 var c, currentScrollTop = 0,
     navbar = $('header'),
-    newsbtn = $('.btn_news');
+    newsbtn = $('.btn_news'),
+    footbar = $('footer'),
+    indexbtn = $('.index-page .btn_challenge');
 
 $(window).scroll(function () {
     var a = $(window).scrollTop();
     var b = navbar.height();
+    var footerH = $("footer").outerHeight() -1;
+
+    if ($(window).width() <= 640) {
+        $('.index-page .secC').css({
+            paddingBottom: footerH
+        });
+        if($(window).scrollTop() + $(window).outerHeight() >= $(document).outerHeight()-footerH) {
+            indexbtn.css({
+                bottom: footerH
+            });
+        }else if($(window).scrollTop() + $(window).outerHeight() < $(document).outerHeight()-footerH){
+            indexbtn.css({
+                bottom: 0
+            });
+        }
+    }
 
     currentScrollTop = a;
 
@@ -149,16 +167,22 @@ function windowEvents() {
 }
 
 function _resize() {
-    getSize(), 1024 < winW ? resizePC() : resizeMB()
+    getSize(), 1024 < winW ? resizePC() : resizeMB(), 800 <= winH ? scrollTopReload() : null
 }
 
 function getSize() {
-    winW = $win.outerWidth(), winH = $win.height(), headerTopH = $(".header-top").outerHeight(), headerNavH = $(".header-nav").outerHeight(), footerH = $("footer").outerHeight()
+    winW = $win.outerWidth(), winH = $win.outerHeight(), headerTopH = $(".header-top").outerHeight(), headerNavH = $(".header-nav").outerHeight(), footerH = $("footer").outerHeight()
 }
 
 var scrollHandler = function(){
     $header.removeClass(PAGE_HEADER_ACTIVE);
     $headerNav.stop().slideUp(DURATION.FAST);
+}
+
+function scrollTopReload() {
+    $('html, body').animate({  
+        scrollTop: 0
+    }, DURATION.FAST); 
 }
 
 function resizePC() {

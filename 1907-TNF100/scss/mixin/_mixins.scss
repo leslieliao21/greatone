@@ -1,0 +1,200 @@
+/*==================================================*\
+        Mixins
+\*==================================================*/
+
+/*** Pseudo Class ***/
+/** 
+ * div:after{
+ *     @include pseudo;
+ *     top: -1rem; left: -1rem;
+ *     width: 1rem; height: 1rem;
+ * }
+ */
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+
+
+/*** Media Queries (Mobile First) ***/
+/**
+ * .site-header {
+ *     padding: 2rem;
+ *     font-size: 1.8rem;
+ *
+ *     @include mq('tablet-wide') {
+ *         padding-top: 4rem;
+ *         font-size: 2.4rem;
+ *     }
+ * }
+ */
+ $breakpoints: (
+  "mini-phone":   320px,
+  "phone":        400px,
+  "phone-wide":   480px,
+  "phablet":      560px,
+  "tablet-small": 640px,
+  "tablet":       768px,
+  "tablet-wide":  1024px,
+  "desktop":      1366px,
+  "desktop-wide": 1680px
+);
+@mixin mq($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        } @else {
+            $width: $width + 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
+
+
+
+/*** Input Placeholder Style ***/
+/**
+ * input,  
+ * textarea {  
+ *     @include placeholderStyle {
+ *         color: $grey;
+ *     }
+ * }
+ */
+ @mixin placeholderStyle {
+    // &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+
+
+
+/*** Responsive Ratio ***/
+/**
+ * .ifr-wrap{
+ *     @include responsive-ratio(16,9);
+ * }
+ */
+@mixin responsive-ratio($x,$y, $pseudo: false) {
+    $padding: unquote(( $y / $x ) * 100 + '%');
+    @if $pseudo {
+        &:before {
+            @include pseudo($pos: relative);
+            width: 100%;
+            padding-bottom: $padding;
+        }
+    } @else {
+        padding-bottom: $padding;
+    }
+}
+
+
+
+/*** z-index Setting ***/
+/**
+ * example:
+ * .site-header {
+ *     z-index: z("lightbox");
+ * }
+ */
+@function z($name) {
+    @if index($z-indexes, $name) {
+        @return (length($z-indexes) - index($z-indexes, $name)) + 1;
+    } @else {
+        @warn 'There is no item "#{$name}" in this list; choose one of: #{$z-indexes}';
+        @return null;
+    }
+}
+// 越上層、數字越大
+$z-indexes: (
+    "loading",
+    "lightbox"
+);
+
+
+
+/*** CSS Triangle ***/
+/**
+ *	used for creating CSS only triangles
+ *	example:
+ *	.element {
+ *		&::before {
+ *			@include css-triangle(blue, down);
+ *		}
+ *	}
+ */
+@mixin css-triangle($color, $direction, $size: 6px, $position: absolute, $round: false) {
+	@include pseudo($pos: $position);
+	width: 0;
+	height: 0;
+
+	@if $round {
+		border-radius: 3px;
+	}
+
+	@if $direction == down {
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		border-top: $size solid $color;
+        margin-top: 0 - round( $size / 2.5 );
+        
+	} @else if $direction == up {
+		border-left: $size solid transparent;
+		border-right: $size solid transparent;
+		border-bottom: $size solid $color;
+        margin-bottom: 0 - round( $size / 2.5 );
+        
+	} @else if $direction == right {
+		border-top: $size solid transparent;
+		border-bottom: $size solid transparent;
+		border-left: $size solid $color;
+        margin-right: -$size;
+        
+	} @else if  $direction == left {
+		border-top: $size solid transparent;
+		border-bottom: $size solid transparent;
+		border-right: $size solid $color;
+		margin-left: -$size;
+	}
+}
+
+
+
+/*** Width && Height ***/
+/**
+ *	example:
+ *	.element {
+ *      @include wh(100%);
+ *	}
+ */
+@mixin wh($val) {
+    width: $val;
+    height: $val;
+}
+
+
+
+/*** Full Page Popup ***/
+/**
+ *	example:
+ *	.element {
+ *      @include fullPopup();
+ *	}
+ */
+@mixin fullPopup($bgColor) {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $bgColor;
+    position: fixed;
+    top: 0; left: 0;
+}

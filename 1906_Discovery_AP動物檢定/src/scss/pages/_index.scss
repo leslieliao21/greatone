@@ -151,6 +151,9 @@
         .btn_challenge{
           max-width: 535px;
           margin: 40px auto 0 auto;
+          position: relative;
+          bottom: initial; left: initial;
+          transition: none;
         }
         @include mq(tablet-mid, max) {
           margin: 0;
@@ -168,6 +171,9 @@
           .btn_challenge{
             max-width: 100%;
             margin: 0 auto;
+            position: fixed;
+            bottom: 0; left: 0;
+            transition: none;
             &:hover{
               transform: none;
             }

@@ -21,10 +21,6 @@ html {
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     border: none;
     outline: none;
-    -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
 }
 button{
     font-family: $font-stack;
@@ -1430,9 +1426,18 @@ header{
             box-sizing: border-box;
             padding: 1rem 2rem;
             box-shadow: 2px 2px 3px #cdcdcd;
-            h3{
+            p{
                 font-weight: normal !important;
                 line-height: 2rem;
+                a{
+                    color: #000;
+                    font-weight: 700;
+                    display: inline-block;
+                    text-decoration: underline;
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
             }
         }
         @include media(tab2){
@@ -1735,9 +1740,18 @@ header{
             box-sizing: border-box;
             padding: 1rem 2rem;
             box-shadow: 2px 2px 3px #cdcdcd;
-            h3{
+            p{
                 font-weight: normal !important;
                 line-height: 2rem;
+                a{
+                    color: #000;
+                    font-weight: 700;
+                    display: inline-block;
+                    text-decoration: underline;
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
             }
         }
         @include media(tab2){

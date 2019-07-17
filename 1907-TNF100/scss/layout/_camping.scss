@@ -1,0 +1,232 @@
+/*==================================================*\
+        Outdoor Training Page
+\*==================================================*/
+.activetiesTemplate.campingPage {  /* <body> */
+  .topic {
+    width: 80%;
+    top: 9%;
+
+    @include mq(phablet) {
+      top: 17%;
+    }
+
+    @include mq(tablet) {
+      width: 57.8125%;
+      top: 40px;
+    }
+    
+    @include mq(tablet-wide) {
+      top: 79px;
+    }
+  }
+
+  .fixedSideBar {
+    li {
+  //     /*
+  //     * 因為 Phone & Tablet 時 隱藏fixedSideBar 的需求，所以註解掉。
+  //     * 請保留、for 未來需求改變
+  //     */
+  //     // left: size(121);
+
+  //     // @include mq(phablet) {
+  //     //   left: size(177);
+  //     // }
+
+      @include mq(tablet) {
+        left: size(84);
+      }
+    }
+  }
+
+  // 客製化
+  .mb10{
+    margin-bottom: 1rem;
+  }
+  .origin{
+    margin-bottom: 0;
+  }
+  .fixedSideBar{
+    .origin{
+      display: none;
+    }
+  }
+  .courseTable{
+    .pc-none{
+      display: inline-block;
+    }
+    .m-none{
+      display: none;
+    }
+    @include mq(tablet) {
+      .m-none{
+        display: inline-block;
+      }
+      .pc-none{
+        display: none;
+      }
+    }
+  }
+  article .listContent{
+    padding-left: 0;
+  }
+  article .listContent>table>tbody>tr>td:first-child,
+  article .listContent>table>tbody>tr>td:nth-child(3){
+    width: 8.25rem;
+  }
+  article .listContent>table>tbody>tr>td:nth-child(2),
+  article .listContent>table>tbody>tr>td:nth-child(4){
+    width: 14.25rem;
+    text-align: left;
+  }
+  article .block>ul.introductionUl>li, 
+  article section>ul.introductionUl>li{
+    ol{
+      list-style-type: none;
+      padding-left: 1rem;
+      p{
+        display: initial;
+        br{
+          display: block;
+        }
+      }
+    }
+    >p{
+      &:before{
+        display: none;
+      }
+    }
+  }
+  .introductionTable{
+    tbody{
+      p{
+        text-align: left;
+      }
+    }
+  }
+  .googleMap{
+    height: auto;
+    padding: 0;
+    font-size: 0;
+  }
+  .reg{
+    .block{
+      margin-bottom: 2.5rem;
+      padding: 0;
+      font-size: 0;
+    }
+    .leftBox,.rightBox{
+      display: inline-block;
+      width: 100%;
+      vertical-align: top;
+    }
+    .leftBox{
+      margin-bottom: 2rem;
+      @include mq(tablet) {
+        width: 55%;
+        margin-bottom: 0;
+      }
+      .ulTri{
+        position: relative;
+        &::before{
+          content: "";
+          display: block;
+          position: absolute;
+          left: -1rem;
+          top: .3rem;
+          width: 0;
+          height: 0;
+          margin-right: -5px;
+          border-width: 7.5px 10px;
+          border-style: solid;
+          border-color: transparent transparent transparent #e72418;
+        }
+      }
+    }
+    .rightBox{
+      margin-bottom: 2.5rem;
+      @include mq(tablet) {
+        width: 45%;
+      }
+    }
+  }
+  .mapBox{
+    margin-top: 3rem;
+    height: 380px;
+    padding-bottom: 60px;
+  }
+    // ._mod_title.smallTitle {
+    //   .ch {
+    //     margin-right: 20px;
+    //     @include mq(mini-phone) {
+    //       margin-right: 25px;
+    //     }
+    //     @include mq(tablet) {
+    //       margin-right: 30px;
+    //     }
+    //     h4 {
+    //       font-size: size(16);
+    //       @include mq(mini-phone) {
+    //         font-size: size(20);
+    //       }
+    //       @include mq(phablet) {
+    //         font-size: size(24);
+    //       }
+    //     }
+    //   }
+      
+    //   .en {
+    //     h4 {
+    //       font-size: size(14);
+    //       @include mq(mini-phone) {
+    //         font-size: size(16);
+    //       }
+    //       @include mq(phablet) {
+    //         font-size: size(28);
+    //       }
+    //     }
+    //   }
+    // }
+    .soonBtn{
+      display: flex;
+      // &::after{
+      //   display: none;
+      // }
+    }
+    
+/*==================== Course Section ====================*/
+  .course {  /*section*/
+    
+    // 照片背景
+    &:before {
+      height: 0;
+      padding-bottom: 279%;
+      background-color: transparent;
+      background-image: url('../images/background/camping_bottom_bgimg.jpg');
+      background-size: cover;
+      background-position: top center;
+      background-repeat: no-repeat;
+      z-index: -1;
+      bottom: 0; left: 0;
+      
+      @include mq(tablet) {
+        padding-bottom: 60%;
+        background-image: url('../images/background/camping_bottom_bgimg.jpg');
+      }
+    }
+  }
+
+  /*==================== SignUp Section ====================*/
+  .signUp {
+    .taipei,.kaohsiung{
+      display: none;
+    }
+    > a {
+      // width: 240px;
+    }
+
+    p {
+      font-size: 1.5em;
+      line-height: 1.8;
+    }
+  }
+}

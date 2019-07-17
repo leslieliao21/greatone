@@ -1,0 +1,41 @@
+/*==================================================*\
+        Outdoor Training Page
+\*==================================================*/
+.outdoorTrainingPage {  /* <body> */
+  .kv {  /* <section> */
+    .topic {
+      width: 57.8125%;
+      top: 9%;
+
+      @include mq(phablet) {
+        top: 17%;
+      }
+
+      @include mq(tablet) {
+        top: 40px;
+      }
+      
+      @include mq(tablet-wide) {
+        top: 79px;
+      }
+    }
+  }
+
+  .fixedSideBar {
+    li {
+      /*
+      * 因為 Phone & Tablet 時 隱藏fixedSideBar 的需求，所以註解掉。
+      * 請保留、for 未來需求改變
+      */
+      // left: size(121);
+
+      // @include mq(phablet) {
+      //   left: size(177);
+      // }
+
+      @include mq(tablet) {
+        left: size(135);
+      }
+    }
+  }
+}

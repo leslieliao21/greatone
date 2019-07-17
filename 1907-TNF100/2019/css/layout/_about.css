@@ -1,0 +1,9 @@
+/*==================================================*\
+    About Page
+\*==================================================*/
+.aboutPage {
+  /* body */ }
+  .aboutPage .pageFooter {
+    display: none; }
+  .aboutPage .topTitle picture {
+    width: 341px; }

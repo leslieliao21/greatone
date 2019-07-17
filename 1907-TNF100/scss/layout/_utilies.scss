@@ -1,0 +1,564 @@
+/*==================================================*\
+        Utilies Style
+\*==================================================*/
+
+/*==================== Container ====================*/
+main {
+  padding-top: 60px;
+
+  @include mq(phablet) {
+    padding-top: 80px;
+  }
+
+  @include mq(tablet) {
+    padding-top: 100px;
+  }
+}
+
+section {
+  background-color: $colorWhite;
+}
+
+.container {
+  width: 100%;
+  padding: 0 5%;
+
+  @include mq(tablet) {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 $containerPadding;
+  }
+}
+
+
+
+
+
+/*==================== Modules ====================*/
+._mod_title {
+  margin-bottom: 25px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  border-bottom: 1px solid $colorBlack;
+
+  @include mq(phablet) {
+    margin-bottom: 40px;
+  }
+
+  @include mq(tablet) {
+    margin-bottom: 30px;
+  }
+
+  h4 {
+    font-weight: bold;
+    
+  }
+  
+  .ch {
+    margin-right: 30px;
+    padding: 0 20px;
+    transform: skew(-$stdSkewDeg);
+    transform-origin: 0 100%;
+    background-color: $colorPrimary;
+    
+    h4 {
+      color: $colorWhite;
+      transform: skew($stdSkewDeg);
+      font-size: size(18);
+      line-height: 1.75;
+      position: relative;
+      top: 1px;
+
+      @include mq(phablet) {
+        font-size: size(30);
+      }
+      
+      @include mq(tablet) {
+        font-size: size(24);
+      }
+    }
+  }
+  
+  .en {
+    align-self: center;
+    text-transform: uppercase;
+    
+    h4 {
+      color: $colorBlack;
+      font-size: size(23);
+      line-height: 1;
+
+      @include mq(phablet) {
+        font-size: size(35);
+      }
+      
+      @include mq(tablet) {
+        font-size: size(28);
+      }
+    }
+  }
+}
+
+.ifrSec {
+  @include mq(tablet) {
+    width: 100%;
+    max-width: 640px;
+  }
+}
+
+.ifrWrap {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+
+  iframe {
+    @include wh(100%);
+    position: absolute;
+    top: 0; left: 0;
+  }
+}
+
+._warning {
+  color: $colorPrimary;
+}
+
+.brNoHide {
+  br {
+    display: block !important;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+img.love{
+  opacity: 0;
+  z-index: 5201314;
+  position: fixed;
+  bottom: 0; right: 0;
+  
+  &.start {
+    animation: loveFish 3s;
+  }
+}
+@keyframes loveFish {
+  0% {
+    opacity: 1;
+    transform: translate(0, 100%);
+    right: 0;
+  }
+  20% {
+    transform: translate(0, 0);
+  }
+  75% {
+    opacity: 1;
+    right: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, 0);
+    right: 100%;
+  }
+  
+}
+
+/***** Input Series *****/
+.radioWrap,
+.checkboxWrap {  /* label */
+  > input {
+    @include wh(0);
+    -ms-pointer-events: none;
+    pointer-events: none;
+    opacity: 0;
+    z-index: -10;
+    position: absolute;
+    top: 0; left: 0;
+  }
+
+  .fakebox {
+    border: 1px solid #828282;
+    background-color: $colorWhite;
+    position: relative;
+
+    &:before {
+      @include pseudo();
+      margin: auto;
+      top: 0; bottom: 0;
+      left: 0; right: 0;
+    }
+  }
+}
+
+// Radio Wrapper
+.radioWrap {  /* label */
+  display: flex;
+  align-items: center;
+
+  @include mq(tablet) {
+    &:hover {
+      .fakebox {
+        &:before {
+          opacity: 0.1;
+        }
+      }
+    }
+  }
+
+  .fakebox {
+    @include wh(20px);
+    border-radius: 100%;
+
+    &:before {
+      @include wh(12px);
+      opacity: 0;
+      border-radius: inherit;
+      background-color: $colorPrimary;
+    }
+
+    @include mq(phablet) {
+      @include wh(30px);
+
+      &:before {
+        @include wh(20px);
+      }
+    }
+  }
+
+  input{
+    &:checked {
+      + .fakebox {
+        &:before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+// Select Wrapper
+.selectWrap {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &:before {
+    @include pseudo();
+    @include wh(0);
+    margin: auto;
+    border-width: 8px 5px;
+    border-style: solid;
+    border-color: $colorPrimary transparent transparent transparent;
+    top: 8px; bottom: 0;
+    right: 10px;
+
+    @include mq(phablet) {
+      border-width: 12px 8px;
+      top: 12px;
+      right: 20px;
+    }
+    
+    @include mq(tablet) {
+      border-width: 8px 5px;
+      top: 8px;
+    }
+  }
+}
+
+
+
+
+/*==================== Slick ====================*/
+.slick-list,
+.slick-track {
+  height: 100%;
+}
+
+.slick-dotted {
+  &.slick-slider {
+    margin-bottom: 0;
+  }
+}
+
+.slick-dots {
+  display: none !important;
+}
+
+
+
+
+
+/*==================== Go Top Button ====================*/
+.goTop {  /* button */
+  @include wh(21px);
+  padding: 10px;
+  transform: translate(0, 0);
+  border: 1px solid $colorPrimary;
+  border-radius: 6px;
+  box-sizing: content-box;
+  background-color: rgba(#FFFFFF, 0.75);
+  z-index: 10;
+  position: fixed;
+  bottom: 10%; right: 0;
+
+  @include mq(phablet) {
+    @include wh(26px);
+  }
+
+  @include mq(tablet) {
+    @include wh(21px);
+  }
+
+  @include mq(tablet) {
+    &,
+    > div:before {
+      transition: all 100ms;
+    }
+
+    &:hover {
+      background-color: $colorPrimary;
+
+      > div {
+        &:before {
+          border-color: $colorWhite;
+        }
+      }
+    }
+  }
+
+  > div {
+    @include wh(100%);
+    position: relative;
+
+    &:before {
+      @include pseudo();
+      @include wh(100%);
+      margin: auto;
+      transform: rotate(-45deg);
+      border-width: 3px 3px 0 0;
+      border-style: solid;
+      border-color: $colorPrimary;
+      top: 50%; bottom: 0;
+      right: 0;
+    }
+  }
+}
+
+
+
+
+
+/*========== Form Series ==========*/
+.stdForm {  /* <form> */
+  input,
+  select,
+  textarea {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    color: $colorBlack;
+    font-size: size(16);
+    line-height: 2.5;
+  
+    @include placeholderStyle() {
+      color: $colorDarkGray;
+      font-size: size(16);
+      line-height: 2.5;
+    }
+  
+    @include mq(phablet) {
+      height: 60px;
+      padding: 0 20px;
+      font-size: size(24);
+  
+      @include placeholderStyle() {
+        font-size: size(24);
+      }
+    }
+  
+    @include mq(tablet) {
+      height: 39px;
+      font-size: size(18);
+      line-height: 2.22;
+  
+      @include placeholderStyle() {
+        font-size: size(18);
+        line-height: 2.22;
+      }
+    }
+  }
+  
+  .formItem {
+    margin-bottom: size(10);
+  
+    @include mq(phablet) {
+      margin-bottom: size(20);
+    }
+  
+    @include mq(tablet) {
+      display: flex;
+      align-items: flex-start;
+    }
+  
+    p {
+      font-size: size(16);
+      line-height: 2.5;
+  
+      @include mq(phablet) {
+        font-size: size(24);
+        line-height: 2.27;
+      }
+  
+      @include mq(tablet) {
+        font-size: size(18);
+        line-height: 2.22;
+      }
+    }
+  
+    .title {
+      @include mq(tablet) {
+        width: 375px;
+      }
+  
+      @include mq(tablet-wide) {
+        width: 300px;
+      }
+    }
+  }
+  
+  .bkContainer {
+    display: flex;
+    align-items: center;
+  
+    @include mq(tablet) {
+      width: 100%;
+    }
+  }
+  
+  .comment {
+    margin-top: 13px;
+  
+    @include mq(phablet) {
+      margin-top: 16px;
+    }
+    
+    @include mq(tablet) {
+      margin-top: 10px;
+    }
+  
+    p {
+      color: $colorDarkGray;
+      font-size: size(12);
+      line-height: 1.5;
+  
+      @include mq(phablet) {
+        font-size: size(18);
+      }
+  
+      @include mq(tablet) {
+        font-size: size(14);
+      }
+    }
+  
+    br {
+      display: block;
+    }
+  
+    > table {
+      width: 100%;
+      border-collapse: collapse;
+  
+      @include mq(phablet) {
+        width: auto;
+      }
+      
+      td {
+        padding: 0 10px;
+        border: 1px solid $colorDarkGray;
+      }
+  
+      p {
+        line-height: 2;
+      }
+    }
+  }
+  
+  .radioWrap {
+    margin-right: 20px;
+  
+    .fakebox {
+      margin-right: 5px;
+    }
+  }
+  
+  .selectWrap {
+    width: 100%;
+  
+    select {
+      text-align: center;
+    }
+  }
+  
+  
+  /***** Form Button Wrap *****/
+  .formBtnWrap {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    @include mq(phablet) {
+      margin-top: 40px;
+    }
+  
+    > button {
+      width: 50%;
+      transform: skew(-30deg);
+      position: relative;
+  
+      @include mq(tablet) {
+        width: 240px;
+      }
+      
+      &:before {
+        @include pseudo();
+        @include wh(0);
+        margin: auto;
+        transform: skew(30deg);
+        border-width: 5px 7px;
+        border-style: solid;
+        border-color: transparent transparent transparent $colorWhite;
+        top: 0; bottom: 0;
+        right: 5px;
+  
+        @include mq(phablet) {
+          border-width: 7px 10px;
+          right: 15px;
+        }
+      }
+
+      &._blackBG {
+        background-color: $colorBlack;
+      }
+      &._redBG {
+        background-color: $colorPrimary;
+      }
+      
+      p {
+        transform: skew(30deg);
+        color: $colorWhite;
+        font-size: size(16);
+        line-height: 2.1;
+        font-weight: bold;
+  
+        @include mq(phablet) {
+          font-size: size(24);
+        }
+      }
+    }
+  }
+}

@@ -30,7 +30,7 @@ p.nominalBounds = new cjs.Rectangle(0,0,216,205);
 (lib.hunger_txt_before = function() {
 	this.initialize(img.hunger_txt_before);
 }).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,335,140);
+p.nominalBounds = new cjs.Rectangle(0,0,300,126);
 
 
 (lib.hungry = function() {
@@ -240,7 +240,7 @@ p.nominalBounds = new cjs.Rectangle(-35,-56,70,112);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
 
-}).prototype = getMCSymbolPrototype(lib.hunger_txt_before_1, new cjs.Rectangle(0,0,335,140), null);
+}).prototype = getMCSymbolPrototype(lib.hunger_txt_before_1, new cjs.Rectangle(0,0,300,126), null);
 
 
 (lib.head_main = function(mode,startPosition,loop) {
@@ -605,11 +605,11 @@ p.nominalBounds = new cjs.Rectangle(-46.8,-10.4,363.8,368.2);
 	// hunger_txt_before
 	this.instance = new lib.hunger_txt_before_1();
 	this.instance.parent = this;
-	this.instance.setTransform(586,97,1,1,0,0,0,167.5,70);
+	this.instance.setTransform(587,97,1,1,0,0,0,167.5,70);
 	this.instance.alpha = 0;
 	this.instance._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(2).to({_off:false},0).to({x:597,alpha:1},4).to({x:374},75).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(2).to({_off:false},0).to({x:607,alpha:1},4).to({x:394},75).wait(1));
 
 	// head
 	this.instance_1 = new lib.head_1();
@@ -671,22 +671,22 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/body.png?1559279560886", id:"body"},
-		{src:"images/cross.png?1559279560886", id:"cross"},
-		{src:"images/head.png?1559279560886", id:"head"},
-		{src:"images/hunger_txt_before.png?1559279560886", id:"hunger_txt_before"},
-		{src:"images/hungry.png?1559279560886", id:"hungry"},
-		{src:"images/left_back_b.png?1559279560886", id:"left_back_b"},
-		{src:"images/left_back_s.png?1559279560886", id:"left_back_s"},
-		{src:"images/left_front_b.png?1559279560886", id:"left_front_b"},
-		{src:"images/left_front_s.png?1559279560886", id:"left_front_s"},
-		{src:"images/nose.png?1559279560886", id:"nose"},
-		{src:"images/sad_1.png?1559279560886", id:"sad_1"},
-		{src:"images/sad_2.png?1559279560886", id:"sad_2"},
-		{src:"images/shadow.png?1559279560886", id:"shadow"},
-		{src:"images/tail.png?1559279560886", id:"tail"},
-		{src:"images/tooth.png?1559279560886", id:"tooth"},
-		{src:"images/tooth_s.png?1559279560886", id:"tooth_s"}
+		{src:"images/body.png?1561695990170", id:"body"},
+		{src:"images/cross.png?1561695990170", id:"cross"},
+		{src:"images/head.png?1561695990170", id:"head"},
+		{src:"images/hunger_txt_before.png?1561695990170", id:"hunger_txt_before"},
+		{src:"images/hungry.png?1561695990170", id:"hungry"},
+		{src:"images/left_back_b.png?1561695990170", id:"left_back_b"},
+		{src:"images/left_back_s.png?1561695990170", id:"left_back_s"},
+		{src:"images/left_front_b.png?1561695990170", id:"left_front_b"},
+		{src:"images/left_front_s.png?1561695990170", id:"left_front_s"},
+		{src:"images/nose.png?1561695990170", id:"nose"},
+		{src:"images/sad_1.png?1561695990170", id:"sad_1"},
+		{src:"images/sad_2.png?1561695990170", id:"sad_2"},
+		{src:"images/shadow.png?1561695990170", id:"shadow"},
+		{src:"images/tail.png?1561695990170", id:"tail"},
+		{src:"images/tooth.png?1561695990170", id:"tooth"},
+		{src:"images/tooth_s.png?1561695990170", id:"tooth_s"}
 	],
 	preloads: []
 };

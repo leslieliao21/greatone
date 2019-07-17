@@ -1,0 +1,135 @@
+/*==================================================*\
+        Lightbox: _signout
+\*==================================================*/
+._signout {
+  .lbContainer {
+    width: 100%;
+    max-width: 720px;
+    // height: 600px;
+    padding: 5%;
+    background-color: $colorBgGray;
+    position: relative;
+
+    @include mq(tablet) {
+      padding: 40px $containerPadding;
+    }
+
+    &:before {
+      @include pseudo();
+      width: 100%;
+      height: 0;
+      padding: 14%;
+      background-image: url('../images/background/lb_signout_silhouette.png');
+      background-position: left bottom;
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      bottom: 0; left: 0;
+      
+      @include mq(tablet) {
+        height: 100px;
+        padding: 0;
+      }
+    }
+  }
+
+  .lbContent {
+    background-color: transparent;
+  }
+
+  ._mod_title {
+    .en {
+      @include mq(tablet) {
+        br {
+          display: none;
+        }
+      }
+    }
+
+    .ch {
+      @include mq(phablet) {
+        margin-right: 50px;
+      }
+
+      @include mq(tablet) {
+        margin-right: 30px;
+      }
+    }
+  }
+
+
+  /***** Form Series *****/
+  .stdForm {
+    .formItem {
+      .title {
+        @include mq(tablet) {
+          width: 232px;
+        }
+      }
+
+      .bkContainer {
+        @include mq(tablet) {
+          width: calc(100% - 232px);
+        }
+      }
+    }
+  
+    .inputPhoneWrap {
+      width: 100%;
+
+      input {
+        &:focus {
+          + .fakePlaceholder {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .formBtnWrap {
+    margin-bottom: 15%;
+
+    @include mq(tablet) {
+      margin-bottom: 60px;
+    }
+  }
+
+  .bkContainer {
+    position: relative;
+  }
+
+  // 聯絡電話的 假placeholder
+  .fakePlaceholder {
+    margin: auto;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 4px;
+
+    @include mq(phablet) {
+      left: 10px;
+    }
+
+    @include mq(tablet) {
+      left: 11px;
+    }
+
+    picture {
+      width: 30px;
+
+      @include mq(phablet) {
+        width: 50px;
+      }
+      @include mq(tablet) {
+        width: 30px;
+      }
+    }
+
+    p {
+      color: #828282;
+    }
+  }
+}

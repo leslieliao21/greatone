@@ -1,0 +1,79 @@
+/*==================================================*\
+        Footer
+\*==================================================*/
+
+/*footer*/.pageFooter {
+  background-color: $colorWhite;
+  position: relative;
+
+  &:before {
+    @include pseudo();
+    width: 100%;
+    padding-bottom: 35%;
+
+    background-image: url('../images/background/m_page_footer_bg.png');
+    background-size: 100% auto;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    bottom: 31%; left: 0;
+    
+    @include mq(tablet) {
+      background-image: url('../images/background/page_footer_bg.png');
+      background-size: auto;
+      bottom: 0;
+    }
+  }
+  
+  .container{
+    padding-bottom: size(13);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+}
+
+
+
+/***** 版權宣告 *****/
+.copyRight {
+  p {
+    color: #B4B4B4;
+    font-size: size(12);
+    line-height: 1.5;
+    white-space: nowrap;
+
+    @include mq(phablat) {
+      font-size: size(18);
+    }
+  }
+}
+
+
+
+/***** 相關連結 *****/
+.relatedLinks {
+  display: flex;
+  justify-content: flex-end;
+
+  a {
+    width: size(40);
+
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+
+    @include mq(phablet) {
+      width: size(51);
+    }
+
+    @include mq(tablet) {
+      opacity: 0.3;
+      transition: all 100ms;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

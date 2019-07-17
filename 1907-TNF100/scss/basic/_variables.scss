@@ -1,0 +1,46 @@
+/*==================================================*\
+        SCSS Variables
+\*==================================================*/
+
+/*==================== Fonts ====================*/
+$fontStack: Arial, Helvetica, sans-serif, "微軟正黑體", "蘋果儷黑體", "新細明體";
+$rootFzNum: 16;
+$rootFz: $rootFzNum + px;
+
+
+
+/*==================== Color ====================*/
+$colorPrimary: #e72418;
+
+$colorBlack: #050505;
+$colorWhite: #FFFFFF;
+$colorGray: #dfdfdf;
+$colorDarkGray: #828282;
+
+$colorBgGray: #ECECEC;
+$colorBgDeepGray: #cacaca;
+
+
+
+/*==================== Height ====================*/
+// Header Height
+$headerH: 60px;
+$headerPhabletH: 80px;
+$headerTabletH: 100px;
+
+$subMenuOverlayH: 60px;
+
+
+
+/*==================== Margin / Padding ====================*/
+$containerPadding: size(50);
+
+
+
+/*==================== Duration ====================*/
+$stdDuration: 300ms;
+
+
+
+/*==================== Other ====================*/
+$stdSkewDeg: 30deg;

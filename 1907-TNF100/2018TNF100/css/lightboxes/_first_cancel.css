@@ -1,0 +1,21 @@
+._first_cancel p, ._cancel_10k p, ._change_april p {
+  max-width: 500px;
+  margin: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: 1.5; }
+  ._first_cancel p:not(:last-child), ._cancel_10k p:not(:last-child), ._change_april p:not(:last-child) {
+    margin-bottom: 1rem; }
+
+._first_cancel a, ._cancel_10k a, ._change_april a {
+  color: blue;
+  text-decoration: underline;
+  display: inline; }
+
+._first_cancel .lbContainer, ._cancel_10k .lbContainer, ._change_april .lbContainer {
+  max-width: 700px; }
+
+._first_cancel .lbContent, ._cancel_10k .lbContent, ._change_april .lbContent {
+  border-radius: 10px;
+  padding-top: 1rem;
+  padding-bottom: 1rem; }

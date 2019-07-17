@@ -1,0 +1,315 @@
+/*==================================================*\
+        Index Page
+\*==================================================*/
+/*body*/.indexPage {
+  .tnf1002019_fixed {
+    display: none !important;
+  }
+  main {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /*footer*/.pageFooter {
+    width: 100%;
+    position: fixed;
+    bottom: 0; left: 0;
+  }
+
+  .goTop {  /* button */
+    display: none;
+  }
+}
+
+// Index Key Visions
+/*._slick*/.indexKV {
+  height: 100%;
+
+  .slickItem {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+
+    background-color: transparent;
+    background-size: cover;
+    background-position: top right;
+    background-repeat: no-repeat;
+    position: relative;
+
+    @include mq(tablet) {
+      justify-content: center;
+    }
+    
+    // 針對 "形象圖" 隱藏內容
+    &:not(.kvList) {
+      background-size: 100% auto;
+      background-position: top center;
+
+      > * {
+        display: none;
+        
+        @include mq(tablet) {
+          display: block;
+          background-size: cover;
+        }
+      }
+    }
+  }
+}
+
+
+
+/***** KV 清單 *****/
+/*.slickItem*/.kvList {
+  img {
+    margin: 0;
+  }
+
+  .container {
+    width: 65%;
+    margin-top: -$headerH;
+
+    @include mq(phablet) {
+      margin-top: -$headerPhabletH;
+      &.txtUp{
+        margin-top: -390px;
+      }
+    }
+
+    @include mq(tablet) {
+      margin-top: -$headerTabletH;
+
+      > * {
+        margin-left: 18px;
+      }
+    }
+  }
+
+  // KV List's Button
+  a {
+    width: 175px;
+    margin-top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $colorPrimary;
+    position: relative;
+    
+    @include mq(tablet) {
+      width: 285px;
+      margin-top: size(50);
+    }
+    
+    &:after {
+      @include pseudo($pos: static);
+      @include wh(12px);
+      margin-left: 5px;
+      margin-top: 1px;
+      transition: all $stdDuration;
+      transform: translateX(0) rotate(45deg);
+      border-width: 2px 2px 0 0;
+      border-style: solid;
+      border-color: $colorWhite;
+      
+      @include mq(tablet) {
+        @include wh(18px);
+      }
+    }
+
+    @include mq(tablet) {
+      &:hover {
+        &:after {
+          transform: translateX(10px) rotate(45deg);
+        }
+      }
+    }
+  }
+
+  // Text of Button
+  p {
+    transform: translateY(1px);
+    color: $colorWhite;
+    font-size: size(18);
+    line-height: 2.267;
+    letter-spacing: 2px;
+    text-align: center;
+    display: inline-block;
+    
+    @include mq(phablet) {
+      font-size: size(30);
+    }
+  }
+}
+
+
+
+/***** 右側點點 Selector *****/
+.kvListDots {
+  width: 10px;
+  height: 94px;
+  margin: auto;
+  transition: all $stdDuration;
+  position: absolute;
+  top: 0; bottom: 0;
+  right: 5%;
+
+  &.hide {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  // 點點本身
+  > div {
+    @include wh(11px);
+    cursor: pointer;
+    transition: all $stdDuration;
+    border-radius: 100px;
+    background-color: $colorWhite;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    // state: 已選擇
+    &.selected {
+      height: 30px;
+
+      &:last-child {
+        > p {
+          width: 40px;
+        }
+      }
+
+      > p {
+        width: 85px;
+        opacity: 1;
+      }
+    }
+
+    @include mq(tablet) {
+      &:hover {
+        height: 30px;
+        background-color: #CCCCCC;
+  
+        &:last-child {
+          > p {
+            width: 40px;
+          }
+        }
+  
+        > p {
+          width: 85px;
+          opacity: 1;
+          color: #CCCCCC;
+        }
+      }
+    }
+
+    // 文字
+    > p {
+      width: 0;
+      margin: auto;
+      overflow: hidden;
+      user-select: none;
+      pointer-events: none;
+      transition: all $stdDuration;
+      opacity: 0;
+      transform: translateX(-10px);
+
+      color: $colorWhite;
+      font-size: size(20);
+      line-height: 1;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-align: right;
+      white-space: nowrap;
+
+      position: absolute;
+      top: 6px; right: 100%;
+    }
+  }
+}
+
+
+
+
+
+/***** 個別調整區 *****/
+  // Key Vision - 1
+  /*.slickItem*/.kv1 {
+    background-image: url('../images/kv/m_index_kv_1.jpg');
+    
+    @include mq(tablet) {
+      background-image: url('../images/kv/index_kv_1.jpg');
+    }
+
+    // KV1 - LOGO
+    .kv1Logo {
+      width: 14%;
+      position: absolute;
+      top: 30px; left: 45px;
+    }
+
+    // Center Slogon
+    .centerSlogon {
+      width: 33%;
+      margin: auto;
+      top: 0; bottom: 0;
+      left: 0; right: 0;
+    }
+
+    // Sub Slogon
+    .subslogon {
+      width: 15%;
+      position: absolute;
+      bottom: 22.5%; left: 45px;
+    }
+  }
+
+  // Key Vision - 2
+  /*.slickItem*/.kv2 {
+    background-image: url('../images/kv/m_index_kv_2.jpg');
+
+    @include mq(tablet) {
+      background-image: url('../images/kv/index_kv_2.jpg');
+    }
+  }
+
+  // Key Vision - 3
+  /*.slickItem*/.kv3 {
+    background-image: url('../images/kv/m_index_kv_3.jpg');
+
+    @include mq(tablet) {
+      background-image: url('../images/kv/index_kv_3.jpg');
+    }
+  }
+
+  // Key Vision - 4
+  /*.slickItem*/.kv4 {
+    background-image: url('../images/kv/m_index_kv_4.jpg');
+
+    @include mq(tablet) {
+      background-image: url('../images/kv/index_kv_4.jpg');
+    }
+  }
+
+  // Key Vision - 5
+  /*.slickItem*/.kv5 {
+    background-image: url('../images/kv/m_index_kv_5.jpg');
+
+    @include mq(tablet) {
+      background-image: url('../images/kv/index_kv_5.jpg');
+    }
+  }
+
+  // Key Vision - 6
+  /*.slickItem*/.kv6 {
+    background-image: url('../images/kv/m_index_kv_6.jpg');
+
+    @include mq(tablet) {
+      background-image: url('../images/kv/index_kv_6.jpg');
+    }
+  }

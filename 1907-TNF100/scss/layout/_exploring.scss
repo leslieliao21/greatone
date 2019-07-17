@@ -1,0 +1,351 @@
+/*==================================================*\
+        Outdoor Training Page
+\*==================================================*/
+.activetiesTemplate.exploringPage {  /* <body> */
+  article br{
+    display: block;
+  }
+  .kv {  /* <section> */
+    padding-bottom: 60%;
+    background-image: url('../images/kv/m_orienteering_kv.jpg');
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    
+    @include mq(tablet) {
+      height: 318px;
+      padding: 0;
+      background-image: url('../images/kv/orienteering_kv.jpg');
+    }
+
+    // 前景: 山脈剪影
+    &:before {
+      @include pseudo();
+      width: 100%;
+      height: 29.0625%;
+      background-image: url('../images/background/m_mountain_silhouette.png');
+      background-size: 100% auto;
+      background-position: bottom left;
+      background-repeat: no-repeat;
+      bottom: -1px; left: 0;
+      
+      @include mq(tablet) {
+        height: 184px;
+        background-image: url('../images/background/mountain_orienteering.png');
+        background-size: auto;
+        background-position: bottom center;
+        background-repeat: repeat-x;
+      }
+    }
+    .topic {
+      width: 80%;
+      top: 9%;
+
+      @include mq(phablet) {
+        top: 17%;
+      }
+
+      @include mq(tablet) {
+        width: 57.8125%;
+        top: 40px;
+      }
+      
+      @include mq(tablet-wide) {
+        top: 79px;
+      }
+    }
+  }
+  @include mq(tablet-wide) {
+    .picLeft{
+      img{
+        margin: 0;
+      }
+    }
+  }
+  article .fBig{
+    font-weight: bold;
+    font-size: 1.3125rem;
+    @include mq(tablet) {
+      font-size: 1.3125rem;
+    }
+  }
+  .pc-none{
+    @include mq(tablet) {
+      display: none;
+    }
+  }
+  .tBold{
+    font-weight: bold;
+  }
+  .fcBlue{
+    color: #098fd8
+  }
+  .fcRed{
+    color: #e72418
+  }
+  .videoBlock{
+    iframe{
+      max-width: 854px;
+      max-height: 480px;
+      width: 100%;
+      height: 50.4vw;
+      margin: 0 auto;
+      display: block;
+    }
+    .vTag{
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+      display: block;
+      text-align: center;
+    }
+  }
+
+  .tCenter{
+    text-align: center;
+  }
+  
+  /* 個別調整 */
+  .session{
+    @include mq(tablet) {
+      width: 90px;
+      br{
+        display: none;
+      }
+    }
+  }
+  // Session-1
+  /*a*/.session1 {
+    bottom: 21%; left: 17.5%;
+
+    @include mq(tablet) {
+      bottom: 72px; left: 243px;
+    }
+  }
+
+  // Session-2
+  /*a*/.session2 {
+    bottom: 18%; left: 35%;
+
+    @include mq(tablet) {
+      bottom: 63px; left: 234px; 
+    }
+    
+    @include mq(tablet-wide) {
+      bottom: 63px; left: 234px; 
+    }
+  }
+
+  // Session-3
+  /*a*/.session3 {
+    bottom: 24%; left: 51%;
+
+    @include mq(tablet) {
+      bottom: 85px; left: 429px;
+    }
+    
+    @include mq(tablet-wide) {
+      bottom: 85px; left: 429px;
+    }
+  }
+  @include mq(tablet){
+    .fixedSideBar{
+      display: none;
+    }
+  }
+
+  // 客製化
+  .underline{
+    text-decoration: underline;
+    text-underline-position: under;
+  }
+  .fBold{
+    font-weight: bold;
+  }
+  .fcRed{
+    color: rgb(192, 80, 77);
+  }
+  .fcGray{
+    color: #4a4a4a;
+  }
+    .mt-100{
+      @include mq(tablet) {
+        margin-top: -34px;
+      }
+      // @include mq(tablet) {
+      //   margin-top: -60px;
+      // }
+      // @include mq(tablet-wide) {
+      //   margin-top: -100px;
+      // }
+    }
+    .tCenter{
+      text-align: center;
+    }
+    .picSpan{
+      text-align: center;
+      display: inline-block;
+      margin-top: 0.3rem;
+      a{
+        display: inline-block;
+        color: #2ab3fc;
+      }
+    }
+    .mb2{
+      margin-bottom: 2rem;
+    }
+    article .listContent{
+      padding-left: 0;
+      @include mq(tablet){
+        padding-left: 0;
+      }
+    }
+    .leftPic{
+      @include mq(tablet){
+        display: inline-block;
+      }
+      img{
+        @include mq(tablet){
+          margin-left: 0;
+        }
+      }
+      span{
+        display: block;
+        text-align: center;
+        font-size: 1rem;
+      }
+    }
+    .picLeft{
+      margin-bottom: 2rem;
+      @include mq(tablet){
+        margin: 0;
+      }
+    }
+    .forChu, .forKao{
+      display: none;
+    }
+    .picSpan{
+      line-height: 1.5;
+      text-align: center;
+    }
+    ._mod_title.smallTitle {
+      .ch {
+        margin-right: 20px;
+        @include mq(mini-phone) {
+          margin-right: 25px;
+        }
+        @include mq(tablet) {
+          margin-right: 30px;
+        }
+        h4 {
+          font-size: size(16);
+          @include mq(mini-phone) {
+            font-size: size(20);
+          }
+          @include mq(phablet) {
+            font-size: size(24);
+          }
+        }
+      }
+      
+      .en {
+        h4 {
+          font-size: size(14);
+          @include mq(mini-phone) {
+            font-size: size(16);
+          }
+          @include mq(phablet) {
+            font-size: size(28);
+          }
+        }
+      }
+    }
+    .soonBtn{
+      display: flex;
+      // &::after{
+      //   display: none;
+      // }
+    }
+
+    // TABLE
+    article .listContent>table>tbody>tr>td:first-child, 
+    article .listContent>table>tbody>tr>th:first-child{
+      width: calc( 100%/3 );
+        @include mq(phablet) {
+          width: calc( 100%/3 );
+        }
+    }
+    article .listContent>table>tbody>tr>td:last-child, 
+    article .listContent>table>thead>tr>td:last-child,
+    article .listContent>table>tbody>tr>td:nth-child(2), 
+    article .listContent>table>thead>tr>td:nth-child(2){
+      text-align: center;
+    }
+
+    .mb2{
+      margin-bottom: 2rem;
+    }
+    .googleMap{
+      height: auto;
+      padding-bottom: 0;
+      font-size: 0;
+    }
+    .googleMap iframe{
+      width: 100%;
+      height: 380px;
+      padding: 0;
+      margin: 0;
+      font-size: 0;
+    }
+    
+/*==================== Course Section ====================*/
+  .course {  /*section*/
+    
+    // 照片背景
+    &:before {
+      height: 0;
+      padding-bottom: 279%;
+      background-color: transparent;
+      background-image: url('../images/background/exploring_bgimg.jpg');
+      background-size: cover;
+      background-position: top center;
+      background-repeat: no-repeat;
+      z-index: -1;
+      bottom: 0; left: 0;
+      
+      @include mq(tablet) {
+        padding-bottom: 65%;
+        background-image: url('../images/background/exploring_bgimg.jpg');
+      }
+    }
+  }
+
+  .review{
+    padding-top: 4rem;
+  }
+  .reviewKao{
+    
+  }
+  .reviewKao{
+    
+  }
+  .reviewKao{
+
+  }
+
+  /*==================== SignUp Section ====================*/
+  .signUp {
+    padding-top: 2rem;
+    .taipei,.kaohsiung{
+      display: none;
+    }
+    > a {
+      // width: 240px;
+    }
+
+    p {
+      font-size: 1.5em;
+      line-height: 1.8;
+    }
+  }
+}

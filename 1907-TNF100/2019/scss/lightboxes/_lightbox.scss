@@ -1,0 +1,143 @@
+/*==================================================*\
+        Lightbox
+\*==================================================*/
+
+.lightbox {
+  @include fullPopup(rgba(0, 0, 0, 0.8));
+  opacity: 0;
+  transition: all $stdDuration;
+  z-index: 100;
+
+  svg path {
+    fill: #FFFFFF;
+  }
+
+  &.imgOnly {
+    .lbContainer {
+      width: 90%;
+    }
+
+    .lbContent {
+      background-color: transparent;
+
+      img {
+        width: auto;
+      }
+    }
+
+    .slickItem {
+      background-color: transparent;
+    }
+
+    .slick-track {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+    }
+
+    .slick-arrow {
+      transform: none !important;
+
+      > div {
+        border-color: $colorWhite;
+      }
+    }
+
+    .arrow-prev {
+      left: auto !important;
+      right: 100%;
+    }
+
+    .arrow-next {
+      left: 100%;
+      right: auto !important;
+    }
+  }
+}
+
+.lbLoading {
+  @include wh(40px);
+  margin: auto;
+  z-index: 0;
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+}
+
+// Content Container
+.lbContainer {
+  width: 100%;
+  z-index: 1;
+  position: relative;
+
+  &.container {
+    padding: 0;
+
+    @include mq(tablet) {
+      padding: 0 $containerPadding;
+    }
+  }
+}
+
+// Lightbox Content
+.lbContent {
+  width: 100%;
+  opacity: 0;
+  background-color: #FFFFFF;
+
+  > img {
+    width: 100%;
+    max-width: auto;
+  }
+}
+
+// Button: Close Lightbox
+.closeLbBtn {
+  /* 請設定寬高 */
+  @include wh(50px);
+  cursor: pointer;
+  transform: translate(0, 0);
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+
+  @include mq(tablet) {
+    transform: translateY(-10px);
+  }
+
+  &:before,
+  &:after {
+    @include pseudo();
+    width: 100%;
+    height: 4px;
+    margin: auto;
+    border-radius: 100px;
+    background-color: #FFFFFF;
+    top: 0; bottom: 0;
+  }
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+
+  // Hover
+  @include mq(tablet) {
+    &:before,
+    &:after {
+      transition: all $stdDuration;
+    }
+
+    &:hover {
+      &:before {
+        transform: rotate(135deg);
+      }
+      &:after {
+        transform: rotate(-135deg);
+      }
+    }
+  }
+}

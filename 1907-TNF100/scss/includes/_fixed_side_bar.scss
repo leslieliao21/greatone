@@ -1,0 +1,91 @@
+/*==================================================*\
+        Fixed Side Bar
+\*==================================================*/
+
+.fixedSideBar {
+  min-width: auto;
+  margin: auto;
+  -ms-pointer-events: none;
+  pointer-events: none;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  position: fixed;
+  top: 0; bottom: 0;
+  right: 0;
+
+  @include mq(tablet) {
+    display: flex;
+  }
+
+  li {
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 1px;
+    }
+
+    &.selected {
+      @include mq(phablet) {
+        left: 0 !important;
+      }
+      
+      button {
+        background: $colorPrimary !important;
+      }
+    }
+
+    @include mq(tablet) {
+      &:hover {
+        left: 0 !important;
+        
+        button {
+          background: $colorPrimary !important;
+        }
+      }
+    }
+  }
+
+  li,
+  button {
+    transition: all 200ms;
+  }
+  
+  button {
+    width: 100%;
+    -ms-pointer-events: auto;
+    pointer-events: auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: $colorBlack;
+  }
+
+  picture {
+    width: 23px;
+    margin-right: 10px;
+
+    @include mq(phablet) {
+      width: 28px;
+    }
+
+    @include mq(tablet) {
+      width: 23px;
+    }
+  }
+
+  p {
+    color: $colorWhite;
+    font-size: size(16);
+
+    @include mq(phablet) {
+      font-size: size(24);
+    }
+    
+    @include mq(tablet) {
+      font-size: size(18);
+    }
+  }
+}

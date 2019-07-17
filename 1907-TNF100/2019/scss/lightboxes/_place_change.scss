@@ -1,0 +1,30 @@
+._place_change {
+  p {
+    max-width: 500px;
+    margin: auto;
+
+    padding: {
+      left: 10px;
+      right: 10px;
+    }
+
+    line-height: 1.5;
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .lbContainer {
+    max-width: 700px;
+  }
+
+  .lbContent {
+    border-radius: 10px;
+
+    padding: {
+      top: 1rem;
+      bottom: 1rem;
+    }
+  }
+}

@@ -1,0 +1,413 @@
+/*==================================================*\
+        Lectures Page
+\*==================================================*/
+.tnf100_2019Template.tnf100_2019_lecturesPage {  /* <body> */
+
+  .fixedSideBar {
+    li {
+  //     /*
+  //     * 因為 Phone & Tablet 時 隱藏fixedSideBar 的需求，所以註解掉。
+  //     * 請保留、for 未來需求改變
+  //     */
+  //     // left: size(121);
+
+  //     // @include mq(phablet) {
+  //     //   left: size(177);
+  //     // }
+
+      @include mq(tablet) {
+        left: size(84);
+      }
+    }
+  }
+  .pc-none{
+    @include mq(tablet) {
+      display: none;
+    }
+  }
+  // 客製化
+  table{
+    td{
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
+  &.enPage{
+    .title, .tTitle{
+      margin-top: 1rem;
+    }
+    .block{
+      p{
+        margin-top: 1rem;
+      }
+    }
+  }
+  .alignC{
+    @include mq(tablet){
+      text-align: center;
+    }
+  }
+  .tBold{
+    font-weight: bold;
+  }
+  h3{
+    font-size: 1.4125rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+  .mt2{
+    margin-top: 2%;
+  }
+  .mt1{
+    margin-top: 1rem;
+  }
+  .mb1{
+    margin-bottom: 1rem;
+  }
+  .banner{
+    &::before{
+      display: none;
+    }
+  }
+  .title{
+    font-weight: bold;
+    vertical-align: middle;
+    &:not(:first-child){
+      margin-top: 1rem;
+    }
+    .btnSign{
+      width: 70%;
+      display: block;
+      vertical-align: middle;
+      max-width: 336px;
+      margin: 0 auto;
+      @include mq(tablet) {
+        display: inline-block;
+        width: 30%;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+  .txtPic{
+    margin: 5% auto 10%;
+  }
+  .triUl{
+    li{
+      position: relative;
+      padding-left: 1.3125rem;
+      &::before{
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: .4rem 0 .4rem .6rem;
+        border-color: transparent transparent transparent #e72418;
+        position: absolute;
+        top: 0.65rem;
+        left: 1vw;
+      }
+      @include mq(tablet) {
+        &::before{
+          left: 1.3125rem;
+        }
+      }
+    }
+  }
+  section{
+    p{
+      line-height: 1.5;
+      font-size: 4vw;
+      @include mq(tablet) {
+        font-size: 1.125rem;
+        line-height: 1.8;
+      }
+    }
+    .title-skew{
+      width: 100%;
+      border-bottom: 1px solid #000; 
+      text-align: left;
+      margin-bottom: 2rem;
+      h2{
+        background-color: #e72418;
+        display: inline-block;
+        padding: .5rem 1rem;
+        transform: skewX(-25deg);
+        transform-origin: left bottom;
+        font{
+          display: block;
+          text-align: center;
+          font-size: 1.5rem;
+          font-weight: bold;
+          color: #fff;
+          line-height: 1;
+          transform: skewX(25deg);
+        }
+      }
+    }
+    &.article{
+      padding-top: 5rem;
+      padding-bottom: 12rem;
+      .articleList{
+        li{
+          background-color: #fff;
+          margin-bottom: 2rem;
+          padding: 1.65rem 2rem;
+          border: 1px solid transparent;
+          transition: .2s;
+          &:hover{
+            border-color: #e72418;
+          }
+        }
+        a{
+          font-size: 0;
+          >*{
+            display: inline-block;
+            vertical-align: top;
+          }
+          .picBox{
+            width: 100%;
+            margin-bottom: 1rem;
+            @include mq(tablet) {
+              width: 24.5%;
+              margin-bottom: 0;
+            }
+          }
+          .txtBox{
+            width: 100%;
+            
+            @include mq(tablet) {
+              width: 72.5%;
+              margin-left: 3%;
+            }
+          }
+          .title{
+            p{
+              font-size: 1.5rem;
+              font-weight: bold;
+              line-height: 1.2;
+            }
+          }
+          hr{
+            border: 0;
+            border-top: 1px solid #ccc;
+            margin: 0.5rem 0;
+          }
+          .txt{
+            p{
+              font-size: 1.15rem;
+              line-height: 1.5;
+              &::after{
+                content: "";
+                display: inline-block;
+                width: 10px;
+                height: 8px;
+                background: url(../images/review/triangle.png) no-repeat;
+                background-size: contain;
+                margin-left: 0.5rem;
+              }
+            }
+          }
+        }
+  
+      }
+    }
+  }
+  .block{
+    // padding-left: 0;
+    // padding: 0 5vw;
+    margin-bottom: 2rem;
+    @include mq(tablet) {
+      padding: 0;
+      padding: .5rem 0 1.5rem 1.5rem;
+    }
+    .infoPic{
+      margin: 2% 0 0;
+      padding-left: 0;
+      @include mq(tablet) {
+        padding-left: 1.2rem;
+      }
+    }
+    ol{
+      list-style-type:decimal;
+      padding-left: 8vw;
+      &.olAlpha{
+        list-style-type: lower-alpha;
+      }
+      @include mq(tablet) {
+        padding-left: 1.3rem;
+      }
+    }
+    ul{
+      list-style-type: disc;
+      padding-left: 8vw;
+      @include mq(tablet){
+        padding-left: 1.3rem;
+      }
+    }
+  }
+  .teacherTable{
+    td{
+      vertical-align: middle;
+      display: block;
+      p{
+        text-align: left;
+      }
+      p.tBold{
+        text-align: center;
+      }
+      img{
+        width: 60%;
+        margin-top: 7.5vw;
+        margin-bottom: 1.5vw;
+      }
+      @include mq(tablet) {
+        display: table-cell;
+        &:not(:first-child){
+          padding: 0 1rem;
+        }
+        p.tBold{
+          text-align: left;
+        }
+        img{
+          width: auto;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  .regTable, .sizeTable{
+    width: 100%;
+    thead{
+      background-color: #4169e1;
+      p{
+        color: #fff;
+      }
+    }
+    td{
+      padding: 0 .25vw;
+      @include mq(tablet) {
+        padding: 0 .5rem;
+      }
+    }
+    p, li{
+      font-size: 3vw;
+      @include mq(tablet) {
+        font-size: 1rem;
+      }
+    }
+  }
+  .sizeTable{
+    tr{
+      &:nth-child(even){
+        background-color: #f1f1f1;
+      }
+    }
+  }
+  .regTable{
+    .bg-gray{
+      background-color: #f1f1f1;
+    }
+    td{
+      &:nth-child(6){
+        max-width: 24rem;
+      }
+    }
+  }
+  .sizeTable{
+    margin-top: 1rem;
+    td{
+      &:first-child{
+        background-color: #4169e1;
+        p{
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .rule{
+    position: relative;
+    padding-bottom: 10%;
+    &::before{
+      display: block;
+      position: absolute;
+      width: 100%;
+      padding-bottom: 14.6875%;
+      background-image: url(../images/background/m_banner_mountain_silhouette.png);
+      background-size: 100% auto;
+      background-position: bottom center;
+      background-repeat: no-repeat;
+      bottom: -1px;
+      left: 0;
+      @include mq(tablet) {
+        background-image: url(../images/background/banner_mountain_silhouette.png);
+        background-size: auto;
+        background-repeat: repeat-x;
+        content: "";
+      }
+    }
+    ol{
+      list-style-type: decimal;
+    }
+    li{
+      margin-bottom: 2vw;
+      @include mq(tablet){
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  .sponsor{
+    position: relative;
+    padding-bottom: 10%;
+    padding-top: 20%;
+    @include mq(tablet) {
+      padding-bottom: 200px;
+      padding-top: 2%;
+    }
+  }
+
+  .sideSignUp{
+    width: 100%;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+    @include mq(tablet) {
+      width: auto;
+      position: fixed;
+      right: 0;
+      top: 30%;
+      bottom: auto;
+    }
+  }
+  .pageFooter{
+    margin-bottom: 15vw;
+    @include mq(tablet) {
+      margin-bottom: 0;
+    }
+  }
+
+/*==================== Course Section ====================*/
+  // .course {  /*section*/
+    
+  //   // 照片背景
+  //   &:before {
+  //     height: 0;
+  //     padding-bottom: 279%;
+  //     background-color: transparent;
+  //     background-image: url('../images/background/camping_bottom_bgimg.jpg');
+  //     background-size: cover;
+  //     background-position: top center;
+  //     background-repeat: no-repeat;
+  //     z-index: -1;
+  //     bottom: 0; left: 0;
+      
+  //     @include mq(tablet) {
+  //       padding-bottom: 60%;
+  //       background-image: url('../images/background/camping_bottom_bgimg.jpg');
+  //     }
+  //   }
+  // }
+}
