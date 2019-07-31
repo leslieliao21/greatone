@@ -1545,16 +1545,17 @@ header{
         margin-right: 1.5%;
         margin-bottom: 1.5%;
         
-        &:last-child, &:nth-child(4){
+        &:nth-child(7), &:nth-child(4){
             margin-right: 0;
         }
+
         @include media(tab2){
             width: 80%;
             display: block;
             padding: 4%;
             margin: 0 auto;
             margin-bottom: 4%;
-            &:last-child, &:nth-child(4){
+            &:nth-child(7), &:nth-child(4){
                 margin: 0 auto;
                 margin-bottom: 4%;
             }

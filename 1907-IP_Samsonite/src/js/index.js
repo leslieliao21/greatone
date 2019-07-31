@@ -45,16 +45,32 @@ var myScript = function () {
     var imagesLoaded = loading();
     imagesLoaded.loadfunc();
 
+    var luggage = $('.mainLuggage');
+    
+
+    TweenMax.fromTo(luggage, 1.2, {
+        x: 1500,
+        opacity: 0,
+        autoAlpha: 0
+      }, {
+        x: 0,
+        opacity: 1,
+        autoAlpha: 1,
+        // delay: 0.2,
+        ease: Back.easeIn,
+        pause: true
+      });
+
     $('._slick').slick({
         lazyLoad: 'progressive',
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 7000,
-        dots: true,
         centerMode: true,
         centerPadding: slickW +'px',
+        autoplay: true,
+        autoplaySpeed: 4000,
+        dots: true,
         responsive: [
             {
               breakpoint: 999,
@@ -81,13 +97,14 @@ var myScript = function () {
     $(window).scroll(function () {
         var winTop = $(window).scrollTop();
         var slideTop = $('.secD').offset().top;
+        var slideHeight = $('.secD').outerHeight();
         var secCTop = $('.secC').offset().top;
 
         if(winW > 999){
             var scroll = $(window).scrollTop();
             if(scroll > pos) {
                 tweenLeaf.play();
-                if(winTop >= secCTop && winTop < slideTop){
+                if(winTop >= secCTop && winTop < slideTop + slideHeight / 3){
                     tweenLeaf.reverse();
                 }else{
                     tweenLeaf.play();
@@ -98,8 +115,6 @@ var myScript = function () {
             }            
         }
         pos = scroll;
-
-        
 
     })
 
@@ -208,24 +223,7 @@ $(function () {
     //     windowEvents();
     // });
 
-    var luggage = $('.mainLuggage');
-    
-
-    TweenMax.fromTo(luggage, 1.8, {
-        x: 1500,
-        opacity: 0,
-        autoAlpha: 0
-      }, {
-        x: 0,
-        opacity: 1,
-        autoAlpha: 1,
-        // delay: 0.2,
-        ease: Back.easeIn,
-        pause: true
-      });
-
 });
-
 
 //prevent touch to hover
 function hasTouch() {

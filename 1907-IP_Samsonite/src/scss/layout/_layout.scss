@@ -63,7 +63,7 @@ main {
 
 .showD{
   display: block;
-  @include mq(tablet-wide, max) {
+  @include mq(tablet, max) {
     display: none;
   }
 }

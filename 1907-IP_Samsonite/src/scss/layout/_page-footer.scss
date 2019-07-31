@@ -8,7 +8,12 @@
   color: #FFF;
   background-color: transparent;
   text-align: center;
-  margin: 5vw auto 30px auto;
+  margin: 6vw auto 3vw auto;
+  padding-bottom: 60px;
   z-index: 10;
   line-height: 1.5em;
+  @include mq(tablet) {
+    margin: 5vw auto 0 auto;
+    padding-bottom: 40px;
+  }
 }
