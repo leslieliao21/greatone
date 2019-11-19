@@ -1,0 +1,115 @@
+
+input, select{
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 8px 10px;
+    color: #000;
+    display: inline-block;
+    border: 1px solid #e0e0e0;
+    &:focus{
+        border: 1px solid #a6a6a6;
+    }
+    &.w50{
+        width: 50%;
+    }
+    @include mq(tablet, max) {
+        &.w50{
+            width: 70%;
+        }
+    }
+}
+select{
+    margin-right: 2%;
+    background: url('../images/icon_select.svg') #FFF no-repeat;
+    background-position: 92% center;
+    -webkit-background-size: 10px 10px;
+    background-size: 10px 10px;
+}
+
+label, input, select{
+    display: block;
+    margin-bottom: 1vh;
+    display: inline-block;
+    margin-left: -4px;
+}
+
+label{
+    width: 8%;
+    @include mq(tablet, max) {
+        width: 20%;
+    }
+}
+
+input[type="file"] {
+    display: none;
+}
+
+  
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #727272;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #727272;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #727272;
+  }
+
+/* Removes the clear button from date inputs */
+input[type="date"]::-webkit-clear-button {
+    display: none;
+}
+
+/* Removes the spin button */
+input[type="date"]::-webkit-inner-spin-button { 
+    display: none;
+}
+
+/* Always display the drop down caret */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: #7d0000;
+}
+
+/* A few custom styles for date inputs */
+input[type="date"] {
+    appearance: none;
+    -webkit-appearance: none;
+    &:before{
+        width:100%;
+        content:attr(placeholder);
+        background-color:#FFFFFF;
+    }
+    &:hover:before{
+        width:0;
+        content:'';
+    }
+}
+
+input[type="date"], focus {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+
+// input[type="radio"] {
+//     width: 10px;
+//     // height: 15px;
+//     background: #FFF;
+//     border-radius: 5px;
+//     opacity: 1;
+// }
+
+
+  input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    input[type="number"] {
+        -moz-appearance: textfield;
+    }
+
+

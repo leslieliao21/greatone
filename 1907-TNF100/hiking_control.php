@@ -239,7 +239,7 @@
               <p>快閃體驗地點：高雄統一夢時代百貨、新竹巨城SOGO百貨、台北忠孝SOGO百貨</p>
               <p>預約辦法：前往活動介面預約報名</p>
               <p>凡是線上預約成功並且到現場體驗者，即可獲得神秘精美預約好禮</p>
-              <p>數量有限，趕快來報名！！ <a href="http://www.thenorthface-event.tw/game" class="inblock vaMiddle wa" target="_blank"><img src="./images/button/signup_3.png" alt="立刻報名"></a> </p>
+              <p>數量有限，趕快來報名！！ <!--<a href="http://www.thenorthface-event.tw/game" class="inblock vaMiddle wa" target="_blank"><img src="./images/button/signup_3.png" alt="立刻報名"></a>--> </p>
               <p>可預約時間：<font class="inblick">12:00</font><font class="inblick">/13:00</font><font class="inblick">/14:00</font><font class="inblick">/15:00</font><font class="inblick">/16:00</font><font class="inblick">/17:00</font><font class="inblick">/18:00</font></p>
               <ol>
                 <li>

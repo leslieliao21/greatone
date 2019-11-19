@@ -1,0 +1,148 @@
+/*==================================================*\
+        ecard Page Style
+\*==================================================*/
+
+.rules-page {
+    // overflow: hidden;
+
+    main {
+        position: relative;
+        width: 100%;
+        height: auto;
+        background: #FFF;
+
+        .rulesBg {
+            width: 100%;
+            min-width: 1920px;
+            height: calc(100% - 66px);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-size: 1920px auto;
+            z-index: 0;
+
+            @include mq(tablet-small, max) {
+                min-width: 100%;
+            }
+
+            &:before {
+                @include pseudo();
+                width: 100%;
+                height: 100%;
+                background: url('../images/background/bg_rule_top.png') center top no-repeat;
+                background-size: 1920px auto;
+
+                @include mq(tablet-small, max) {
+                    background: url('../images/background/bg_rule_top.png') center top no-repeat;
+                    background-size: 202% auto;
+                }
+            }
+
+            &:after {
+                @include pseudo();
+                width: 100%;
+                height: 100%;
+                background: url('../images/background/bg_ecard_bottom.png') right bottom no-repeat;
+                background-size: 1046px auto;
+
+                @include mq(tablet-small, max) {
+                    background: url('../images/background/bg_ecard_bottom.png') left bottom no-repeat;
+                    background-size: 140% auto;
+                }
+            }
+
+        }
+
+        h1 {
+            position: absolute;
+            top: 95px;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-left: -240px;
+            font-size: 30px;
+            color: #FFF;
+            font-weight: 300;
+            z-index: 2;
+
+            @include mq(tablet-small, max) {
+                top: 75px;
+                left: 10%;
+                transform: translateX(0);
+                margin-left: -10px;
+                font-size: 5.6vw;
+            }
+        }
+
+        .midWrapper{
+            width: 100%;
+            max-width: 640px;
+            position: relative;
+            margin: auto;
+            padding-top: 180px;
+            padding-bottom: 180px;
+
+            p, ul{
+                font-size: 24px;
+                text-align: justify;
+                font-family: "微軟正黑體";
+                font-weight: 600;
+            }
+
+            strong{
+                display: block;
+                font-size: 30px;
+                color: #e60012;
+                margin: 15px 0;
+            }
+
+            ul{
+                list-style: decimal outside;
+                padding-left: 30px;
+                li{
+                    margin-bottom: 10px;
+                }
+            }
+
+            .rulesTitle{
+                width: 100%;
+                max-width: 348px;
+                position: relative;
+                margin: 40px 0;
+                z-index: 3;
+            }
+            .picBox.mgN{
+                margin-top: -120px;
+            }
+
+            @include mq(tablet-small, max) {
+                padding-top: 30%;
+                padding-bottom: 30%;
+                p, ul{
+                    font-size: 4.5vw;
+                }
+                strong{
+                    font-size: 5.5vw;
+                }
+                p, strong{
+                    padding: 0 20px;
+                }
+                ul{
+                    padding-left: 40px;
+                    padding-right: 20px;
+                }
+                .rulesTitle{
+                    width: 75%;
+                    margin: 20px 0;
+                }
+                .picBox.mgN{
+                    margin-top: -12%;
+                }
+            }
+        }
+
+
+
+    }
+
+}

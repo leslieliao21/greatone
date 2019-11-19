@@ -1,0 +1,56 @@
+/*==================================================*\
+        Layout
+\*==================================================*/
+
+/*==================== Document ====================*/
+html, 
+body {
+  width: 100%;
+  font-family: $font-stack;
+}
+
+html {
+  height: 100%;
+  font-size: 12px;
+  @include mq(phone-wide) {
+    font-size: $rootFz + px;
+  }
+}
+
+body {
+  min-height: 100%;
+  color: $c-word;
+  background-color: $c-bodyBgGray;
+}
+
+
+
+/*==================== Container ====================*/
+main {
+  // padding-top: $headerMbHeight;
+  // @include mq(phone-wide) {
+  //   padding-top: $headerPhoneWideHeight;
+  // }
+  @include mq(tablet-wide) {
+    padding-top: 0;
+  }
+}
+
+section {
+  overflow: hidden;
+  background-color: $c-bodyBgGray;
+}
+
+.container {
+  width: $containerMbWidth;
+  margin: auto;
+
+  @include mq(phone-wide) {
+    width: $containerPhoneWideWidth;
+  }
+  @include mq(tablet-wide) {
+    width: 100%;
+    max-width: $containertabletWideWidth + ($containertabletWidePadding * 2);
+    padding: 0 $containertabletWidePadding;
+  }
+}

@@ -1,0 +1,487 @@
+/*==================================================*\
+        Member Page Style
+\*==================================================*/
+
+#member-page {
+
+    .pageCont {
+
+        .colTitle {
+            color: #297fc9;
+            font-size: 18px;
+            font-weight: 600;
+            margin: 30px 0 20px 0;
+            margin-left: 15px;
+
+            @include mq(tablet, max) {
+                font-size: 6vw;
+                text-align: center;
+                margin-left: 0;
+            }
+        }
+
+        .container {
+            .row {
+                margin-bottom: 20px;
+
+                @include mq(tablet, max) {
+                    margin-bottom: 0;
+
+                    >div {
+                        margin-bottom: 25px;
+                    }
+                }
+
+                .col-sm-6 {
+                    @include mq(tablet, max) {
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+                }
+            }
+
+            .affairName {
+                padding-left: 25px;
+                background: url('../images/icon/icon_list.png') no-repeat left center;
+                background-size: 20px auto;
+                text-decoration: underline;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+
+        }
+
+        form {
+            width: 96%;
+            text-align: center;
+            margin: 25px auto;
+
+            &.w600 {
+                max-width: 600px;
+            }
+
+            // @include mq(tablet, max) {
+            //     width: 100%;
+            //     max-width: 100%;
+            // }
+
+            .form-group {
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    float: none;
+                    clear: both;
+                }
+
+                label {
+                    text-align: right;
+                    margin-top: 9px;
+                    padding-top: 0;
+                    position: relative;
+
+                    @include mq(tablet, max) {
+                        text-align: left;
+                    }
+
+                    img {
+                        width: 16px;
+                        height: auto;
+                        display: inline;
+                        vertical-align: sub;
+                    }
+
+                    &.required {
+                        &:after {
+                            content: '*';
+                            color: red;
+                            display: inline;
+                            position: absolute;
+                            top: -4px;
+                        }
+                    }
+
+                    &.radio-inline,
+                    &.checkbox-inline {
+                        padding-top: 5px;
+                        margin-right: 15px;
+                    }
+
+                    &.checkbox-inline {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .other-input {
+                    height: 30px;
+
+                    &.mgb-10 {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+
+            &.mgt-n10 {
+                margin-top: -10px;
+            }
+        }
+
+        .btnMore {
+            text-align: right;
+            margin: 25px 0 0 0;
+            font-weight: 600;
+            display: block;
+            vertical-align: middle;
+
+            @include mq(tablet, max) {
+                text-align: right;
+                margin-top: 30px;
+            }
+
+            i {
+                font-size: x-small;
+                vertical-align: baseline;
+                margin-right: 5px;
+            }
+
+            span {
+                vertical-align: middle;
+            }
+
+            &:hover {
+                color: #333 !important;
+            }
+        }
+
+    }
+
+    &.affairsRecordPage {
+        form {
+            .photoUploadName{
+                color: rgb(117, 117, 117);
+                font-size: 14px;
+                text-align: right;
+                padding-top: 5px;
+                @include mq(tablet, max) {
+                    font-size: 20px;
+                    text-align: center;
+                }
+            }
+            span,
+            ul {
+                display: inline-block;
+                vertical-align: top;
+            }
+
+            ul {
+                color: #e11e19;
+                list-style: disc inside;
+            }
+
+            span {
+                color: #e11e19;
+                // i{
+                //     color: red;
+                // }
+            }
+
+            textarea {
+                @include mq(tablet, max) {
+                    min-height: 140px;
+                }
+            }
+
+            .formAddition {
+                display: inline-block;
+                margin-top: 4px;
+                padding: 7px 0;
+                margin-left: -40px;
+
+                @include mq(tablet, max) {
+                    margin-left: 0;
+                    text-align: right;
+                    display: block;
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    &.affairsRecordInfoPage {
+        table.normal-table {
+            tr {
+                td {
+                    text-align: left;
+                    padding: 10px 20px;
+                    vertical-align: middle;
+
+                    &:first-child {
+                        width: 25%;
+                        min-width: 90px;
+                    }
+
+                    @include mq(tablet, max) {
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+
+        .container {
+
+            @include mq(tablet) {
+                padding-right: 0;
+                padding-left: 0;
+            }
+        }
+
+        .affairsPhotoBox {
+            padding: 10px;
+            border: 1px solid #f3f3f3;
+            position: relative;
+
+            .imgWrapper {
+                width: 100%;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .affairsPhotoName {
+                position: relative;
+                width: 80%;
+                margin: auto;
+                display: block;
+                text-align: center;
+                background-color: #FFF;
+                margin-top: -15px;
+                padding: 5px 10px;
+                font-weight: 600;
+            }
+
+            p {
+                width: 100%;
+                line-height: 1.6em;
+                padding: 10px 10px 0 10px;
+            }
+        }
+
+        .btnMore {
+            color: #297fc9;
+            margin-top: 10px;
+
+            @include mq(tablet, max) {
+                text-align: right;
+                margin-top: 10px;
+            }
+        }
+    }
+
+    &.affairsDownloadPage {
+
+        .table-in-smallscreen {
+
+            th,
+            td {
+
+                @include mq(tablet) {
+                    &:nth-child(2) {
+                        width: 25%;
+                    }
+
+                    &:last-child {
+                        padding-right: 0;
+                        width: 45%;
+                    }
+                }
+            }
+
+            td {
+
+                @include mq(tablet, max) {
+                    &:before {
+                        width: 20%;
+                    }
+
+                    p {
+                        width: 80%;
+                    }
+                }
+            }
+        }
+
+    }
+
+    &.affairsApplyPage {
+
+        table.normal-table {
+            tr {
+                th {
+                    display: none;
+
+                    @include mq(tablet) {
+                        display: table-cell;
+                        background: #e3ded3;
+                        border-bottom: 1px solid #FFF;
+                    }
+                }
+
+                td {
+                    border-bottom: 1px solid #c8c8c8;
+                    background: #FFF;
+                    text-align: left;
+
+                    &:first-child {
+                        width: 32%;
+                        background: #e3ded3;
+
+                        @include mq(tablet) {
+                            width: 20%;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    &.memberMainPage {
+        table.normal-table {
+            tr {
+                td {
+                    vertical-align: middle;
+
+                    &:first-child {
+                        width: 25%;
+                        min-width: 90px;
+                    }
+
+                    ul {
+                        li {
+                            a {
+                                text-decoration: underline;
+
+                                &:hover {
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .btnMore {
+                color: #297fc9;
+
+                @include mq(tablet, max) {
+                    text-align: right;
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        table.applyTable {
+            tr {
+                th {
+                    padding: 10px 20px;
+
+                    .applyName {
+                        background: url('../images/icon/icon_com.png') left center no-repeat;
+                        background-size: 18px auto;
+                        padding-left: 24px;
+                    }
+                }
+
+                td {
+                    padding: 20px;
+
+                    ul {
+                        padding: 0;
+                        line-height: 1.8em;
+
+                        li {
+                            list-style: none;
+
+                            a {
+                                text-decoration: underline;
+
+                                &:hover {
+                                    text-decoration: none;
+                                }
+                            }
+
+                            &:before {
+                                content: '>';
+                                color: #297fc9;
+                                display: inline;
+                                position: relative;
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+            .btnMore {
+                color: #297fc9;
+
+                @include mq(tablet, max) {
+                    text-align: right;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+}
+
+.memberInfoPage {
+    table.normal-table {
+        tr {
+            td {
+                text-align: left;
+                vertical-align: middle;
+                padding: 15px 10px;
+
+                &:first-child {
+                    width: 15%;
+                    min-width: 85px;
+                }
+
+                @include mq(tablet, max) {
+                    text-align: left !important;
+                }
+
+                .btn {
+                    padding: 12px;
+                    margin-top: 0;
+                    margin-bottom: 0;
+
+                    @include mq(tablet, max) {
+                        padding: 10px;
+                        margin-top: 15px;
+                    }
+                }
+
+                >div {
+                    &.col-sm-8 {
+                        padding-left: 0;
+                    }
+
+                    span {
+                        font-size: 13px;
+                        color: #646464;
+                        margin-top: 15px;
+
+                        i {
+                            margin-right: 3px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

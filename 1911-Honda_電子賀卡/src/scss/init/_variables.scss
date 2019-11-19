@@ -1,0 +1,39 @@
+/*==================================================*\
+        SCSS Variables
+\*==================================================*/
+
+/*==================== Fonts ====================*/
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC');
+@import url(https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+$font-stack: Arial, "Noto Sans TC", "微軟正黑體", "蘋果儷黑體", sans-serif, "新細明體" !default;
+$rootFz: 16;
+
+/*==================== Color ====================*/
+/***** 主色系 *****/
+$c-primary: #7d0000;
+$c-secondary: #f0c30a;
+/***** 對比色系 *****/
+/***** 特殊色系 *****/
+/***** 灰色系 *****/
+
+/***** 黑白 *****/
+$c-white: #ffffff !default;
+$c-black: #000000 !default;
+
+/***** DISCOVERY *****/
+$c-blue-discovery: #046192 !default;
+$c-deepblue-discovery: #005785 !default;
+$c-blue-animal: #1588cd !default;
+$c-deepblue-animal: #097abe !default;
+$c-blue-esport: #0d134b !default;
+$c-deepblue-esport: #010741 !default;
+$c-red-tlc: #e10026 !default;
+$c-deepred-tlc: #c40021 !default;
+
+
+
+/*==================== Duration ====================*/
+$duration-fastest: 100ms !default;
+$duration-fast: 300ms !default;
+$duration-std: 400ms !default;
+$duration-slow: 600ms !default;

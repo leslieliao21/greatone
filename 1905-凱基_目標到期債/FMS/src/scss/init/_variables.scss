@@ -1,0 +1,82 @@
+/*==================================================*\
+        SCSS Variables
+\*==================================================*/
+
+/*==================== Fonts ====================*/
+$font-stack: "微軟正黑體", "蘋果儷黑體", "新細明體", Arial, Helvetica, sans-serif !default;
+$font-stack-en-first: Arial, Helvetica, sans-serif, "微軟正黑體", "蘋果儷黑體", "新細明體" !default;
+$rootFz: 18;
+
+
+
+/*==================== Color ====================*/
+/***** 主色系 *****/
+$c-headerBg: #005596;
+$c-remarksTitle: #2364b2;
+$c-goTop: #002f7b;
+$c-sectionSpecialBg: #1883d5;
+$c-colorShadow: #1476c1;
+/***** 對比色系 *****/
+/***** 特殊色系 *****/
+$c-fluctuationTitle: #d32929;
+$c-fluctuationTopic: #ff6464;
+$c-contrasting: #f6aa00;
+$c-qa: #f1960b;
+$c-strong: #eb5e02;
+$c-columnarOther: #e85820;
+$c-ans: #d2f975;
+$c-colorBox2: #ee921a;
+$c-colorBox3: #efc313;
+$c-defense1: #3eb134;
+$c-defense2: #f28f00;
+$c-defense3: #14a3de;
+$c-slickDotActive: #ffcd38;
+$c-highlight: #f8ff89;
+$c-understandTitle: #eba112;
+$c-understandChartItemBg: #ffd65c;
+/***** 灰色系 *****/
+$c-shadow: #ddd;
+$c-word: #454545;
+$c-collectItemWord: #909090;
+$c-deepWord: #545454;
+$c-source: #7a7a7a;
+$c-collectItemBg: #e0e0e0;
+$c-bodyBgGray: #f3f6f7;
+
+/***** 黑白 *****/
+$c-white: #ffffff !default;
+$c-black: #000000 !default;
+
+
+
+/*==================== Duration ====================*/
+$duration-fastest: 100ms !default;
+$duration-faster: 200ms !default;
+$duration-fast: 300ms !default;
+$duration-std: 400ms !default;
+$duration-slow: 600ms !default;
+
+
+
+/*==================== bdrs ====================*/
+$bdrs-shrap: 6;
+$bdrs-lowest: 10;
+$bdrs-lower: 15;
+$bdrs-std: 25;
+
+
+
+
+/*==================== header ====================*/
+$headerMbHeight: 130px;
+$headerPhoneWideHeight: 196px;
+
+
+
+/*==================== Container ====================*/
+// Width
+$containerMbWidth: 90%;
+$containerPhoneWideWidth: 87.8125%;
+$containertabletWideWidth: 1142px;
+// Padding
+$containertabletWidePadding: 40px;

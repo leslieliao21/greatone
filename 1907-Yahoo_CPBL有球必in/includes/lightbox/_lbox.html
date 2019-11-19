@@ -1,0 +1,204 @@
+<div id="lb-intro">
+
+    <!--燈箱前導頁 START-->
+    <div id="page-intro" class="inside show">
+        <div class="titleLb">
+            <img src="images/logo_lb.png" alt="">
+        </div>
+        <p>活動期間為自己支持的球隊簽到加油，即可參加抽獎，累績滿3天、5天、10天各有不同等級的獎品等你來抽!</p>
+        <ul>
+            <li>活動日期:2019/7/22~2019/8/31</li>
+            <li>活動獎項:</li>
+        </ul>
+
+        <div class="imgWrapper">
+            <img src="images/img_gift.jpg" alt="">
+        </div>
+
+        <a href="javascript:" class="btn_goSignIn">
+            <img src="images/btn_lb_go.png" alt="">
+        </a>
+    </div>
+    <!--燈箱前導頁 END-->
+
+    <!--燈箱登入頁 START-->
+    <div id="page-signin" class="inside hide">
+
+        <div class="titleLb">
+            <img src="images/logo_lb.png" alt="">
+        </div>
+
+        <span>請選擇登入方式</span>
+
+        <a href="javascript:" class="btn_lbSign yahoo">
+            <img src="images/sign_logo_yahoo.png" alt="">
+        </a>
+        <a href="javascript:" class="btn_lbSign fb">
+            <img src="images/sign_logo_fb.png" alt="">
+        </a>
+        <a href="javascript:" class="btn_lbSign googleplus">
+            <img src="images/sign_logo_googleplus.png" alt="">
+        </a>
+
+    </div>
+    <!--燈箱登入頁 END-->
+
+    <!--燈箱隊伍選擇頁 START-->
+    <div id="page-team" class="inside hide">
+
+        <div class="titleLb">
+            <img src="images/logo_lb.png" alt="">
+        </div>
+
+        <span>選擇你想支持的隊伍?<br>(說明: 一旦選擇便不得更動)</span>
+
+        <div class="chooseTeamWrapper">
+            <div class="teamBox">
+                <img src="images/icon_team_l.png" alt="">
+                <span>Lamigo</span>
+            </div>
+            <div class="teamBox">
+                <img src="images/icon_team_g.png" alt="">
+                <span>富邦</span>
+            </div>
+            <div class="teamBox">
+                <img src="images/icon_team_u.png" alt="">
+                <span>統一7-ELEVEn</span>
+            </div>
+            <div class="teamBox">
+                <img src="images/icon_team_b.png" alt="">
+                <span>中信兄弟</span>
+            </div>
+        </div>
+
+        <a href="javascript:" class="btn_team_confirm">
+            <img src="images/btn_lb_confirm.png" alt="">
+        </a>
+
+    </div>
+    <!--燈箱隊伍選擇頁 END-->
+
+    <!--燈箱簽到頁 START-->
+    <div id="page-checkin" class="inside hide">
+
+        <div class="titleLb">
+            <img src="images/logo_lb.png" alt="">
+        </div>
+
+        <div class="playgroundBG">
+            <span>請注意<span class="teamName">中信兄弟</span>開賽資訊，<br>記得在比賽開打當天回來簽到應援喔！</span>
+
+            <div class="checkWrapper">
+                <div class="ballRow ballFour">
+                    <div class="iconBall empty">
+                        <span>1</span>
+                    </div>
+                    <div class="iconBall empty">
+                        <span>2</span>
+                    </div>
+                    <div class="iconBall checked">
+                        <span>3</span>
+                    </div>
+                    <div class="iconBall checked">
+                        <span>4</span>
+                    </div>
+                </div>
+                <div class="ballRow ballSix">
+                    <div class="iconBall occupy">
+                        <span>5</span>
+                    </div>
+                    <div class="iconBall checked">
+                        <span>6</span>
+                    </div>
+                    <div class="iconBall occupy">
+                        <span>7</span>
+                    </div>
+                    <div class="iconBall occupy">
+                        <span>8</span>
+                    </div>
+                    <div class="iconBall occupy">
+                        <span>9</span>
+                    </div>
+                    <div class="iconBall occupy">
+                        <span>10</span>
+                    </div>
+                </div>
+                <div class="ballRow ballFour">
+                    <div class="iconBall empty">
+                        <span>11</span>
+                    </div>
+                    <div class="iconBall checked">
+                        <span>12</span>
+                    </div>
+                    <div class="iconBall empty">
+                        <span>13</span>
+                    </div>
+                    <div class="iconBall empty">
+                        <span>14</span>
+                    </div>
+                </div>
+            </div>
+
+            <p>
+                <span>當日無賽事</span>
+                <span>當日有賽事</span>
+                <span>已完成簽到</span>
+            </p>
+
+            <a href="javascript:" class="btn_checkin">
+                <img src="images/btn_lb_checkin.png" alt="">
+            </a>
+        </div>
+
+    </div>
+    <!--燈箱簽到頁 END-->
+
+    <!--燈箱結束頁 START-->
+    <div id="page-finish" class="inside hide">
+
+        <div class="titleLb">
+            <img src="images/logo_lb.png" alt="">
+        </div>
+
+        <span>恭喜應援成功！</span>
+
+        <a href="javascript:" class="btn_finish">
+            <img src="images/btn_lb_fin.png" alt="">
+        </a>
+
+    </div>
+    <!--燈箱結束頁 END-->
+
+</div>
+
+<script>
+    $(function () {
+
+        $('.btn_goSignIn').on('click', function () {
+            $('#page-intro').hide();
+            $('#page-signin').removeClass('hide').show();
+        });
+
+        $('.btn_lbSign').on('click', function () {
+            $('#page-signin').hide();
+            $('#page-team').removeClass('hide').show();
+        });
+
+        $('.btn_team_confirm').on('click', function () {
+            $('#page-team').hide();
+            $('#page-checkin').removeClass('hide').show();
+        });
+
+        $('.btn_checkin').on('click', function () {
+            $('#page-checkin').hide();
+            $('#page-finish').removeClass('hide').show();
+        });
+        
+
+        $(".teamBox").on('click', function () {
+            $(this).addClass('selected');
+            $(this).siblings().removeClass('selected');
+        });
+
+    });
+</script>

@@ -1,0 +1,262 @@
+@charset "UTF-8";
+/*========== Mixin ==========*/
+@import "../../../scss/mixin/mixins";
+@import "../../../scss/mixin/functions";
+
+/*========== Basic ==========*/
+@import "../../../scss/basic/reset";
+@import "../../../scss/basic/variables";
+
+/*========== Modules ==========*/
+@import "../../../scss/modules/mods";
+
+/*========== Includes ==========*/
+@import "../../../scss/includes/page_footer";
+@import "../../../scss/includes/page_header";
+@import "../../../scss/includes/loading";
+@import "../../../scss/includes/fixed_side_bar";
+
+/*========== Lightbox ==========*/
+@import "../../../scss/lightboxes/lightbox";
+@import "../../../scss/lightboxes/_signout";
+@import "../../../scss/lightboxes/_place_change";
+
+/*========== layout ==========*/
+@import "../../../scss/basic/base";
+@import "../../../scss/layout/utilies";
+
+/*========== Pages ==========*/
+@import "../layout/tnf100_2020_template";
+@import "../layout/tnf100_2020_arti";
+
+/*==================================================*\
+      News Page
+\*==================================================*/
+.tnf100_2020Template.articlePage {  /* <body> */
+  //  overflow-x: hidden;
+ 
+    ol{
+      list-style-position: outside;
+      list-style-type: decimal;
+      padding-left: 22px;
+      li{
+        color: #000000;
+        line-height: 1.7;
+        font-size: 4vw;
+        padding-bottom: 3vw;
+        text-align: justify;
+        @include mq(tablet) {
+          font-size: 18px;
+          padding-bottom: 1.5rem;
+        }
+      }
+    }
+   // 客製化
+   .alignC{
+     text-align: center;
+     >*{
+       text-align: center;
+     }
+   }
+   .allBold{
+     *{
+       font-weight: bold;
+     }
+   }
+   .tBold{
+     font-weight: bold;
+   }
+   .tTitle{
+     font-weight: bold;
+     font-size: 1.3125rem;
+     margin-bottom: 0;
+     // @include mq(tablet) {
+     //   font-size: 1.3125rem;
+     // }
+   }
+ 
+   .triBot, .triTop{
+     
+     &::after{
+       content: '';
+       position: absolute;
+       left: 0;
+       width: 0;
+       height: 0;
+       border-style: solid;
+     }
+   }
+   .banner{
+     &::before{
+       display: none;
+     }
+   }
+   
+	.article-ind{
+      position: relative;
+		padding-bottom: 12rem;
+      &:before {
+         pointer-events: none;
+         content: "";
+         display: block;
+         position: absolute;
+         width: 100%;
+         padding-bottom: 14.6875%;
+         background-image: url(../images/background/banner_mountain_silhouette.png);
+         background-size: 100% auto;
+         background-position: bottom center;
+         background-repeat: no-repeat;
+         bottom: -1px;
+         left: 0;
+      }
+      h2.title{
+         display: block;
+         text-align: center;
+         font-size: 1.75rem;
+         font-weight: bold;
+         margin-bottom: 2rem;
+         // color: #fff;
+      }
+		.articleList{
+			li{
+				background-color: #fff;
+				margin-bottom: 2rem;
+				padding: 1.65rem 2rem;
+				border: 1px solid #ccc;
+				transition: .2s;
+				&:hover{
+					border-color: #e72418;
+				}
+			}
+			a{
+				font-size: 0;
+				>*{
+					display: inline-block;
+					vertical-align: top;
+				}
+				.picBox{
+					width: 100%;
+					margin-bottom: 1rem;
+					@include mq(tablet) {
+						width: 24.5%;
+						margin-bottom: 0;
+					}
+				}
+				.txtBox{
+					width: 100%;
+					
+					@include mq(tablet) {
+						width: 72.5%;
+						margin-left: 3%;
+					}
+				}
+				.title{
+					p{
+						font-size: 1.5rem;
+						font-weight: bold;
+						line-height: 1.2;
+					}
+				}
+				hr{
+					border: 0;
+					border-top: 1px solid #ccc;
+					margin: 0.5rem 0;
+				}
+				.txt{
+					p{
+						font-size: 1.15rem;
+						line-height: 1.5;
+						&::after{
+							content: "";
+							display: inline-block;
+							width: 10px;
+							height: 8px;
+							background: url(../images/review/triangle.png) no-repeat;
+							background-size: contain;
+							margin-left: 0.5rem;
+						}
+					}
+				}
+			}
+
+		}
+	}
+ 
+ 
+   .sponsor{
+      position: relative;
+      padding-bottom: 9rem;
+      @include mq(tablet) {
+         padding-bottom: 9rem;
+      }
+      .mtBg{
+         padding-top: 3rem;
+         padding-bottom: 20%;
+         background: url(../images/background/ind_mountain_m.png) top center no-repeat;
+         @include mq(tablet) {
+            padding-bottom: 0px;
+            background: url(../images/background/ind_mountain.png) top center no-repeat;
+         }
+         background-size: cover;
+      }
+      .indTitle{
+         img{
+            width: 30vw;
+            max-width: 149px;
+         }
+      }
+      article{
+         margin-bottom: 4rem;
+      }
+      .block{
+         display: block;
+         text-align: center;
+         font-size: 0;
+      }
+      p{
+         line-height: 2;
+      }
+      .box{
+         font-size: 0;
+         width: 50%;
+         display: inline-block;
+         padding: 0;
+         margin-bottom: 10vw;
+         &:first-child {
+            border-right: 1px solid #a3a3a3;
+         }
+         span{
+            font-size: 1rem;
+            display: inline-block;
+            margin-bottom: 1rem;
+         }
+         
+         @include mq(tablet) {
+            padding: 0 2rem;
+            width: auto;
+         }
+      }
+   }
+ ._indSlick{
+   .slick-dots{
+     display: block !important;
+     z-index: 5;
+     bottom: 20%;
+     li button{
+       border-radius: 50%;
+       width: .5rem;
+       height: .5rem;
+       background-color: #dda5a1;
+       transition: .3s;
+       &::before{
+         display: none;
+       }
+     }
+     li.slick-active{
+       button{
+         background-color: #da0b00;
+       }
+     }
+   }
+ }
+}

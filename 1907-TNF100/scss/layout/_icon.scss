@@ -1,0 +1,343 @@
+.iconPage {
+    background: #000;
+    -webkit-overflow-scrolling: touch;
+
+    footer{
+        // display: none;
+        background: #000;
+        &:before{
+            display: none;
+        }
+        .container{
+            display: none;
+        }
+    }
+    
+    main {
+        width: 100%;
+        // max-width: 768px;
+        // margin: 0 auto;
+
+        .container{
+            width: 100%;
+            max-width: 768px;
+            margin: 0 auto;
+            position: relative;
+            padding: 0;
+        }
+
+        section {
+            width: 100%;
+            position: relative;
+
+            &.sec {
+                background: url('../images/iconpage/sec_bg1.jpg') repeat-y top center;
+                background-size: 100% auto;
+                padding: 25px 15px;
+                position: relative;
+
+                h3.secTitle {
+                    max-width: 570px;
+                    width: 85%;
+                    margin: 30px auto 20px auto;
+                }
+
+                p {
+                    color: #FFF;
+                    font-size: 20px;
+                    line-height: 1.4;
+                    margin-bottom: 25px;
+                }
+
+                .imgWrapper {
+                    margin: 25px auto;
+                }
+
+                .historyWrap{
+                    // margin-bottom: 50px;
+                    padding: 0 2%;
+                    .historyBlock{
+                        width: 100%;
+                        margin-bottom: 15px;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                        .historyPic{
+                            width: 27%;
+                            margin-right: 3%;
+                        }
+                        .historyTxt{
+                            width: 70%;
+                            color: #FFF;
+                            .year{
+                                font-size: 28px;
+                                font-weight: 700;
+                                margin-bottom: 5px;
+                            }
+                            .jacket{
+                                font-size: 20px;
+                                font-weight: 600;
+                                margin-bottom: 5px;
+                            }
+                            p{
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+
+                a.iconVideo {
+                    position: relative;
+
+                    &:before {
+                        content: '';
+                        width: 24%;
+                        max-width: 137px;
+                        height: auto;
+                        max-height: auto;
+                        padding-bottom: 18%;
+                        background: url('../images/iconpage/btn_play.png') no-repeat center center;
+                        background-size: contain;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+
+                .icon-slider {
+                    position: relative;
+                }
+
+                .storeWrapper{
+                    background: #000;
+                    padding: 20px;
+
+                    select{
+                        width: 50%;
+                        padding: 12px;
+                        font-size: 18px;
+                        font-weight: 600;
+                        margin-bottom: 15px;
+                        color: #FFF;
+                        background-color: #000;
+                        border: 1px solid #FFF;
+                        background: url('../images/iconpage/select_arrow.jpg') 90% center no-repeat;
+                        background-size: 15px auto;
+                        option{
+                            background-color: #000;
+                        }
+                    }
+
+                    ul.storeList{
+                        width: 100%;
+                        height: 450px;
+                        
+                        
+                        color: #FFF;
+                        li{
+                            padding: 25px 0;
+                            margin-right: 20px;
+                            border-bottom: 1px solid #FFF;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            &:last-child{
+                                border-bottom: 0;
+                            }
+                            .storeTxt{
+                                padding-right: 15px;
+                                span{
+                                    display: block;
+                                    padding: 0 0 10px 0;
+                                    font-size: 14px;
+                                    &:last-child{
+                                        padding: 0;
+                                    }
+                                    &.storeName{
+                                        font-size: 18px;
+                                        font-weight: 700;
+                                    }
+                                }
+                            }
+                            .mapIcon{
+                                max-width: 35px;
+                            }
+                        }
+                    }
+                }
+            }
+            // &:last-child{
+            //     padding-bottom: 7em !important;
+            // }
+        }
+    }
+
+    .videoBox {
+        
+        .videoWrapper {
+            width: 100%;
+            position: relative;
+
+            height: 0;
+            margin-bottom: 20px;
+
+            &.videoA {
+                padding-bottom: 173%;
+                padding-top: 25px;
+            }
+
+            &.videoB {
+                padding-bottom: 52%;
+                padding-top: 25px;
+            }
+
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+   
+    }
+
+
+    .lightbox {
+        overflow-y: auto;
+        z-index: 9998;
+    }
+
+    .lbContent {
+        background: transparent;
+        padding: 4% 12% 8% 12%;
+
+        a.lb_btn {
+            width: 90%;
+            max-width: 380px;
+            margin: 10px auto 0 auto;
+        }
+
+        // @include mq(phablet, max) {
+        //     padding: 6% 6% 18% 6%;
+        // }
+    }
+
+    ._icon-video02 .lbContent, ._icon-video03 .lbContent{
+        padding: 4% 3.5% 8% 3.5%;
+        a.lb_btn {
+            width: 70%;
+            max-width: 380px;
+            margin: 10px auto 0 auto;
+        }
+    }
+
+    .lbContainer {
+        padding: 0;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 700px;
+        width: 100%;
+    }
+
+    .prevBtn,
+    .nextBtn {
+        width: 50px;
+        height: 80px;
+        position: absolute;
+        top: 50%;
+        display: block;
+        padding: 0;
+        -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        cursor: pointer;
+        z-index: 9;
+        transition: 0.4s;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .prevBtn:hover,
+    .nextBtn:hover {
+        background-color: rgba(0, 0, 0, 1);
+    }
+
+    .prevBtn:before,
+    .nextBtn:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20px;
+        height: 26px;
+    }
+
+    .prevBtn {
+        left: 0;
+        &:before {
+            background: url('../images/iconpage/arrow_l.png') no-repeat center center;
+            background-size: contain;
+        }
+    }
+
+    .nextBtn {
+        right: 0;
+        &:before {
+            background: url('../images/iconpage/arrow_r.png') no-repeat center center;
+            background-size: contain;
+        }
+    }
+
+
+    .pd-none {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-bottom: 0!important;
+    }
+
+    .mCSB_scrollTools {
+        width: 4px;
+        border-radius: 5px;
+    }
+    
+    .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+        width: 4px;
+        background-color: #fff;
+        border-radius: 5px;
+    }
+    
+    
+    .mCSB_scrollTools .mCSB_draggerRail {
+        width: 4px;
+        background-color: #555555;
+    }
+
+    .ifrBox {
+        margin: auto;
+
+        iframe {
+            width: 100%;
+            height: 49vw;
+            margin: auto;
+
+            @include mq(tablet) {
+                height: 26.5rem;
+            }
+        }
+
+        span {
+            text-align: center;
+            display: block;
+            margin-top: 1rem;
+        }
+    }
+
+}

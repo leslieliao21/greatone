@@ -1,0 +1,81 @@
+<nav class="navbar navbar-default" role="navigation">
+    <div class="inside">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-center navbar-brand">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="">
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">‑路老師專區</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">實習路老師註冊</a></li>
+                        <li><a href="#">個人宣講歷程</a></li>
+                        <li><a href="#">宣講歷程登錄</a></li>
+                        <li><a href="#">教案下載</a></li>
+                        <li><a href="#">培訓報名</a></li>
+                        <li><a href="#">個人資料</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">‑我要找路老師</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">單位資訊</a></li>
+                        <li><a href="#">路老師查詢</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">‑路老師介紹</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">最新消息</a></li>
+                        <li><a href="#">團隊介紹</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">金質獎/銀質獎</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<script>
+    $(function () {
+
+        var $win = $(window);
+        var winW = $win.width();
+
+        if (winW > 768) {
+            $('.dropdown').hover(
+                function () {
+
+                    $(this).find('ul').css({
+                        "display": "block",
+                        "margin-top": 0
+                    });
+
+                },
+                function () {
+
+                    $(this).find('ul').css({
+                        "display": "none",
+                        "margin-top": 0
+                    });
+
+                }
+            );
+        }
+
+
+    });
+</script>

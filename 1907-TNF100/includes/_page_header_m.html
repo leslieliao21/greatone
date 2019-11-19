@@ -5,9 +5,9 @@
                 <!-- <source media="(min-width: 769px)" srcset="images/icon/thf_logo.jpg">
         <source media="(min-width: 561px)" srcset="images/icon/thf_logo@2x.jpg">
         <img src="images/icon/thf_logo@3x.jpg" alt="The North Face Logo"> -->
-                <source media="(min-width: 769px)" srcset="/images/icon/tnf_logo_white.png">
-                <source media="(min-width: 561px)" srcset="/images/icon/tnf_logo_white.png">
-                <img src="/images/icon/tnf_logo_white.png" alt="The North Face Logo">
+                <source media="(min-width: 769px)" srcset="./images/icon/tnf_logo_white.png">
+                <source media="(min-width: 561px)" srcset="./images/icon/tnf_logo_white.png">
+                <img src="./images/icon/tnf_logo_white.png" alt="The North Face Logo">
             </picture>
         </a>
     </div>
@@ -34,8 +34,19 @@
                                 </div>
 
                                 <ul>
+                                    <!-- <li>
+                                        <a href="/2020comingsoon.html">COMING SOON</a>
+                                    </li> -->
                                     <li>
-                                        <p>賽事籌備中</p>
+                                        <a href="/2020TNF100/news.php">最新消息</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/2020TNF100/info.html">賽事資訊</a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/2020TNF100/article.php">精選文章</a>
                                     </li>
                                 </ul>
                             </div>
@@ -144,13 +155,13 @@
                 </div>
             </li>
 
-            <!-- <li>
-                <a href="#">Future Light</a>
+            <li>
+                <a href="/futurelight.html">FUTURELIGHT<img src="./images/icon/new_tag.gif" style="display: inline;" alt=""></a>
             </li>
 
             <li>
-                <a href="#">ICON系列</a>
-            </li> -->
+                <a href="/icon.html">ICON系列<img src="./images/icon/new_tag.gif" alt=""></a>
+            </li>
 
             <li class="has-submenu">
                 <a href="javascript:;" data-submenu="infomation">活動資訊</a>
@@ -174,6 +185,10 @@
 
                                 <ul>
                                     <li>
+                                        <a href="/hiking/2019hiking_danlan.html">探秘淡蘭</a>
+                                    </li>
+
+                                    <li>
                                         <a href="/hiking_taipei.php">無痕山林</a>
                                     </li>
 
@@ -184,14 +199,25 @@
                             </div>
                         </li>
 
-                        <li>
-                            <a href="/camping.php">野營</a>
-                            <!-- <span class="historyReview"><a href="#">歷史回顧</a></span> -->
+                        <li class="has-submenu noarrow">
+                            <a href="/camping/2019camping.php">野營</a>
+                            <span class="historyReview"><a href="javascript:;"
+                                    data-submenu="info_camping">歷史回顧</a></span>
+                            <div id="info_camping" class="submenu">
+                                <div class="submenu-header" data-submenu-close="info_camping">
+                                    <a href="javascript:;">野營-歷史回顧</a>
+                                </div>
+
+                                <ul>
+                                    <li>
+                                        <a href="/camping.php">2018</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
 
                         <li class="has-submenu noarrow">
-                            <a href="/outdoor/2019outdoor_taichung.html">野練<img src="/images/icon/new_tag.gif"
-                                    alt=""></a>
+                            <a href="/outdoor/2019outdoor_taichung.php">野練</a>
                             <span class="historyReview"><a href="javascript:;"
                                     data-submenu="info_outdoor">歷史回顧</a></span>
                             <div id="info_outdoor" class="submenu">
@@ -211,7 +237,7 @@
                         </li>
 
                         <li class="has-submenu noarrow">
-                            <a href="/climbing/2019climbing.html">攀岩<img src="/images/icon/new_tag.gif" alt=""></a>
+                            <a href="/climbing/2019climbing.html">攀岩</a>
                             <span class="historyReview"><a href="javascript:;"
                                     data-submenu="info_climbing">歷史回顧</a></span>
                             <div id="info_climbing" class="submenu">

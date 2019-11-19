@@ -1,0 +1,294 @@
+/*==================================================*\
+        Outdoor Training Page
+\*==================================================*/
+
+.tnf100_2020Template.articlePage {
+    .arti{
+        position: relative;
+        // z-index: 1;
+        background-image: url('../images/arti_bg.jpg');
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-color: #ececec;
+        padding-bottom: 16vw;
+        @include mq(tablet) {
+            padding-bottom: 8rem;
+        }
+        p{
+            a{
+                display: inline;
+            }
+        }
+        .artititle{
+            border-bottom: 1px solid #cccccc;
+            padding-bottom: 1.2vw;
+            @include mq(tablet) {
+                padding-bottom: 0.5rem;
+            }
+            p{
+                font-size: 4.6875vw;
+                color: #000000;
+                line-height: 1.5;
+                font-weight: bold;
+                @include mq(tablet) {
+                    font-size: 1.875rem;
+                }
+            }
+            span{
+                display: block;
+                font-size: 4vw;
+                color: #e72418;
+                line-height: 1.3;
+                font-weight: bold;
+                position: relative;
+                padding-bottom: 1vw;
+                @include mq(tablet) {
+                    font-size: 1.5rem;
+                    padding-bottom: 0;
+                }
+                &:after , &:before{
+                    content: "";
+                    display: inline-block;
+                    width: 3.2vw;
+                    height: 3.1vw;
+                    background-image: url('../images/arti_title_line.png');
+                    background-size: 100% 100%;
+                    background-repeat: no-repeat;
+                    background-position: center top;
+                    vertical-align: baseline;
+                    @include mq(tablet) {
+                        width: 1.2rem;
+                        height: 1.1rem;
+                    }
+                }
+                &:before{
+                    margin-right: 0.4rem;
+                }
+                &:after{
+                    margin-left: 0.4rem;
+                }
+            }
+        }
+        .artibox{
+            text-align: center;
+            padding-top: 7vw;
+            @include mq(tablet) {
+                padding-top: 2.5rem;
+            }
+            .foto{
+                padding-bottom: 7.5vw;
+                @include mq(tablet) {
+                    padding-bottom: 2.5rem;
+                }
+                .in{
+                    display: inline-block;
+                    max-width: 805px;
+                }
+                iframe{
+                    width: 100%;
+                    height: 50vw;
+                    @include mq(tablet) {
+                        width: 85vw;
+                        max-width: 800px;
+                        height: 460px;
+                    }
+                }
+                .ptxt{
+                    color: #444444;
+                    line-height: 1.7;
+                    font-size: 4vw;
+                    text-align: left;
+                    padding-top: 1.5vw;
+                    @include mq(tablet) {
+                        font-size: 16px;
+                        padding-top: 0.5rem;
+                    }
+                    &:before{
+                        content: "▲";
+                        color: #e72418;
+                        display: inline;
+                        font-size: 4vw;
+                        line-height: 1.7;
+                        @include mq(tablet) {
+                            font-size: 16px;
+                        }
+                    }
+                }
+                &.single{
+                    width: 100%;
+                    @include mq(tablet) {
+                        width: auto;
+                    }
+                }
+                &.muti{
+                    .in{
+                        display: flex;
+                        flex-wrap:wrap;
+                        margin: auto;
+                        .p{
+                            flex:1;
+                            margin-right: 1%;
+                            &:last-child , &.ns{
+                                margin-right: 0;
+                            }
+                        }
+                        .p2{
+                            // flex: 2;
+                            width: 100%;
+                            margin:  1vw 0;
+                            @include mq(tablet) {
+                                margin:  0.5rem 0;
+                            }
+                        }
+                        img{
+                            // width: 49%;
+                            // margin-right: 1%;
+                            // &:last-child{ margin-right: 0;}
+                            width: 100%;
+                        }
+                    }
+                    .ptxt{
+                        width: 100%;
+                        max-width: 805px;
+                        margin: auto;
+                    }
+                }
+            }
+            .txt{
+                text-align: left;
+                padding-bottom: 8vw;
+                @include mq(tablet) {
+                    padding-bottom: 3rem;
+                }
+                &.pb0{
+                    padding-bottom: 0;
+                }
+                p{
+                    color: #000000;
+                    line-height: 1.7;
+                    font-size: 4vw;
+                    padding-bottom: 3vw;
+                    text-align: justify;
+                    @include mq(tablet) {
+                        font-size: 18px;
+                        padding-bottom: 1.5rem;
+                    }
+                    &.first{
+                        font-weight: 700;
+                        padding-bottom: .2vw;
+                    }
+                    &:last-child{
+                        padding-bottom: 0;
+                    }
+                }
+                .sub{
+                    color: #d5241e;
+                    line-height: 1.7;
+                    font-size: 4vw;
+                    font-weight: bold;
+                    padding-bottom: 1vw;
+                    @include mq(tablet) {
+                        font-size: 18px;
+                        padding-bottom: 0.5rem;
+                    }
+                }
+                .sub2{
+                    color: #d5241e;
+                    line-height: 1.7;
+                    font-size: 4vw;
+                    padding-bottom: 1vw;
+                    @include mq(tablet) {
+                        font-size: 18px;
+                        padding-bottom: 0.5rem;
+                    }
+                }
+                .sub3{
+                    color: #000;
+                    line-height: 1.7;
+                    font-size: 4vw;
+                    padding-bottom: 1vw;
+                    font-weight: bold;
+                    @include mq(tablet) {
+                        font-size: 18px;
+                        padding-bottom: 0.5rem;
+                    }
+                }
+                .artitable{
+                    width: 100%;
+                    color: #000000;
+                    line-height: 1.7;
+                    font-size: 4vw;
+                    padding-bottom: 3vw;
+                    border-collapse: collapse;
+                    empty-cells: show;
+                    @include mq(tablet) {
+                        font-size: 18px;
+                        padding-bottom: 1.5rem;
+                    }
+                    th , td{
+                        padding: 3vw 2.5vw;
+                        // border: 1px solid #000;
+                        @include mq(tablet) {
+                            padding: 1rem;
+                        }
+                    }
+                    td{
+                        // background: #fff;
+                        // background: rgba(255,255,255,0.8)
+                        vertical-align: middle;
+                    }
+                    &.arti1{
+                        tr:first-child{
+                            td{
+                                text-align: center;
+                            }
+                        }
+                        tr{
+                            &:not(:first-child){
+                                td:first-child{
+                                    max-width: 450px;
+                                }
+                            }
+                        }
+                        td{
+                            border: 1px solid #d1d1d1;
+                            width: 50%;
+                        }
+                    }
+                }
+                .dotlist , .numlist{
+                    padding-left: 5vw;
+                    @include mq(tablet) {
+                        padding-left: 1.3rem;
+                    }
+                    li{
+                        color: #000000;
+                        line-height: 1.7;
+                        font-size: 4vw;
+                        // padding-bottom: 3vw;
+                        text-align: justify;
+                        @include mq(tablet) {
+                            font-size: 18px;
+                            // padding-bottom: 1.5rem;
+                        }
+                    }
+                    a{
+                        // color: #d5241e;
+                        display: inline-block;
+                        font-weight: 700;
+                        // text-decoration: underline;
+                        &:hover{
+                            text-decoration: none;
+                        }
+                    }
+                }
+                .dotlist{
+                    list-style: disc;
+                }
+                .numlist{
+                    list-style: decimal;
+                }
+            }
+        }
+    }
+}

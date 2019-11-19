@@ -3,6 +3,14 @@
 \*==================================================*/
 .outdoor2019Page {  /* <body> */
 
+	.sideSignUp{
+		width: auto;
+		position: fixed;
+		right: 0;
+		top: 35%;
+		z-index: 9;
+	}
+
     section.activity{
         background-image: none;
     }

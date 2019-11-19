@@ -1,0 +1,35 @@
+/*==================================================*\
+        Fonts
+\*==================================================*/
+
+/***** Font Tag *****/
+p,
+a,
+li {
+  font-size: size-rem(16);
+  font-weight: normal;
+  @include mq(tablet) {
+    font-size: 28px;
+  }
+}
+
+p {
+  a {
+    color: inherit;
+    font-size: inherit;
+    display: inline;
+  }
+}
+
+span {
+  color: inherit;
+  font-size: inherit;
+}
+
+b {
+  font-weight: bold;
+}
+
+small {
+  font-size: 12px;
+}

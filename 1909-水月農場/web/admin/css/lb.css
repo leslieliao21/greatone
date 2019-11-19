@@ -1,0 +1,67 @@
+.lb {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  text-align: center;
+  font-size: 0; }
+  .lb:after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: middle; }
+
+.lbinner {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 100%; }
+
+.lbbox {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  background: #fff;  }
+  .lbbox .btn_x {
+    width: 47px;
+    position: absolute;
+    top: 0;
+    right: -55px;
+    cursor: pointer; }
+    .lbbox .btn_x:hover img {
+      opacity: 0; }
+      @media screen and (max-width: 1024px) {
+        .lbbox .btn_x:hover img {
+          opacity: 1; } }
+    .lbbox .btn_x:hover:after {
+      opacity: 1; }
+    @media screen and (max-width: 1366px) {
+      .lbbox .btn_x {
+        width: 3.2vw;
+        right: -4vw; } }
+    @media screen and (max-width: 1024px) {
+      .lbbox .btn_x {
+        width: 9.420289855072464%;
+        right: 0;
+        top: -4vw; } }
+    .lbbox .btn_x:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: url("../images/lb_btn_x_ovr.png");
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      background-position: center top;
+      opacity: 0; }
+      @media screen and (max-width: 1024px) {
+        .lbbox .btn_x:after {
+          display: none; } }

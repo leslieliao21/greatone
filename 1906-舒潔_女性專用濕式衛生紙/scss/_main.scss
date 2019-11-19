@@ -694,10 +694,12 @@ header{
                     &.positive{
                         transform-origin: center center;
                         transform: perspective(700px) rotateY(0deg);
+                        z-index: 1;
                     }
                     &.negative{
                         transform-origin: center center;
                         transform: perspective(700px) rotateY(180deg);
+                        z-index: 0;
                     }
                 }
                 h3{
@@ -723,6 +725,7 @@ header{
                     margin: auto;
                     opacity: 1;
                     transition: .5s;
+                    z-index: 2;
                     .lighting{
                         visibility: hidden;
                     }
@@ -742,10 +745,12 @@ header{
                         &.positive{
                             transform-origin: center center;
                             transform: perspective(700px) rotateY(180deg);
+                            z-index: 0;
                         }
                         &.negative{
                             transform-origin: center center;
                             transform: perspective(700px) rotateY(360deg);
+                            z-index: 1;
                         }
                     }
                 }

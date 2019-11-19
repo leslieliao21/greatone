@@ -1,0 +1,70 @@
+#loading{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background: #07959e;
+    opacity: 1;
+    pointer-events: none;
+}
+
+
+  
+@keyframes ball-beat {
+    50% {
+        opacity: 0.2;
+        transform: scale(0.18); 
+    }
+    100% {
+        opacity: 1;
+        transform: scale(0.12); 
+    } 
+}
+.map{
+    opacity: 0;
+}
+  
+.loader-inner{
+    
+    width: 400px;
+    height: 75px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.ball-beat {
+
+    > div {
+        background-color: #eb5e02;
+        width: 75px;
+        height: 75px;
+        border-radius: 100%;
+        margin: 2px;
+        animation-fill-mode: both;
+        display: inline-block;
+        transition: .2s;
+        transform: scale(.2);
+        &.dot1{
+            position: relative;
+            left: 50px;
+        }
+        &.dot3{
+            position: relative;
+            right: 50px;
+        }
+    }
+    &.autoAni{
+        > div {
+            animation: ball-beat 0.7s 0s infinite linear; 
+            &:nth-child(2n-1) {
+                animation-delay: -0.35s !important; 
+            }
+        }
+    }
+}

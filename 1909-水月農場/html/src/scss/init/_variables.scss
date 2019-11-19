@@ -1,0 +1,31 @@
+/*==================================================*\
+        SCSS Variables
+\*==================================================*/
+
+/*==================== Fonts ====================*/
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url(https://fonts.googleapis.com/css?family=EB+Garamond&display=swa);
+$font-stack: Arial, Helvetica,"Noto Sans TC", "微軟正黑體", "蘋果儷黑體", sans-serif, "新細明體" !default;
+$rootFz: 16;
+
+
+
+/*==================== Color ====================*/
+/***** 主色系 *****/
+$c-primary: #1273b1;
+$c-secondary: #f0c30a;
+/***** 對比色系 *****/
+/***** 特殊色系 *****/
+/***** 灰色系 *****/
+
+/***** 黑白 *****/
+$c-white: #ffffff !default;
+$c-black: #000000 !default;
+
+
+
+/*==================== Duration ====================*/
+$duration-fastest: 100ms !default;
+$duration-fast: 300ms !default;
+$duration-std: 400ms !default;
+$duration-slow: 600ms !default;

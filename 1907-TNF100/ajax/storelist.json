@@ -1,0 +1,290 @@
+{
+    "north": [
+        {
+            "name": "新光三越站前店",
+            "address": "台北市中正區忠孝西路1段66號11樓",
+            "tel": "電話：02-2311-8570",
+            "map": "https://www.google.com/maps/search/?api=1&query=25.0461236,121.5129846,17z&query_place_id=ChIJcwMa3HKpQjQRDEzzZzYIn-M"
+        },
+        {
+            "name": "新光三越信義店A11館",
+            "address": "台北市信義區松壽路11號5樓(A11館)",
+            "tel": "電話：02-2723-3769",
+            "map": "https://www.google.com/maps/search/?api=1&query=25.0366128,121.5650683,17z&query_place_id=ChIJQcKOdbqrQjQROgrX00ZQqmo"
+        },
+        {
+            "name": "統一時代百貨",
+            "address": "台北市信義區忠孝東路五段8號5F",
+            "tel": "電話：02-2722-8041",
+            "map": "https://www.google.com/maps/search/?api=1&query=25.0406487,121.5647941,19z&query_place_id=ChIJOTnw6EarQjQRbddiN7lZ1P0"
+        },
+        {
+            "name": "SOGO忠孝店",
+            "address": "台北市大安區忠孝東路4段45號10樓",
+            "tel": "電話：02-8771-9306",
+            "map": "https://www.google.com/maps/search/?api=1&query=25.0418746,121.5424442,17z&query_place_id=ChIJBSBcr9CrQjQRCo_e9Vtrwvk"
+        },
+        {
+            "name": "台北京站時尚廣場",
+            "address": "台北市大同區承德路1段1號3樓",
+            "tel": "電話：02-2552-7927",
+            "map": "https://www.google.com/maps/search/?api=1&query=25.0490524,121.5159212,17z&query_place_id=ChIJG36LdG2pQjQRDRZn7E79-qk"
+        },
+        {
+            "name": "SOGO復興店-UE",
+            "address": "臺北市大安區忠孝東路三段300號6F",
+            "tel": "電話：02-8772-8473",
+            "map": "https://www.google.com/maps/search/?api=1&query=25.0411401,121.5407533,17z&query_place_id=ChIJaeY0sNCrQjQR4-RHfyVu_0U"
+        },
+        {
+            "name": "新光三越信義店A11-UE",
+            "address": "台北市信義區松壽路11號3樓(A11館)",
+            "tel": "電話：02-2723-1447",
+            "map": "https://www.google.com/maps/search/?api=1&query=25.0366128,121.5650683,17z&query_place_id=ChIJQcKOdbqrQjQROgrX00ZQqmo"
+        },
+        {
+            "name": "台北忠孝旗艦店",
+            "address": "臺北市大安區忠孝東路四段226號",
+            "tel": "電話：02-2711-3792",
+            "map": "https://www.google.com/maps/search/?api=1&query=25.0412457,121.5517795,17z&query_place_id=ChIJy29f2cWrQjQR3YxWI2fG-2E"
+        },
+        {
+            "name": "新光三越南西店",
+            "address": "台北市中山區南京西路12號8樓",
+            "tel": "電話：02-2581-6738",
+            "map": "https://www.google.com/maps/search/?api=1&query=25.0525072,121.5203135,19z&query_place_id=ChIJS7qHS2mpQjQRjcsDvPunUgo"
+        },
+        {
+            "name": "台北SOGO天母店",
+            "address": "台北市士林區中山北路6段77號4樓",
+            "tel": "電話：02-2834-0156",
+            "map": "https://www.google.com/maps/search/?api=1&query=25.1050146,121.5218629,17z&query_place_id=ChIJq6pqS5euQjQRfBou4ktZ0KA"
+        },
+        {
+            "name": "INVINCIBLE EAST",
+            "address": "台北市大安區忠孝東路四段181巷35弄3號",
+            "tel": "電話：02-8771-9958",
+            "map": "https://www.google.com/maps/search/?api=1&query=25.0440357,121.5487473,17z&query_place_id=ChIJt_2h9MSrQjQRwGZsQrw8Nts"
+        },
+        {
+            "name": "美麗華",
+            "address": "臺北市中山區敬業三路20號美麗華百樂園漾館3F",
+            "tel": "電話：02-8501-2520",
+            "map": "https://www.google.com/maps/search/?api=1&query=25.0832366,121.5547985,17z&query_place_id=ChIJQb0d-RKsQjQRe53Evgnkq8w"
+        },
+        {
+            "name": "中華店",
+            "address": "臺北市萬華區中華路一段94號",
+            "tel": "電話：02-2311-1499",
+            "map": "https://www.google.com/maps/search/?api=1&query=25.0445247,121.5087854,21z/&query_place_id=ChIJD401_gupQjQRMpmaiMxjwmk"
+        },
+        {
+            "name": "大直ATT",
+            "address": "台北市敬業三路123號2樓-+TNF櫃",
+            "tel": "電話：02-6617-7954",
+            "map": "https://www.google.com/maps/search/?api=1&query=25.081505,121.5551989,19.33z&query_place_id=ChIJjRhQkxytQjQRp5SbAmKDJSY"
+        },
+        {
+            "name": "大東九店",
+            "address": "臺北市士林區大東路38號",
+            "tel": "電話：02-6617-3081",
+            "map": "https://www.google.com/maps/search/?api=1&query=25.0893948,121.5231563,17z&query_place_id=ChIJMQ1PsrquQjQRlZ0BlNl2SDU"
+        },
+        {
+            "name": "比漾廣場",
+            "address": "新北市永和區中山路一段238號B1F",
+            "tel": "電話：02-8231-6706",
+            "map": "https://www.google.com/maps/search/?api=1&query=25.0079118,121.5052241,17z&query_place_id=ChIJK1LtTNupQjQRCTfO4POOKI8"
+        },
+        {
+            "name": "板橋大遠百",
+            "address": "新北市板橋區新站路28號6樓",
+            "tel": "電話：02-2964-3279",
+            "map": "https://www.google.com/maps/search/?api=1&query=25.0125275,121.4648484,18z&query_place_id=ChIJx4VE6BioQjQRFbNT0m1dJwM"
+        },
+        {
+            "name": "板橋大遠百-UE",
+            "address": "新北市板橋區新站路28號8樓",
+            "tel": "電話：02-2956-2028",
+            "map": "https://www.google.com/maps/search/?api=1&query=25.0125275,121.4648484,18z&query_place_id=ChIJx4VE6BioQjQRFbNT0m1dJwM"
+        },
+        {
+            "name": "府中店",
+            "address": "新北市板橋區中山路1段3-5號3-4樓",
+            "tel": "電話：02-8953-5960",
+            "map": "https://www.google.com/maps/search/?api=1&query=25.0079362,121.4576217,17z&query_place_id=ChIJUdHsgqcCaDQRKhV305HCb4g"
+        },
+        {
+            "name": "環球板橋",
+            "address": "新北市板橋區縣民大道二段7號1F-TNF櫃",
+            "tel": "電話：02-6637-5501",
+            "map": "https://www.google.com/maps/search/?api=1&query=25.0144948,121.4616513,17z&query_place_id=ChIJ__X-axmoQjQR5bE_W-BaXhA"
+        },
+        {
+            "name": "U-TOWN汐止",
+            "address": "新北市汐止區新台五路一段99號1F-OUTDOOR櫃",
+            "tel": "電話：02-6637-7617",
+            "map": "https://www.google.com/maps/search/?api=1&query=25.0620958,121.648763,19z&query_place_id=ChIJhfLHWEJTXTQRu4ah7_a6Lnk"
+        },
+        {
+            "name": "環球中和",
+            "address": "新北市中和區中山路三段122號2F-TNF櫃",
+            "tel": "電話：02-6637-1639",
+            "map": "https://www.google.com/maps/search/?api=1&query=25.0071737,121.4726171,17z&query_place_id=ChIJOW18SSeoQjQR5oBDl1xSwQk"
+        },
+        {
+            "name": "台茂購物中心-UE",
+            "address": "桃園市蘆竹區南崁路一段112號1F",
+            "tel": "電話：03-212-0956",
+            "map": "https://www.google.com/maps/search/?api=1&query=25.0534758,121.2862033,17z&query_place_id=ChIJReiujXSgQjQRUEIzbN1DkSI"
+        },
+        {
+            "name": "新台茂",
+            "address": "桃園市蘆竹區南崁路一段112號B2F",
+            "tel": "電話：03-212-7193",
+            "map": "https://www.google.com/maps/search/?api=1&query=25.0534758,121.2862033,17z&query_place_id=ChIJReiujXSgQjQRUEIzbN1DkSI"
+        },
+        {
+            "name": "桃園遠東百貨",
+            "address": "桃園市桃園區中正路20號7樓",
+            "tel": "電話：03-339-8195",
+            "map": "https://www.google.com/maps/search/?api=1&query=24.9897581,121.3116484,17z&query_place_id=ChIJ72_Nq_weaDQR3mUFzDm9B-4"
+        },
+        {
+            "name": "中壢SOGO",
+            "address": "桃園市中壢區元化路357號6樓",
+            "tel": "電話：03-425-7846",
+            "map": "https://www.google.com/maps/search/?api=1&query=24.9624559,121.2213858,17z&query_place_id=ChIJ57SfszYiaDQRG5N12rfORws"
+        },
+        {
+            "name": "中壢大江購物中心",
+            "address": "桃園市中壢區中園路二段509號3F",
+            "tel": "電話：03-263-9185",
+            "map": "https://www.google.com/maps/search/?api=1&query=25.0014215,121.2289339,19z&query_place_id=ChIJOXR22rwhaDQRKg6BtwjRbh0"
+        },
+        {
+            "name": "新竹巨城購物中心",
+            "address": "新竹市東區中央路229號2樓",
+            "tel": "電話：03-533-2749",
+            "map": "https://www.google.com/maps/search/?api=1&query=24.809821,120.9729432,17z&query_place_id=ChIJQyv318Q1aDQRYz_krC4mdb4"
+        },  
+        {
+            "name": "新竹巨城購物中心-UE",
+            "address": "新竹市東區中央路229號1樓",
+            "tel": "電話： 03-515-2995",
+            "map": "https://www.google.com/maps/search/?api=1&query=24.809821,120.9729432,17z&query_place_id=ChIJQyv318Q1aDQRYz_krC4mdb4"
+        },
+        {
+            "name": "新竹大遠百",
+            "address": "新竹市東區西大路323號7樓",
+            "tel": "電話：03-528-6322",
+            "map": "https://www.google.com/maps/search/?api=1&query=24.802248,120.9628747,17z&query_place_id=ChIJER5Vzeo1aDQRikYaeFtPaYA"
+        },
+        {
+            "name": "新竹巨城SOGO",
+            "address": "新竹市東區中央路239號4樓",
+            "tel": "電話：03-515-2096",
+            "map": "https://www.google.com/maps/search/?api=1&query=24.809821,120.9729432,17z&query_place_id=ChIJQyv318Q1aDQRYz_krC4mdb4"
+        },
+        {
+            "name": "尚順廣場",
+            "address": "苗栗縣頭份市中央路105號1F",
+            "tel": "電話：03-724-3766",
+            "map": "https://www.google.com/maps/search/?api=1&query=24.6889794,120.9040271,21z&query_place_id=ChIJNW-WIt9NaDQRHp8hCVD5qI0"
+        },
+        {
+            "name": "新月",
+            "address": "宜蘭縣宜蘭市民權路二段38巷6號3F-TNF櫃",
+            "tel": "電話：03-931-1764",
+            "map": "https://www.google.com/maps/search/?api=1&query=24.7540479,121.7486403,17z&query_place_id=ChIJ0329ZMPkZzQRkWmwAe_i0Ss"
+        }
+    ],
+    "mid": [
+        {
+            "name": "新光三越中港店",
+            "address": "台中市西屯區台灣大道三段301號12樓",
+            "tel": "電話：04-2254-3521",
+            "map": "https://www.google.com/maps/search/?api=1&query=24.1652621,120.6415196,17z&query_place_id=ChIJacBApYw9aTQRTUxbOQdRHJ0"
+        },
+        {
+            "name": "台中大遠百",
+            "address": "台中市西屯區台灣大道三段251號6樓南棟",
+            "tel": "電話：04-2254-4679",
+            "map": "https://www.google.com/maps/search/?api=1&query=24.1634556,120.6420964,17z&query_place_id=ChIJuaGhlow9aTQRfHNZ8O0BGxw"
+        },
+        {
+            "name": "大魯閣新時代",
+            "address": "台中市東區復興路四段186號",
+            "tel": "電話：04-2224-8447",
+            "map": "https://www.google.com/maps/search/?api=1&query=24.135896,120.6853846,17z&query_place_id=ChIJ9a_5lRU9aTQR5vyqoPukmik"
+        },
+        {
+            "name": "中友百貨",
+            "address": "台中市北區三民路三段161號B棟6樓",
+            "tel": "電話：04-2229-4493",
+            "map": "https://www.google.com/maps/search/?api=1&query=24.1523089,120.6825723,17z&query_place_id=ChIJBbtXImY9aTQRAU3RM_CheZ8"
+        },
+        {
+            "name": "逢甲三店",
+            "address": "臺中市西屯區逢甲路132、134號",
+            "tel": "電話：04-360-93926",
+            "map": "https://www.google.com/maps/search/?api=1&query=24.1783381,120.643115,21z&query_place_id=ChIJdTZCyEEXaTQRkd3jlk-jTOI"
+        }
+    ],
+    "south": [
+        {
+            "name": "秀泰嘉義",
+            "address": "嘉義市西區國華里文化路299號1F",
+            "tel": "電話：05-310-1521",
+            "map": "https://www.google.com/maps/search/?api=1&query=23.4853726,120.4477442,21z&query_place_id=ChIJL7hNtzKUbjQRi5Dp4M_C6Vk"
+        },
+        {
+            "name": "新光三越台南西門-UE",
+            "address": "台南市中西區西門路1段658號4樓",
+            "tel": "電話：06-303-0561",
+            "map": "https://www.google.com/maps/search/?api=1&query=22.9865487,120.1981096,20.19z&query_place_id=ChIJvw8y-3t2bjQRpP_qkrPgGDs"
+        },
+        {
+            "name": "新光三越台南西門店",
+            "address": "台南市中西區西門路1段658號5樓",
+            "tel": "電話：06-303-0377",
+            "map": "https://www.google.com/maps/search/?api=1&query=22.9865487,120.1981096,20.19z&query_place_id=ChIJvw8y-3t2bjQRpP_qkrPgGDs"
+        },
+        {
+            "name": "新光三越左營店",
+            "address": "高雄市左營區高鐵路123號7樓",
+            "tel": "電話：07-345-7506",
+            "map": "https://www.google.com/maps/search/?api=1&query=22.6890229,120.3081753,17z&query_place_id=ChIJrSPR9G8FbjQRJxpbZvtNODo"
+        },
+        {
+            "name": "高雄漢神巨蛋-UE",
+            "address": "高雄市左營區博愛二路777號3樓",
+            "tel": "電話：07-586-9170",
+            "map": "https://www.google.com/maps/search/?api=1&query=22.6696892,120.3001736,17z&query_place_id=ChIJ0TDepQgFbjQRgJ_S1DSMyIY"
+        },
+        {
+            "name": "高雄統一夢時代購物中心",
+            "address": "高雄市前鎮區中華五路789號4樓",
+            "tel": "電話：07-823-2559",
+            "map": "https://www.google.com/maps/search/?api=1&query=22.5951547,120.304735,17z&query_place_id=ChIJJ9PJ63IDbjQR-dpo3hF9MZI"
+        },
+        {
+            "name": "高雄漢神巨蛋",
+            "address": "高雄市左營區博愛二路777號8樓",
+            "tel": "電話：07-522-8325",
+            "map": "https://www.google.com/maps/search/?api=1&query=22.6696892,120.3001736,17z&query_place_id=ChIJ0TDepQgFbjQRgJ_S1DSMyIY"
+        },
+        {
+            "name": "高雄大遠百",
+            "address": "高雄市苓雅區三多四路21號8樓",
+            "tel": "電話：07-338-1780",
+            "map": "https://www.google.com/maps/search/?api=1&query=22.6129958,120.301876,17z&query_place_id=ChIJ-ZcUgXsDbjQRbi4wSNqqojk"
+        },
+        {
+            "name": "大魯閣草衙道",
+            "address": "高雄市前鎮區明正里中安路1之1號-TNF櫃",
+            "tel": "電話：07-963-8364",
+            "map": "https://www.google.com/maps/search/?api=1&query=22.5824516,120.3269951,17z&query_place_id=ChIJBdXrqYAEbjQRce0nSJTnMgk"
+        }
+    ]
+}

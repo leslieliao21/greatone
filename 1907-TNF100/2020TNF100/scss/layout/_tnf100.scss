@@ -1,0 +1,250 @@
+/*==================================================*\
+        Outdoor Training Page
+\*==================================================*/
+.tnf100Page {  /* <body> */
+  a{
+    display: inline-block;
+    color: #4173f2;
+  }
+  .fcBlack{
+    color: #000;
+  }
+  table{
+    margin-bottom: 1.5rem;
+  }
+  .block{
+    display: block;
+  }
+  article table>tbody>tr>td{
+    padding: 4px;
+  }
+  td{
+    text-align: center;
+    vertical-align: middle;
+    p{
+      text-align: center;
+      font-size: 0.7125rem;
+      @include mq(tablet) {
+        font-size: 1.125rem;
+      }
+    }
+  }
+  ._mod_title .en h4{
+    font-size: 0.9rem;
+    &.fSmall{
+      font-size: 0.75rem;
+    }
+    @include mq(tablet){
+      font-size: 1.75rem;
+      &.fSmall{
+        font-size: 1.75rem;
+      }
+    }
+  }
+  ._mod_title .ch h4{
+    // font-size: 0.9rem;
+    &.fSmall{
+      font-size: 0.9rem;
+    }
+    @include mq(tablet){
+      font-size: 1.75rem;
+      &.fSmall{
+        font-size: 1.75rem;
+      }
+    }
+  }
+  .alignL{
+    text-align: left;
+    @include mq(tablet) {
+      padding-left: 2rem;
+    }
+  }
+  article .block>ul>li ol{
+    padding-left: 1.5rem;
+  }
+  li{
+    margin-bottom: 1rem;
+    list-style-position: outside;
+  }
+  article .block>ul>li ol>li:not(:last-of-type){
+    margin-bottom: 1.125rem;
+  }
+  table{
+    background-color: #fff;
+  }
+  table>tbody>tr>.tableBgBlue{
+    background-color: #c4e3ff;
+  }
+  table>tbody>tr>.tableBgGreen{
+    background-color: #eaf3cd;
+  }
+  table>tbody>tr>.tableBgPink{
+    background-color: #feeaf5;
+  }
+  article table.rulesTable>tbody>tr>td:first-child{
+    @include mq(tablet) {
+      width: 8.25rem;
+    }
+  }
+  article table.storageTable>tbody>tr>td:first-child{
+    @include mq(tablet) {
+      width: 13.25rem;
+    }
+  }
+  article table.otherTable>tbody>tr>td:first-child{
+    @include mq(tablet) {
+      width: 18.25rem;
+    }
+  }
+  article table>tbody>tr>td br,
+  article br{
+    @include mq(tablet) {
+      display: block;
+    }
+  }
+  section{
+    padding-bottom: 1.5rem;
+  }
+  .routeMt{
+    margin-top: -18%;
+    @include mq(tablet) {
+      margin-top: -155px;
+    }
+  }
+  .titleSpan{
+    font-size: 1.125rem;
+    line-height: 1.5;
+    font-weight: bold;
+    display: block;
+    &::before{
+      content: "";
+      width: 2.3vw;
+      height: 3.2vw;
+      display: inline-block;
+      margin-right: 0.35rem;
+      background: url(../images/icon/tnf100_tri.png) no-repeat;
+      background-size: contain;
+    }
+    @include mq(tablet) {
+      &::before{
+        width: 10px;
+        height: 15px;
+      }
+    }
+  }
+  .kv {  /* <section> */
+    .topic {
+      width: 57.8125%;
+      top: 9%;
+
+      @include mq(phablet) {
+        top: 17%;
+      }
+
+      @include mq(tablet) {
+        top: 40px;
+      }
+      
+      @include mq(tablet-wide) {
+        top: 79px;
+      }
+    }
+  }
+  .information{
+    padding-bottom: 25%;
+    @include mq(tablet){
+      padding-bottom: 15%;
+    }
+  }
+  .registration{
+    @include mq(tablet){
+      padding-bottom: 150px;
+    }
+  }
+  ._grayBottom{
+    padding: 0 0 20%;
+    position: relative;
+    &::before{
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      padding-bottom: 14.6875%;
+      background-image: url(../images/background/m_banner_mountain_silhouette.png);
+      background-size: 100% auto;
+      background-position: bottom center;
+      background-repeat: no-repeat;
+      bottom: -1px;
+      left: 0;
+    }
+    @include mq(tablet){
+      padding-bottom: 140px;
+      &::before{
+        background-image: url(../images/background/banner_mountain_silhouette.png);
+        background-size: auto;
+        background-repeat: repeat-x;
+      }
+    }
+  }
+  .otherContent{
+    >li{
+      border-bottom: 1px solid #a7a7a7;
+      position: relative;
+      .otherBox{
+        display: none;
+        padding-bottom: 1rem;
+      }
+      &.active{
+        .otherBox{
+          transition: .3s;
+        }
+        a{
+          background: url(../images/icon/other_close.png) no-repeat;
+          background-size: contain;
+        }
+      }
+    }
+    h5{
+      font-weight: normal;
+      line-height: 1.5;
+      padding: 0.75rem 0;
+      font-size: 1.125rem;
+    }
+    a{
+      background: url(../images/icon/other_open.png) no-repeat;
+      background-size: contain;
+      width: 5vw;
+      height: 5vw;
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      @include mq(tablet){
+        width: 19px;
+        height: 19px;
+      }
+    }
+  }
+  .fixedSideBar {
+    li {
+      /*
+      * 因為 Phone & Tablet 時 隱藏fixedSideBar 的需求，所以註解掉。
+      * 請保留、for 未來需求改變
+      */
+      // left: size(121);
+
+      // @include mq(phablet) {
+      //   left: size(177);
+      // }
+
+      @include mq(tablet) {
+        left: size(121);
+        // left: 7.5rem;
+      }
+    }
+  }
+
+  .signUp {
+    padding-bottom: 11rem;
+  }
+}

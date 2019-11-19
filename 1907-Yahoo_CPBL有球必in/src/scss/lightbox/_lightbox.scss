@@ -1,0 +1,132 @@
+/*==================================================*\
+        Lightbox
+\*==================================================*/
+
+.lightbox {
+  @include full-popup(rgba(0, 0, 0, 0.8));
+  overflow-y: auto;
+  opacity: 0;
+  z-index: 9999;
+  // padding-top: 2vh;
+
+  @include mq(phone-mid, max) {
+    padding-top: 8vh;
+  }
+
+  svg { 
+    path {
+      fill: #FFFFFF;
+    }
+  }
+}
+
+
+
+.lb-container {
+  width: 90%;
+  max-width: 500px;
+  margin: auto;
+  opacity: 0;
+  position: absolute;
+  // top: 0; bottom: 0;
+  // left: 0; right: 0;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  @media screen and (max-width:723px) { 
+    position: relative;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    transform: none;
+  }
+}
+
+// Lightbox Content
+.lb-content {
+  width: 100%;
+  max-width: 500px;
+  background: #FFF;
+  border-radius: 5px;
+  padding: 4vw;
+  line-height: 1.4em;
+  margin: 0 auto;
+  border-top: 6px solid $c-blueD;
+
+  .inside{
+    width: 95%;
+    margin: 0 auto;
+    // background-color: #fffdf5;
+    // border-radius: 5px;
+    // padding: 1.5vh 2vw;
+    // min-height: 62vh;
+    text-align: center;
+    position: relative;
+    // box-shadow: 0px 2px 2px 5px rgba(0, 0, 0, 0.2);
+    @include mq(phablet, max) {
+      width: 100%;
+    }
+    // .whiteBg{
+    //   min-height: 52vh;
+    //   padding: 1.5vh 2vw;
+    //   background-color: #fffdf5;
+    //   border-radius: 5px;
+    //   margin-bottom: 3vh;
+    //   box-shadow: 0px 2px 2px 5px rgba(0, 0, 0, 0.2);
+    // }
+    // .lb_title{
+    //   width: 100%;
+    //   color: #333333;
+    //   font-size: 36px;
+    //   font-weight: 800;
+    //   padding-bottom: 5px;
+    //   margin-bottom: 2vh;
+    //   border-bottom: 1px solid #dfdfdf;
+    //   @include mq(tablet, max) {
+    //     font-size: 32px;
+    //   }
+    // }
+    form{
+      padding: 10px 0;
+    }
+  }
+  p{
+    width: 100%;
+    display: inline-block;
+    word-wrap: break-word;
+    // @include mq(phablet, max) {
+    //   margin-left: -10px;
+    // }
+  }
+}
+
+// Button: Close Lightbox
+.lb-close-btn {
+  @extend %mod_close-btn;
+  @include wh(60px);
+  position: absolute;
+  top: -55px;
+  right: -8px;
+  border-radius: 100%;
+  z-index: 9999;
+
+  &:before,
+  &:after {
+    width: 80%;
+    height: 6px;
+    left: 10%;
+    border-radius: 100px;
+    background-color: #FFFFFF;
+  }
+
+  /* 可於 _extends.scss 選擇欲 extend 之 hover樣式 */
+  @extend %close-btn-hover-1;
+}
+
+.lb-loading {
+  @include wh(47px);
+  margin: auto;
+  z-index: 0;
+  position: fixed;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+}

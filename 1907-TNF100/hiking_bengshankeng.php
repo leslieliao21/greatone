@@ -409,9 +409,9 @@
                 </li>
               </ul>
             </div>
-            <div class="block">
+            <!--<div class="block">
               <a href="https://store.biji.co/tborder/new/61cff883-338c-4e21-a96e-372595f7e93c" target="_blank"><img src="./images/button/signup_2.png" alt="我要報名"></a>
-            </div>
+            </div>-->
           </section>
         </article>
       </div>

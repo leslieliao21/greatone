@@ -6,7 +6,7 @@
   @include fullPopup(rgba(0, 0, 0, 0.8));
   opacity: 0;
   transition: all $stdDuration;
-  z-index: 100;
+  z-index: 9999;
 
   svg path {
     fill: #FFFFFF;
@@ -79,7 +79,7 @@
   width: 100%;
   z-index: 1;
   position: relative;
-
+  
   &.container {
     padding: 0;
 

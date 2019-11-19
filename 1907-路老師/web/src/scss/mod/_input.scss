@@ -1,0 +1,353 @@
+.form-control {
+    height: auto;
+    padding: 10px;
+    border-radius: 0;
+    outline: 0;
+    border: 1px solid transparent;
+    box-shadow: none;
+
+    @include mq(tablet, max) {
+        height: auto;
+        padding: 15px;
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+}
+
+.form-inline,
+    {
+    padding-top: 0 !important;
+}
+
+.control-label {
+    text-align: left !important;
+    @include mq(tablet, max) {
+        margin: 10px 0;
+    }
+}
+
+.col-xs-1,
+.col-sm-1,
+.col-md-1,
+.col-lg-1,
+.col-xs-2,
+.col-sm-2,
+.col-md-2,
+.col-lg-2,
+.col-xs-3,
+.col-sm-3,
+.col-md-3,
+.col-lg-3,
+.col-xs-4,
+.col-sm-4,
+.col-md-4,
+.col-lg-4,
+.col-xs-5,
+.col-sm-5,
+.col-md-5,
+.col-lg-5,
+.col-xs-6,
+.col-sm-6,
+.col-md-6,
+.col-lg-6,
+.col-xs-7,
+.col-sm-7,
+.col-md-7,
+.col-lg-7,
+.col-xs-8,
+.col-sm-8,
+.col-md-8,
+.col-lg-8,
+.col-xs-9,
+.col-sm-9,
+.col-md-9,
+.col-lg-9,
+.col-xs-10,
+.col-sm-10,
+.col-md-10,
+.col-lg-10,
+.col-xs-11,
+.col-sm-11,
+.col-md-11,
+.col-lg-11,
+.col-xs-12,
+.col-sm-12,
+.col-md-12,
+.col-lg-12 {
+    padding-left: 8px;
+    padding-right: 8px;
+
+    @include mq(tablet, max) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    &.pdr-5{
+        @include mq(tablet, max) {
+            padding-right: 10px;
+        }
+    }
+}
+
+label.labelIcon {
+    padding-left: 22px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 18px 20px;
+}
+
+.signupInfoPage label.labelIcon, .contactPage label.labelIcon {
+    padding-left: 25px;
+    background-size: 22px 20px;
+}
+
+.affairsRecordPage label.labelIcon {
+    padding-left: 28px;
+    background-size: 25px 20px;
+}
+
+button.btn {
+    padding: 12px 40px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: 0.4s;
+
+    @include mq(phablet, max) {
+        padding: 10px 25px;
+        font-size: 4.8vw;
+    }
+}
+
+button.btn-link {
+    padding: 0;
+    border-radius: 0;
+}
+
+button.btn-submit {
+    color: #FFF;
+    background-color: #ff7303;
+
+    &:hover {
+        color: #FFF;
+        background-color: #e86700;
+    }
+}
+
+button.btn-upload, button.btn-edit {
+    color: #FFF;
+    background-color: #2b80c9;
+
+    img {
+        width: 12px;
+        display: inline;
+        vertical-align: middle;
+    }
+
+    &:hover {
+        color: #FFF;
+        background-color: #166cb7;
+    }
+}
+
+button.btn-gray {
+    color: #FFF;
+    background-color: #646464;
+
+    &:hover {
+        color: #FFF;
+        background-color: #525252;
+    }
+}
+
+button.btn-link {
+    color: #000;
+
+    &:hover {
+        text-decoration: none;
+        color: #888;
+    }
+}
+
+.pageCont {
+    button {
+        display: block;
+        margin: 10px auto;
+        border-radius: 50px;
+        width: 100%;
+        max-width: 300px;
+
+        @include mq(tablet, max) {
+            max-width: 100%;
+        }
+    }
+
+    button.btn-submit {
+        margin-top: 40px;
+    }
+
+    button.btn-upload {
+        max-width: auto;
+        padding: 10px;
+        margin: 0;
+
+        @include mq(tablet, max) {
+            margin-bottom: 15px;
+        }
+    }
+
+    button.btnInline {
+        display: inline-block;
+        max-width: 130px;
+        margin: 30px 10px 0 10px;
+        padding: 12px;
+
+        @include mq(tablet, max) {
+            display: block;
+            margin: 25px auto;
+            width: 100%;
+            max-width: 100%;
+
+            &:first-child {
+                margin-top: 40px;
+            }
+        }
+    }
+}
+
+/* Create a custom checkbox button */
+/* Hide the browser's default checkbox */
+.checkboxCont{
+    display: block;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    .checkbox-inline {
+        padding-left: 28px;
+        margin-right: 10px;
+
+        input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+        .checkmark {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-54%);
+            height: 20px;
+            width: 20px;
+            background-color: #FFF;
+            border: 1px solid #cfcfcf;
+          }
+    }
+}
+  
+ 
+  
+  /* When the checkbox is checked, add a blue background */
+  .checkboxCont input:checked ~ .checkmark {
+    background-color: #FFF;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Style the checkmark/indicator */
+  .checkboxCont .checkmark:after {
+    left: 5px;
+    top: 1px;
+    width: 8px;
+    height: 12px;
+    border: solid #297fc9;
+    border-width: 0 4px 4px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+/* Create a custom radio button */
+.radioCont {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    .radio-inline {
+        padding-left: 28px;
+        margin-right: 5px;
+
+        input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .checkmark {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-54%);
+            height: 20px;
+            width: 20px;
+            background-color: #FFF;
+            border: 1px solid #cfcfcf;
+            border-radius: 50%;
+        }
+    }
+}
+
+
+/* Show the indicator (dot/circle) when checked */
+.radioCont input:checked~.checkmark:after, 
+.checkboxCont input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radioCont .checkmark:after {
+    top: 4px;
+    left: 4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #297fc9;
+}
+
+
+select {
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    overflow: hidden;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDI4NC45IDI4NC45IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyODQuOSAyODQuOTsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4NCgkuc3Qwe2ZpbGw6IzI5N0ZDOTt9DQo8L3N0eWxlPg0KPGc+DQoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTI4Mi4xLDc2LjVsLTE0LjMtMTQuM2MtMS45LTEuOS00LjEtMi45LTYuNi0yLjljLTIuNSwwLTQuNywxLTYuNiwyLjlMMTQyLjUsMTc0LjRMMzAuMyw2Mi4yDQoJCWMtMS45LTEuOS00LjEtMi45LTYuNi0yLjljLTIuNSwwLTQuNywxLTYuNiwyLjlMMi45LDc2LjVDMC45LDc4LjQsMCw4MC42LDAsODMuMWMwLDIuNSwxLDQuNywyLjksNi42bDEzMywxMzMNCgkJYzEuOSwxLjksNC4xLDIuOSw2LjYsMi45czQuNy0xLDYuNi0yLjlsMTMzLjEtMTMzYzEuOS0xLjksMi44LTQuMSwyLjgtNi42QzI4NC45LDgwLjYsMjg0LDc4LjQsMjgyLjEsNzYuNXoiLz4NCjwvZz4NCjwvc3ZnPg0K) no-repeat;
+    background-size: 10px auto;
+    background-position: calc(100% - 10px) center;
+
+    option {
+        padding: 20px 0;
+        min-height: 50px;
+        line-height: 2rem;
+    }
+}
+
+.btn:hover,
+.btn:focus,
+.btn.focus {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+    outline: none !important;
+    color: #fff !important;
+}

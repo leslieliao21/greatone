@@ -1,0 +1,622 @@
+<?php 
+require_once '../php.lib/constants.php';
+require_once PHP_LIB_PATH.'default_setting.php';
+?>
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+<?php 
+  $game_id = 16;
+  require_once '../includes/outdoor_photo.php';
+  ?>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+  <title>The North Face 北面野營夜2019</title>
+  <meta property="og:title" content="The North Face 北面野營夜2019">
+  <meta property="og:url" content="http://www.xn--djr420n.tw/camping/2019camping.html">
+  <meta property="og:image" content="http://www.xn--djr420n.tw/camping/images/2019camping/camping_pic_1.jpg">
+  <link rel="icon" type="image/ico" href="../images/favicon.ico" />
+
+  <!-- CSS Plugins -->
+  <link rel="stylesheet" href="../css/slick.min.css" />
+  <link rel="stylesheet" href="../css/slick-theme.min.css" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/style.min.css" />
+
+  <!-- JS Plugins -->
+  <script type="text/javascript" src="../js.lib/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="../js.lib/jquery.zeynep.js"></script>
+  <script type="text/javascript" src="../js.lib/imagesloaded.js"></script>
+  <script type="text/javascript" src="../js.lib/slick.min.js"></script>
+  <script type="text/javascript" src="../js.lib/lightbox.js"></script>
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WTFN8FH');
+  </script>
+  <!-- End Google Tag Manager -->
+</head>
+
+<body class="activetiesTemplate camping2019Page">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WTFN8FH" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <!-- Loading -->
+  <div class="loading">
+    <div>
+      <div class="c1"></div>
+      <div class="c2"></div>
+      <div class="c3"></div>
+      <div class="c4"></div>
+    </div>
+    <span>loading</span>
+  </div>
+
+  <!-- Header, Source: "includes/_header.html" -->
+  <header class="pageHeader" data-hint="act"></header>
+
+  <!--========== Main Container ==========-->
+  <main>
+    <!-- KV Section -->
+    <section class="kv">
+      <div class="container">
+        <div class="topic">
+          <img src="../images/kv/camping_logo.png" alt="野營">
+        </div>
+      </div>
+    </section> <!-- KV END -->
+
+    <!-- Banner Section -->
+    <section class="banner">
+      <div class="container">
+        <h2><span>【TNF 野營系列】 開啟人生第一場野營-北面野營夜</span></h2>
+        <button class="toBannerBlock">
+          <p class="titlePlace">漢神巨蛋</p>
+        </button>
+      </div>
+
+      <div class="bannerBlock">
+        <div class="container">
+          <img src="images/2019camping/camping_pic_1.jpg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="introduction articleSec _bgc_gray">
+      <div class="container">
+        <div class="_mod_title">
+          <div class="ch">
+            <h4>活動宗旨</h4>
+          </div>
+        </div>
+
+        <article>
+          <section>
+            <div class="block">
+              <p class="tBold">英國著名的探險玩家-貝爾‧吉羅斯曾說過「我們沒有征服山，是山通融我們上去的。」</p>
+              <p>北面與漢神巨蛋再度跨界合作，讓我們再一次沉浸在時間停止的夜晚，在北面野營嘉年華享受歡樂時光。野營嘉年華這次結合露營、BBQ、星空電影院，囊括各式戶外生活風格，我們期待可以打造一場全台灣最有風格的戶外生活體驗！</p>
+            </div>
+            <div class="block">
+              <div class="ifrBox">
+                <iframe src="https://www.youtube.com/embed/VzapUgQestU" frameborder="0"
+                  allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+              </div>
+            </div>
+          </section>
+        </article>
+      </div>
+    </section>
+
+
+    <section class="course articleSec _bgc_gray">
+
+      <div class="container">
+        <div class="_mod_title">
+          <div class="ch">
+            <h4>活動亮點</h4>
+          </div>
+        </div>
+
+        <article>
+          <section>
+            <div class="block">
+              <p class="tBold">
+                <img src="images/icon/icon_camping.png" style="margin: 0; display:inline-block;" alt="">
+                <font class="fcRed">亮點<span class="fzB">1 </span></font>
+                野炊 / 野營 / BBQ
+              </p>
+              <ol>
+                <li><img src="images/2019camping/camping_pic_2.jpg" style="margin: 0" alt=""></li>
+              </ol>
+            </div>
+            <div class="block">
+              <p class="tBold">
+                <img src="images/icon/icon_camping.png" style="margin: 0; display:inline-block;" alt="">
+                <font class="fcRed">亮點<span class="fzB">2 </span></font>
+                星空電影院
+              </p>
+              <p>
+                重拾50、60年代生活風情，一起在廣場看電影。星空電影院將重現當年的氛圍，感受露天電影院的復古風情，也重溫「電影」的魅力。
+              </p>
+            </div>
+            <div class="block">
+              <p class="tBold">
+                <img src="images/icon/icon_camping.png" style="margin: 0; display:inline-block;" alt="">
+                <font class="fcRed">亮點<span class="fzB">3 </span></font>
+                達人分享
+              </p>
+              <p class="tBold">台灣第一登山型男 - 雪羊</p>
+              <p>「我從土地的角度出發，仔細地品嘗每一份專屬於台灣的美麗。」
+                雪羊是一個專門透過攝影作品講故事的登山型男，讓我們透過他的鏡頭看到野營的美好
+              </p>
+              <p class="tBold">山女孩 - Melissa</p>
+              <p>出門露營要注意些什麼呢？畢竟在戶外首先就要注意安全，挑選工具、裝備特性、以及了解露營禁忌是必要滴！！！
+              </p>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="container">
+        <div class="_mod_title">
+          <div class="ch">
+            <h4>活動資訊</h4>
+          </div>
+        </div>
+        <article>
+          <section class="reg">
+            <div class="block">
+              <div class="leftBox">
+                <p>
+                  <span class="tBold">野營時間：</span>
+                  10/19 (六) – 10/20(日)
+                </p>
+                <p>
+                  <span class="tBold">野營地點：</span>
+                  高雄漢神巨蛋 6F空中花園
+                </p>
+                <p>
+                  <span class="tBold">報名方式：</span>
+                  9/10 中午12:00開放線上報名 (需審核)
+                </p>
+                <p>
+                  <span class="tBold">參與者：</span>
+                  需有登山露營經驗，並審核完成報名者
+                </p>
+                <p>
+                  <span class="tBold">審核資料：</span>
+                  (提供以下資料擇一即可)
+                </p>
+                <p>1. 任意爬山或健行照片</p>
+                <p>2. 任意露營照片</p>
+                <p>3. 審核信箱：thenorthface@ulti.com.tw</p>
+                <p>
+                  <span class="tBold">報名費：</span>
+                  大人$500 / 小孩$100
+                </p>
+                <p>
+                  <span class="tBold">出席贈品：</span>
+                </p>
+                <p>1. 凡參加皆送The North Face T-shirt一件</p>
+                <p>
+                  (此衣服為示意圖，恕不挑款式、不挑顏色)
+                  <img src="images/2019camping/camping_pic_9.png" style="margin:10px 0;" alt="">
+                </p>
+                <p>
+                  2. 多功能圓柱椅
+                  <img src="images/2019camping/camping_pic_10.png" style="margin:10px 0;" alt="">
+                </p>
+                <p>
+                  <span class="tBold">特別注意事項 ：</span>
+                </p>
+                <p>1. 現場活動僅提供帳棚，參與者需自備簡單清潔用品(牙刷、毛巾)及睡袋</p>
+                <p>2. 場地僅提供廁所並無盥洗設備，建議自行盥洗後抵達現場</p>
+                <p>3. 百貨公司場地現場嚴禁明火，請勿自行野炊</p>
+                <p>4. 當天有佈置帳篷競賽，可自備裝飾露營帳篷飾品</p>
+                <p>5. 帳棚內恕不提供電力或延長線插座設備，記得攜帶行動電源</p>
+                <p>
+                  <span class="tBold">協辦單位：</span>
+                </p>
+                <ol>
+                  <li><img src="../images/sup_logo.jpg" style="margin: 0" alt="統一健身俱樂部"></li>
+                </ol>
+
+              </div>
+
+              <div class="rightBox">
+                <img src="images/2019camping/camping_pic_3.jpg" alt="">
+
+              </div>
+            </div>
+
+          </section>
+        </article>
+      </div>
+
+      <div class="container">
+        <div class="_mod_title">
+          <div class="ch">
+            <h4>達人分享</h4>
+          </div>
+        </div>
+
+        <article>
+          <section>
+            <div class="block">
+              <div class="picBox">
+                <img src="images/2019camping/camping_pic_4.png">
+              </div>
+            </div>
+            <div class="block">
+              <p class="tBold fzB">PART.1</p>
+              <p>講師: 雪羊視界 - 雪羊</p>
+              <ul>
+                <li class="flag">2013年起開始登山生涯，至今攀登過92座台灣百岳</li>
+                <li class="flag">2015年開始經營粉絲專頁「雪羊視界」，迄今已有超過7萬粉絲追蹤</li>
+                <li class="flag">為udn鳴人堂專欄作者之一，擁有野外一線反應員WFR急救證照</li>
+                <li class="flag">自2017年以來，舉辦各式主題講座分享超過100場</li>
+                <li class="flag">2018年開始進行海外攀登，迄今攀登過日本赤岳、富士山，吉爾吉斯列寧峰、尼泊爾梅樂峰等山岳</li>
+              </ul>
+            </div>
+            <div class="block">
+              <p>「攝影 x 登山」當這兩種興趣結合在一起，會併出什麼樣的火花，山岳攝影師雪羊就是很好的例子。
+                從大學開始接觸登山領域，到現在邁入了第六年，期間雪羊走過了許多山岳，山中的歷史遺跡與自然風景，是他最著迷的地方。雪羊的粉絲頁貼文，記錄著他的所見所聞，編織成一篇篇有溫度的故事，這些故事都是雪羊的登山足跡，也是最引人入勝的地方。更因為對山林的熱愛，讓他時常發表對政府政策的犀利批判，希望能透過文字吸引更多人一起關心、改變台灣的山岳環境，讓雪羊成為了台灣登山領域之中，一個特別的存在。
+              </p>
+            </div>
+            <div class="block">
+              <div class="picBox">
+                <img src="images/2019camping/camping_pic_5.png">
+              </div>
+            </div>
+            <div class="block">
+              <p class="tBold fzB">PART.2</p>
+              <p>講師: Melissa x 山女孩</p>
+              <ul>
+                <li class="flag">2016年 - 連續攀登三座台中排北三峽百岳</li>
+                <li class="flag">2017-18年 - 總共攻頂了45座台灣及日本百岳</li>
+                <li class="flag">2019年 - 已攀登8座台灣百岳，預計9月向日本百岳再度挑戰</li>
+              </ul>
+            </div>
+            <div class="block">
+              <p>一步一步向前走。「山，永遠都在那裡。」
+              </p>
+              <p>
+                歲月飛逝、而美好的年華又如此短暫，因此想要將我走過的路、爬過的山、 吃過的東西一一記錄下來，也想藉此機會跟大家交流一些爬山的經驗以及蒐集到的知識分享。
+              </p>
+            </div>
+          </section>
+        </article>
+      </div>
+
+      <div class="container">
+        <div class="_mod_title">
+          <div class="ch">
+            <h4>星空電影院</h4>
+          </div>
+        </div>
+
+        <article>
+          <section>
+            <div class="block">
+              <p>閃爍的星光下，開啟我們的新視界</p>
+              <p>電影片名: 極限登峰</p>
+            </div>
+            <div class="block">
+              <div class="ifrBox">
+                <iframe src="https://www.youtube.com/embed/hd-YR84hDTw" frameborder="0"
+                  allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+              </div>
+            </div>
+            <!--<div class="block" style="margin-top: 2rem">
+              <img src="images/2019camping/camping_pic_6.jpg">
+            </div>-->
+
+          </section>
+        </article>
+      </div>
+
+      <div class="container">
+          <div class="_mod_title">
+            <div class="ch">
+              <h4>趣味競賽</h4>
+            </div>
+          </div>
+          <article>
+            <section class="reg">
+              <div class="block">
+                <div class="leftBox">
+                  <p class="tBold">【北面 登山野營系列】DIY  帳篷佈置</p>
+                  <p>為了迎來燦爛的星空，我們也來將帳篷佈置成美麗的據點吧!  和親友一起佈置成專屬你們的標誌，一起成為最美麗的據點吧!</p>
+
+                  <p class="tBold" style="margin-top: 2rem;">主題: Never Stop Exploring</p>
+                  <p>說明:多久沒有大膽一回? 來發揮創意，突破自己的框架吧!  勇敢創造出自己的風格</p>
+                  <p>評比: 由The North Face 人員 & 漢神巨蛋人員 執行公允評選前三名者，可獲得價值 $ 10,000 北面精美商品</p>
+                </div>
+  
+                <div class="rightBox">
+                  <img src="images/2019camping/camping_pic_7.png" alt="">
+  
+                </div>
+              </div>
+  
+            </section>
+          </article>
+        </div>
+
+
+      <div class="container">
+        <div class="_mod_title">
+          <div class="ch">
+            <h4>活動流程</h4>
+          </div>
+        </div>
+
+        <article>
+          <section>
+            <div class="block">
+              <p>我們將以帶領進入未知野營領域，讓您享受星光之樂</p>
+              <ul>
+                <li>
+                  <p>流程內容：</p>
+                </li>
+              </ul>
+            </div>
+            <div class="listContent">
+              <table class="courseTable">
+                <thead>
+                  <tr>
+                    <th colspan="2">
+                      <p>10/19(六)</p>
+                    </th>
+                    <th colspan="2">
+                      <p>10/20(日)</p>
+                    </th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>
+                      <p>15:00 <br><span class="m-none">-</span><span class="pc-none m-block">|</span> <br>15:30</p>
+                    </td>
+                    <td>
+                      <p>報到/到指定營地區</p>
+                    </td>
+                    <td>
+                      <p>06:00 <br><span class="m-none">-</span><span class="pc-none m-block">|</span> <br>07:30</p>
+                    </td>
+                    <td>
+                      <p>Morning call+換裝梳洗</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>15:30 <br><span class="m-none">-</span><span class="pc-none m-block">|</span> <br>17:00</p>
+                    </td>
+                    <td>
+                      <p>建造營地</p>
+                    </td>
+                    <td>
+                      <p>07:30 <br><span class="m-none">-</span><span class="pc-none m-block">|</span> <br>08:15</p>
+                    </td>
+                    <td>
+                      <p>早操+朝氣早餐</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>17:00 <br><span class="m-none">-</span><span class="pc-none m-block">|</span> <br>18:00</p>
+                    </td>
+                    <td>
+                      <p>達人分享Part.1</p>
+                      <p>雪羊視界 - 雪羊分享</p>
+                    </td>
+                    <td>
+                      <p>08:15 <br><span class="m-none">-</span><span class="pc-none m-block">|</span> <br>09:00</p>
+                    </td>
+                    <td>
+                      <p>達人分享Part.2</p>
+                      <p>山女孩-Melissa分享</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>18:00 <br><span class="m-none">-</span><span class="pc-none m-block">|</span> <br>19:30</p>
+                    </td>
+                    <td>
+                      <p>營地 BBQ / 野營音樂會 / 佈置帳篷</p>
+                    </td>
+                    <td>
+                      <p>09:00 <br><span class="m-none">-</span><span class="pc-none m-block">|</span> <br>09:45</p>
+                    </td>
+                    <td>
+                      <p>互動遊戲</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>19:30 <br><span class="m-none">-</span><span class="pc-none m-block">|</span> <br>21:20</p>
+                    </td>
+                    <td>
+                      <p>星空電影院</p>
+                    </td>
+                    <td>
+                      <p>09:45 <br><span class="m-none">-</span><span class="pc-none m-block">|</span> <br>11:20</p>
+                    </td>
+                    <td>
+                      <p>整理帳篷/環境</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>21:20</p>
+                    </td>
+                    <td>
+                      <p>就寢/自由時間</p>
+                    </td>
+                    <td>
+                      <p>11:00</p>
+                    </td>
+                    <td>
+                      <p>活動結束</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </article>
+      </div>
+    </section>
+    <section class="origin"></section>
+
+    <section class="reg">
+      <div class="container">
+        <div class="_mod_title smallTitle">
+          <div class="ch">
+            <h4>地理位置</h4>
+          </div>
+        </div>
+        <article>
+          <section>
+            <div class="block">
+              <div class="leftBox">
+                <p>北面活動小組客服專線：02-2325-5505分機38</p>
+                <p>The North Face服務電話: (07)522-8325</p>
+              </div>
+              <div class="rightBox">
+                <img src="images/2019camping/camping_pic_8.jpg" alt="漢神巨蛋">
+
+              </div>
+            </div>
+          </section>
+        </article>
+      </div>
+    </section>
+    <section class="googleMap">
+
+      <div class="mapBox _bgc_gray">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14726.2940856208!2d120.3023623!3d22.6696843!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x86c88c34d4d29f80!2z5ryi56We5beo6JuL6LO854mp5buj5aC0!5e0!3m2!1szh-TW!2stw!4v1535618973433"
+          frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="review articleSec _bgc_gray">
+      <div class="container">
+        <div class="_mod_title">
+          <div class="ch">
+            <h4>精彩回顧</h4>
+          </div>
+          <div class="en">
+            <h4>REVIEW</h4>
+          </div>
+        </div>
+        <article>
+          <section>
+            <div class="block">
+              <p></p>
+            </div>
+          </section>
+
+          <section>
+            <div class="_slick imgOnly">
+              <?php foreach($photos as $v){?>
+              <div class="slickItem">
+                <button class="js-lb">
+                  <img src="<?php echo $photo_dir.$v['img_small'];?>" style="height:auto;" alt="">
+                </button>
+              </div>
+              <?php }?>  
+            </div>
+            <p class="slickPageWrap">
+              <span class="nowPage">1</span>&nbsp;/&nbsp;<span class="totalPage"></span>
+            </p>
+          </section>
+        </article>
+      </div>
+
+      <!-- <div class="reviewVidWrap _c">
+        <div class="reviewTitle">
+          <div class="container">
+            <article>
+              <div class="content">
+                <picture>
+                  <img src="images/icon/thf_logo@3x.jpg" alt="The North Face Logo">
+                </picture>
+                <h6>2019 高雄巨蛋野營</h6>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="reviewVid">
+          <div class="container">
+            <article>
+              <div class="content">
+                <div class="ifrWrap">
+                  <iframe src="https://www.youtube.com/embed/VzapUgQestU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="reviewDescription">
+          <div class="container">
+            <article>
+              <div class="content">
+                <p>我們來自不同的城市，最終匯集於巨蛋頂樓，齊心協力的搭建帳篷，聆聽職人的經驗分享，欣賞星光電影院播映，俯臥在絢麗的星空下，勾勒彼此回憶的藍圖。</p>
+              </div>
+            </article>
+          </div>
+        </div> -->
+      </div>
+    </section>
+
+    <section class="sign-button _bgc_gray">
+      <!-- <div class="container">
+        <div class="block">
+          <a href="https://www.accupass.com/event/1909060807008397385400" class="goSignup" target="_blank">
+            <img src="./images/button/signup_4.png" alt="立即報名">
+          </a>
+        </div>
+      </div> -->
+    </section>
+  </main>
+
+  <!-- Footer, Source: "includes/_footer.html" -->
+  <footer class="pageFooter"></footer>
+
+  <!--========== Javascript ==========-->
+  <script type="text/javascript" src="../js/script.min.js"></script>
+
+  <script>
+
+    function readyConfirm(event) {
+      alert("9/10 中午12:00 統一開報");
+      event.stopPropagation();
+      event.preventDefault();
+      return false;
+    }
+  </script>
+
+  <!-- IE9 以下，提醒使用者 更新 / 切換瀏覽器 -->
+  <!--[if lte IE 9]><h1 class="forIE8Less" style="width:100%; height:150px; padding-top:70px; color:#000; background:#FFF; position:fixed; top:0; left:0; z-index:9999; text-align:center;">本網頁不支援 IE9 以下版本，請更新瀏覽器版本或建議使用 Chrome 瀏覽器。</h1><style>body>*{display: none;}.forIE8Less{display:block;}</style><![endif]-->
+</body>
+
+</html>

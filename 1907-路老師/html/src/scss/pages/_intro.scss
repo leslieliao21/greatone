@@ -1,0 +1,321 @@
+/*==================================================*\
+        intro Page Style
+\*==================================================*/
+
+#intro-page {
+
+    .pageCont {
+
+        p {
+            font-size: 16px;
+            line-height: 1.8em;
+
+            @include mq(tablet, max) {
+                font-size: 18px;
+            }
+        }
+
+        #introNewsWrapper {
+            background: #FFF;
+            padding: 0 0 20px 0;
+            ul.introNewsList {
+                // margin-top: -20px;
+                
+                li {
+                    border-bottom: 1px solid #e1e1e1;
+
+                    &:hover {
+                        background: #fafafa;
+                    }
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+
+                    a:link {
+                        display: block;
+                        padding: 20px;
+
+                        &:hover {
+                            color: inherit;
+                            text-decoration: none;
+                        }
+                    }
+
+                    .newsDate {
+                        font-size: 13px;
+                        color: #656565;
+                        margin-right: 5px;
+                    }
+
+                    .newsCategory {
+                        font-size: 14px;
+                        padding: 4px 10px;
+                        font-weight: 600;
+                    }
+
+                    h4 {
+                        margin-top: 15px;
+                        font-size: 18px;
+                        font-weight: 600;
+                        line-height: 1.4em;
+                    }
+
+                    @include mq(tablet, max) {
+                        .newsDate {
+                            font-size: 18px;
+                        }
+
+                        .newsCategory {
+                            font-size: 18px;
+                        }
+
+                        h4 {
+                            font-size: 21px;
+                        }
+                    }
+                }
+            }
+
+            .btnMore {
+                text-align: right;
+                margin: 10px 20px 10px 0;
+                font-weight: 600;
+                display: block;
+                vertical-align: middle;
+
+                @include mq(tablet, max) {
+                    text-align: center;
+                    margin-top: 40px;
+                }
+
+                i {
+                    font-size: x-small;
+                    vertical-align: baseline;
+                    margin-right: 5px;
+                }
+
+                span {
+                    vertical-align: middle;
+                }
+
+                &:hover {
+                    color: #333;
+                }
+            }
+        }
+
+        .introWrapper{
+            padding: 20px 30px;
+            background: #FFF;
+        }
+
+        #introNewsArticle{
+            .newsArticleTitle{
+                border-bottom: 1px solid #e1e1e1;
+                padding: 10px 0 20px 0;
+                margin-bottom: 25px;
+                .newsDate {
+                    font-size: 13px;
+                    color: #656565;
+                    margin-right: 5px;
+                }
+    
+                .newsCategory {
+                    font-size: 14px;
+                    padding: 4px 10px;
+                    font-weight: 600;
+                }
+    
+                h4 {
+                    margin-top: 15px;
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 1.4em;
+                }
+
+                @include mq(tablet, max) {
+                    .newsDate {
+                        font-size: 18px;
+                    }
+
+                    .newsCategory {
+                        font-size: 18px;
+                    }
+
+                    h4 {
+                        font-size: 21px;
+                    }
+                }
+            }
+            .newsArticleBody{
+                padding-bottom: 15px;
+                .imgWrapper{
+                    width: 100%;
+                    margin: 20px 0;
+                    text-align: center;
+                    img{
+                        width: auto;
+                    }
+                }
+
+                > *:first-child{
+                    margin-top: 0;
+                }
+            }
+        }
+
+        #introFAQWrapper{
+            .faqBox{
+                padding: 15px 20px;
+                border: 1px solid #c8c8c8;
+                margin-bottom: 15px;
+                cursor: pointer;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                .questionBar{
+                    font-weight: bold;
+                    position: relative;
+                    padding-right: 20px;
+                    &:after{
+                        width: 13px;
+                        height: 9px;
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: 50%;
+                        bottom: 50%;
+                        right: 0;
+                        transform: translateY(-50%);
+                        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDI4NC45IDI4NC45IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyODQuOSAyODQuOTsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4NCgkuc3Qwe2ZpbGw6IzI5N0ZDOTt9DQo8L3N0eWxlPg0KPGc+DQoJPHBhdGggY2xhc3M9InN0MCIgZD0iTTI4Mi4xLDc2LjVsLTE0LjMtMTQuM2MtMS45LTEuOS00LjEtMi45LTYuNi0yLjljLTIuNSwwLTQuNywxLTYuNiwyLjlMMTQyLjUsMTc0LjRMMzAuMyw2Mi4yDQoJCWMtMS45LTEuOS00LjEtMi45LTYuNi0yLjljLTIuNSwwLTQuNywxLTYuNiwyLjlMMi45LDc2LjVDMC45LDc4LjQsMCw4MC42LDAsODMuMWMwLDIuNSwxLDQuNywyLjksNi42bDEzMywxMzMNCgkJYzEuOSwxLjksNC4xLDIuOSw2LjYsMi45czQuNy0xLDYuNi0yLjlsMTMzLjEtMTMzYzEuOS0xLjksMi44LTQuMSwyLjgtNi42QzI4NC45LDgwLjYsMjg0LDc4LjQsMjgyLjEsNzYuNXoiLz4NCjwvZz4NCjwvc3ZnPg0K) no-repeat;
+                        background-size: 13px auto;
+                        background-position: right center;
+                        font-weight: bold;
+                        transition: 0.4s;
+                    }
+                }
+                .answerBar{
+                    display: none;
+                    margin-top: 15px;
+                    padding-bottom: 20px;
+                    color: #666666;
+                    position: relative;
+                    .faqCollapse{
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        font-size: 14px;
+                        color: #297fc9;
+                        text-decoration: underline;
+                        opacity: 0;
+                        transition: all $duration-slow;
+                        i{
+                            font-size: 10px;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+
+                &.clicked{
+                    .questionBar{
+                        &:after{
+                            transform: rotate(-180deg);
+                            margin-top: -5px;
+                        }
+                    }
+                    .answerBar{
+                        .faqCollapse{
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.awardPage{
+
+        .container{
+            margin-bottom: 30px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            .row{
+                > div{
+                    padding-left: 0;
+                    padding-right: 0;
+                    &:first-child{
+                        table{
+                            border-right: 1px solid #c8c8c8;
+                            @include mq(tablet, max) {
+                                border-right: 0;
+                            }
+                        }
+                    }
+                }
+                .text-right{
+                    @include mq(tablet, max) {
+                        text-align: left !important;
+                    }
+                }
+                p.awardName, p.awardNumber{
+                    background-size: 20px 17px;
+                    background-repeat: no-repeat;
+                    background-position: left center;
+                    display: inline-block;
+                    padding-left: 25px;
+                    font-weight: 600;
+                    @include mq(tablet, max) {
+                        font-size: 20px;
+                    }
+                }
+                p.awardName{
+                    background-image: url('../images/icon/icon_award01.png');
+                }
+                p.awardNumber{
+                    background-image: url('../images/icon/icon_award02.png');
+                }
+
+                table.responsive-table{
+                    tr{
+                        th, td{
+                            text-align: center;
+                            vertical-align: middle;
+                        }
+                        @include mq(tablet, max) {
+                            &:not(:first-child){
+                                border: 1px solid #c8c8c8;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    &.privatePage{
+        .pageCont{
+            h5, p, li{
+                line-height: 1.8em;
+            }
+            h5{
+                font-size: 20px;
+                font-weight: 700;
+            }
+            p, ul{
+                margin-bottom: 20px;
+            }
+            p{
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
+            ul{
+                list-style: disc outside;
+                padding-left: 20px;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,866 @@
+/*==================================================*\
+        hiking 2019 Page
+\*==================================================*/
+.activetiesTemplate.hiking2019Page {
+
+    ._mod_title .ch {
+        background-color: #3a3a3a;
+    }
+
+    .floatAnchorMenu {
+        display: none;
+        width: 100%;
+        height: 85px;
+        position: fixed;
+        top: $headerH;
+        left: 0;
+        right: 0;
+        z-index: 9888;
+        background: url(../hiking/images/2019danlan/hiking_danlan_floatmenu_bg.png) center center;
+        background-repeat: repeat-x;
+
+        @include mq(phablet, max) {
+            height: 60px;
+            background-size: auto 130%;
+        }
+
+        @include mq(phablet) {
+            top: $headerPhabletH;
+        }
+
+        @include mq(tablet) {
+            top: $headerTabletH;
+        }
+
+        .container {
+            height: 100%;
+        }
+
+        ul {
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            padding-bottom: 10px;
+
+            li {
+                a {
+                    padding: 0 0.5vw;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    transition: all $stdDuration;
+
+                    img {
+                        margin-right: 10px;
+
+                        @include mq(phablet, max) {
+                            margin-right: 5px;
+                            width: 20px;
+                        }
+                    }
+
+                    span {
+                        color: #FFF;
+                        font-weight: 600;
+                        font-size: size(18);
+                    }
+
+                    &:after {
+                        @include pseudo();
+                        width: 0;
+                        height: 4px;
+                        background-color: $colorPrimary;
+                        bottom: -10px;
+                        left: 0;
+                        right: 0;
+                        opacity: 0;
+                        transition: all $stdDuration;
+                        margin: auto;
+                    }
+
+                    &.selected,
+                    &:hover {
+                        &:after {
+                            width: 100%;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .lbLoading {
+        z-index: 9999;
+    }
+
+    .lightbox {
+        overflow-y: auto;
+        z-index: 9998;
+    }
+
+    .lbContent {
+        background: transparent;
+        padding: 4% 4% 8% 4%;
+
+        @include mq(phablet, max) {
+            padding: 6% 6% 18% 6%;
+        }
+    }
+
+    .lbContainer {
+        padding: 0;
+        // margin-top: 10%;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: url(../images/background/hiking_mountain_small_white.png) no-repeat center bottom #ececec;
+        background-size: contain;
+        max-width: 950px;
+        width: 90%;
+
+        @include mq(phablet, max) {
+            background-size: 180% auto;
+        }
+    }
+
+    .ulTri {
+        position: relative;
+        padding-left: 20px;
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            top: .3rem;
+            width: 0;
+            height: 0;
+            margin-right: -5px;
+            border-width: 7.5px 10px;
+            border-style: solid;
+            border-color: transparent transparent transparent #e72418;
+        }
+    }
+
+    a.insideSignUpBtn {
+        margin-top: auto;
+        width: 100%;
+        color: #FFF;
+        background: $colorPrimary;
+        padding: 5% 0;
+        text-align: center;
+        position: relative;
+        font-weight: 600;
+        font-size: size(18);
+
+        @include mq(tablet, max) {
+            padding: 3% 0;
+        }
+
+        &:after {
+            @include pseudo($pos: absolute);
+            width: 10px;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-width: 6px 8px;
+            border-style: solid;
+            border-color: transparent transparent transparent #FFF;
+
+        }
+    }
+
+
+    .sign-button {
+        padding-bottom: 10rem;
+
+    }
+
+    .goSignup {
+        &:hover {
+            -webkit-filter: brightness(1.075);
+        }
+    }
+
+    .picBox {
+        margin: 15px auto 40px auto;
+        text-align: center;
+    }
+
+    .block {
+        ul {
+            list-style: disc outside;
+            padding-left: 20px;
+            margin-bottom: 20px;
+            font-size: size(18);
+            line-height: 1.5;
+
+            li {
+                .picBox {
+                    margin-top: 25px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        ul.decimal {
+            list-style: decimal outside !important;
+
+            p {
+
+                &:before,
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    article {
+
+        .block {
+            .listContent {
+                // padding-left: 18px;
+
+                ol {
+                    list-style-position: outside;
+                }
+            }
+
+            &.flexBlock {
+                display: flex;
+                flex-direction: row;
+                align-items: stretch;
+                justify-content: space-between;
+                padding: 5% 0;
+
+                @include mq(tablet, max) {
+                    flex-direction: column;
+                    padding: 10% 0;
+                }
+
+                .roadSignUpBox {
+                    width: 32%;
+                    border: 1px solid #ececec;
+                    padding: 2%;
+                    position: relative;
+                    text-align: center;
+
+                    @include mq(tablet, max) {
+                        width: 100%;
+                        margin-bottom: 12%;
+                        padding: 5%;
+
+                        >img {
+                            width: 25px;
+                        }
+                    }
+
+                    .roadName {
+                        margin: 10px auto 20px auto;
+
+                        p {
+                            margin-bottom: 0;
+                            font-size: size(26);
+                            font-weight: 800;
+                            line-height: 1.2;
+                        }
+                    }
+                }
+
+                .activityBox {
+                    width: 32%;
+                    border: 1px solid #000;
+                    padding: 5% 2% 3% 2%;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+
+                    @include mq(tablet, max) {
+                        width: 100%;
+                        padding: 10% 5% 6% 5%;
+                        margin-bottom: 12%;
+                    }
+
+                    .absIcon {
+                        width: 32%;
+                        position: absolute;
+                        top: -9%;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background: #ececec;
+                        padding: 0 4%;
+
+                        @include mq(tablet, max) {
+                            width: 100px;
+                        }
+                    }
+
+                    h5 {
+                        font-weight: 800;
+                        margin-bottom: 15px;
+                        font-size: size(18);
+                        line-height: 1.5;
+
+                        span {
+                            font-size: size(16);
+                            background: #000;
+                            padding: 2px 4px 2px 8px;
+                            color: #FFF;
+                            position: relative;
+                            margin-right: 10px;
+                            overflow: hidden;
+
+                            &:after {
+                                @include pseudo($pos: absolute);
+                                width: 10px;
+                                height: 100%;
+                                right: -16px;
+                                top: 0;
+                                border-width: 11px 8px;
+                                border-style: solid;
+                                border-color: transparent transparent transparent #000;
+
+                            }
+                        }
+                    }
+
+                    ul {
+                        li {
+                            &:first-child {
+                                margin-bottom: 5px;
+                            }
+
+                            p {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .teacherBlock {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: space-between;
+                padding: 3.5% 0;
+                border-bottom: 1px solid #c6c6c6;
+
+                &:last-child {
+                    border-bottom: 0;
+                }
+
+                .teacherImg {
+                    width: 20%;
+                    max-width: 168px;
+
+                    @include mq(phablet, max) {
+                        width: 28%;
+                    }
+                }
+
+                .teacherInfo {
+                    width: 80%;
+
+                    @include mq(phablet, max) {
+                        width: 70%;
+                    }
+
+                    p {
+                        a {
+                            display: inline;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+
+        .roadBlock {
+            padding: 5% 3.5%;
+            border: 1px solid #ececec;
+            background: url(../images/background/hiking_mountain_small_gray.png) no-repeat center bottom;
+            background-size: contain;
+
+            @include mq(tablet, max) {
+                padding: 7% 3.5%;
+                background-size: 150% auto;
+            }
+
+            .block {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+                // margin-bottom: 0;
+                >div {
+                    font-size: size(25);
+                    line-height: 1.2;
+
+                    >span {
+                        font-size: size(25);
+                    }
+
+                    &:nth-child(2) {
+                        padding: 2% 4.5vw;
+                        border-right: 1px solid #c6c6c6;
+                        border-left: 1px solid #c6c6c6;
+                    }
+
+                    &:nth-child(3) {
+                        padding: 2% 5% 2% 2%;
+                    }
+
+                    >img,
+                    .roadName {
+                        display: inline-block;
+
+                        p {
+                            font-size: size(25);
+                            margin-bottom: 0;
+                            line-height: 1.2;
+                        }
+                    }
+
+                    @include mq(tablet, max) {
+                        font-size: size(15);
+
+                        >span {
+                            font-size: size(20);
+                        }
+
+                        &:nth-child(2) {
+                            padding: 2%;
+                        }
+
+                        &:nth-child(3) {
+                            padding: 2%;
+                        }
+
+                        >img {
+                            display: none;
+                        }
+
+                        >img,
+                        .roadName {
+                            p {
+                                font-size: size(20);
+                            }
+                        }
+                    }
+                }
+            }
+
+            >p {
+                text-align: center;
+                margin-bottom: 40px;
+
+                @include mq(tablet, max) {
+                    margin-bottom: 20px;
+                }
+            }
+
+            .js-lb {
+                width: 70%;
+                margin: 0 auto;
+            }
+        }
+
+        .cooperateBlock {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 3.5% 0;
+
+            .cooperateImg {
+                width: 20%;
+                max-width: 135px;
+            }
+
+            .cooperateInfo {
+                width: 80%;
+            }
+        }
+
+        .stepBarBlock {
+            color: #000;
+            background: #ececec;
+            height: 50px;
+            margin-bottom: 20px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            overflow: hidden;
+
+            .stepBox {
+                font-weight: 600;
+                padding: 0 20px;
+                height: 50px;
+                color: #FFF;
+                background: #000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 15px;
+                border-right: 4px solid #6e6e6e;
+                transform: skewX(-20deg);
+                margin-left: -10px;
+                padding-left: 30px;
+
+                span {
+                    transform: skewX(20deg)
+                }
+            }
+        }
+
+        .stepFlexBlock {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin-bottom: 25px;
+
+            @include mq(tablet, max) {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .imgWrapper {
+                @include mq(phone, max) {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        .qrcodeBlock {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 0 25px 0;
+
+            @include mq(tablet, max) {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .qrcodeBox {
+                text-align: center;
+                padding: 0 2%;
+
+                @include mq(tablet, max) {
+                    &:first-child {
+                        margin-bottom: 25px;
+                    }
+                }
+            }
+        }
+    }
+
+    .topic {
+        width: 80%;
+        top: 9%;
+
+        @include mq(phablet) {
+            top: 17%;
+        }
+
+        @include mq(tablet) {
+            width: 57.8125%;
+            top: 40px;
+        }
+
+        @include mq(tablet-wide) {
+            top: 79px;
+        }
+    }
+
+    h2 {
+        margin-bottom: 0;
+    }
+
+    .bannerBlock {
+        padding: 5% 0 10%;
+
+        @include mq(tablet) {
+            padding: 1.5% 0 7%;
+        }
+
+        p {
+            line-height: 1.5;
+            font-size: size(18);
+            margin: 35px auto;
+            padding: 0 2rem;
+        }
+    }
+
+
+    .origin {
+        margin-bottom: 0;
+        height: 200px;
+        background-color: #ececec;
+
+        @include mq(tablet, max) {
+            height: 130px;
+        }
+    }
+
+
+    .pc-none {
+        display: inline-block;
+    }
+
+    .m-none {
+        display: none;
+    }
+
+    @include mq(tablet) {
+        .m-none {
+            display: inline-block;
+        }
+
+        .pc-none {
+            display: none;
+        }
+    }
+
+
+    article .listContent {
+        padding-left: 0;
+        table {
+            th {
+                background-color: #ececec;
+            }
+            &.sizeTable{
+                margin:15px auto 25px auto;
+                th, tr > td:first-child{
+                    background-color: #3b6ece;
+                    color: #FFF;
+                }
+            }
+        }
+    }
+
+    article .listContent>table>tbody>tr>td:first-child {
+        width: 8.25rem;
+        @include mq(tablet, max) {
+            width: auto;
+        }
+    }
+
+    article .listContent>table.courseTable1>tbody>tr>td:nth-child(2) {
+        width: 14.25rem;
+        text-align: center;
+        @include mq(tablet, max) {
+            width: 5rem;
+        }
+    }
+
+    article .listContent>table.sizeTable>tbody>tr>td,
+    article .listContent>table.courseTable2>tbody>tr>td{
+        text-align: center;
+    }
+
+    // article .listContent>table>tbody>tr>td:nth-child(2),
+    // article .listContent>table>tbody>tr>td:nth-child(4) {
+    //     width: 14.25rem;
+    //     text-align: left;
+    // }
+
+    article .block>ul.introductionUl>li,
+    article section>ul.introductionUl>li {
+        ol {
+            list-style-type: none;
+            padding-left: 1rem;
+
+            p {
+                display: initial;
+
+                br {
+                    display: block;
+                }
+            }
+        }
+
+        >p {
+            &:before {
+                display: none;
+            }
+        }
+    }
+
+    .introduction {
+        padding: 3% 0 7% 0;
+        z-index: 1;
+        position: relative;
+
+        &:before,
+        &:after {
+            @include pseudo();
+            width: 100%;
+        }
+
+        &:after {
+            height: 0;
+            padding-bottom: 17.03125%;
+            background-image: url('../images/background/m_course_mountain_silhouette.png');
+            background-position: bottom center;
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+            bottom: -1px;
+            left: 0;
+
+            @include mq(tablet) {
+                height: 137px;
+                background-image: url('../images/background/course_mountain_silhouette.png');
+                background-size: auto;
+            }
+        }
+    }
+
+    .leftBox,
+    .rightBox {
+        display: inline-block;
+        width: 100%;
+        vertical-align: middle;
+    }
+
+    .leftBox {
+        margin-bottom: 2rem;
+
+        @include mq(tablet) {
+            width: 45%;
+            margin-bottom: 0;
+        }
+
+
+    }
+
+    .rightBox {
+        margin-bottom: 2rem;
+
+        @include mq(tablet) {
+            width: 50%;
+        }
+    }
+
+    /*==================== Course Section ====================*/
+    .course {
+        padding-top: 4rem;
+        padding-bottom: 10%;
+
+        @include mq(tablet) {
+            padding-bottom: 80px;
+        }
+
+        // 照片背景
+        &:before {
+            height: 0;
+            padding-bottom: 279%;
+            background-color: transparent;
+            background-image: none;
+            background-size: cover;
+            background-position: top center;
+            background-repeat: no-repeat;
+            z-index: -1;
+            bottom: 0;
+            left: 0;
+
+            @include mq(tablet) {
+                padding-bottom: 60%;
+                background-image: none;
+            }
+        }
+
+        >.container {
+            &:not( :first-child) {
+                margin-top: 4rem;
+            }
+        }
+    }
+
+    .pd-none {
+        padding: 0 !important;
+    }
+
+    .grayBgTxt {
+        background-color: #ececec;
+        padding: 2%;
+        margin-bottom: 0;
+    }
+
+    .mgtop {
+        margin-top: 2rem;
+    }
+
+    a.linkInline {
+        display: inline;
+        color: #e72418;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    .fcBlue{
+        color: #25b0f6;
+    }
+
+    .ptxt{
+        color: #444444;
+        line-height: 1.7;
+        font-size: 4vw;
+        text-align: center;
+        margin-bottom: 50px;
+        // padding-top: 1.5vw;
+        @include mq(tablet) {
+            font-size: 18px;
+            // padding-top: 0.5rem;
+        }
+        &:before{
+            content: "▲";
+            color: #e72418;
+            display: inline;
+            font-size: 4vw;
+            line-height: 1.7;
+            @include mq(tablet) {
+                font-size: 18px;
+            }
+        }
+    }
+
+    .anchor {
+        position: relative;
+        height: 0px;
+        width: 100%;
+    }
+    
+    .anchor article {
+        width: 100%;
+        position: absolute;
+        left: 0px;
+        top: -20px;
+        visibility: hidden;
+        @include mq(tablet, max) {
+            top: -20px;
+        }
+        &#applyHikingDanlan{
+            top: -100px;
+            @include mq(tablet, max) {
+                top: -70px;
+            }
+        }
+    }
+}

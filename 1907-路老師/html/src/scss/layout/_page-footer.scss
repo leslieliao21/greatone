@@ -1,0 +1,77 @@
+/*==================================================*\
+        Page Footer
+\*==================================================*/
+
+.page-footer {
+  width: 100%;
+  position: relative;
+  padding: 30px 20px;
+  // position: fixed;
+  // z-index: 10;
+  // bottom: 0; left: 0;
+  text-align: center;
+  color: #FFF;
+  font-size: 14px;
+  background-color: #0b0f19;
+  line-height: 1.6;
+
+  p{
+    display: inline-block;
+    vertical-align: middle;
+    // @include set-flex(center, center);
+    @include mq(phone, max){
+      font-size: 15px;
+    }
+    &:first-child{
+      color: #b4b4b4;
+    }
+    img{
+      max-width: 70px;
+      display: inline-block;
+      vertical-align: middle;
+      @include mq(phone, max){
+        max-width: 50px;
+      }
+    }
+    span{
+      vertical-align: middle;
+    }
+  }
+
+  ul{
+    width: 100%;
+    padding: 10px 0 25px 0;
+    display: block;
+    position: relative;
+    li{
+      display: inline-block;
+      position: relative;
+      // width: 12%;
+      &:after{
+        content: '';
+        position: absolute;
+        display: inline-block;
+        width: 1px;
+        height: 12px;
+        right: -2.5px; top: 50%;
+        transform: translateY(-50%);
+        background-color: #fff;
+        
+      }
+      &:last-child{
+        &:after{
+          content: none;
+        }
+      }
+      a{
+        padding: 0 10px;
+        &:hover{
+          color: #cccccc;
+        }
+        @include mq(tablet, max){
+          padding: 0 5px;
+        }
+      }
+    }
+  }
+}

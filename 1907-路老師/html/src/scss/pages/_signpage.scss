@@ -1,0 +1,133 @@
+/*==================================================*\
+        Sign Page Style
+\*==================================================*/
+
+#sign-page {
+
+    .pageCont {
+
+        p {
+            font-size: 16px;
+            line-height: 1.8em;
+            @include mq(tablet, max) {
+                font-size: 18px;
+            }
+        }
+
+        form {
+            width: 96%;
+            text-align: center;
+            margin: 25px auto;
+
+            &.w600 {
+                max-width: 600px;
+            }
+
+            // @include mq(tablet, max) {
+            //     width: 100%;
+            //     max-width: 100%;
+            // }
+
+            .form-group {
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    float: none;
+                    clear: both;
+                }
+
+                label {
+                    text-align: right;
+                    margin-top: 7px;
+                    padding-top: 0;
+                    position: relative;
+
+                    @include mq(tablet, max) {
+                        text-align: left;
+                    }
+
+                    img {
+                        width: 16px;
+                        height: auto;
+                        display: inline;
+                        vertical-align: sub;
+                    }
+
+                    &.required {
+                        &:after {
+                            content: '*';
+                            color: red;
+                            display: inline;
+                            position: absolute;
+                            top: -4px;
+                        }
+                    }
+
+                    &.radio-inline,
+                    &.checkbox-inline {
+                        padding-top: 0;
+                        margin-right: 15px;
+
+                        @include mq(tablet, max) {
+                            margin-bottom: 10px;
+                        }
+                    }
+
+                    &.checkbox-inline {
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .formAddition {
+                    display: inline-block;
+                    padding: 9px 0;
+                    margin-left: -15px;
+                    text-decoration: underline;
+
+                    @include mq(tablet, max) {
+                        margin-left: 0;
+                        text-align: right;
+                        display: block;
+                        padding: 0;
+                    }
+                }
+
+                .other-input {
+                    height: 30px;
+                    margin-bottom: 10px;
+                    margin-top: 5px;
+
+                    &.mgb-0 {
+                        margin-bottom: 0;
+                    }
+
+                    @include mq(tablet, max) {
+                        height: initial;
+                    }
+                }
+            }
+
+            &.mgt-n10 {
+                margin-top: -10px;
+            }
+        }
+    }
+
+    &.deptSignPage{
+        .row{
+            .col-sm-5{
+                &:first-child{
+                    margin-bottom: 40px;
+                }
+            } 
+        }
+    }
+
+    &.contactPage{
+        form{
+            width: 100%;
+        }
+    }
+
+}

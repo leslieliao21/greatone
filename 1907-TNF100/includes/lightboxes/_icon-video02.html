@@ -1,0 +1,39 @@
+<div class="videoBox">
+
+    <div class="videoWrapper videoB">
+        <iframe width="560" height="349" src="https://www.youtube.com/embed/ikurmUQwD80?&autoplay=1&rel=0"
+            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
+
+    <a href="javascript:;" class="lb_btn closeLbBtnInner">
+        <img src="./images/iconpage/btn_lb01.png" alt="">
+    </a>
+
+    <a href="javascript:;" class="lb_btn closeLbBtnAnchor">
+        <img src="./images/iconpage/btn_lb02.png" alt="">
+    </a>
+
+    <a href="https://www.thenorthface.com.tw/v2/official/SalePageCategory/310461?utm_source=mktsite&utm_medium=page&utm_campaign=201909icon&utm_content=icon" target="_blank" class="lb_btn">
+        <img src="./images/iconpage/btn_lb03.png" alt="">
+    </a>
+
+</div>
+
+<script>
+        function readyConfirm(event){
+            alert("8/30 早上11:00 準時開賣");
+            event.stopPropagation();
+            event.preventDefault();
+            return false;
+        }
+        $(function () {
+            $('.closeLbBtn, .closeLbBtnInner, .closeLbBtnAnchor').on('click', lightbox.closeLightbox);
+            $('.closeLbBtnAnchor').on('click', function (evt) {
+                $('html, body').animate({
+                    scrollTop: $('#storeSec').offset().top - 50
+                });
+                return false;
+            });
+        });
+    </script>

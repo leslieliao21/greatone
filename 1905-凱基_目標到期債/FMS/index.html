@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <!--[if lte IE 9]>
+    <script language="javascript">
+      document.location.href="index_ie.html";
+    </script>
+  <![endif]-->
+    <!-- Basic Data -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>凱基投信目標到期債券策略</title>
+    <meta name="title" content="凱基投信目標到期債券略" />
+    <meta name="keywords" content="目標到期債券,收益較確定,期間已固定,波動較穩定" />
+    <meta name="description" content="淡定投資學">
+    <meta name="author" content="凱基投信">
+    <meta property="og:image" content="https://www.kgifund.com.tw/FMS/images/fb_share_600x315.jpg">
+    <link rel="icon" type="image/ico" href="./images/icon/favicon.ico" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/main.min.css" />
+
+    <!-- Tools -->
+    <script src="./js/vendor.min.js"></script>
+    <script src="./js/kits.min.js"></script>
+    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+    <script src="./src/js/vendor/index_an.js"></script>
+    <script src="./src/js/vendor/ani-ribbon.js"></script>
+    <script src="./src/js/vendor/line1.js"></script>
+    <script src="./src/js/vendor/line2.js"></script>
+    <script src="./src/js/vendor/line3.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-75164793-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-75164793-3');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-N4J8GNZ');
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body class="index-page">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N4J8GNZ" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="page-loading">
+        <div class="loading"></div>
+    </div>
+
+    <header class="page-header">
+        <div class="container">
+            <!--===== Main Logo =====-->
+            <a href="https://www.kgifund.com.tw/" class="main-logo gtag" data-ga="btn_logo">
+                <picture>
+                    <source media="(min-width: 640px)" srcset="./images/logo/main.png">
+                    <img src="./images/logo/main@3x.png" alt="凱基投信 - 中華開發金控">
+                </picture>
+            </a>
+
+            <!--===== Navigation =====-->
+            <nav>
+                <div class="list flex-center-center">
+                    <!-- a.active == hints -->
+                    <a class="gtag" data-ga="btn_menu00" href="javascript:;" data-anchor="kv">
+                        <p>首頁</p>
+                    </a>
+                    <a class="gtag" data-ga="btn_menu01" href="javascript:;" data-anchor="investment">
+                        <p>淡定投資學</p>
+                    </a>
+                    <a class="gtag" data-ga="btn_menu02" href="javascript:;" data-anchor="understand">
+                        <p>目標到期債</p>
+                    </a>
+                    <a class="gtag" data-ga="btn_menu03" href="javascript:;" data-anchor="calm">
+                        <p>圖解淡定術</p>
+                    </a>
+                    <a class="gtag" data-ga="btn_menu04" href="javascript:;" data-anchor="series">
+                        <p>系列產品</p>
+                    </a>
+                    <a class="gtag" class="" data-ga="btn_menu05" href="javascript:;" data-anchor="qa">
+                        <p>產品Q&A</p>
+                    </a>
+                    <p>JOIN</p>
+                    <a class="sns fb gtag" data-ga="btn_joinFb" target="_blank"
+                        href="https://www.facebook.com/KGIFUND/">
+                        <div class="img-wrap">
+                            <img src="./images/icon/sns_fb_ovr.png" alt="加入 Facebook">
+                        </div>
+                    </a>
+                    <a class="sns line gtag" data-ga="btn_joinLine" target="_blank"
+                        href="https://line.me/R/ti/p/9lKUTWBACX">
+                        <div class="img-wrap">
+                            <img src="./images/icon/sns_line_ovr.png" alt="加入 Line">
+                        </div>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div id="outlook" class="btn_menu00">
+            <!--========== KV ==========-->
+            <section class="kv">
+                <picture>
+                    <source media="(min-width: 1024px)" srcset="./images/bg/kv.jpg">
+                    <img src="./images/bg/m_kv.jpg" alt="">
+                </picture>
+                <div id="animation_container" style="width:800px; height:930px">
+                    <canvas id="canvas" width="800" height="930"
+                        style="position: absolute; display: block; background-color:rgba(255, 255, 255, 1);"></canvas>
+                    <div id="dom_overlay_container"
+                        style="pointer-events:none; overflow:hidden; width:800px; height:930px; position: absolute; left: 0px; top: 0px; display: block;">
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="topic">
+                        <h1><span>投資「債」升級 演進3.0</span><br>凱基2025到期優先順位新興市場債券基金</h1>
+                        <h2>本基金有相當比重投資於非投資等級<br>之高風險債券且配息來源可能為本金</h2>
+                    </div>
+
+                    <button class="scroll-btn gtag" data-ga="btn_scroll">
+                        <p>scroll</p>
+                    </button>
+                </div>
+            </section>
+        </div>
+
+        <div id="three-point" class="btn_menu01">
+            <!--========== 淡定投資學: Investment ==========-->
+            <section class="investment">
+                <div class="container">
+                    <header class="top-title">
+                        <h2>淡定投資學</h2>
+                    </header>
+                    <div class="content">
+                        <div class="img-wrap">
+                            <img src="./images/inv_computer.png" alt="一次3定 資產較安定">
+                        </div>
+                        <p class="highlight-word">
+                            目標到期債投資策略具有可獲得<span>收益確定性高一點、投資期間確定，</span><br>以及<span>市場波動較穩定</span>的三大優勢，讓您面對市場不確定時，更能淡定規劃未來。
+                        </p>
+
+                        <div class="_investmentSlick _slick">
+                            <div class="item item-1">
+                                <div class="img-wrap">
+                                    <img src="./images/temp/inv_slick_1.png" alt="">
+                                    <div id="animation_container_l1" class="line line1"
+                                        style="background-color:rgba(255, 255, 255, 0.00); width:341px; height:262px">
+                                        <canvas id="canvas_l1" width="341" height="262"
+                                            style="position: absolute; display: block; background-color:rgba(255, 255, 255, 0.00);"></canvas>
+                                        <div id="dom_overlay_container_l1"
+                                            style="pointer-events:none; overflow:hidden; width:341px; height:262px; position: absolute; left: 0px; top: 0px; display: block;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="summary">
+                                    <div class="title">
+                                        <h4>收益較確定</h4>
+                                        <h5>主要來自債息收入</h5>
+                                    </div>
+                                    <p>買進債券持有到期，期間若無發生信用違約事件，債券發行者依契約提供票面利息，因此獲得的收益確定性高一點。</p>
+                                </div>
+                            </div>
+                            <div class="item item-2">
+                                <div class="img-wrap">
+                                    <img src="./images/temp/inv_slick_2.png" alt="">
+                                    <div id="animation_container_l2" class="line line2"
+                                        style="background-color:rgba(255, 255, 255, 0.00); width:265px; height:240px">
+                                        <canvas id="canvas_l2" width="265" height="240"
+                                            style="position: absolute; display: block; background-color:rgba(255, 255, 255, 0.00);"></canvas>
+                                        <div id="dom_overlay_container_l2"
+                                            style="pointer-events:none; overflow:hidden; width:265px; height:240px; position: absolute; left: 0px; top: 0px; display: block;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="summary">
+                                    <div class="title">
+                                        <h4>期間已固定</h4>
+                                        <h5>投資6年到期</h5>
+                                    </div>
+                                    <p>買進債券持有至到期，由於投資前已確認投資時間，方便投資人財務規劃，資金效率較高。</p>
+                                </div>
+                            </div>
+                            <div class="item item-3">
+                                <div class="img-wrap">
+                                    <img src="./images/temp/inv_slick_3.png" alt="">
+                                    <div id="animation_container_l3" class="line line3"
+                                        style="background-color:rgba(255, 255, 255, 0.00); width:239px; height:2px">
+                                        <canvas id="canvas_l3" width="239" height="2"
+                                            style="position: absolute; display: block; background-color:rgba(255, 255, 255, 0.00);"></canvas>
+                                        <div id="dom_overlay_container_l3"
+                                            style="pointer-events:none; overflow:hidden; width:239px; height:2px; position: absolute; left: 0px; top: 0px; display: block;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="summary">
+                                    <div class="title">
+                                        <h4>波動較穩定</h4>
+                                        <h5>買進持有至到期</h5>
+                                    </div>
+                                    <p>買進債券持有至到期，期間因政策利率變化造成的價格波動，期間若無信用違約事件，不影響返還金額及期間利息收入，因此無須過度擔心市場波動。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="skills" class="btn_menu02">
+            <!--========== 了解目標到期債: Understand ==========-->
+            <section class="understand">
+                <header class="top-title">
+                    <h2>目標到期債<br>演進三部曲</h2>
+                </header>
+
+                <div class="content">
+                    <div class="_understandSlick _slick">
+                        <!-- 優先順位債權 -->
+                        <div class="item priority">
+                            <div class="center">
+                                <div class="pyramid_txt">
+                                    <div class="txt_3 abs">
+                                        <picture>
+                                            <source media="(min-width: 1024px)" srcset="./images/pyramid_txt_3.png">
+                                            <img src="./images/m_pyramid_txt_3.png" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="txt_2 abs">
+                                        <picture>
+                                            <source media="(min-width: 1024px)" srcset="./images/pyramid_txt_2.png">
+                                            <img src="./images/m_pyramid_txt_2.png" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="txt_1">
+                                        <picture>
+                                            <source media="(min-width: 1024px)" srcset="./images/pyramid_txt_1.png">
+                                            <img src="./images/m_pyramid_txt_1.png" alt="">
+                                        </picture>
+                                    </div>
+                                </div>
+                                <div class="pyramid">
+                                    <div class="pyramid_3 abs">
+                                        <picture>
+                                            <source media="(min-width: 1024px)" srcset="./images/pyramid_3.png">
+                                            <img src="./images/m_pyramid_3.png" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="pyramid_2 abs">
+                                        <picture>
+                                            <source media="(min-width: 1024px)" srcset="./images/pyramid_2.png">
+                                            <img src="./images/m_pyramid_2.png" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="pyramid_1">
+                                        <picture>
+                                            <source media="(min-width: 1024px)" srcset="./images/pyramid_1.png">
+                                            <img src="./images/m_pyramid_1.png" alt="">
+                                        </picture>
+                                    </div>
+                                </div>
+                                <div class="pyramid_arrow">
+                                    <div class="arrow">
+                                        <picture>
+                                            <source media="(min-width: 1024px)" srcset="./images/pyramid_arrow.png">
+                                            <img src="./images/m_pyramid_arrow.png" alt="">
+                                        </picture>
+                                    </div>
+                                    <div class="txt_top">優先順位<br>償債權</div>
+                                    <div class="txt_bottom">低順位<br>償債權</div>
+                                </div>
+                                <p class="note">
+                                    資料來源 : Barings，2019/05。
+                                </p>
+                            </div>
+                        </div>
+                        <!--END 優先順位債權 END-->
+                        <!-- Pigs -->
+                        <div class="item pigs">
+                            <div class="title">
+                                <h4>目標到期債基金，<br>收益可確定性高一點</h4>
+                                <div class="container">
+                                    <p>目標到期債投資策略是以債券利息收入為主，回歸債券投資本質利用債券到期還本特性，買進債券後持有至到期，可獲得收益的確定性高一點。</p>
+                                </div>
+                            </div>
+                            <h6>第 <span>0</span> 年</h6>
+                            <div class="chart">
+                                <div class="pigs-wrap">
+                                    <div class="pig big">
+                                        <img src="./images/icon/pig.png" alt="">
+                                        <p>初期投資金額</p>
+                                    </div>
+                                    <div class="pig">
+                                        <img src="./images/icon/pig.png" alt="">
+                                    </div>
+                                    <div class="pig">
+                                        <img src="./images/icon/pig.png" alt="">
+                                    </div>
+                                    <div class="pig">
+                                        <img src="./images/icon/pig.png" alt="">
+                                    </div>
+                                    <div class="pig">
+                                        <img src="./images/icon/pig.png" alt="">
+                                    </div>
+                                    <div class="pig">
+                                        <img src="./images/icon/pig.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="six-year">
+                                    <div class="container">
+                                        <picture>
+                                            <source media="(min-width: 1024px)" srcset="./images/six_year.png">
+                                            <img src="./images/m_six_year.png" alt="">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--END Pigs END-->
+                        <!-- 三段階梯 -->
+                        <div class="item three">
+                            <div class="arr-line active" style="width: 1622.5px; opacity: 1;"></div>
+                            <div class="title">
+                                <h4>三段階梯到期策略，提升資金運用彈性</h4>
+                                <div class="container">
+                                    <p>第四年開始階梯買回，提升資金運用彈性及降低投資風險</p>
+                                </div>
+                            </div>
+                            <div class="chart">
+                                <img src="./images/three_chart.png" alt="">
+                                <img src="./images/three_text_box.png" alt="" class="text-box">
+                                <img src="./images/m_three_final.png" alt="" class="m-three-final">
+                            </div>
+                        </div>
+                        <!--END 三段階梯 END-->
+                    </div>
+                    <!--                    <p class="source">註 : 以上圖僅為示意，並不作為收益之保證。<br>*期間若無發生信用違約的事件，債券發行者依契約提供票面利息；若發生違約事件，可能侵蝕投資本金<br>*受益人授權經理公司於第四年定期買回日當日將受益人所持有受益權單位總數之10%辦理買回，及於第五年定期買回日當日將受益人所持有受益權單位總數之22.2%辦理買回。</p>-->
+                </div>
+            </section>
+
+            <!--========== Fluctuation ==========-->
+            <section class="fluctuation">
+                <div class="container">
+                    <div class="title">
+                        <img src="./images/icon/fluctuation_title.png" alt="">
+                        <h3>目標到期債基金 價格波動少一點</h3>
+                        <p>雖然政策利率變化會對債券價格產生波動，在沒有發生信用違約情況下，對於買進持有債券至到期的投資人，價格波動較不會影響到債券到期時返還金額及期間收益，且隨著債券越接近到期，債券價格的波動也越低，
+                            因此無需過度擔心市場波動。</p>
+                    </div>
+                </div>
+
+                <div class="chart-wrap">
+                    <div class="container">
+                        <h4 class="topic">債券價格的表現示意圖<span>(係採債券以面額購入為例)</span></h4>
+                    </div>
+
+                    <div class="chart">
+                        <div class="container">
+                            <div class="map">
+                                <div class="line">
+                                    <picture>
+                                        <source media="(min-width: 1024px)"
+                                            srcset="./images/fluctuation_chart_line.png">
+                                        <img src="./images/m_fluctuation_chart_line.png" alt="">
+                                    </picture>
+                                </div>
+                                <div class="wave"></div>
+                                <div class="box box-0">
+                                    <picture>
+                                        <source media="(min-width: 1024px)" srcset="./images/fluctuation_box_0.png">
+                                        <img src="./images/m_fluctuation_box_0.png" alt="">
+                                    </picture>
+                                </div>
+                                <div class="box box-1">
+                                    <picture>
+                                        <source media="(min-width: 1024px)" srcset="./images/fluctuation_box_1.png">
+                                        <img src="./images/m_fluctuation_box_1.png" alt="">
+                                    </picture>
+                                </div>
+                                <div class="box box-2">
+                                    <picture>
+                                        <source media="(min-width: 1024px)" srcset="./images/fluctuation_box_2.png">
+                                        <img src="./images/m_fluctuation_box_2.png" alt="">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <p class="source">註 : 以上圖僅為示意，並不作為收益之保證。</p>
+                </div>
+            </section>
+        </div>
+
+
+        <div id="profiles" class="btn_menu03">
+            <!--========== 圖解淡定術: Calm ==========-->
+            <section class="calm">
+                <header class="top-title">
+                    <h2>圖解淡定術</h2>
+                </header>
+                <div class="content">
+                    <div class="container">
+                        <div class="_calmOwl owl-carousel owl-theme">
+                            <div class="item video">
+                                <a class="gtag" data-ga="btn_profiles_01" data-lb="_video1" href="javascript:;">
+                                    <div class="img-wrap">
+                                        <img src="./images/calm_img_1.jpg" alt="面對中美貿易戰爭 投資組合該如何佈局?">
+                                    </div>
+                                    <p>面對中美貿易戰爭 投資組合該如何佈局?</p>
+                                </a>
+                            </div>
+                            <!-- <div class="item video">
+                                <a class="gtag" data-ga="btn_profiles_02" data-lb="_video2" href="javascript:;">
+                                    <div class="img-wrap">
+                                        <img src="./images/calm_img_2.jpg" alt="面對升息環境下 未來的投資布局策略">
+                                    </div>
+                                    <p>面對升息環境下 未來的投資布局策略</p>
+                                </a>
+                            </div> -->
+                            <div class="item video">
+                                <a class="gtag" data-ga="btn_profiles_03" data-lb="_video3" href="javascript:;">
+                                    <div class="img-wrap">
+                                        <img src="./images/calm_img_3.jpg" alt="目標到期債券基金淨值會不會波動啊?">
+                                    </div>
+                                    <p>目標到期債券基金淨值會不會波動啊?</p>
+                                </a>
+                            </div>
+                            <div class="item video" id="startItem">
+                                <a class="gtag" data-ga="btn_profiles_04" data-lb="_video4" href="javascript:;">
+                                    <div class="img-wrap">
+                                        <img src="./images/calm_img_4.jpg" alt="選擇目標到期債，投資變聰明!">
+                                    </div>
+                                    <p>選擇目標到期債，投資變聰明!</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a class="gtag" data-ga="btn_profiles_05" target="_blank"
+                                    href="https://www.kgifund.com.tw/FMS/images/map-1.pdf">
+                                    <div class="img-wrap">
+                                        <img src="./images/calm_img_5.jpg" alt="駛向輕鬆投資的列車 目標到期債券基金">
+                                    </div>
+                                    <p>駛向輕鬆投資的列車 目標到期債券基金</p>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a class="gtag" data-ga="btn_profiles_06" target="_blank"
+                                    href="https://www.kgifund.com.tw/FMS/images/map-2.pdf">
+                                    <div class="img-wrap">
+                                        <img src="./images/calm_img_6.jpg" alt="資金配置好工具 SWAP換匯交易">
+                                    </div>
+                                    <p>資金配置好工具 SWAP換匯交易</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="product" class="btn_menu04">
+            <!--========== 系列產品: Series Products ==========-->
+            <section class="series">
+                <div id="animation_container_s" style="background-color:rgba(255, 255, 255, 0.00);">
+                    <canvas id="canvas_s"
+                        style="position: absolute; display: block; background-color:rgba(255, 255, 255, 0.00);"></canvas>
+                    <div id="dom_overlay_container_s"
+                        style="pointer-events:none; overflow:hidden; width:1200px; height:627px; position: absolute; left: 0px; top: 0px; display: block;">
+                    </div>
+                </div>
+                <div class="container">
+                    <header class="top-title">
+                        <h2>系列產品</h2>
+                    </header>
+                    <div class="content">
+                        <picture>
+                            <source media="(min-width: 1024px)" srcset="./images/series_content.png">
+                            <img src="./images/m_series_content.png" alt="凱基投信目標到期債策略">
+                        </picture>
+                    </div>
+                </div>
+
+                <div class="color-title" style="margin-top:80px;">
+                    <p>雙強攜手合作 為您資產嚴格把關</p>
+                </div>
+            </section>
+
+            <!--========== Cooperation ==========-->
+            <section class="cooperation">
+                <div class="container">
+                    <div class="earth">
+                        <div class="img-wrap">
+                            <img src="./images/earth.png" alt="地球">
+                            <img class="hands" src="./images/earth_hand.png" alt="雙強聯手">
+                        </div>
+
+                        <!-- 凱基投信 -->
+                        <div class="partner kg">
+                            <img src="./images/earth_kg.png" alt="凱基投信">
+                        </div>
+                        <!-- 鋒裕匯理 -->
+                        <div class="partner amundi">
+                            <img src="./images/earth_barings.png" alt="霸菱">
+                        </div>
+                    </div>
+
+                    <p class="source">資料來源：(1) 資料截至2019/5/31；(2)霸菱資產管理官網，2019/3/31；(3)資料時間： 2018/12/31。</p>
+                </div>
+            </section>
+
+            <!--========== Debt ==========-->
+            <section class="debt">
+                <div class="color-title">
+                    <p>首選凱基優先順位債 聚焦品質</p>
+                </div>
+                <div class="container">
+                    <div class="debt_container">
+                        <div class="debt_item item_1">
+                            <div class="badge_label">
+                                <picture>
+                                    <source media="(min-width: 1024px)" srcset="./images/debt_1_label.png">
+                                    <img src="./images/m_debt_1_label.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="badge_box">
+                                <div class="badge">
+                                    <picture>
+                                        <source media="(min-width: 1024px)" srcset="./images/debt_1_circle_1.png">
+                                        <img src="./images/m_debt_1_circle_1.png" alt="">
+                                    </picture>
+                                </div>
+                                <div class="plus">
+                                    <picture>
+                                        <source media="(min-width: 1024px)" srcset="./images/debt_plus.png">
+                                        <img src="./images/m_debt_plus.png" alt="">
+                                    </picture>
+                                </div>
+                                <div class="badge">
+                                    <picture>
+                                        <source media="(min-width: 1024px)" srcset="./images/debt_1_circle_2.png">
+                                        <img src="./images/m_debt_1_circle_2.png" alt="">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="debt_item item_2">
+                            <div class="badge_label">
+                                <picture>
+                                    <source media="(min-width: 1024px)" srcset="./images/debt_2_label.png">
+                                    <img src="./images/m_debt_2_label.png" alt="">
+                                </picture>
+                            </div>
+                            <div class="badge_box">
+                                <div class="badge">
+                                    <picture>
+                                        <source media="(min-width: 1024px)" srcset="./images/debt_2_circle_1.png">
+                                        <img src="./images/m_debt_2_circle_1.png" alt="">
+                                    </picture>
+                                </div>
+                                <div class="plus">
+                                    <picture>
+                                        <source media="(min-width: 1024px)" srcset="./images/debt_plus.png">
+                                        <img src="./images/m_debt_plus.png" alt="">
+                                    </picture>
+                                </div>
+                                <div class="badge">
+                                    <picture>
+                                        <source media="(min-width: 1024px)" srcset="./images/debt_2_circle_2.png">
+                                        <img src="./images/m_debt_2_circle_2.png" alt="">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <p class="source">*以上係假設百分百持債，若加計現金部位，投資等級債可能低於60%</p>
+                </div>
+            </section>
+
+            <!--========== Rate ==========-->
+            <section class="rate">
+                <div class="color-title">
+                    <p>3.0 提高報酬率及降低波動度</p>
+                </div>
+                <div class="container">
+                    <div class="rate_container">
+                        <picture>
+                            <source media="(min-width: 1024px)" srcset="./images/rate_graph.jpg">
+                            <img src="./images/m_rate_graph.png" alt="">
+                        </picture>
+
+                        <div class="arrow_left">
+                            <picture>
+                                <source media="(min-width: 1024px)" srcset="./images/m_rate_arrow_left.png">
+                                <img src="./images/m_rate_arrow_left.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="arrow_up">
+                            <picture>
+                                <source media="(min-width: 1024px)" srcset="./images/m_rate_arrow_up.png">
+                                <img src="./images/m_rate_arrow_up.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="target">
+                            <picture>
+                                <source media="(min-width: 1024px)" srcset="./images/rate_target.png">
+                                <img src="./images/m_rate_target.png" alt="" class="targetImg">
+                            </picture>
+                            <div class="txt">
+                                <picture>
+                                    <source media="(min-width: 1024px)" srcset="./images/rate_txt.png">
+                                    <img src="./images/m_rate_txt.png" alt="">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <p class="source">*資料來源：Bloomberg，截至2019/4/30。新興市場美元債為美銀美林新興市場美元債指數(DXEM)，新興市場公司債為美銀美林新興市場公司債指數。</p>
+                </div>
+            </section>
+
+            <!--========== Bond ==========-->
+            <section class="bond">
+                <div class="color-title">
+                    <p>配息自由選 資金運用彈性高</p>
+                </div>
+                <div class="container">
+                    <div class="item">
+                        <div class="color-box">
+                            <div class="left">
+                                <p>美元計價級別</p>
+                            </div>
+                            <div class="right">
+                                <b>累計</b>
+                                <b>年配</b>
+                            </div>
+                        </div>
+                        <div class="white-paper">
+                            <div>
+                                <p>基金投資以美元計價債為主，<br>無避險需求</p>
+                            </div>
+                            <div class="circle">
+                                <p>USD</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="color-box">
+                            <div class="left">
+                                <p>新臺幣計價級別</p>
+                            </div>
+                            <div class="right">
+                                <b>累計</b>
+                                <b>年配</b>
+                            </div>
+                        </div>
+                        <div class="white-paper">
+                            <div>
+                                <p>透過近全額避險，<br>降低新臺幣匯率變化影響<i>*</i></p>
+                            </div>
+                            <div class="circle">
+                                <p>NTD</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="color-box">
+                            <div class="left">
+                                <p>人民幣計價級別</p>
+                            </div>
+                            <div class="right">
+                                <b>累計</b>
+                                <b>年配</b>
+                            </div>
+                        </div>
+                        <div class="white-paper">
+                            <div>
+                                <p>透過近全額避險，降低人民幣<br class="pc">匯率變化影響，且有機會享有匯兌收益<i>*</i></p>
+                            </div>
+                            <div class="circle">
+                                <p>CNY</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <p class="source">*新臺幣兌美元避險成本或人民幣兌美元避險收益或成本，將依據當時市場狀況變化而有差異</p>
+                </div>
+            </section>
+
+
+            <!--========== Fund ==========-->
+            <section class="fund">
+                <div class="container">
+                    <div class="fund-title">
+                        <img src="./images/icon/fund_title.png" alt="基金小檔案">
+                    </div>
+                    <div class="content">
+                        <div class="steps">
+                            <picture>
+                                <source media="(min-width: 1024px)" srcset="./images/fund/img_0.png">
+                                <img src="./images/fund/m/img_0.png" alt="">
+                            </picture>
+                            <picture>
+                                <source media="(min-width: 1024px)" srcset="./images/fund/img_2.png">
+                                <img src="./images/fund/m/img_1.png" alt="">
+                            </picture>
+                            <picture>
+                                <source media="(min-width: 1024px)" srcset="./images/fund/img_3.png">
+                                <img src="./images/fund/m/img_2.png" alt="">
+                            </picture>
+                            <picture>
+                                <source media="(min-width: 1024px)" srcset="./images/fund/img_4.png">
+                                <img src="./images/fund/m/img_3.png" alt="">
+                            </picture>
+                            <picture>
+                                <source media="(min-width: 1024px)" srcset="./images/fund/img_5.png">
+                                <img src="./images/fund/m/img_4.png" alt="">
+                            </picture>
+                            <picture>
+                                <source media="(min-width: 1024px)" srcset="./images/fund/img_6.png">
+                                <img src="./images/fund/m/img_5.png" alt="">
+                            </picture>
+                            <picture>
+                                <source media="(min-width: 1024px)" srcset="./images/fund/img_7.png">
+                                <img src="./images/fund/m/img_6.png" alt="">
+                            </picture>
+                            <picture>
+                                <source media="(min-width: 1024px)" srcset="./images/fund/img_8.png">
+                                <img src="./images/fund/m/img_7.png" alt="">
+                            </picture>
+                            <picture>
+                                <source media="(min-width: 1024px)" srcset="./images/fund/img_9.png">
+                                <img src="./images/fund/m/img_8.png" alt="">
+                            </picture>
+                            <picture>
+                                <source media="(min-width: 1024px)" srcset="./images/fund/img_10.png">
+                                <img src="./images/fund/m/img_9.png" alt="">
+                            </picture>
+
+                            <a href="javascript:;" class="manage fund-btn gtag" data-ga="btn_product_more"></a>
+                            <a href="javascript:;" class="recycle fund-btn gtag" data-ga="btn_product_more"></a>
+                        </div>
+
+                        <div class="container">
+                            <div class="fund-download-btns">
+                                <a target="_blank" href="https://www.kgifund.com.tw/images/fund_41_b.pdf" class="btn gtag" data-ga="btn_prospectus">
+                                    <p>公開說明書下載</p>
+                                </a>
+                                <a target="_blank" href="https://www.kgifund.com.tw/images/fund_41_a.pdf" class="btn gtag" data-ga="btn_prospectus_s">
+                                    <p>簡式公開說明書下載</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--========== Collect ==========-->
+            <section class="collect">
+                <div class="container">
+                    <div class="item">
+                        <a class="gtag" data-ga="btn_product_end01" target="_blank"
+                            href="https://www.kgifund.com.tw/fund_fecture40_tw.html">
+                            <p class="title">凱基2025階梯到期新興市場債券基金</p>
+                            <p class="txtBold">本基金有相當比重投資於非投資等級之高風險債券</p>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a class="gtag" data-ga="btn_product_end02" target="_blank"
+                            href="https://www.kgifund.com.tw/fund_fecture36_us.html">
+                            <p class="title">凱基2025到期新興市場債券基金</p>
+                            <p class="txtBold">本基金有相當投資比重投資於非投資等級之高風險債券</p>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a class="gtag" data-ga="btn_product_end03" target="_blank"
+                            href="http://www.kgifund.com.tw/fund_fecture32_us.html">
+                            <p class="title">凱基2024到期新興市場債券基金</p>
+                            <p class="txtBold">本基金有相當投資比重投資於非投資等級之高風險債券</p>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a class="gtag" data-ga="btn_product_end04" target="_blank"
+                            href="https://www.kgifund.com.tw/fund_fecture31_tw.html">
+                            <p class="title">凱基6年到期新興市場債券基金</p>
+                            <p class="txtBold">本基金有相當投資比重投資於非投資等級之高風險債券</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="qa" class="btn_menu05">
+            <!--========== Q&A ==========-->
+            <section class="qa">
+                <div class="container">
+                    <header class="top-title">
+                        <h2>產品Q&A</h2>
+                    </header>
+                    <div class="content">
+                        <div id="qa-0" class="item">
+                            <button class="gtag" data-ga="btn_qa00">
+                                <div>
+                                    <p>選擇年配息型的配息時間？<span class="label">NEW</span></p>
+                                    <div class="switch" data-ga="btn_qa00"></div>
+                                </div>
+                            </button>
+                            <div class="ans">
+                                <div class="ans-box">
+                                    <p>凱基2025到期優先順位新興市場債券基金(本基金有相當比重投資於非投資等級之高風險債券且配息來源可能為本金)預定民國108/10月成立、114/10月到期，配息頻率為年配，配息時間為每年10月，期間預計配息6次，第6次配息併同基金到期日分配基金資產時給付。
+                                    </p>
+                                    <div class="ans-inner">
+                                        <ul>
+                                            <li>
+                                                <p>第一年至第五年配息圖示說明(以下僅為舉例說明)：</p>
+                                                <picture>
+                                                    <source media="(min-width: 1024px)" srcset="./images/qa_0_img.jpg">
+                                                    <img src="./images/m_qa_0_img.jpg" alt="第一年至第五年配息圖示說明">
+                                                </picture>
+                                            </li>
+                                            <li>
+                                                <p>第6年將不進行配息，可分配金額將併入到期日之淨資產價值中於到期時一次
+                                                    給付予投資人。</p>
+                                            </li>
+                                        </ul>
+                                        <div class="note">
+                                            *上述資料僅作為舉例說明之用，本基金之本基金收益分配自收益評價日(每年九月最後日曆日)之本基金淨資產價值進行收益分配之評價，並於收益評價日後第二十個營業日(含)前分配之，配息評價日、除息基準日及除息日等，悉依基金經理公司之公告為準
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="qa-1" class="item">
+                            <button class="gtag" data-ga="btn_qa01">
+                                <div>
+                                    <p>目標到期債券基金的淨值都不會波動?<span class="label">HOT</span></p>
+                                    <div class="switch" data-ga="btn_qa01"></div>
+                                </div>
+                            </button>
+                            <div class="ans">
+                                <div class="ans-box">
+                                    <p>目標到期債券基金與一般的債券基金一樣，淨值都會因為所持有的債券價格變化而隨之波動，但因為目標到期債券基金是買進與基金到期日相近的債券，因此隨著所持有的債券逐步接近到期日，淨值波動度將隨著存續期間的縮減而逐漸降低。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="qa-2" class="item">
+                            <button class="gtag" data-ga="btn_qa02">
+                                <div>
+                                    <p>目標到期債券基金中途不能買回?若中途買回會有額外的費用?</p>
+                                    <div class="switch" data-ga="btn_qa02"></div>
+                                </div>
+                            </button>
+                            <div class="ans">
+                                <div class="ans-box">
+                                    <p>目標到期債券基金可以在中途提出買回，除了於基金成立日之次一營業日（含當日）起至第六個營業日（含當日）期間提出買回者，不收取買回費用外，其餘期間提出者需負擔2%的買回費用。主要是目標到期債券基金於成立後，幾乎會將所有資金進行投資，以期在到期日時能提供投資人預期的目標收益率，因此一旦途中有投資人提出買回，為了支付買回款項，基金將被迫賣出所投資的債券標的，而既有留存的投資人可能被迫承擔因為他人買回所衍生的交易成本，或是因為賣出債券標的可能產生的資本利損，因此為求公平起見，相關成本應由提出買回的投資人承擔，而所收取的費用也將全數納入基金淨資產當中。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="qa-3" class="item">
+                            <button class="gtag" data-ga="btn_qa03">
+                                <div>
+                                    <p>市場若持續升息會影響到目標到期債券的投資?</p>
+                                    <div class="switch" data-ga="btn_qa03"></div>
+                                </div>
+                            </button>
+                            <div class="ans">
+                                <div class="ans-box">
+                                    <p>市場利率波動為影響債券價格的重要關鍵，因此利率變化將反應在目標到期債券基金的基金淨值中，但投資期間淨值的變化只會對提前買回的投資人造成影響，因此若投資人選擇於中途買回，須承擔淨值波動所造成的資本利得或利損。但若是投資人持有至到期，期間若無發生違約事件，債券將會發揮到期還本的特質，隨著越接近到期日，債券價格波動也會越低，債券價格會逐漸回到票面金額，因此在基金進場布局完成後，利率的變化不是影響投資組合達到預期目標收益的主要因素。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="qa-4" class="item">
+                            <button class="gtag" data-ga="btn_qa04">
+                                <div>
+                                    <p>債券的布局，買入後還會進行調整?</p>
+                                    <div class="switch" data-ga="btn_qa04"></div>
+                                </div>
+                            </button>
+                            <div class="ans">
+                                <div class="ans-box">
+                                    <p>目標到期債券基金在期初布局時，會選定到期日與基金到期日相近的一籃子優質的債券標的進行買入，然後持有至接近到期，以領取穩定的票息，並避免不必要的交易成本發生，因此正常情況下，經理人在買入標的後不會發生頻繁調整情況，除非有債券到期再擇優布局、債券利息再投入，以及中途有投資人選擇買回，或是原本選定的投資標的有信用違約風險發生時，將會因應狀況進行投資組合的調整。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="qa-5" class="item">
+                            <button class="gtag" data-ga="btn_qa05">
+                                <div>
+                                    <p>投資目標到期債券基金，預估收益率何時可以較確定?</p>
+                                    <div class="switch" data-ga="btn_qa05"></div>
+                                </div>
+                            </button>
+                            <div class="ans">
+                                <div class="ans-box">
+                                    <p>本產品為投資商品，並非像定存一樣接近無風險。目標到期債券基金投資組合平均殖利率須於基金成立進場布局完成之後才能有較為明確的預估。但該殖利率亦非最後到期確定給付的收益率，因為期間投資標的調整或是所收取的債息收入再投資所獲得的收益，都可能影響到到期時給付的收益率。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="qa-6" class="item">
+                            <button class="gtag" data-ga="btn_qa06">
+                                <div>
+                                    <p>目標到期債券基金，是否有稅負問題</p>
+                                    <div class="switch" data-ga="btn_qa06"></div>
+                                </div>
+                            </button>
+                            <div class="ans">
+                                <div class="ans-box">
+                                    <p>現行法規規定，境內基金之資本利得無需課稅，且因為這類基金產品大都僅提供累積級別(債息再投資)，無課徵海外所得稅問題，因此投資於無配息型的目標到期債券基金無稅負問題。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!--========== Remarks ==========-->
+        <section class="remarks">
+            <div class="container">
+                <article>
+                    <h6><span>凱基證券投資信託股份有限公司　</span>104台北市中山區明水路698號<span>　www.kgifund.com.tw</span>　服務專線：<a
+                            href="tel:0221815678">( 02 ) 2181 5678</a></h6>
+                    <p>【凱基投信獨立經營管理】本基金經金管會同意生效，惟不表示本基金絕無風險。經理公司以往之經理績效不保證本基金之最低投資收益；經理公司除盡善良管理人之注意義務外，不負責本基金之盈虧，亦不保證最低之收益，投資人申購前應詳閱基金公開說明書。有關基金應負擔之費用已揭露於基金之公開說明書，投資人可至公開資訊觀測站
+                        http://mops.twse.com.tw下載或查詢。本文提及之經濟走勢預測不必然代表本基金之績效，本基金投資風險請詳閱基金公開說明書。<strong>本基金六年期滿即信託契約終止，經理公司將根據屆時淨資產價值進行償付，本基金非定存之替代品，亦不保證本金之全額返還。投資組合之持債在無信用風險發生的情況下，隨著愈接近到期日，市場價格將愈接近債券面額，然本基金仍可能存在違約風險與價格損失風險。本基金投資組合除執行信用風險部位管理以及因應贖回款需求外，將採取較低周轉率之投資策略，同時原則上，投資組合中個別債券到期年限以不超過基金實際存續年限(即六年期)為主。此外，本基金的存續期間(duration)將隨著債券的存續年限縮短而逐年降低，並在六年期滿時接近於零。本基金在成立日之次一營業日起即不再接受受益權單位之申購，自成立後之次一營業日即開放每日可買回，但在契約存續期間屆滿前提出買回者，將收取提前買回費用2%，該買回費用將歸入基金資產，以保護既有投資人權益，因此本基金不建議投資人從事短線交易，並鼓勵投資人持有本基金至到期日。</strong>本基金訂有定期買回日，受益人授權經理公司依信託契約規定於定期買回日辦理買回申請。
+                    </p>
+                    <p>本基金有相當比重投資於新興市場國家高收益債券，<strong>由於高收益債券之信用評等未達投資等級或未經信用評等，且對利率變動的敏感度甚高，故本基金可能會因利率上升、市場流動性下降，或債券發行機構違約不支付本金、利息或破產而蒙受虧損。本基金不適合無法承擔相關風險之投資人。</strong>投資人投資以高收益債券為訴求之基金不宜占其投資組合過高之比重。<strong>本基金最高可投資基金總資產15%於符合美國Rule
+                            144A債券，該債券屬私募性質，較可能發生流動性不足、財務訊息揭露不完整或因價格不透明導致波動性較大之風險，投資人於投資前須留意相關風險。</strong></p>
+                    <p>投資人以新臺幣或其它非本基金計價幣別之貨幣換匯後投資本基金者，須自行承擔匯率變動之風險，當本基金計價級別相對於其它貨幣升值時，將產生匯兌損失。因投資人與銀行進行外匯交易有賣價與買價之差異，投資人進行換匯時須承擔買賣價差，此價差依各銀行報價而定。此外，投資人尚須承擔匯款費用，且外幣匯款費用可能高於新臺幣匯款費用。投資人須留意外幣匯款到達時點可能依受款行作業而遞延。本基金風險報酬等級為RR3，風險報酬等級之分類係基於一般市場狀況反映市場價格波動風險，無法涵蓋所有風險，不宜作為投資唯一依據，投資人仍應注意所投資基金個別的風險。
+                    </p>
+                    <p>基金的配息可能由基金的收益或本金中支付。任何涉及由本金支出的部分，可能導致原始投資金額減損有關本基金配息組成項目，投資人可至凱基投信官網http://www.KGIfund.com.tw下載或查詢。本基金配息前未先扣除應負擔之相關費用。基金配息率不代表基金報酬率，且過去配息率不代表未來配息率；基金淨值可能因市場因素而上下波動。
+                    </p>
+                    <p>本基金投資無受存款保險、保險安定基金或其他相關保障機制之保障，投資人須自負盈虧。基金投資可能產生的最大損失為全部本金。</p>
+                    <p>本資料係整理分析各方面資訊之結果，純屬參考性質，本公司不作任何保證或承諾，請勿將本內容視為對個別投資人做基金買賣或其他任何投資之建議或要約。本公司已力求其中資訊之正確與完整，惟不保證本報告絕對正確無誤。未經授權不得複製、修改或散發引用。
+                    </p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Fixed Share -->
+    <div class="fixed-share _white">
+        <p>SHARE</p>
+        <a class="sns fb gtag" data-ga="btn_shareFb" target="_blank"
+            href="https://www.facebook.com/sharer/sharer.php?u=https://www.kgifund.com.tw/FMS/index.html">
+            <div class="img-wrap">
+                <img src="./images/icon/sns_fb_ovr_bl.png" alt="從 Facebook 分享">
+            </div>
+        </a>
+        <a class="sns line gtag" data-ga="btn_shareLine" target="_blank"
+            href="https://lineit.line.me/share/ui?url=https://www.kgifund.com.tw/FMS/index.html">
+            <div class="img-wrap">
+                <img src="./images/icon/sns_line_ovr_bl.png" alt="從 Line 分享">
+            </div>
+        </a>
+    </div>
+
+    <!-- Go Top Button -->
+    <button class="go-top gtag" data-ga="btn_top">
+        <img src="./images/icon/go_top.png" alt="移動到頂端">
+        <p>TOP</p>
+    </button>
+
+    <script src="./js/index.min.js"></script>
+    <script>
+        $('.gtag').on('click', function (e) {
+            var $this = $(this);
+            var href = $this.attr('href');
+            var tar = $this.attr('target')
+            var event = $(this).data('ga');
+
+            if (href && href != '#' && href != 'javascript:;' && tar != '_blank') {
+                e.preventDefault();
+                setTimeout(function () {
+                    location.href = href;
+                }, 500);
+            }
+
+            gtag('event', event);
+            console.log('event', event);
+        });
+    </script>
+</body>
+
+</html>

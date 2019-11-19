@@ -1,0 +1,173 @@
+/*==================================================*\
+        dept Page Style
+\*==================================================*/
+
+#dept-page {
+
+    .pageCont {
+
+        .deptName {
+            padding-left: 25px;
+            background: url('../images/icon/icon_list02.png') no-repeat left center;
+            background-size: 16px auto;
+        }
+
+        .deptSubName {
+            padding-left: 22px;
+            background: url('../images/icon/icon_circle_hollow.png') no-repeat left center;
+            background-size: 13px auto;
+        }
+
+    }
+
+    &.deptInfoPage{
+        table.column-table{
+            margin-top: 20px;
+            tr{
+                &:not(:first-child):not(:last-child){
+                    border-bottom: 1px solid #c8c8c8;
+                }
+                th, td{
+                    padding: 10px 20px;
+                }
+                td{
+                    &:first-child{
+                        width: 25%;
+                        min-width: 110px;
+                    }
+                }
+            }
+        }
+        .btn{
+            margin: 15px 0;
+            @include mq(tablet, max) {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+        .signout{
+            .btn{
+                margin: 0;
+            }
+        }
+    }
+
+}
+
+.searchPage{
+    .container{
+        @include mq(tablet) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    form{
+        .form-group{
+            text-align: left;
+        }
+    }
+
+    .formAddition{
+        margin-left: 0 !important;
+    }
+
+    .searchCont{
+        .container{
+            @include mq(tablet) {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            > .row{
+                @include mq(tablet) {
+                    margin-top: -6px;
+                }
+            }
+        }
+        form{
+            @include mq(tablet, max) {
+                width: 92% !important;
+                max-width: 92% !important;
+            }
+            label{
+                margin-top: 2px !important;
+            }
+        }
+        .responsive-table{
+            tr{
+                @include mq(tablet, max) {
+                    margin-bottom: 0;
+                }
+                th, td{
+                    text-align: center;
+                    @include mq(tablet) {
+                        width:13.3333%;
+                        &:nth-child(2),
+                        &:nth-child(3),
+                        &:nth-child(6){
+                            width: 20%;
+                        }
+                    }
+                }
+            }
+        }
+        .resultTxt{
+            width: 100%;
+            padding: 5px 0;
+            border-bottom: 1px solid #a0a0a0;
+            margin-bottom: 10px;
+        }
+        p{
+            overflow: visible;
+            height: 100%;
+            text-overflow: none;
+            font-size: 16px;
+            &.txtOverflow{
+                @include textoverflow(16px, 1.8, 2);
+            }
+
+            @include mq(tablet, max) {
+                font-size: 18px;
+                &.txtOverflow{
+                    @include textoverflow(18px, 1.8, 2);
+                }
+            }
+        }
+        a.expandBtn{
+            display: none;
+            color: #297fc9;
+            text-decoration: underline;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+        nav#paginationBar{
+            width: 100%;
+            text-align: center;
+            ul.pagination{
+                margin: 20px auto !important;
+                li{
+                    
+                    span, a{
+                        background-color: transparent;
+                        border: none;
+                        color: #ff7303;
+                        @include mq(phone, max) {
+                            font-size: 18px;
+                        }
+                        @include mq(phone-mini, max) {
+                            font-size: 16px;
+                            padding: 6px;
+                        }
+                    }
+                }
+                li.active{
+                    a{
+                        color: #566063;
+                    }
+                }
+            }
+        }
+    }
+}

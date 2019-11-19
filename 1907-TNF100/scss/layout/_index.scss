@@ -1,28 +1,35 @@
 /*==================================================*\
         Index Page
 \*==================================================*/
-/*body*/.indexPage {
+
+/*body*/
+.indexPage {
   .tnf1002019_fixed {
     display: none !important;
   }
+
   main {
     height: 100vh;
     overflow: hidden;
   }
 
-  /*footer*/.pageFooter {
+  /*footer*/
+  .pageFooter {
     width: 100%;
     position: fixed;
-    bottom: 0; left: 0;
+    bottom: 0;
+    left: 0;
   }
 
-  .goTop {  /* button */
+  .goTop {
+    /* button */
     display: none;
   }
 }
 
 // Index Key Visions
-/*._slick*/.indexKV {
+/*._slick*/
+.indexKV {
   height: 100%;
 
   .slickItem {
@@ -41,15 +48,15 @@
     @include mq(tablet) {
       justify-content: center;
     }
-    
+
     // 針對 "形象圖" 隱藏內容
     &:not(.kvList) {
       background-size: 100% auto;
       background-position: top center;
 
-      > * {
+      >* {
         display: none;
-        
+
         @include mq(tablet) {
           display: block;
           background-size: cover;
@@ -62,7 +69,8 @@
 
 
 /***** KV 清單 *****/
-/*.slickItem*/.kvList {
+/*.slickItem*/
+.kvList {
   img {
     margin: 0;
   }
@@ -73,7 +81,8 @@
 
     @include mq(phablet) {
       margin-top: -$headerPhabletH;
-      &.txtUp{
+
+      &.txtUp {
         margin-top: -390px;
       }
     }
@@ -81,7 +90,7 @@
     @include mq(tablet) {
       margin-top: -$headerTabletH;
 
-      > * {
+      >* {
         margin-left: 18px;
       }
     }
@@ -96,12 +105,12 @@
     justify-content: center;
     background-color: $colorPrimary;
     position: relative;
-    
+
     @include mq(tablet) {
       width: 285px;
       margin-top: size(50);
     }
-    
+
     &:after {
       @include pseudo($pos: static);
       @include wh(12px);
@@ -112,7 +121,7 @@
       border-width: 2px 2px 0 0;
       border-style: solid;
       border-color: $colorWhite;
-      
+
       @include mq(tablet) {
         @include wh(18px);
       }
@@ -136,7 +145,7 @@
     letter-spacing: 2px;
     text-align: center;
     display: inline-block;
-    
+
     @include mq(phablet) {
       font-size: size(30);
     }
@@ -152,7 +161,8 @@
   margin: auto;
   transition: all $stdDuration;
   position: absolute;
-  top: 0; bottom: 0;
+  top: 0;
+  bottom: 0;
   right: 5%;
 
   &.hide {
@@ -161,7 +171,7 @@
   }
 
   // 點點本身
-  > div {
+  >div {
     @include wh(11px);
     cursor: pointer;
     transition: all $stdDuration;
@@ -178,12 +188,12 @@
       height: 30px;
 
       &:last-child {
-        > p {
+        >p {
           width: 40px;
         }
       }
 
-      > p {
+      >p {
         width: 85px;
         opacity: 1;
       }
@@ -193,14 +203,14 @@
       &:hover {
         height: 30px;
         background-color: #CCCCCC;
-  
+
         &:last-child {
-          > p {
+          >p {
             width: 40px;
           }
         }
-  
-        > p {
+
+        >p {
           width: 85px;
           opacity: 1;
           color: #CCCCCC;
@@ -209,7 +219,7 @@
     }
 
     // 文字
-    > p {
+    >p {
       width: 0;
       margin: auto;
       overflow: hidden;
@@ -228,7 +238,8 @@
       white-space: nowrap;
 
       position: absolute;
-      top: 6px; right: 100%;
+      top: 6px;
+      right: 100%;
     }
   }
 }
@@ -238,78 +249,88 @@
 
 
 /***** 個別調整區 *****/
-  // Key Vision - 1
-  /*.slickItem*/.kv1 {
-    background-image: url('../images/kv/m_index_kv_1.jpg');
-    
-    @include mq(tablet) {
-      background-image: url('../images/kv/index_kv_1.jpg');
-    }
+// Key Vision - 1
+/*.slickItem*/
+.kv1 {
+  background-image: url('../images/kv/m_index_kv_1.jpg');
 
-    // KV1 - LOGO
-    .kv1Logo {
-      width: 14%;
-      position: absolute;
-      top: 30px; left: 45px;
-    }
-
-    // Center Slogon
-    .centerSlogon {
-      width: 33%;
-      margin: auto;
-      top: 0; bottom: 0;
-      left: 0; right: 0;
-    }
-
-    // Sub Slogon
-    .subslogon {
-      width: 15%;
-      position: absolute;
-      bottom: 22.5%; left: 45px;
-    }
+  @include mq(tablet) {
+    background-image: url('../images/kv/index_kv_1.jpg');
   }
 
-  // Key Vision - 2
-  /*.slickItem*/.kv2 {
-    background-image: url('../images/kv/m_index_kv_2.jpg');
-
-    @include mq(tablet) {
-      background-image: url('../images/kv/index_kv_2.jpg');
-    }
+  // KV1 - LOGO
+  .kv1Logo {
+    width: 14%;
+    position: absolute;
+    top: 30px;
+    left: 45px;
   }
 
-  // Key Vision - 3
-  /*.slickItem*/.kv3 {
-    background-image: url('../images/kv/m_index_kv_3.jpg');
-
-    @include mq(tablet) {
-      background-image: url('../images/kv/index_kv_3.jpg');
-    }
+  // Center Slogon
+  .centerSlogon {
+    width: 33%;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
 
-  // Key Vision - 4
-  /*.slickItem*/.kv4 {
-    background-image: url('../images/kv/m_index_kv_4.jpg');
-
-    @include mq(tablet) {
-      background-image: url('../images/kv/index_kv_4.jpg');
-    }
+  // Sub Slogon
+  .subslogon {
+    width: 15%;
+    position: absolute;
+    bottom: 22.5%;
+    left: 45px;
   }
+}
 
-  // Key Vision - 5
-  /*.slickItem*/.kv5 {
-    background-image: url('../images/kv/m_index_kv_5.jpg');
+// Key Vision - 2
+/*.slickItem*/
+.kv2 {
+  background-image: url('../images/kv/m_index_kv_2.jpg');
 
-    @include mq(tablet) {
-      background-image: url('../images/kv/index_kv_5.jpg');
-    }
+  @include mq(tablet) {
+    background-image: url('../images/kv/index_kv_2.jpg');
   }
+}
 
-  // Key Vision - 6
-  /*.slickItem*/.kv6 {
-    background-image: url('../images/kv/m_index_kv_6.jpg');
+// Key Vision - 3
+/*.slickItem*/
+.kv3 {
+  background-image: url('../images/kv/m_index_kv_3.jpg');
 
-    @include mq(tablet) {
-      background-image: url('../images/kv/index_kv_6.jpg');
-    }
+  @include mq(tablet) {
+    background-image: url('../images/kv/index_kv_3.jpg');
   }
+}
+
+// Key Vision - 4
+/*.slickItem*/
+.kv4 {
+  background-image: url('../images/kv/m_index_kv_4.jpg');
+
+  @include mq(tablet) {
+    background-image: url('../images/kv/index_kv_4.jpg');
+  }
+}
+
+// Key Vision - 5
+/*.slickItem*/
+.kv5 {
+  background-image: url('../images/kv/m_index_kv_5.jpg');
+
+  @include mq(tablet) {
+    background-image: url('../images/kv/index_kv_5.jpg');
+  }
+}
+
+// Key Vision - 6
+/*.slickItem*/
+.kv6 {
+  background-image: url('../images/kv/m_index_kv_6.jpg');
+
+  @include mq(tablet) {
+    background-image: url('../images/kv/index_kv_6.jpg');
+  }
+}

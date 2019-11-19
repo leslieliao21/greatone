@@ -1,0 +1,7 @@
+/*==================================================*\
+        Member Page Style
+\*==================================================*/
+#dept-page .pageCont .affairName {
+  padding-left: 25px;
+  background: url("../images/icon/icon_list.png") no-repeat left center;
+  background-size: 20px auto; }

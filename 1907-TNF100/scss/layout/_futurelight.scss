@@ -1,0 +1,530 @@
+.futurelightPage {
+    background: #000;
+    -webkit-overflow-scrolling: touch;
+    
+    .hideMinline{
+        display: inline;
+        @include mq(tablet, max) {
+            display: none;
+        }
+    }
+
+    footer {
+        // display: none;
+        background: #000;
+
+        &:before {
+            display: none;
+        }
+
+        .container {
+            display: none;
+        }
+    }
+
+    main {
+        width: 100%;
+        padding-bottom: 70px;
+
+        .container {
+            width: 100%;
+            max-width: 1040px;
+            margin: 0 auto;
+            position: relative;
+            padding: 0;
+        }
+
+        section {
+            width: 100%;
+            position: relative;
+            background: #000;
+            color: #FFF;
+            padding: 0 75px;
+
+            @include mq(tablet, max) {
+                padding: 0 25px;
+            }
+
+            h2.spTitle {
+                font-size: 30px;
+                font-weight: 700;
+                line-height: 1.4em;
+                text-align: center;
+
+                span {
+                    font-weight: 400;
+                }
+            }
+
+            hr {
+                display: block;
+                margin: 70px auto;
+                border: 0;
+                width: 20%;
+                max-width: 215px;
+                min-width: 120px;
+                height: 2px;
+                background: #FFF;
+            }
+
+
+            &.top {
+                background: url('../images/futurelight/bg_top.jpg') no-repeat center top;
+                padding-top: 125px;
+
+                .fl_logo {
+                    width: 90%;
+                    max-width: 460px;
+                    margin: 0 auto 85px auto;
+                }
+
+                h2.spTitle {
+                    margin: 130px auto 20px auto;
+                }
+
+                p {
+                    width: 100%;
+                    text-align: center;
+                    font-size: 20px;
+                    line-height: 1.8em;
+                }
+            }
+
+            &.sec {
+                // padding: 0 40px;
+                text-align: center;
+
+                // @include mq(tablet, max) {
+                //     padding: 0;
+                // }
+
+                .ifrBox{
+                    margin-bottom: 40px !important;
+                }
+
+                &.pd-none {
+                    padding: 0 !important;
+                }
+
+                .mg-top{
+                    margin-top: 40px;
+                }
+
+                p {
+                    font-size: 20px;
+                    width: 100%;
+                    text-align: left;
+                    line-height: 1.5em;
+                    font-weight: 300;
+
+                    strong {
+                        font-size: 24px;
+                        font-weight: 900;
+                        display: block;
+                        margin-bottom: 5px;
+                    }
+                }
+
+            }
+
+            &#articleSec{
+                .articleList{
+                    margin-top: 1rem;
+                    li{
+                        margin-bottom: 2rem;
+                        padding: 1.65rem 2rem;
+                        border: 1px solid #ccc;
+                        transition: .2s;
+                        &:hover{
+                            border-color: #e72418;
+                        }
+                    }
+                    a{
+                        font-size: 0;
+                        >*{
+                            display: inline-block;
+                            vertical-align: top;
+                        }
+                        .picBox{
+                            width: 100%;
+                            margin-bottom: 1rem;
+                            @include mq(tablet) {
+                                width: 24.5%;
+                                margin-bottom: 0;
+                            }
+                        }
+                        .txtBox{
+                            width: 100%;
+                            
+                            @include mq(tablet) {
+                                width: 72.5%;
+                                margin-left: 3%;
+                            }
+                        }
+                        .title{
+                            p{
+                                font-size: 1.4rem;
+                                font-weight: bold;
+                                line-height: 1.2;
+                            }
+                        }
+                        hr{
+                            border: 0;
+                            border-top: 1px solid #ccc;
+                            margin: 0.5rem 0;
+                        }
+                        .txt{
+                            p{
+                                font-size: 1.15rem;
+                                line-height: 1.5;
+                                &::after{
+                                    content: "";
+                                    display: inline-block;
+                                    width: 10px;
+                                    height: 8px;
+                                    background: url(../images/review/triangle.png) no-repeat;
+                                    background-size: contain;
+                                    margin-left: 0.5rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &#storeSec {
+                li {
+                    padding: 50px 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    +li{
+                        border-top: 1px solid $colorWhite;
+                    }
+
+                    .storeTxt {
+                        padding-right: 10px;
+
+                        span {
+                            width: 100%;
+                            display: block;
+                            padding: 0 0 10px 0;
+                            font-size: 20px;
+
+                            &:last-child {
+                                padding: 0;
+                            }
+
+                            &.storeName {
+                                font-size: 24px;
+                                font-weight: 700;
+                            }
+                        }
+                    }
+
+                    .mapIcon {
+                        max-width: 42px;
+                    }
+                }
+
+            }
+
+
+
+        }
+    }
+
+    .ifrBox {
+        margin: auto;
+        margin-top: 40px;
+
+        iframe {
+            width: 100%;
+            height: 49vw;
+            margin: auto;
+
+            @include mq(tablet) {
+                height: 31.5rem;
+            }
+        }
+
+        span {
+            text-align: center;
+            display: block;
+            margin-top: 1rem;
+        }
+    }
+
+
+    // 文章頁面
+    &.articlePage{
+        .arti{
+            position: relative;
+            padding-top: 8vw;
+            padding-bottom: 16vw;
+            @include mq(tablet) {
+                padding-top: 2rem;
+                padding-bottom: 8rem;
+            }
+            p{
+                a{
+                    display: inline;
+                }
+            }
+            .artititle{
+                position: relative;
+                border-bottom: 1px solid #cccccc;
+                padding-bottom: 1.2vw;
+                @include mq(tablet) {
+                    padding-bottom: 0.5rem;
+                }
+                p{
+                    font-size: 4.6875vw;
+                    line-height: 1.5;
+                    font-weight: bold;
+                    @include mq(tablet) {
+                        font-size: 1.875rem;
+                        padding-right: 9rem;
+                    }
+                }
+                span{
+                    display: block;
+                    font-size: 4vw;
+                    color: #e72418;
+                    line-height: 1.3;
+                    font-weight: bold;
+                    position: relative;
+                    padding-bottom: 1vw;
+                    @include mq(tablet) {
+                        font-size: 1.5rem;
+                        padding-bottom: 0;
+                    }
+                    &:after , &:before{
+                        content: "";
+                        display: inline-block;
+                        width: 3.2vw;
+                        height: 3.1vw;
+                        background-image: url('../images/arti_title_line.png');
+                        background-size: 100% 100%;
+                        background-repeat: no-repeat;
+                        background-position: center top;
+                        vertical-align: baseline;
+                        @include mq(tablet) {
+                            width: 1.2rem;
+                            height: 1.1rem;
+                        }
+                    }
+                    &:before{
+                        margin-right: 0.4rem;
+                    }
+                    &:after{
+                        margin-left: 0.4rem;
+                    }
+                }
+                .writer{
+                    font-size: 3.4vw;
+                    line-height: 1.5;
+                    font-weight: bold;
+                    @include mq(tablet) {
+                        font-size: 1rem;
+                        padding-right: 0;
+                        position: absolute;
+                        bottom: 0.75rem;
+                        right: 0;
+                    }
+                }
+            }
+            .artibox{
+                text-align: center;
+                padding-top: 7vw;
+                @include mq(tablet) {
+                    padding-top: 2.5rem;
+                }
+                .foto{
+                    padding-bottom: 7.5vw;
+                    @include mq(tablet) {
+                        padding-bottom: 2.5rem;
+                    }
+                    .in{
+                        display: inline-block;
+                        max-width: 800px;
+                    }
+                    iframe{
+                        width: 100%;
+                        height: 50vw;
+                        @include mq(tablet) {
+                            width: 85vw;
+                            max-width: 800px;
+                            height: 460px;
+                        }
+                    }
+                    .ptxt{
+                        color: #ccc;
+                        line-height: 1.7;
+                        font-size: 4vw;
+                        text-align: left;
+                        padding-top: 1.5vw;
+                        @include mq(tablet) {
+                            font-size: 16px;
+                            padding-top: 0.5rem;
+                        }
+                        &:before{
+                            content: "▲";
+                            color: #e72418;
+                            display: inline;
+                            font-size: 4vw;
+                            line-height: 1.7;
+                            @include mq(tablet) {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                    &.single{
+                        width: 100%;
+                        @include mq(tablet) {
+                            width: auto;
+                        }
+                    }
+                    &.muti{
+                        .in{
+                            display: flex;
+                            flex-wrap:wrap;
+                            margin: auto;
+                            .p{
+                                flex:1;
+                                margin-right: 1%;
+                                &:last-child , &.ns{
+                                    margin-right: 0;
+                                }
+                            }
+                            .p2{
+                                width: 100%;
+                                margin:  1vw 0;
+                                @include mq(tablet) {
+                                    margin:  0.5rem 0;
+                                }
+                            }
+                            img{
+                                width: 100%;
+                            }
+                        }
+                        .ptxt{
+                            width: 100%;
+                            max-width: 805px;
+                            margin: auto;
+                        }
+                    }
+                }
+                .txt{
+                    text-align: left;
+                    padding-bottom: 8vw;
+                    @include mq(tablet) {
+                        padding-bottom: 3rem;
+                    }
+                    &.pb0{
+                        padding-bottom: 0;
+                    }
+                    p{
+                        line-height: 1.7;
+                        font-size: 4vw;
+                        padding-bottom: 3vw;
+                        text-align: justify;
+                        @include mq(tablet) {
+                            font-size: 18px;
+                            padding-bottom: 1.5rem;
+                        }
+                        &.first{
+                            font-weight: 700;
+                            padding-bottom: .2vw;
+                        }
+                        &:last-child{
+                            padding-bottom: 0;
+                        }
+                    }
+                    .sub{
+                        color: #d5241e;
+                        line-height: 1.7;
+                        font-size: 4vw;
+                        font-weight: bold;
+                        padding-bottom: 1vw;
+                        @include mq(tablet) {
+                            font-size: 18px;
+                            padding-bottom: 0.5rem;
+                        }
+                    }
+                    .sub2{
+                        color: #d5241e;
+                        line-height: 1.7;
+                        font-size: 4vw;
+                        padding-bottom: 1vw;
+                        @include mq(tablet) {
+                            font-size: 18px;
+                            padding-bottom: 0.5rem;
+                        }
+                    }
+                    .sub3{
+                        line-height: 1.7;
+                        font-size: 4vw;
+                        padding-bottom: 1vw;
+                        font-weight: bold;
+                        @include mq(tablet) {
+                            font-size: 18px;
+                            padding-bottom: 0.5rem;
+                        }
+                    }
+                    .artitable{
+                        width: 100%;
+                        line-height: 1.7;
+                        font-size: 4vw;
+                        padding-bottom: 3vw;
+                        border-collapse: collapse;
+                        empty-cells: show;
+                        @include mq(tablet) {
+                            font-size: 18px;
+                            padding-bottom: 1.5rem;
+                        }
+                        th , td{
+                            padding: 3vw 2.5vw;
+                            @include mq(tablet) {
+                                padding: 1rem;
+                            }
+                        }
+                        td{
+                            vertical-align: middle;
+                        }
+                    }
+                    .dotlist , .numlist{
+                        padding-left: 5vw;
+                        @include mq(tablet) {
+                            padding-left: 1.3rem;
+                        }
+                        li{
+                            line-height: 1.7;
+                            font-size: 4vw;
+                            text-align: justify;
+                            @include mq(tablet) {
+                                font-size: 18px;
+                            }
+                        }
+                        a{
+                            display: inline-block;
+                            font-weight: 700;
+                            &:hover{
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                    .dotlist{
+                        list-style: disc;
+                    }
+                    .numlist{
+                        list-style: decimal;
+                    }
+                }
+            }
+        }
+
+    }
+
+}

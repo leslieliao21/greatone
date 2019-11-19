@@ -1,0 +1,651 @@
+/*==================================================*\
+        Index Page Style
+\*==================================================*/
+
+.theme-page {
+
+  main {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    >.container {
+      // height: 100%;
+      // @include set-flex();
+      position: relative;
+    }
+
+  }
+  
+  .goTop{
+    width: 3.75rem;
+    position: fixed;
+    right: 2rem;
+    bottom: 4rem;
+    border-radius: 50%;
+    background: transparent;
+    transition: .2s;
+    &:hover{
+      background: $c-blue-discovery;
+    }
+  }
+
+  section {
+
+    &.kv {
+      width: 100%;
+
+      @include mq(tablet, max) {
+      }
+    }
+
+    &.indexSponsorSection {
+      width: 100%;
+      position: relative;
+      background: #FFF;
+      padding: 2% 0;
+
+      @include mq(notebook, max) {
+        padding: 4% 0 8% 0;
+      }
+
+      ._slick {
+        width: 100%;
+        @include set-flex(center, space-around);
+
+        @include mq(notebook, max) {
+          display: inline-block;
+        }
+
+        * {
+          transition: none;
+        }
+
+        .item {
+          // max-width: 200px;
+          margin: 0 20px;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    &.stageSection {
+      @include set-flex(center, center);
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      @include mq(tablet-wide, max) {
+        flex-direction: column;
+        flex-wrap: nowrap;
+      }
+      .stageBlock {
+        width: 50%;
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        z-index: 0;
+
+        @include mq(tablet-wide, max) {
+          width: 100%;
+          padding-bottom:2rem;
+        }
+      }
+      .txt {
+        padding: 0 4rem;
+        @include mq(tablet-wide, max) {
+          padding: 0 1rem;
+        }
+        .title{
+          position: relative;
+          left: -0.25rem;
+          font-size: 2.5rem;
+          font-weight: bold;
+          line-height: 1;
+          @include mq(tablet-wide, max) {
+            left: auto;
+            text-align: center;
+          }
+        }
+        hr{
+          width: 2rem;
+          display: block;
+          margin: 1.5rem 0;
+          border: 0;
+          border-top: 2px solid;
+          @include mq(tablet-wide, max) {
+            margin: auto;
+            margin: 1rem auto;
+          }
+        }
+        p {
+          line-height: 1.75;
+        }
+      }
+    }
+    
+    &.themeIntroSection {
+      padding: 8rem 0 12rem;
+      @include mq(tablet-wide, max) {
+        padding: 2rem 0 4rem;
+      }
+      .container{
+        max-width: 100%;
+        padding: 0 3%;
+        @include mq(tablet-wide, max) {
+          padding: 0 1rem;
+        }
+      }
+      .title{
+        font-weight: bold;
+        font-size: 2.5rem;
+        text-align: center;
+        color: $c-white;
+        line-height: 1;
+        &::after{
+          content: "";
+          display: block;
+          width: 2rem;
+          height: 2px;
+          background-color: $c-white;
+          margin: 1.75rem auto 2rem;
+        }
+        @include mq(tablet-wide, max) {
+          font-size: 2rem;
+          &::after{
+            width: 1.25rem;
+            height: 1px;
+            margin: .75rem auto 2rem;
+          }
+        }
+      }
+      .themeIntro {
+        text-align: center;
+        font-size: 0;
+        // @include set-flex( flex-start, space-between);
+        // flex-direction: row;
+        // flex-wrap: wrap;
+        // @include mq(tablet-wide, max) {
+        //   flex-direction: column;
+        //   flex-wrap: nowrap;
+        // }
+      }
+      .introBlock{
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+        width: 18%;
+        &:not(:last-child){
+          margin-right: 2.5%;
+        }
+        @include mq(tablet-wide, max) {
+          width: 100%;
+          &:not(:last-child){
+            margin-right: 0;
+            margin-bottom: 4rem;
+          }
+        }
+        .txt {
+          position: relative;
+          text-align: left;
+          background-color: $c-white;
+          min-height: 20rem;
+          height: auto;
+          padding: 1rem 1.75rem 2.375rem;
+          transition: .2s;
+          @include mq(tablet-wide, max) {
+            min-height: 15rem;
+            padding: 1rem 1rem 2rem;
+          }
+          .blockTitle {
+            height: auto;
+            font-size: 1.5rem;
+            padding-bottom: .75rem;
+            font-weight: bold;
+            @include mq(tablet-wide, max) {
+              // margin-bottom: 0.5rem;
+            }
+          }
+          .overContent{
+            height: 100%;
+            overflow: hidden;
+          }
+          p{
+            font-size: 1rem;
+          }
+        }
+        .btnMore{
+          width: 2.5rem;
+          height: 2.5rem;
+          transform: rotate(45deg);
+          display: block;
+          position: absolute;
+          right: 0;
+          left: 0;
+          top: calc(100% - 1.25rem);
+          margin: auto;
+          transition: .1s;
+          &._active{
+            transform: rotate(-135deg);
+          }
+          &::after, &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 0;
+            transition: .1s;
+          }
+          &::after{
+            width: 1.5rem;
+            transform: rotate(45deg);
+            position: absolute;
+            top: 42%;
+            left: 15%;
+          }
+          &::before{
+            height: 0.8125rem;
+            width: 0.8125rem;
+            position: absolute;
+            top: 40%;
+            left: 40%;
+          }
+        }
+        .btnScroll{
+          margin-top: 2rem;
+          opacity: 1;
+          transition: .2s;
+          >*{
+            display: inline-block;
+            vertical-align: middle;
+          }
+          .stall-icon{
+            fill-rule: evenodd;
+          }
+          span{
+            font-size: 1rem;
+            font-weight: bold;
+            margin-left: 0.5rem;
+          }
+          &:hover{
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+    &.stallSection {
+      padding: 5rem;
+      @include mq(tablet-wide, max) {
+        padding: 2rem 6% 4rem;
+      }
+      .stallContainer{
+        margin: auto;
+        width: 100%;
+        max-width: 1740px;
+      }
+      .stallBlock{
+        + .stallBlock{
+          margin-top: 2rem;
+        }
+        &._noLogo{
+          .stallLogo{
+            display: none;
+          }
+          .stallinfo{
+            width: 100%;
+          }
+        }
+      }
+      h4{
+        color: $c-white;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        @include mq(tablet-wide, max) {
+          font-size: 1.875rem;
+        }
+      }
+      p, li{
+        font-size: 1rem;
+        @include mq(tablet-wide, max) {
+          font-size: .95rem;
+        }
+      }
+      ol{
+        list-style-type: disc;
+        list-style-position: outside;
+        padding-left: 1.25rem;
+      }
+      .box{
+        font-size: 0;
+        background-color: $c-white;
+        >div{
+          display: inline-block;
+          vertical-align: middle;
+          width: 50%;
+          @include mq(tablet-wide, max) {
+            width: 100%;
+          }
+        }
+      }
+      .pic{
+        position: relative;
+        overflow: hidden;
+        &::after{
+          content: "";
+          display: block;
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 0 8vw 30vw 0;
+          border-color: transparent $c-white transparent transparent;
+        }
+        @include mq(tablet-wide, max) {
+          &::after{
+            display: none;
+          }
+        }
+      }
+      .txt{
+        padding: 0 4rem 0 1rem;
+        @include mq(tablet-wide, max) {
+          padding: 1.5rem 1rem;
+        }
+      }
+
+      .top{
+        font-size: 0;
+        margin-bottom: 1.5rem;
+        @include mq(tablet-wide, max) {
+          margin-bottom: 1rem;
+        }
+        >div{
+          display: inline-block;
+          vertical-align: top;
+          @include mq(tablet-wide, max) {
+            display: block;
+          }
+        }
+        .stallLogo{
+          width: 115px;
+          padding-right: 2rem;
+          margin: auto;
+        }
+        .stallinfo{
+          width: calc( 100% - 115px );
+          @include mq(tablet-wide, max) {
+            width: 100%;
+            margin-top: 1rem;
+          }
+        }
+      }
+
+      .tag{
+        height: 1.675rem;
+        line-height: 1.675rem;
+        display: inline-block;
+        background-color: $c-black;
+        font-size: 1rem;
+        color: $c-white;
+        position: relative;
+        text-align: center;
+        padding: 0 .5rem 0 .75rem;
+        margin-bottom: .5rem;
+        @include mq(tablet-wide, max) {
+          font-size: .95rem;
+        }
+        &::after{
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 100%;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 1.675rem 0 0 .9rem;
+          border-color: transparent transparent transparent $c-black;
+        }
+      }
+    }
+  }
+  
+  &._discovery{
+    ._link{
+      color: $c-blue-discovery;
+      text-decoration: underline;
+      &:hover{
+        color: #000;
+        text-decoration: none;
+      }
+    }
+    .fc-theme{
+      color: $c-blue-discovery;
+    }
+    section.stageSection {
+      .txt{
+        .title{
+          color: $c-blue-discovery;
+        }
+      }
+    }
+    section.themeIntroSection {
+      background: url(../images/theme/discovery_intro_bg.jpg) center bottom repeat-y #055a8c;
+      background-size: 100% auto;
+      background-attachment:fixed;
+      @include mq(tablet-wide, max) {
+        background: url(../images/theme/m_discovery_intro_bg.jpg) center bottom repeat-y #055a8c;
+        background-size: 100% auto;
+        background-attachment:fixed;
+      }
+      .blockTitle{
+        color: $c-blue-discovery;
+      }
+      .introBlock {
+        .btnMore{
+          background-color: $c-black;
+          &::after{
+            border-top: 2px solid #fff;
+          }
+          &::before{
+            border-right: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+          }
+          &:hover, &._active{
+            background-color: $c-blue-discovery;
+          }
+        }
+      }
+      .btnScroll{
+        .stall-icon{
+          fill: #7fd3ff;
+        }
+        span{
+          color: #7fd3ff;
+        }
+      }
+    }
+    .stallSection{
+      background-color: $c-blue-discovery;
+    }
+  }
+  &._animalPlanet{
+    .fc-theme{
+      color: $c-blue-animal;
+    }
+    section.themeIntroSection {
+      background: url(../images/theme/animal_intro_bg.jpg) center bottom repeat-y #055a8c;
+      background-size: 100% auto;
+      background-attachment:fixed;
+      @include mq(tablet-wide, max) {
+        background: url(../images/theme/m_animal_intro_bg.jpg) center bottom repeat-y #055a8c;
+        background-size: 100% auto;
+        background-attachment:fixed;
+      }
+      .blockTitle{
+        color: $c-blue-animal;
+      }
+      .introBlock {
+        .btnMore{
+          background-color: $c-black;
+          &::after{
+            border-top: 2px solid #fff;
+          }
+          &::before{
+            border-right: 2px solid #fff;
+            border-bottom: 2px solid #fff;
+          }
+          &:hover, &._active{
+            background-color: $c-blue-animal;
+          }
+        }
+      }
+      .btnScroll{
+        .stall-icon{
+          fill: #c0e9ff;
+        }
+        span{
+          color: #c0e9ff;
+        }
+      }
+    }
+    .stallSection{
+      background-color: $c-blue-animal;
+    }
+  }
+  &._eurosport{
+    .fc-theme{
+      color: $c-blue-esport;
+    }
+    ._link{
+      color: $c-blue-esport;
+      // text-decoration: underline;
+    }
+    section.themeIntroSection {
+      background: url(../images/theme/esport_intro_bg.jpg) center bottom repeat-y #055a8c;
+      background-size: 100% auto;
+      background-attachment:fixed;
+      @include mq(tablet-wide, max) {
+        background: url(../images/theme/m_esport_intro_bg.jpg) center bottom repeat-y #055a8c;
+        background-size: 100% auto;
+        background-attachment:fixed;
+      }
+      .blockTitle{
+        color: $c-blue-esport;
+      }
+      .introBlock {
+        .btnMore{
+          background-color: $c-blue-esport;
+          &::after{
+            border-top: 2px solid #fdc123;
+          }
+          &::before{
+            border-right: 2px solid #fdc123;
+            border-bottom: 2px solid #fdc123;
+          }
+          &:hover, &._active{
+            background-color: #fdc123;
+            &::after{
+              border-top: 2px solid $c-blue-esport;
+            }
+            &::before{
+              border-right: 2px solid $c-blue-esport;
+              border-bottom: 2px solid $c-blue-esport;
+            }
+          }
+        }
+      }
+      .btnScroll{
+        .stall-icon{
+          fill: #fdc123;
+        }
+        span{
+          color: #fdc123;
+        }
+      }
+    }
+    .stallSection{
+      background-color: $c-blue-esport;
+    }
+  }
+  &._tlc{
+    .fc-theme{
+      color: $c-red-tlc;
+    }
+    section.stageSection {
+      .txt {
+        .title {
+          color: $c-red-tlc;
+        }
+      }
+    }
+    section.themeIntroSection {
+      background: url(../images/theme/tlc_intro_bg.jpg) center bottom repeat-y #055a8c;
+      background-size: 100% auto;
+      background-attachment:fixed;
+      .title{
+        color: $c-red-tlc;
+        &:after {
+          background-color: #202020;
+        }
+      }
+      @include mq(tablet-wide, max) {
+        background: url(../images/theme/m_tlc_intro_bg.jpg) center bottom repeat-y #055a8c;
+        background-size: 100% auto;
+        background-attachment:fixed;
+      }
+      
+      .introBlock {
+        .btnMore{
+          background-color: #202020;
+          &::after{
+            border-top: 2px solid $c-white;
+          }
+          &::before{
+            border-right: 2px solid $c-white;
+            border-bottom: 2px solid $c-white;
+          }
+          &:hover, &._active{
+            background-color: $c-red-tlc;
+          }
+        }
+      }
+      .btnScroll{
+        .stall-icon{
+          fill: $c-red-tlc;
+        }
+        span{
+          color: $c-red-tlc;
+        }
+      }
+    }
+    .stallSection{
+      background-color: $c-red-tlc;
+    }
+  }
+  // .mCSB_scrollTools {
+  //   width: 4px;
+  //   border-radius: 0;
+  //   opacity: 1;
+  // }
+  
+  // .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  //   width: 4px;
+  //   background-color: #046192;
+  //   border-radius: 0;
+  //   opacity: 1;
+  // }
+  
+  // .mCSB_scrollTools .mCSB_draggerRail {
+  //   width: 4px;
+  //   background-color: #FFF;
+  //   opacity: 0.1;
+  // }
+
+}

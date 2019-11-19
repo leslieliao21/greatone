@@ -1,0 +1,86 @@
+
+
+/*  base scss  */
+
+
+$font-stack: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+  Helvetica, Arial, "微軟正黑體", "新細明體", "蘋果儷黑體", Verdana, sans-serif;
+
+$color-r:#de1249;
+$color-r2:#bc2044;
+
+
+/* base 共用 */
+
+
+._c:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.c {
+  clear: both;
+}
+
+.hide {
+  display: none;
+}
+
+.vhide {
+  visibility: hidden;
+}
+
+.table {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.tr {
+  display: table-row;
+}
+
+.td {
+  display: table-cell;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+._bgWhite{background-color: #fff;}
+._bgBlack{background-color: #000;}
+._bgGray{background-color: #eaeaea;}
+._bgBlue{background-color: #002f7b;}
+._bgGreen{background-color: #3eb134;}
+._bgBGreen{background-color: #07959e;}
+._bgOrange{background-color: #ec6800;}
+._bgLightOrange{background-color: #ea8d00;}
+
+._fcWhite{color: #fff;}
+._fcBlack{color: #000;}
+._fcLightGray{color: #4b4b4b;}
+._fcGray{color: #313131;}
+._fcBlue{color: #002f7b;}
+._fcGreen{color: #3eb134;}
+._fcOrange{color: #eb5e02;}
+//img[src$=".gif"],
+//img[src$=".jpg"],
+//img[src$=".png"] {
+//    image-rendering: -moz-crisp-edges;
+//    /* Firefox */
+//    image-rendering: -o-crisp-edges;
+//    /* Opera */
+//    image-rendering: -webkit-optimize-contrast;
+//    /* Webkit (non-standard naming) */
+//    image-rendering: crisp-edges;
+//    -ms-interpolation-mode: nearest-neighbor;
+//    /* IE (non-standard property) */
+//}

@@ -1,0 +1,47 @@
+/*==================================================*\
+        Page Loading
+\*==================================================*/
+.page-loading {
+  @include full-popup(#000);
+  z-index: 9999;
+
+  > div {
+    width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  img {
+    width: 100px;
+    margin: 0 auto;
+  }
+
+  span{
+    color: white;
+  }
+
+  .loader{
+    width: 100px;
+    margin: auto;    
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    
+  }
+
+  // .progress-bar {
+  //   width: 0;
+  //   max-width: 90px;
+  //   margin: 0 auto;
+  //   margin-top: 2px;
+  //   padding: 3px 0;
+  //   height: 25px;
+  //   box-sizing: border-box;
+  //   transition: all $duration-fastest;
+  //   background-color: #f0c30a;
+  //   position: absolute;
+  //   top: 0; right: 2px;
+  //   border-radius: 10px;
+  //   z-index: -1;
+  // }
+}

@@ -1,0 +1,103 @@
+/*==================================================*\
+        Lightbox
+\*==================================================*/
+
+.lightbox {
+  @include full-popup(rgba(1, 38, 61, 0.8));
+  overflow-y: auto;
+  opacity: 0;
+  z-index: 9999;
+
+  svg { 
+    path {
+      fill: #FFFFFF;
+    }
+  }
+}
+
+
+.lb-container {
+  max-width: 90%;
+  margin: auto;
+  opacity: 0;
+  z-index: 0;
+  position: absolute;
+  // top: 0; bottom: 0;
+  // left: 0; right: 0;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+// Lightbox Content
+.lb-content {
+  width: 750px;
+  max-width: 750px;
+  background-position: center center;
+  background-size: 100% 100%;
+  padding: 10px 20px;
+  &:before, &:after{
+    @include pseudo();
+    width: 100%;
+    left: 0;
+  }
+  .inside{
+    width: 95%;
+    margin: 0 auto;
+    // background-color: #fffdf5;
+    // border-radius: 5px;
+    // padding: 1.5vh 2vw;
+    // min-height: 62vh;
+    text-align: center;
+    position: relative;
+    // box-shadow: 0px 2px 2px 5px rgba(0, 0, 0, 0.2);
+
+  }
+  p{
+    width: 100%;
+    display: inline-block;
+    word-wrap: break-word;
+    // @include mq(phablet, max) {
+    //   margin-left: -10px;
+    // }
+  }
+}
+
+// Button: Close Lightbox
+.lb-close-btn {
+  @extend %mod_close-btn;
+  @include wh(45px);
+  position: absolute;
+  top: 0;
+  right: -55px;
+  background-color: transparent;
+  border: 1px solid #FFF;
+  // border-radius: 100%;
+  transition: all $duration-slow;
+  z-index: 9999;
+
+  &:before,
+  &:after {
+    width: 80%;
+    height: 2px;
+    left: 10%;
+    // border-radius: 100px;
+    background-color: #FFFFFF;
+  }
+
+  &:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  /* 可於 _extends.scss 選擇欲 extend 之 hover樣式 */
+  // @extend %close-btn-hover-1;
+}
+
+.lb-loading {
+  @include wh(47px);
+  margin: auto;
+  z-index: 0;
+  position: fixed;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+}

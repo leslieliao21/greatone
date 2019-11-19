@@ -1,0 +1,62 @@
+.countdownPage footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0; }
+  .countdownPage footer .goTop {
+    display: none; }
+
+.countdownPage main {
+  height: 100vh;
+  overflow: hidden;
+  position: relative; }
+  .countdownPage main .countdownKV {
+    height: 100%;
+    background: url("../images/bg_countdown.jpg") no-repeat center center;
+    background-size: cover; }
+    .countdownPage main .countdownKV .container {
+      width: 100%;
+      height: auto;
+      max-width: 750px;
+      margin: 0 auto;
+      padding-top: 70px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .countdownPage main .countdownKV .container .countdownTitle {
+        width: 100%; }
+      .countdownPage main .countdownKV .container .countdownBlock {
+        position: relative;
+        background: rgba(0, 0, 0, 0.4);
+        padding: 15px;
+        margin-top: 100px;
+        border-radius: 4px; }
+        .countdownPage main .countdownKV .container .countdownBlock .flipdown {
+          width: auto; }
+          .countdownPage main .countdownKV .container .countdownBlock .flipdown .rotor-group:last-child {
+            display: none; }
+          .countdownPage main .countdownKV .container .countdownBlock .flipdown .rotor-group:nth-child(3) {
+            padding-right: 0; }
+          .countdownPage main .countdownKV .container .countdownBlock .flipdown .rotor-group-heading {
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            -webkit-transform: translateX(calc(-50% - 15px));
+            -ms-transform: translateX(calc(-50% - 15px));
+            transform: translateX(calc(-50% - 15px)); }
+            .countdownPage main .countdownKV .container .countdownBlock .flipdown .rotor-group-heading:before {
+              color: #FFF !important; }
+          .countdownPage main .countdownKV .container .countdownBlock .flipdown .rotor-group:nth-child(3) .rotor-group-heading {
+            -webkit-transform: translateX(calc(-50%));
+            -ms-transform: translateX(calc(-50%));
+            transform: translateX(calc(-50%)); }
